@@ -924,7 +924,7 @@ GENOAR is described in an article under review at *Nucleic Acids Research*:
 
 > Paik H, Ko TL, Kim D, Shin D, Sirota M, Oskotsky B, Oskotsky T, Lee T, Lee H, Lee D. GENOAR: Global Engine for Navigating the Omnicell space via Agent-based Research. *Nucleic Acids Research*, submitted (2026).
 
-[`CITATION.cff`](CITATION.cff) carries the same in machine-readable form; GitHub's "Cite this repository" reads it. A tagged release with a Zenodo DOI will follow, and the DOI will be added here and to the file.
+[`CITATION.cff`](CITATION.cff) carries the same in machine-readable form; GitHub's "Cite this repository" reads it. Software releases are tagged on GitHub (current: v1.0.0). A Zenodo DOI for a release is planned and will be added here and to the file.
 
 ---
 

@@ -985,7 +985,7 @@ GENOAR는 *Nucleic Acids Research*에 심사 중인 논문에 기술되어 있�
 
 > Paik H, Ko TL, Kim D, Shin D, Sirota M, Oskotsky B, Oskotsky T, Lee T, Lee H, Lee D. GENOAR: Global Engine for Navigating the Omnicell space via Agent-based Research. *Nucleic Acids Research*, submitted (2026).
 
-같은 내용이 [`CITATION.cff`](CITATION.cff)에 기계 판독 형식으로 들어 있으며, GitHub의 "Cite this repository"가 이 파일을 읽습니다. Zenodo DOI가 붙은 태그 릴리스가 뒤따를 예정이고, DOI는 여기와 파일에 추가됩니다.
+같은 내용이 [`CITATION.cff`](CITATION.cff)에 기계 판독 형식으로 들어 있으며, GitHub의 "Cite this repository"가 이 파일을 읽습니다. 소프트웨어 릴리스는 GitHub 태그로 관리합니다(현재 v1.0.0). 릴리스의 Zenodo DOI는 추후 발급해 여기와 파일에 추가할 예정입니다.
 
 ---
 

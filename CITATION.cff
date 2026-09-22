@@ -1,11 +1,11 @@
 # Citation metadata for GENOAR (Citation File Format 1.2.0).
 # GitHub reads this file to offer "Cite this repository".
 #
-# Still to fill in, in this order:
-#   - `version` and `date-released`: at the first tagged release.
-#   - `doi`: the Zenodo DOI of that release (the journal requires one).
+# Still to fill in:
+#   - `doi`: the Zenodo DOI of a release, once one is deposited.
 #   - `preferred-citation`: swap `status: submitted` for the volume, pages and
 #     DOI when the article is published.
+# Bump `version` and `date-released` with every tagged release.
 cff-version: 1.2.0
 message: >-
   If you use GENOAR, please cite the article under preferred-citation.
@@ -17,6 +17,8 @@ abstract: >-
   agents and human researchers can use: it collects and standardises GEO
   metadata with an AI nomenclaturist, processes the raw reads in parallel,
   and serves the result through an AI librarian.
+version: 1.0.0
+date-released: "2026-09-22"
 repository-code: "https://github.com/cxinsys/genoar"
 url: "https://genoar.ai"
 license: MIT
