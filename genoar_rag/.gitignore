@@ -1,0 +1,45 @@
+# Environment
+.env
+.env.*
+!.env.example
+.venv/
+.cache/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+node_modules/
+
+# Database files
+*.db
+data/
+# Recovery copies of data/, kept beside it. Gigabytes of SQLite and FAISS, and
+# the only route back to a previous population — worth guarding from an
+# absent-minded `git add -A` as much as from deletion.
+#
+# Each one holds the same filenames as data/, so going back to it is: stop the
+# stack, then either copy its contents over data/, or leave it where it is and
+# point DB_FILE and the HUMAN_/MOUSE_ index and mapping paths in .env at it.
+# Take the .db, its -wal and -shm sidecars, and each index with its .meta.json
+# together — an index whose sidecar names a different model is refused at load,
+# and a .db separated from its -wal is missing whatever had not been checkpointed.
+data_backup_*/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+.next/
+# Local development overlay for compose. Copied from the .example beside it
+# and kept off the deployments, which serve the production build.
+docker-compose.override.yml
+
+# One machine's dataset settings and schemas, like the overlay above: the
+# names and paths in them belong to a deployment, not the repo.
+datasets.env
+mariadb-init/*.sql

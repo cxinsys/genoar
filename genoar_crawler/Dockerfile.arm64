@@ -1,0 +1,80 @@
+# GENOAR Crawler - ARM64 Architecture
+# For: Apple Silicon (M1/M2/M3/M4), AWS Graviton, Raspberry Pi, ARM servers
+ARG TARGETPLATFORM=linux/arm64
+FROM python:3.11-slim-bookworm
+
+ENV PYTHONUNBUFFERED=1
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=UTC
+ENV LANG=C.UTF-8
+ENV LC_ALL=C.UTF-8
+ENV CHROME_DRIVER_PATH=/usr/bin/chromedriver
+ENV CHROME_BINARY_PATH=/usr/bin/chromium
+
+# System dependencies + Chromium (ARM64 uses apt package, not Google Chrome)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    wget \
+    curl \
+    unzip \
+    gnupg \
+    ca-certificates \
+    gzip \
+    procps \
+    # Chromium browser and driver (ARM64 native)
+    chromium \
+    chromium-driver \
+    # Fonts for proper rendering
+    fonts-liberation \
+    fonts-noto-cjk \
+    fonts-noto-color-emoji \
+    && rm -rf /var/lib/apt/lists/*
+
+# ChromeDriver symlink for path consistency
+RUN if [ -f /usr/bin/chromedriver ]; then \
+        ln -sf /usr/bin/chromedriver /usr/local/bin/chromedriver; \
+    fi
+
+# Verify installations
+RUN echo "=== Installed Versions ===" \
+    && chromium --version \
+    && chromedriver --version
+
+# Create app directory
+WORKDIR /app
+
+# Copy requirements first for better Docker layer caching
+COPY requirements.txt .
+
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy application code
+COPY genoar_crawler.py integration.py parsing.py ./
+
+# Create output directories
+RUN mkdir -p /data/SMTX /data/SRR /data/META /tmp/chrome-user-data \
+    && chmod -R 777 /tmp/chrome-user-data
+
+# Security: non-root user
+RUN useradd -m -s /bin/bash genoar \
+    && chown -R genoar:genoar /app /data /tmp/chrome-user-data
+USER genoar
+
+# Expose volume for data output
+VOLUME ["/data"]
+
+# Set default command
+ENTRYPOINT ["python", "/app/genoar_crawler.py"]
+CMD ["1", "1", "true"]
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+    CMD pgrep -f "genoar_crawler.py" || exit 1
+
+# Labels for documentation
+LABEL maintainer="GENOAR Team" \
+      description="GENOAR Crawler for ARM64 architecture (Apple Silicon, Graviton)" \
+      version="2.0" \
+      architecture="arm64" \
+      python.version="3.11" \
+      chrome.source="chromium-apt"

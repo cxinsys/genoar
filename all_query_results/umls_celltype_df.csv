@@ -1,0 +1,1848 @@
+,CUI,STR,SAB,STY
+0,C0039194,T Cells,MSH,Cell
+1,C1167909,T cells,MEDCIN,Laboratory Procedure
+2,C0039194,t cells,CHV,Cell
+3,C0039194,T cells,CPT,Cell
+4,C0039194,T cells,LCH_NW,Cell
+5,C0039194,T cells,LNC,Cell
+8,C0039194,T Cells,NCI,Cell
+9,C0229613,Lymphoblast,RCD,Cell
+10,C0229613,Lymphoblast,SNM,Cell
+11,C0229613,Lymphoblast,SNMI,Cell
+12,C0229613,lymphoblast,AOD,Cell
+13,C0229613,lymphoblast,CSP,Cell
+14,C0229613,Lymphoblast,FMA,Cell
+15,C0229613,lymphoblast,CHV,Cell
+16,C0229613,Lymphoblast,SNOMEDCT_US,Cell
+17,C0229613,Lymphoblast,NCI,Cell
+18,C0229613,lymphoblast,MTH,Cell
+19,C0004561,b cells,CHV,Cell
+20,C0004561,B cells,LCH_NW,Cell
+21,C0004561,B Cells,NCI,Cell
+22,C2243049,peripheral blood mononuclear cells,MEDCIN,Laboratory Procedure
+23,C1321301,Peripheral Blood Mononuclear Cells,MSH,Cell
+24,C0027882,Neurons,LCH,Cell
+25,C0027882,Neurons,MSH,Cell
+26,C0027882,neurons,CHV,Cell
+27,C0027882,Neurons,LCH_NW,Cell
+28,C0027882,Neurons,PSY,Cell
+29,C0027882,Neurons,NCI,Cell
+30,C0027882,Neurons,MTH,Cell
+31,C0043544,Zygote,MSH,Embryonic Structure
+32,C0043544,Zygote,SNM,Embryonic Structure
+33,C0043544,Zygote,SNMI,Embryonic Structure
+34,C0043544,zygote,AOD,Embryonic Structure
+35,C0043544,Zygote,FMA,Embryonic Structure
+36,C0686873,zygote,CHV,Eukaryote
+37,C0043544,zygote,CHV,Embryonic Structure
+38,C0043544,Zygote,UWDA,Embryonic Structure
+39,C0686873,Zygote,SNOMEDCT_US,Eukaryote
+40,C0043544,Zygote,SNOMEDCT_US,Embryonic Structure
+41,C0043544,Zygote,NCI,Embryonic Structure
+42,C0026573,Morula,MSH,Embryonic Structure
+43,C2630713,Morula,NCBI,Eukaryote
+44,C0026573,morula,CHV,Embryonic Structure
+45,C0026573,Morula,FMA,Embryonic Structure
+46,C0026573,Morula,SNOMEDCT_US,Embryonic Structure
+47,C0026573,Morula,NCI,Embryonic Structure
+48,C4246193,Late blastocyst,FMA,Embryonic Structure
+49,C0015350,ICM,FMA,Tissue
+50,C0015350,icm,CHV,Tissue
+51,C0015350,ICM,UWDA,Tissue
+52,C1550746,ICM,HL7V3.0,Temporal Concept
+53,C0039462,te,CHV,Hazardous or Poisonous Substance
+54,C0039462,te,CHV,"Element, Ion, or Isotope"
+55,C4522043,TE,NCI,Diagnostic Procedure
+56,C2826100,TE,NCI,Temporal Concept
+57,C0221908,Epithelial,SNMI,Qualitative Concept
+58,C0221908,epithelial,CHV,Qualitative Concept
+59,C0221908,Epithelial,NCI,Qualitative Concept
+60,C0225369,Chondrocytes,MSH,Cell
+61,C0225369,chondrocytes,CHV,Cell
+62,C0225369,Chondrocytes,NCI,Cell
+63,C0018207,Granulosa Cells,MSH,Cell
+64,C0018207,granulosa cells,CHV,Cell
+65,C0018207,Granulosa Cells,NCI,Cell
+66,C0206116,Microglia,MSH,Cell
+67,C0206116,Microglia,SNM,Cell
+68,C0206116,Microglia,SNMI,Cell
+69,C0206116,microglia,AOD,Cell
+70,C0206116,microglia,CSP,Cell
+71,C0206116,Microglia,FMA,Cell
+72,C0206116,microglia,CHV,Cell
+73,C0206116,Microglia,LCH_NW,Cell
+74,C0206116,Microglia,UWDA,Cell
+75,C0206116,Microglia,MTH,Cell
+76,C0206116,Microglia,OMIM,Cell
+77,C0206116,Microglia,SNOMEDCT_US,Cell
+78,C0206116,Microglia,NCI,Cell
+79,C0682638,memory b cell,CHV,Cell
+80,C0682638,Memory B Cell,MSH,Cell
+81,C0682638,Memory B Cell,NCI,Cell
+82,C0555198,High-Grade Glioma,NCI,Neoplastic Process
+83,C4722099,High-grade glioma,SNOMEDCT_US,Neoplastic Process
+84,C1997217,Low-grade glioma,SNOMEDCT_US,Neoplastic Process
+85,C1997217,Low-Grade Glioma,NCI,Neoplastic Process
+86,C1997217,Low-grade glioma,OMIM,Neoplastic Process
+87,C0030281,Pancreatic beta cell,FMA,Cell
+88,C0030281,pancreatic beta cell,CHV,Cell
+89,C0030281,pancreatic beta cell,CSP,Cell
+90,C0030281,Pancreatic beta Cell,MSH,Cell
+91,C0242692,Skeletal muscle,RCD,Tissue
+92,C0242692,Skeletal muscle,SNM,Tissue
+93,C0242692,Skeletal muscle,UWDA,Tissue
+94,C0242692,skeletal muscle,AOD,Tissue
+95,C0242692,skeletal muscle,CSP,Tissue
+96,C0242692,skeletal muscle,CHV,Tissue
+97,C0242692,Skeletal Muscle,MSH,Tissue
+98,C0242692,Skeletal muscle,LNC,Tissue
+99,C0242692,Skeletal muscle,SNOMEDCT_US,Tissue
+100,C0242692,Skeletal muscle,FMA,Tissue
+101,C0242692,Skeletal Muscle,NCI,Tissue
+102,C0242692,Skeletal Muscle,HL7V2.5,Tissue
+103,C1546780,Skeletal muscle,HL7V2.5,Intellectual Product
+104,C1550659,Skeletal muscle,HL7V3.0,Body Substance
+105,C2717959,IPS Cells,MSH,Cell
+106,C1171346,hESC,MSH,Cell
+107,C0026473,Monocytes,LCH,Cell
+108,C0026473,Monocytes,MSH,Cell
+109,C0026473,monocytes,MTH,Cell
+110,C0026473,Monocytes,MTH,Cell
+111,C0026473,Monocytes,LNC,Cell
+113,C0026473,monocytes,CHV,Cell
+115,C0026473,Monocytes,LCH_NW,Cell
+116,C0026473,Monocytes,MDR,Cell
+117,C0026473,Monocytes,CPM,Cell
+121,C0026473,Monocytes,NCI,Cell
+122,C0016030,Fibroblasts,LCH,Cell
+123,C0016030,Fibroblasts,MSH,Cell
+124,C0016030,Fibroblasts,LNC,Cell
+125,C0016030,fibroblasts,CHV,Cell
+127,C0016030,Fibroblasts,LCH_NW,Cell
+128,C0016030,Fibroblasts,NCI,Cell
+129,C0016030,Fibroblasts,MTH,Cell
+130,C1546634,Fibroblasts,HL7V2.5,Intellectual Product
+131,C1550637,Fibroblasts,HL7V3.0,Body Substance
+132,C0024264,Lymphocytes,LCH,Cell
+133,C0024264,Lymphocytes,MSH,Cell
+134,C0024264,lymphocytes,MTH,Cell
+135,C0024264,Lymphocytes,LNC,Cell
+136,C0024264,lymphocytes,CHV,Cell
+138,C0024264,Lymphocytes,LCH_NW,Cell
+139,C4018897,Lymphocytes,SNOMEDCT_US,Body Substance
+140,C0024264,Lymphocytes,MDR,Cell
+141,C0024264,Lymphocytes,CPM,Cell
+144,C0024264,Lymphocytes,PSY,Cell
+145,C0024264,Lymphocytes,NCI,Cell
+146,C1550651,Lymphocytes,HL7V3.0,Body Substance
+147,C0024264,Lymphocytes,HL7V2.5,Cell
+148,C1546705,Lymphocytes,HL7V2.5,Intellectual Product
+149,C0882849,CD34+ Cells,DRUGBANK,Cell
+150,C0806987,mononuclear cell,CHV,Cell
+151,C0232275,OS,CCPSS,Finding
+152,C0232275,OS,SNMI,Finding
+153,C0262950,Os,UWDA,"Body Part, Organ, or Organ Component"
+154,C0230028,Os,FMA,Body Location or Region
+155,C2936904,OS,OMIM,Disease or Syndrome
+156,C2697964,OS,NCI,Gene or Genome
+157,C0262950,os,CHV,"Body Part, Organ, or Organ Component"
+158,C1417167,OS,HGNC,Gene or Genome
+159,C1561953,Os,HL7V3.0,"Body Part, Organ, or Organ Component"
+160,C0439164,OD,RCD,Quantitative Concept
+161,C3665488,OD,OMIM,Disease or Syndrome
+162,C0439164,OD,LNC,Quantitative Concept
+163,C0014257,Endothelial,NCI,Tissue
+164,C0227525,hepatocytes,CHV,Cell
+165,C0227525,Hepatocytes,MSH,Cell
+166,C0227525,Hepatocytes,NCI,Cell
+167,C0003315,Antigen Presenting Cells,MSH,Cell
+168,C0003315,antigen presenting cells,CHV,Cell
+169,C0003315,Antigen presenting cells,LCH_NW,Cell
+170,C0003315,Antigen Presenting Cells,NCI,Cell
+171,C0035298,Retinal,SNMI,"Body Part, Organ, or Organ Component"
+172,C0035298,RETINAL,CCPSS,"Body Part, Organ, or Organ Component"
+173,C0035331,retinal,CSP,Organic Chemical
+174,C0035331,retinal,CSP,Pharmacologic Substance
+175,C0035331,retinal,CSP,Vitamin
+176,C0035331,Retinal,NCI,Organic Chemical
+177,C0035331,Retinal,NCI,Pharmacologic Substance
+178,C0035331,Retinal,NCI,Vitamin
+179,C0035298,Retinal,NCI,"Body Part, Organ, or Organ Component"
+180,C0035331,Retinal,LNC,Organic Chemical
+181,C0035331,Retinal,LNC,Pharmacologic Substance
+182,C0035331,Retinal,LNC,Vitamin
+183,C0035298,retinal,CHV,"Body Part, Organ, or Organ Component"
+184,C0035298,Retinal,LNC,"Body Part, Organ, or Organ Component"
+185,C0035331,Retinal,MSH,Organic Chemical
+186,C0035331,Retinal,MSH,Pharmacologic Substance
+187,C0035331,Retinal,MSH,Vitamin
+188,C0035331,retinal,NDDF,Organic Chemical
+189,C0035331,retinal,NDDF,Pharmacologic Substance
+190,C0035331,retinal,NDDF,Vitamin
+194,C0033416,Promyelocytes,MTH,Cell
+195,C0033416,Promyelocytes,LNC,Cell
+196,C0033416,promyelocytes,CHV,Cell
+198,C0033416,Promyelocytes,CPM,Cell
+200,C0033416,Promyelocytes,MSH,Cell
+201,C0229635,Metamyelocytes,MTH,Cell
+202,C0229635,Metamyelocytes,LNC,Cell
+203,C0229635,metamyelocytes,CHV,Cell
+205,C0229635,Metamyelocytes,MSH,Cell
+207,C3661517,band cells,CHV,Cell
+208,C0229640,Segmented neutrophils,LNC,Cell
+209,C0027950,Neutrophil,MSH,Cell
+210,C0027950,Neutrophil,RCD,Cell
+211,C0027950,neutrophil,AOD,Cell
+212,C0027950,neutrophil,CSP,Cell
+213,C0027950,Neutrophil,FMA,Cell
+214,C0027950,Neutrophil,LNC,Cell
+215,C0027950,neutrophil,CHV,Cell
+220,C0027950,Neutrophil,NCI,Cell
+221,C0027950,neutrophil,MTH,Cell
+222,C0369715,Myelocytes,MTH,Cell
+223,C0369715,Myelocytes,LNC,Cell
+224,C0369715,myelocytes,CHV,Cell
+226,C0369715,Myelocytes,MSH,Cell
+228,C0332134,PDX,SNMI,Qualitative Concept
+229,C0332134,pdx,CHV,Qualitative Concept
+230,C4050317,PDX,NCI,Experimental Model of Disease
+231,C1721300,PDX,DRUGBANK,Organic Chemical
+232,C1721300,PDX,DRUGBANK,Pharmacologic Substance
+233,C1721300,PDX,PDQ,Organic Chemical
+234,C1721300,PDX,PDQ,Pharmacologic Substance
+235,C0332134,PDX,SNOMEDCT_US,Qualitative Concept
+236,C1418724,PDX,HGNC,Gene or Genome
+240,C0039194,T-Cell,MSH,Cell
+241,C0039194,T-cell,RCD,Cell
+242,C0039194,T-cell,LNC,Cell
+243,C0039194,t-cell,CHV,Cell
+245,C0039194,T-cell,SNOMEDCT_US,Cell
+248,C0039194,T-Cell,NCI,Cell
+249,C1419009,HSPC,HGNC,Gene or Genome
+250,C0027819,Neuroblastoma,COSTAR,Neoplastic Process
+251,C0027819,Neuroblastoma,LCH,Neoplastic Process
+252,C0027819,Neuroblastoma,MSH,Neoplastic Process
+253,C0027819,Neuroblastoma,MTH,Neoplastic Process
+254,C0700095,Neuroblastoma,RCD,Neoplastic Process
+255,C0027819,Neuroblastoma,SNM,Neoplastic Process
+256,C0027819,NEUROBLASTOMA,CST,Neoplastic Process
+257,C0027819,NEUROBLASTOMA,DXP,Neoplastic Process
+258,C0027819,NEUROBLASTOMA,WHO,Neoplastic Process
+259,C0027819,neuroblastoma,AOD,Neoplastic Process
+260,C0027819,neuroblastoma,CSP,Neoplastic Process
+261,C0027819,Neuroblastoma,OMIM,Neoplastic Process
+262,C0027819,neuroblastoma,MEDCIN,Neoplastic Process
+263,C0027819,Neuroblastoma,SNOMEDCT_US,Neoplastic Process
+264,C0700095,neuroblastoma,CHV,Neoplastic Process
+265,C0027819,neuroblastoma,CHV,Neoplastic Process
+266,C0027819,Neuroblastoma,MEDLINEPLUS,Neoplastic Process
+267,C0027819,Neuroblastoma,LCH_NW,Neoplastic Process
+268,C0027819,Neuroblastoma,HPO,Neoplastic Process
+269,C0027819,Neuroblastoma,MDR,Neoplastic Process
+272,C0027819,Neuroblastoma,ORPHANET,Neoplastic Process
+273,C0027819,Neuroblastoma,PDQ,Neoplastic Process
+274,C0027819,neuroblastoma,PDQ,Neoplastic Process
+275,C0027819,Neuroblastoma,NCI,Neoplastic Process
+276,C0039194,T cell,AOD,Cell
+277,C0039194,T cell,SNM,Cell
+278,C0039194,T cell,SNMI,Cell
+279,C0039194,t cell,CHV,Cell
+280,C0039194,T cell,SNOMEDCT_US,Cell
+281,C0039194,T Cell,MSH,Cell
+282,C0039194,T Cell,NCI,Cell
+283,C0015161,Eukaryotic Cells,MSH,Cell
+284,C0015161,Eukaryotic cells,LCH,Cell
+285,C0015161,Eukaryotic Cells,MTH,Cell
+286,C0015161,eukaryotic cells,CHV,Cell
+287,C0015161,Eukaryotic cells,LCH_NW,Cell
+288,C0015161,Eukaryotic Cells,NCI,Cell
+289,C0229601,Hematopoietic,SNMI,Functional Concept
+290,C0229601,hematopoietic,CHV,Functional Concept
+291,C0229601,Hematopoietic,NCI,Functional Concept
+292,C0229601,Hematopoietic,MTH,Functional Concept
+293,C1535502,Bronchoalveolar lavage,SNMI,Therapeutic or Preventive Procedure
+294,C1535502,Bronchoalveolar Lavage,MSH,Therapeutic or Preventive Procedure
+295,C1535502,Bronchoalveolar Lavage,NCI,Therapeutic or Preventive Procedure
+296,C1535502,Bronchoalveolar Lavage,MTH,Therapeutic or Preventive Procedure
+297,C1535502,bronchoalveolar lavage,CHV,Therapeutic or Preventive Procedure
+298,C1535502,Bronchoalveolar lavage,LCH_NW,Therapeutic or Preventive Procedure
+299,C1535502,bronchoalveolar lavage,MEDCIN,Therapeutic or Preventive Procedure
+300,C1535502,Bronchoalveolar lavage,MDR,Therapeutic or Preventive Procedure
+301,C0012383,Bronchoalveolar lavage,LNC,Organic Chemical
+302,C0012383,Bronchoalveolar lavage,LNC,Pharmacologic Substance
+303,C1535502,bronchoalveolar lavage,PDQ,Therapeutic or Preventive Procedure
+305,C1535502,bronchoalveolar lavage,CSP,Therapeutic or Preventive Procedure
+307,C0007600,Cell Line,MSH,Cell
+308,C0007600,cell line,CSP,Cell
+309,C0007600,cell line,CHV,Cell
+310,C0007600,Cell Line,NCI,Cell
+311,C0005953,Bone Marrow,MSH,Tissue
+312,C0005953,Bone Marrow,MTH,Tissue
+313,C0005953,Bone Marrow,SNM,Tissue
+314,C0005953,BONE MARROW,SNMI,Tissue
+315,C5441789,Bone marrow,RCD,Tissue
+316,C0005953,Bone marrow,SNM,Tissue
+317,C0005953,Bone marrow,UWDA,Tissue
+318,C0005953,bone marrow,AOD,Tissue
+319,C0005953,bone marrow,CSP,Tissue
+320,C0005953,Bone marrow,FMA,Tissue
+321,C0005953,Bone marrow,ICF,Tissue
+322,C0005953,Bone marrow,ICF-CY,Tissue
+323,C0005953,Bone marrow,LNC,Tissue
+324,C0005953,bone marrow,CHV,Tissue
+325,C0005953,Bone marrow,LCH_NW,Tissue
+326,C0005953,bone marrow,NDDF,Tissue
+328,C0005953,Bone marrow,SNOMEDCT_US,Tissue
+334,C0005953,Bone Marrow,PSY,Tissue
+335,C0005953,Bone Marrow,NCI,Tissue
+336,C0005953,Bone marrow,HL7V2.5,Tissue
+337,C1513143,mesenchymal,CHV,Qualitative Concept
+338,C1513143,Mesenchymal,NCI,Qualitative Concept
+339,C0439677,Myeloid,RCD,Qualitative Concept
+340,C0439677,myeloid,CHV,Qualitative Concept
+341,C0439677,Myeloid,SNOMEDCT_US,Qualitative Concept
+342,C0439677,Myeloid,NCI,Qualitative Concept
+343,C2239176,HEPATOCELLULAR CARCINOMA,CCPSS,Neoplastic Process
+344,C2239176,HEPATOCELLULAR CARCINOMA,DXP,Neoplastic Process
+345,C2239176,HEPATOCELLULAR CARCINOMA,QMR,Neoplastic Process
+346,C2239176,Hepatocellular carcinoma,RCD,Neoplastic Process
+347,C2239176,Hepatocellular carcinoma,SNM,Neoplastic Process
+348,C2239176,hepatocellular carcinoma,AOD,Neoplastic Process
+349,C2239176,hepatocellular carcinoma,CSP,Neoplastic Process
+350,C2239176,Hepatocellular carcinoma,OMIM,Neoplastic Process
+351,C2239176,HEPATOCELLULAR CARCINOMA,OMIM,Neoplastic Process
+352,C2239176,Hepatocellular carcinoma,ICD10CM,Neoplastic Process
+353,C2239176,hepatocellular carcinoma,CHV,Neoplastic Process
+354,C2239176,Hepatocellular Carcinoma,MEDLINEPLUS,Neoplastic Process
+355,C2239176,Hepatocellular carcinoma,MEDLINEPLUS,Neoplastic Process
+356,C2239176,Hepatocellular carcinoma,MDR,Neoplastic Process
+357,C2239176,Hepatocellular carcinoma,HPO,Neoplastic Process
+359,C2239176,Hepatocellular Carcinoma,MSH,Neoplastic Process
+360,C2239176,Hepatocellular carcinoma,SNOMEDCT_US,Neoplastic Process
+362,C2239176,Hepatocellular carcinoma,ORPHANET,Neoplastic Process
+363,C2239176,Hepatocellular Carcinoma,NCI,Neoplastic Process
+364,C2239176,Hepatocellular carcinoma,MTHICD9,Neoplastic Process
+365,C0227525,Hepatocyte,MSH,Cell
+366,C0227525,Hepatocyte,SNM,Cell
+367,C0227525,Hepatocyte,SNMI,Cell
+368,C0227525,hepatocyte,AOD,Cell
+369,C0227525,hepatocyte,CSP,Cell
+370,C0227525,Hepatocyte,FMA,Cell
+371,C0227525,Hepatocyte,LNC,Cell
+372,C0227525,hepatocyte,CHV,Cell
+373,C0227525,Hepatocyte,UWDA,Cell
+374,C0227525,Hepatocyte,SNOMEDCT_US,Cell
+376,C0227525,Hepatocyte,NCI,Cell
+377,C0227525,Hepatocyte,MTH,Cell
+378,C0440102,Various,RCD,"Indicator, Reagent, or Diagnostic Aid"
+379,C3540008,various,ATC,Pharmacologic Substance
+380,C3540766,various,ATC,Pharmacologic Substance
+381,C3540765,various,ATC,Pharmacologic Substance
+382,C3540765,various,ATC,Immunologic Factor
+383,C3540769,various,ATC,Pharmacologic Substance
+384,C3540761,various,ATC,Pharmacologic Substance
+385,C3540763,VARIOUS,ATC,Pharmacologic Substance
+386,C3540762,various,ATC,Pharmacologic Substance
+387,C0014597,Epithelial Cells,MSH,Cell
+388,C0014597,Epithelial cells,RCD,Cell
+389,C0014597,Epithelial Cells,MTH,Cell
+390,C0014597,Epithelial cells,LNC,Cell
+391,C0014597,epithelial cells,CHV,Cell
+393,C0014597,Epithelial cells,LCH_NW,Cell
+395,C0014597,Epithelial Cells,CPM,Cell
+396,C0014597,Epithelial cells,SNOMEDCT_US,Cell
+398,C0014597,Epithelial Cells,PSY,Cell
+399,C0014597,Epithelial Cells,NCI,Cell
+400,C0005955,Bone Marrow Cells,MSH,Cell
+401,C0005955,bone marrow cells,CHV,Cell
+402,C0005955,Bone marrow cells,LCH_NW,Cell
+403,C0439662,Immune,RCD,Finding
+404,C0439662,immune,CHV,Finding
+405,C0439662,Immune,LNC,Finding
+406,C0439662,Immune,SNOMEDCT_US,Finding
+407,C0439662,Immune,MTH,Finding
+408,C0439662,Immune,NCI,Finding
+412,C0004112,Astrocytes,LCH,Cell
+413,C0004112,Astrocytes,MSH,Cell
+414,C0004112,astrocytes,CHV,Cell
+415,C0004112,Astrocytes,OMIM,Cell
+416,C0004112,Astrocytes,LCH_NW,Cell
+417,C0004112,Astrocytes,NCI,Cell
+418,C0004112,Astrocytes,MTH,Cell
+419,C0025202,Melanoma,ICPC2P,Neoplastic Process
+420,C0025202,Melanoma,LCH,Neoplastic Process
+421,C0025202,Melanoma,MSH,Neoplastic Process
+422,C0025202,Melanoma,SNM,Neoplastic Process
+423,C0025202,MELANOMA,COSTAR,Neoplastic Process
+424,C0025202,melanoma,AOD,Neoplastic Process
+425,C0025202,melanoma,BI,Neoplastic Process
+426,C0025202,melanoma,CSP,Neoplastic Process
+427,C0025202,Melanoma,OMIM,Neoplastic Process
+428,C0025202,melanoma,CHV,Neoplastic Process
+429,C0025202,Melanoma,MEDLINEPLUS,Neoplastic Process
+430,C0025202,Melanoma,LCH_NW,Neoplastic Process
+431,C0025202,Melanoma,LNC,Neoplastic Process
+432,C0025202,Melanoma,HPO,Neoplastic Process
+433,C0025202,Melanoma,MDR,Neoplastic Process
+434,C0796561,melanoma,CVX,Pharmacologic Substance
+435,C0796561,melanoma,CVX,Immunologic Factor
+436,C0025202,melanoma,PDQ,Neoplastic Process
+437,C0025202,melanoma,ICPC2ICD10ENG,Neoplastic Process
+438,C0025202,Melanoma,NCI,Neoplastic Process
+439,C0025202,melanoma,MTH,Neoplastic Process
+440,C0796561,melanoma,HL7V2.5,Pharmacologic Substance
+441,C0796561,melanoma,HL7V2.5,Immunologic Factor
+442,C0796561,melanoma,HL7V3.0,Pharmacologic Substance
+443,C0796561,melanoma,HL7V3.0,Immunologic Factor
+444,C0025202,melanoma,ICPC2P,Neoplastic Process
+445,C4086901,gd T Cells,NCI,Cell
+446,C4086901,gd T cells,PDQ,Cell
+447,C0521390,Neuronal,SNMI,Immunologic Factor
+448,C0521390,Neuronal,LNC,Immunologic Factor
+449,C0521390,neuronal,CHV,Immunologic Factor
+451,C0280586,MAIT,PDQ,Therapeutic or Preventive Procedure
+452,C3891065,MAIT Cells,MSH,Cell
+453,C0040300,tissue,AOD,Tissue
+454,C0040300,tissue,CSP,Tissue
+455,C0040300,TISSUE,CCPSS,Tissue
+456,C0040300,Tissue,MSH,Tissue
+457,C0040300,Tissue,UWDA,Tissue
+458,C0040300,Tissue,FMA,Tissue
+459,C0040300,Tissue,LNC,Tissue
+460,C0040300,tissue,CHV,Tissue
+464,C0040300,Tissue,SNOMEDCT_US,Tissue
+466,C0040300,Tissue,NCI,Tissue
+467,C1547928,Tissue,HL7V2.5,Intellectual Product
+468,C0596508,Embryonic Stem Cell,MSH,Cell
+469,C0596508,embryonic stem cell,CSP,Cell
+470,C0596508,Embryonic stem cell,FMA,Cell
+471,C0596508,embryonic stem cell,CHV,Cell
+472,C0596508,Embryonic Stem Cell,NCI,Cell
+473,C0596508,Embryonic stem cell,SNOMEDCT_US,Cell
+474,C1517631,K562,NCI,Cell
+475,C0684249,LUNG CARCINOMA,COSTAR,Neoplastic Process
+476,C0684249,LUNG CARCINOMA,CST,Neoplastic Process
+477,C0684249,lung carcinoma,CHV,Neoplastic Process
+478,C0684249,Lung carcinoma,MDR,Neoplastic Process
+479,C0684249,Lung Carcinoma,PDQ,Neoplastic Process
+480,C0684249,Lung Carcinoma,NCI,Neoplastic Process
+481,C0684249,lung carcinoma,ICPC2P,Neoplastic Process
+482,C0678222,BREAST CARCINOMA,COSTAR,Neoplastic Process
+483,C0678222,BREAST CARCINOMA,CST,Neoplastic Process
+484,C0678222,Breast carcinoma,OMIM,Neoplastic Process
+485,C0678222,breast carcinoma,MEDCIN,Neoplastic Process
+486,C0678222,breast carcinoma,CHV,Neoplastic Process
+487,C0678222,Breast carcinoma,HPO,Neoplastic Process
+488,C0678222,Breast carcinoma,MDR,Neoplastic Process
+489,C0678222,Breast Carcinoma,MSH,Neoplastic Process
+490,C0678222,Breast Carcinoma,MTH,Neoplastic Process
+491,C0678222,Breast Carcinoma,NCI,Neoplastic Process
+492,C0235974,PANCREATIC CARCINOMA,COSTAR,Neoplastic Process
+493,C0235974,Pancreatic carcinoma,OMIM,Neoplastic Process
+494,C0235974,pancreatic carcinoma,MEDCIN,Neoplastic Process
+495,C0235974,pancreatic carcinoma,CHV,Neoplastic Process
+496,C0235974,PANCREATIC CARCINOMA,OMIM,Neoplastic Process
+497,C0235974,Pancreatic carcinoma,MDR,Neoplastic Process
+499,C0235974,Pancreatic carcinoma,SNOMEDCT_VET,Neoplastic Process
+500,C0235974,Pancreatic Carcinoma,MSH,Neoplastic Process
+501,C0235974,Pancreatic carcinoma,MTH,Neoplastic Process
+502,C0235974,Pancreatic Carcinoma,NCI,Neoplastic Process
+503,C0558353,TONGUE CARCINOMA,COSTAR,Neoplastic Process
+504,C0558353,tongue carcinoma,CHV,Neoplastic Process
+505,C0558353,Tongue carcinoma,SNOMEDCT_US,Neoplastic Process
+506,C0558353,Tongue Carcinoma,MTH,Neoplastic Process
+507,C0558353,Tongue Carcinoma,NCI,Neoplastic Process
+508,C0558355,Tonsil carcinoma,RCD,Neoplastic Process
+509,C0558355,tonsil carcinoma,CHV,Neoplastic Process
+510,C0558355,Tonsil carcinoma,SNOMEDCT_US,Neoplastic Process
+511,C0558355,Tonsil Carcinoma,NCI,Neoplastic Process
+512,C0017636,Glioblastoma,ICPC2P,Neoplastic Process
+513,C0017636,Glioblastoma,MDR,Neoplastic Process
+514,C0017636,Glioblastoma,MSH,Neoplastic Process
+515,C0017636,Glioblastoma,RCD,Neoplastic Process
+516,C0017636,Glioblastoma,SNM,Neoplastic Process
+517,C0017636,Glioblastoma,OMIM,Neoplastic Process
+518,C0017636,glioblastoma,CHV,Neoplastic Process
+521,C1621958,Glioblastoma,HPO,Neoplastic Process
+522,C1621958,Glioblastoma,SNOMEDCT_US,Neoplastic Process
+523,C1621958,Glioblastoma,ORPHANET,Neoplastic Process
+524,C0017636,Glioblastoma,MTH,Neoplastic Process
+525,C1621958,Glioblastoma,NCI,Neoplastic Process
+526,C0017636,glioblastoma,CSP,Neoplastic Process
+527,C0017636,glioblastoma,ICPC2P,Neoplastic Process
+554,C0699885,BLADDER CARCINOMA,COSTAR,Neoplastic Process
+555,C0699885,BLADDER CARCINOMA,CST,Neoplastic Process
+556,C0699885,BLADDER CARCINOMA,DXP,Neoplastic Process
+557,C0699885,BLADDER CARCINOMA,WHO,Neoplastic Process
+558,C0699885,Bladder carcinoma,OMIM,Neoplastic Process
+559,C0699885,bladder carcinoma,MEDCIN,Neoplastic Process
+560,C0699885,bladder carcinoma,CHV,Neoplastic Process
+561,C0699885,Bladder carcinoma,HPO,Neoplastic Process
+562,C0699885,Bladder carcinoma,MDR,Neoplastic Process
+563,C0699885,Bladder Carcinoma,NCI,Neoplastic Process
+564,C0596155,basal cells,CHV,Cell
+565,C0596155,Basal Cells,NCI,Cell
+566,C0004561,B-lymphocyte,FMA,Cell
+567,C0004561,b-lymphocyte,CHV,Cell
+568,C0004561,B-Lymphocyte,MSH,Cell
+569,C0004561,B-Lymphocyte,NCI,Cell
+570,C0431085,Tumor cells,RCDAE,Cell
+571,C0431085,Tumor cells,SNM,Cell
+572,C5551176,tumor cells,CHV,Cell
+573,C5551176,Tumor cells,SNOMEDCT_US,Cell
+574,C5551176,Tumor cells,MTH,Cell
+575,C0887899,Myeloid Cells,MTH,Cell
+576,C0887899,Myeloid cells,LNC,Cell
+577,C0887899,myeloid cells,CHV,Cell
+578,C0887899,Myeloid Cells,MSH,Cell
+580,C0887899,Myeloid Cells,NCI,Cell
+581,C0024432,Macrophages,LCH,Cell
+582,C0024432,Macrophages,MSH,Cell
+583,C0024432,Macrophages,LNC,Cell
+584,C0024432,macrophages,CHV,Cell
+586,C0024432,Macrophages,LCH_NW,Cell
+588,C0024432,Macrophages,NCI,Cell
+589,C1550652,Macrophages,HL7V3.0,Body Substance
+590,C0024432,Macrophages,HL7V2.5,Cell
+591,C1546706,Macrophages,HL7V2.5,Intellectual Product
+592,C0023516,Leukocyte,MSH,Cell
+593,C0023516,Leukocyte,SNM,Cell
+594,C0023516,leukocyte,CSP,Cell
+595,C0023516,Leukocyte,FMA,Cell
+596,C0023516,leukocyte,CHV,Cell
+597,C0023516,Leukocyte,SNOMEDCT_US,Cell
+598,C0023516,Leukocyte,NCI,Cell
+599,C0039215,CD4+ T Cell,NCI,Cell
+600,C0334227,cancer cells,CHV,Cell
+601,C0795907,CAFS,OMIM,Disease or Syndrome
+602,C2699751,CAFS,NCI,Gene or Genome
+603,C4277548,CAFs,NCI,Cell
+604,C0022567,Keratinocyte,MSH,Cell
+605,C0022567,Keratinocyte,SNM,Cell
+606,C0022567,Keratinocyte,SNMI,Cell
+607,C0022567,keratinocyte,CSP,Cell
+608,C0022567,Keratinocyte,FMA,Cell
+609,C0022567,keratinocyte,CHV,Cell
+610,C0022567,Keratinocyte,UWDA,Cell
+611,C0022567,Keratinocyte,SNOMEDCT_US,Cell
+612,C0022567,Keratinocyte,NCI,Cell
+613,C0022567,keratinocyte,MTH,Cell
+614,C1956385,Plasmacytoid Dendritic Cells,MSH,Cell
+615,C1956385,Plasmacytoid Dendritic Cells,MTH,Cell
+616,C0004561,B cell,AOD,Cell
+617,C0004561,B cell,SNM,Cell
+618,C0004561,B cell,SNMI,Cell
+619,C0004561,b cell,CHV,Cell
+620,C0004561,B cell,SNOMEDCT_US,Cell
+621,C0004561,B Cell,NCI,Cell
+622,C0032112,Plasma Cells,MSH,Cell
+623,C0032112,Plasma cells,LCH,Cell
+624,C0032112,Plasma cells,LNC,Cell
+625,C0032112,plasma cells,CHV,Cell
+627,C0032112,Plasma cells,LCH_NW,Cell
+628,C0032112,Plasma Cells,CPM,Cell
+630,C0032112,Plasma Cells,MTH,Cell
+631,C0032112,Plasma Cells,NCI,Cell
+632,C0023449,ALL,CSP,Neoplastic Process
+633,C0023449,ALL,DXP,Neoplastic Process
+634,C0444868,All,MTH,Quantitative Concept
+635,C0444868,All,RCD,Quantitative Concept
+636,C0444868,All,SNMI,Quantitative Concept
+637,C1704799,ALL,NCI,Gene or Genome
+638,C0444868,All,NCI,Quantitative Concept
+639,C1961102,ALL,OMIM,Neoplastic Process
+640,C0444868,all,CHV,Quantitative Concept
+641,C0444868,all,HL7V3.0,Quantitative Concept
+642,C0812385,ALL,HGNC,Gene or Genome
+643,C0023449,ALL,MEDLINEPLUS,Neoplastic Process
+645,C3539085,All,SNOMEDCT_US,Idea or Concept
+646,C0444868,All,LNC,Quantitative Concept
+647,C0444868,All,HPO,Quantitative Concept
+648,C1961102,ALL,ORPHANET,Neoplastic Process
+649,C0023449,ALL,PDQ,Neoplastic Process
+650,C0105421,ALL,NCI,"Amino Acid, Peptide, or Protein"
+651,C0105421,ALL,NCI,Enzyme
+652,C1552816,all,HL7V3.0,Intellectual Product
+653,C1552837,all,HL7V3.0,Idea or Concept
+654,C0023467,AML,CSP,Neoplastic Process
+655,C0023467,AML,DXP,Neoplastic Process
+656,C0023467,AML,OMIM,Neoplastic Process
+657,C0023467,aml,BI,Neoplastic Process
+658,C0023467,aml,CHV,Neoplastic Process
+659,C0023467,AML,MEDLINEPLUS,Neoplastic Process
+661,C0023467,AML,HPO,Neoplastic Process
+662,C0023467,AML,ORPHANET,Neoplastic Process
+663,C0023467,AML,PDQ,Neoplastic Process
+664,C0279543,CML,CSP,Neoplastic Process
+665,C0279543,CML,DXP,Neoplastic Process
+666,C1704799,CML,NCI,Gene or Genome
+667,C0279543,CML,OMIM,Neoplastic Process
+668,C0279543,cml,BI,Neoplastic Process
+669,C0279543,cml,CHV,Neoplastic Process
+670,C0812385,CML,HGNC,Gene or Genome
+671,C0279543,CML,MEDLINEPLUS,Neoplastic Process
+673,C0279543,CML,MDR,Neoplastic Process
+674,C0279543,CML,ORPHANET,Neoplastic Process
+675,C0279543,CML,PDQ,Neoplastic Process
+676,C0105421,CML,NCI,"Amino Acid, Peptide, or Protein"
+677,C0105421,CML,NCI,Enzyme
+678,C1640380,Bone Marrow Stromal Cells,MSH,Cell
+679,C1640380,Bone Marrow Stromal Cells,MTH,Cell
+680,C0225336,endothelial cells,CHV,Cell
+681,C0225336,Endothelial cells,LCH_NW,Cell
+682,C0225336,Endothelial Cells,MSH,Cell
+683,C0225336,Endothelial Cells,NCI,Cell
+684,C0334227,cancer cell,CSP,Cell
+685,C0334227,cancer cell,CHV,Cell
+686,C0334227,Cancer Cell,NCI,Cell
+687,C0025149,Medulloblastoma,LCH,Neoplastic Process
+688,C0025149,Medulloblastoma,MDR,Neoplastic Process
+689,C0025149,Medulloblastoma,MSH,Neoplastic Process
+690,C0025149,Medulloblastoma,RCD,Neoplastic Process
+691,C0025149,Medulloblastoma,SNM,Neoplastic Process
+692,C0025149,medulloblastoma,AOD,Neoplastic Process
+693,C0025149,medulloblastoma,CSP,Neoplastic Process
+694,C0025149,Medulloblastoma,OMIM,Neoplastic Process
+695,C0025149,MEDULLOBLASTOMA,OMIM,Neoplastic Process
+696,C0025149,Medulloblastoma,MTH,Neoplastic Process
+697,C0025149,Medulloblastoma,SNOMEDCT_US,Neoplastic Process
+698,C0025149,medulloblastoma,CHV,Neoplastic Process
+699,C0025149,Medulloblastoma,LCH_NW,Neoplastic Process
+700,C0025149,medulloblastoma,MEDCIN,Neoplastic Process
+702,C0025149,Medulloblastoma,HPO,Neoplastic Process
+706,C0025149,Medulloblastoma,ORPHANET,Neoplastic Process
+708,C0025149,Medulloblastoma,NCI,Neoplastic Process
+709,C2717959,Induced Pluripotent Stem Cells,MSH,Cell
+710,C0596508,Embryonic Stem Cells,MSH,Cell
+711,C0596508,Embryonic stem cells,LCH_NW,Cell
+712,C0596508,Embryonic Stem Cells,NCI,Cell
+713,C0006104,Brain,LCH,"Body Part, Organ, or Organ Component"
+714,C0006104,Brain,MSH,"Body Part, Organ, or Organ Component"
+715,C0006104,Brain,MTH,"Body Part, Organ, or Organ Component"
+716,C0006104,Brain,RCD,"Body Part, Organ, or Organ Component"
+717,C0006104,Brain,SNM,"Body Part, Organ, or Organ Component"
+718,C0006104,Brain,UWDA,"Body Part, Organ, or Organ Component"
+719,C0006104,BRAIN,CCPSS,"Body Part, Organ, or Organ Component"
+720,C0006104,brain,AOD,"Body Part, Organ, or Organ Component"
+721,C0006104,brain,CSP,"Body Part, Organ, or Organ Component"
+722,C0006104,Brain,FMA,"Body Part, Organ, or Organ Component"
+723,C0006104,Brain,LNC,"Body Part, Organ, or Organ Component"
+724,C0006104,brain,CHV,"Body Part, Organ, or Organ Component"
+725,C0006104,brain,NEU,"Body Part, Organ, or Organ Component"
+727,C0006104,Brain,LCH_NW,"Body Part, Organ, or Organ Component"
+729,C0006104,Brain,SNOMEDCT_US,"Body Part, Organ, or Organ Component"
+730,C4266577,Brain,LNC,"Body Part, Organ, or Organ Component"
+732,C0006104,Brain,PSY,"Body Part, Organ, or Organ Component"
+733,C0006104,Brain,NCI,"Body Part, Organ, or Organ Component"
+734,C0006104,Brain,HL7V2.5,"Body Part, Organ, or Organ Component"
+735,C0205430,Mixed,RCD,Functional Concept
+736,C0205430,Mixed,SNMI,Functional Concept
+737,C0205430,mixed,CHV,Functional Concept
+738,C0205430,Mixed,LNC,Functional Concept
+739,C0205430,Mixed,SNOMEDCT_US,Functional Concept
+740,C0205430,Mixed,NCI,Functional Concept
+741,C3160715,Mixed,NCI,Finding
+742,C0029250,Organoid,MSH,Tissue
+743,C0029250,organoid,CHV,Tissue
+744,C0029250,Organoid,NCI,Tissue
+773,C0018956,HSCs,NCI,Cell
+774,C0302592,CERVICAL CARCINOMA,COSTAR,Neoplastic Process
+775,C0302592,Cervical carcinoma,OMIM,Neoplastic Process
+776,C0302592,cervical carcinoma,MEDCIN,Neoplastic Process
+777,C0302592,cervical carcinoma,CHV,Neoplastic Process
+778,C0302592,Cervical Carcinoma,NCI,Neoplastic Process
+779,C0003323,CD4,CCPSS,"Amino Acid, Peptide, or Protein"
+780,C0003323,CD4,CCPSS,Immunologic Factor
+781,C0003323,CD4,CCPSS,Receptor
+782,C1332714,CD4,OMIM,Gene or Genome
+783,C0003323,CD4,LNC,"Amino Acid, Peptide, or Protein"
+784,C0003323,CD4,LNC,Immunologic Factor
+785,C0003323,CD4,LNC,Receptor
+786,C0003323,cd4,CHV,"Amino Acid, Peptide, or Protein"
+787,C0003323,cd4,CHV,Immunologic Factor
+788,C0003323,cd4,CHV,Receptor
+789,C1332714,CD4,HGNC,Gene or Genome
+796,C4048280,CD4,NCI,"Amino Acid, Peptide, or Protein"
+797,C4048280,CD4,NCI,Biologically Active Substance
+798,C1332714,CD4,NCI,Gene or Genome
+799,C1413206,CD19,OMIM,Gene or Genome
+800,C0108748,CD19,LNC,"Amino Acid, Peptide, or Protein"
+801,C0108748,CD19,LNC,Immunologic Factor
+804,C1413206,CD19,HGNC,Gene or Genome
+811,C1413206,CD19,NCI,Gene or Genome
+812,C4316926,CD19,NCI,"Amino Acid, Peptide, or Protein"
+813,C4316926,CD19,NCI,Immunologic Factor
+814,C1367477,CD14,OMIM,Gene or Genome
+815,C0108768,CD14,LNC,"Amino Acid, Peptide, or Protein"
+816,C0108768,CD14,LNC,Immunologic Factor
+817,C0108768,CD14,LNC,Receptor
+818,C1367477,CD14,HGNC,Gene or Genome
+825,C5197485,CD14,NCI,"Amino Acid, Peptide, or Protein"
+826,C5197485,CD14,NCI,Biologically Active Substance
+827,C1367477,CD14,NCI,Gene or Genome
+828,C1706438,CD8,NCI,Gene or Genome
+829,C1413244,CD8,OMIM,Gene or Genome
+830,C0085358,CD8,LNC,Immunologic Factor
+831,C3540595,CD8,NCI,Gene or Genome
+833,C0085358,CD8,NCI,Immunologic Factor
+834,C1413244,CD8,HGNC,Gene or Genome
+836,C2587213,CONTROL,CCPSS,Functional Concept
+837,C0308718,CONTROL,SNMI,Pharmacologic Substance
+838,C2587213,Control,LCH,Functional Concept
+839,C0728976,Control,MMSL,Organic Chemical
+840,C0728976,Control,MMSL,Pharmacologic Substance
+841,C2587213,Control,RCD,Functional Concept
+842,C0009932,Control,NCI,Group
+843,C1882979,Control,NCI,Conceptual Entity
+844,C2587213,Control,NCI,Functional Concept
+845,C0308718,CONTROL,CHV,Pharmacologic Substance
+846,C3274648,Control,NCI,Qualitative Concept
+847,C1882979,Control,LNC,Conceptual Entity
+848,C2587213,Control,SNOMEDCT_US,Functional Concept
+850,C1550141,Control,HL7V2.5,Substance
+851,C1547100,Control,HL7V2.5,Idea or Concept
+852,C0243148,control,MSH,Qualitative Concept
+853,C2717959,iPSC,NCI,Cell
+854,C1515186,Gamma Delta T Cell,NCI,Cell
+855,C1512944,Gamma Delta T Cell,MSH,Cell
+856,C2350249,Hemogenic Endothelial Cells,MSH,Cell
+861,C0026473,Monocyte,RCD,Cell
+862,C0026473,Monocyte,SNM,Cell
+863,C0026473,monocyte,AOD,Cell
+864,C0026473,monocyte,CSP,Cell
+865,C0026473,Monocyte,FMA,Cell
+866,C0026473,monocyte,CHV,Cell
+867,C0026473,Monocyte,MSH,Cell
+868,C0026473,Monocyte,SNOMEDCT_US,Cell
+869,C0026473,Monocyte,LNC,Cell
+872,C0026473,Monocyte,NCI,Cell
+875,C1123023,Skin,LCH,Body System
+876,C1123023,Skin,MSH,Body System
+877,C1123023,Skin,MTH,Body System
+879,C1123023,Skin,RCD,Body System
+880,C1123023,Skin,SNM,Body System
+881,C1123023,Skin,UWDA,Body System
+882,C1123023,skin,AOD,Body System
+883,C1123023,skin,CSP,Body System
+884,C1123023,SKIN,CCPSS,Body System
+885,C1123023,SKIN,ICPC,Body System
+886,C1123023,SKIN,SNMI,Body System
+887,C4520765,Skin,OMIM,Body System
+888,C1123023,Skin,OMS,Body System
+889,C1123023,Skin,FMA,Body System
+890,C1123023,Skin,LNC,Body System
+891,C1123023,skin,CHV,Body System
+894,C1123023,Skin,LCH_NW,Body System
+896,C1123023,Skin,SNOMEDCT_US,Body System
+899,C4520765,Skin,NCI,Body System
+900,C1546781,Skin,HL7V2.5,Intellectual Product
+901,C0444099,Skin,HL7V3.0,Body Substance
+902,C3179121,Human Umbilical Vein Endothelial Cells,MSH,Cell
+903,C0038250,Stem Cells,MSH,Cell
+904,C0038250,Stem cells,LCH,Cell
+905,C0038250,stem cells,CHV,Cell
+906,C0038250,Stem Cells,MEDLINEPLUS,Cell
+907,C0038250,Stem cells,LCH_NW,Cell
+908,C0038250,Stem cells,MTH,Cell
+909,C0038250,Stem Cells,NCI,Cell
+910,C0242697,myotubes,CHV,Cell
+911,C1704336,Myotubes,MSH,Cell
+917,C0225336,Endothelial cell,SNM,Cell
+918,C0225336,Endothelial cell,SNMI,Cell
+919,C0225336,Endothelial cell,UWDA,Cell
+920,C0225336,endothelial cell,AOD,Cell
+921,C0225336,Endothelial cell,FMA,Cell
+922,C0225336,Endothelial cell,LNC,Cell
+923,C0225336,endothelial cell,CHV,Cell
+924,C0225336,Endothelial Cell,MSH,Cell
+925,C0225336,Endothelial cell,SNOMEDCT_US,Cell
+927,C0225336,Endothelial Cell,NCI,Cell
+928,C2350467,iNKT Cells,MSH,Cell
+929,C0027912,neuroendocrine,CHV,Body System
+930,C0027912,Neuroendocrine,NCI,Body System
+931,C0806987,Mononuclear cells,LNC,Cell
+932,C0806987,mononuclear cells,CHV,Cell
+934,C0806987,Mononuclear cells,MTH,Cell
+936,C2349200,Pooled,NCI,Functional Concept
+937,C1709595,Pooled,NCI,Body Substance
+938,C2350331,Retinal Neurons,MSH,Cell
+939,C0225369,Chondrocyte,MSH,Cell
+940,C0225369,Chondrocyte,SNM,Cell
+941,C0225369,Chondrocyte,SNMI,Cell
+942,C0225369,Chondrocyte,UWDA,Cell
+943,C0225369,chondrocyte,AOD,Cell
+944,C0225369,chondrocyte,CSP,Cell
+945,C0225369,Chondrocyte,SNOMEDCT_US,Cell
+946,C0225369,Chondrocyte,FMA,Cell
+947,C0225369,Chondrocyte,MTH,Cell
+948,C0225369,chondrocyte,CHV,Cell
+950,C0225369,Chondrocyte,NCI,Cell
+951,C4527316,CAR T Cell,NCI,Cell
+978,C1837610,IPS,OMIM,Disease or Syndrome
+979,C1968833,IPS,HGNC,Gene or Genome
+980,C1019118,Ips,NCBI,Eukaryote
+981,C3811063,IPS,NCI,Gene or Genome
+982,C1968833,IPS,OMIM,Gene or Genome
+983,C1837610,IPS,ORPHANET,Disease or Syndrome
+984,C3178844,Mesenchymal Stromal Cells,MSH,Cell
+985,C5401498,Mesenchymal Stromal Cells,DRUGBANK,Cell
+986,C3178844,Mesenchymal Stromal Cells,MTH,Cell
+994,C1257975,mesenchymal stem cells,CHV,Cell
+995,C1257975,Mesenchymal stem cells,LCH_NW,Cell
+996,C1257975,Mesenchymal Stem Cells,MTH,Cell
+997,C1257975,Mesenchymal Stem Cells,MSH,Cell
+998,C1257975,mesenchymal stem cells,PDQ,Cell
+1006,C0014597,Epithelial Cell,MSH,Cell
+1007,C0014597,epithelial cell,AOD,Cell
+1008,C0014597,Epithelial cell,FMA,Cell
+1009,C0014597,epithelial cell,CHV,Cell
+1010,C0014597,Epithelial cell,UWDA,Cell
+1011,C0014597,Epithelial cell,SNOMEDCT_US,Cell
+1012,C0014597,Epithelial Cell,NCI,Cell
+1013,C0022567,Keratinocytes,MSH,Cell
+1014,C0022567,keratinocytes,CHV,Cell
+1015,C0022567,Keratinocytes,LCH_NW,Cell
+1016,C0022567,Keratinocytes,NCI,Cell
+1017,C0028977,Omentum,LCH,"Body Part, Organ, or Organ Component"
+1018,C0028977,Omentum,MSH,"Body Part, Organ, or Organ Component"
+1019,C0028977,Omentum,RCD,"Body Part, Organ, or Organ Component"
+1020,C0028977,Omentum,SNM,"Body Part, Organ, or Organ Component"
+1021,C0028977,Omentum,UWDA,"Body Part, Organ, or Organ Component"
+1022,C0028977,OMENTUM,SNMI,"Body Part, Organ, or Organ Component"
+1023,C0028977,omentum,AOD,"Body Part, Organ, or Organ Component"
+1024,C0028977,omentum,CSP,"Body Part, Organ, or Organ Component"
+1025,C0028977,Omentum,FMA,"Body Part, Organ, or Organ Component"
+1026,C0028977,omentum,CHV,"Body Part, Organ, or Organ Component"
+1027,C0028977,Omentum,LCH_NW,"Body Part, Organ, or Organ Component"
+1028,C0028977,Omentum,SNOMEDCT_US,"Body Part, Organ, or Organ Component"
+1029,C0028977,Omentum,MTH,"Body Part, Organ, or Organ Component"
+1030,C0028977,Omentum,NCI,"Body Part, Organ, or Organ Component"
+1031,C0028977,Omentum,HL7V2.5,"Body Part, Organ, or Organ Component"
+1032,C0024264,Lymphocyte,MSH,Cell
+1033,C0024264,Lymphocyte,RCD,Cell
+1034,C0024264,Lymphocyte,SNM,Cell
+1035,C0024264,lymphocyte,AOD,Cell
+1036,C0024264,lymphocyte,CSP,Cell
+1037,C0024264,Lymphocyte,FMA,Cell
+1038,C0024264,Lymphocyte,LNC,Cell
+1039,C0024264,lymphocyte,CHV,Cell
+1040,C0024264,Lymphocyte,SNOMEDCT_US,Cell
+1042,C0024264,Lymphocyte,NCI,Cell
+1043,C0024264,Lymphocyte,MTH,Cell
+1064,C0023467,Acute myeloid leukemia,ICD10AE,Neoplastic Process
+1065,C0023467,Acute myeloid leukemia,ICD10AMAE,Neoplastic Process
+1067,C0023467,Acute myeloid leukemia,RCDAE,Neoplastic Process
+1068,C0023467,Acute myeloid leukemia,RCDSA,Neoplastic Process
+1069,C0023467,Acute myeloid leukemia,SNM,Neoplastic Process
+1070,C0023467,Acute myeloid leukemia,SNMI,Neoplastic Process
+1071,C0023467,acute myeloid leukemia,CSP,Neoplastic Process
+1072,C0023467,Acute myeloid leukemia,OMIM,Neoplastic Process
+1073,C0023467,acute myeloid leukemia,CHV,Neoplastic Process
+1074,C0023467,Acute Myeloid Leukemia,MEDLINEPLUS,Neoplastic Process
+1075,C0023467,Acute myeloid leukemia,LCH_NW,Neoplastic Process
+1076,C0023467,Acute myeloid leukemia,HPO,Neoplastic Process
+1077,C0023467,Acute myeloid leukemia,MDR,Neoplastic Process
+1078,C0023467,Acute Myeloid Leukemia,MSH,Neoplastic Process
+1080,C0023467,Acute myeloid leukemia,SNOMEDCT_US,Neoplastic Process
+1081,C0023467,Acute myeloid leukemia,LNC,Neoplastic Process
+1083,C0023467,Acute myeloid leukemia,ORPHANET,Neoplastic Process
+1084,C0023467,acute myeloid leukemia,MEDCIN,Neoplastic Process
+1088,C0023467,acute myeloid leukemia,PDQ,Neoplastic Process
+1089,C0023467,Acute Myeloid Leukemia,NCI,Neoplastic Process
+1090,C0023467,acute myeloid leukemia,ICPC2P,Neoplastic Process
+1091,C0027651,Tumor,MTHMST,Neoplastic Process
+1092,C0027651,Tumor,RCDAE,Neoplastic Process
+1093,C0027651,Tumor,SNM,Neoplastic Process
+1094,C0027651,TUMOR,CCPSS,Neoplastic Process
+1095,C0027651,TUMOR,COSTAR,Neoplastic Process
+1096,C0027651,tumor,AOD,Neoplastic Process
+1097,C0027651,tumor,CSP,Neoplastic Process
+1098,C0027651,Tumor,LNC,Neoplastic Process
+1099,C0027651,tumor,CHV,Neoplastic Process
+1100,C3273930,Tumor,NCI,Finding
+1101,C0027651,Tumor,MEDLINEPLUS,Neoplastic Process
+1105,C0027651,Tumor,NANDA-I,Neoplastic Process
+1107,C0027651,Tumor,HPO,Neoplastic Process
+1108,C0027651,Tumor,SNOMEDCT_US,Neoplastic Process
+1109,C0027651,Tumor,MDR,Neoplastic Process
+1111,C0027651,Tumor,MSH,Neoplastic Process
+1112,C1578706,Tumor,HL7V2.5,Intellectual Product
+1113,C0007634,Cells,LCH,Cell
+1114,C0007634,Cells,MSH,Cell
+1115,C0007634,Cells,MTH,Cell
+1116,C0007634,Cells,LNC,Cell
+1117,C0007634,cells,CHV,Cell
+1119,C0007634,cells,LNC,Cell
+1120,C0007634,Cells,LCH_NW,Cell
+1124,C0007634,Cells,NCI,Cell
+1125,C0026367,Molar,MSH,"Body Part, Organ, or Organ Component"
+1126,C0347982,Molar,RCD,Quantitative Concept
+1127,C0026367,molar,CSP,"Body Part, Organ, or Organ Component"
+1128,C0347982,Molar,NCI,Quantitative Concept
+1129,C0026367,molar,CHV,"Body Part, Organ, or Organ Component"
+1130,C0347982,molar,CHV,Quantitative Concept
+1131,C0347982,Molar,SNOMEDCT_US,Quantitative Concept
+1132,C0026367,Molar,HL7V2.5,"Body Part, Organ, or Organ Component"
+1137,C0006826,Cancer,ICPC2P,Neoplastic Process
+1138,C0006826,Cancer,LCH,Neoplastic Process
+1139,C0998265,Cancer,NCBI,Eukaryote
+1140,C0006826,Cancer,RCD,Neoplastic Process
+1141,C0006826,Cancer,SNM,Neoplastic Process
+1142,C0006826,Cancer,SNMI,Neoplastic Process
+1143,C0006826,CANCER,CCPSS,Neoplastic Process
+1144,C0006826,CANCER,CST,Neoplastic Process
+1145,C0006826,CANCER,DXP,Neoplastic Process
+1146,C0006826,cancer,AOD,Neoplastic Process
+1147,C0006826,Cancer,LNC,Neoplastic Process
+1150,C0006826,cancer,CHV,Neoplastic Process
+1151,C0006826,Cancer,MEDLINEPLUS,Neoplastic Process
+1152,C2707253,Cancer,LNC,Clinical Attribute
+1154,C0006826,Cancer,LCH_NW,Neoplastic Process
+1156,C0006826,Cancer,HPO,Neoplastic Process
+1157,C0006826,Cancer,MDR,Neoplastic Process
+1158,C0006826,Cancer,NANDA-I,Neoplastic Process
+1160,C0006826,cancer,MEDCIN,Neoplastic Process
+1161,C0006826,Cancer,SNOMEDCT_US,Neoplastic Process
+1162,C0006826,Cancer,PDQ,Neoplastic Process
+1163,C0006826,Cancer,OMIM,Neoplastic Process
+1168,C0006826,cancer,CSP,Neoplastic Process
+1169,C0006826,Cancer,NCI,Neoplastic Process
+1170,C0006826,Cancer,MSH,Neoplastic Process
+1171,C1547140,Cancer,HL7V2.5,Biomedical Occupation or Discipline
+1172,C0006826,cancer,ICPC2P,Neoplastic Process
+1173,C0023516,White blood cells,RCD,Cell
+1174,C0023516,white blood cells,CHV,Cell
+1175,C0023516,White blood cells,MDR,Cell
+1176,C0023516,White Blood Cells,MSH,Cell
+1177,C0023516,White blood cells,SNOMEDCT_US,Cell
+1178,C0023516,White blood cells,LNC,Cell
+1179,C0023516,White Blood Cells,PSY,Cell
+1180,C0023516,White Blood Cells,NCI,Cell
+1181,C1171346,human embryonic stem cell,CHV,Cell
+1182,C1171346,human embryonic stem cell,CSP,Cell
+1183,C1171346,Human Embryonic Stem Cell,MSH,Cell
+1184,C0001675,Adult,MSH,Age Group
+1185,C0001675,Adult,RCD,Age Group
+1186,C1706450,Adult,NCI,Population Group
+1187,C0001675,Adult,MTH,Age Group
+1188,C0001675,adult,AOD,Age Group
+1189,C0001675,adult,CHV,Age Group
+1190,C0001675,Adult,LNC,Age Group
+1191,C0001675,Adult,SNOMEDCT_US,Age Group
+1192,C0001675,Adult,NCI,Age Group
+1193,C0521457,Fetal,SNMI,Functional Concept
+1194,C0015965,Fetal,NCI,Embryonic Structure
+1195,C0521457,Fetal,MTH,Functional Concept
+1196,C0521457,fetal,CSP,Functional Concept
+1197,C0521457,FETAL,CCPSS,Functional Concept
+1198,C0033052,Fetal,LNC,Health Care Activity
+1199,C0027882,Neuron,MSH,Cell
+1200,C0027882,Neuron,SNM,Cell
+1201,C0027882,neuron,AOD,Cell
+1202,C0027882,neuron,CSP,Cell
+1203,C0027882,Neuron,FMA,Cell
+1204,C0027882,neuron,CHV,Cell
+1205,C0027882,Neuron,SNOMEDCT_US,Cell
+1206,C0027882,Neuron,NCI,Cell
+1207,C0023440,Erythroleukemia,ICD10AMAE,Neoplastic Process
+1208,C0023440,Erythroleukemia,RCDAE,Neoplastic Process
+1209,C0023440,Erythroleukemia,RCDSA,Neoplastic Process
+1210,C0023440,Erythroleukemia,SNM,Neoplastic Process
+1211,C0023440,Erythroleukemia,SNMI,Neoplastic Process
+1212,C0023440,ERYTHROLEUKEMIA,CST,Neoplastic Process
+1213,C0023440,ERYTHROLEUKEMIA,DXP,Neoplastic Process
+1214,C0023440,ERYTHROLEUKEMIA,QMR,Neoplastic Process
+1215,C0023440,ERYTHROLEUKEMIA,WHO,Neoplastic Process
+1216,C0023440,erythroleukemia,CSP,Neoplastic Process
+1217,C0023440,erythroleukemia,MEDCIN,Neoplastic Process
+1218,C0023440,Erythroleukemia,ICD10CM,Neoplastic Process
+1219,C0023440,erythroleukemia,CHV,Neoplastic Process
+1220,C0023440,Erythroleukemia,MSH,Neoplastic Process
+1221,C0023440,Erythroleukemia,SNOMEDCT_US,Neoplastic Process
+1223,C0023440,Erythroleukemia,OMIM,Neoplastic Process
+1224,C0023440,Erythroleukemia,MDR,Neoplastic Process
+1225,C0023440,Erythroleukemia,ORPHANET,Neoplastic Process
+1226,C0023440,erythroleukemia,ICPC2ICD10ENG,Neoplastic Process
+1227,C4520840,Erythroleukemia,NCI,Neoplastic Process
+1234,C1507178,CD8+CD95+ cells,LNC,Cell
+1235,C1507176,CD4+CD95+ cells,LNC,Cell
+1258,C0205307,Normal,RCD,Qualitative Concept
+1259,C0205307,Normal,SNMI,Qualitative Concept
+1260,C1873497,Normal,OMIM,Finding
+1261,C1704701,Normal,NCI,Quantitative Concept
+1262,C0205307,NORMAL,CCPSS,Qualitative Concept
+1263,C0205307,Normal,LNC,Qualitative Concept
+1264,C0205307,normal,CHV,Qualitative Concept
+1266,C1553406,normal,HL7V3.0,Qualitative Concept
+1267,C0205307,Normal,SNOMEDCT_US,Qualitative Concept
+1269,C0205307,Normal,NCI,Qualitative Concept
+1270,C0205307,Normal,MTH,Qualitative Concept
+1271,C0205307,Normal,HL7V2.5,Qualitative Concept
+1272,C1550457,Normal,HL7V3.0,Finding
+1273,C1551394,Normal,HL7V3.0,Finding
+1275,C1550469,normal,HL7V3.0,Idea or Concept
+1276,C1553386,normal,HL7V3.0,Intellectual Product
+1277,C1553399,normal,HL7V3.0,Idea or Concept
+1278,C1553402,normal,HL7V3.0,Idea or Concept
+1280,C0281361,Pancreatic adenocarcinoma,OMIM,Neoplastic Process
+1281,C0281361,pancreatic adenocarcinoma,CHV,Neoplastic Process
+1282,C0281361,Pancreatic adenocarcinoma,SNOMEDCT_VET,Neoplastic Process
+1283,C0281361,Pancreatic adenocarcinoma,SNOMEDCT_US,Neoplastic Process
+1284,C0281361,Pancreatic adenocarcinoma,HPO,Neoplastic Process
+1285,C0281361,Pancreatic adenocarcinoma,MDR,Neoplastic Process
+1286,C0281361,pancreatic adenocarcinoma,PDQ,Neoplastic Process
+1287,C0281361,Pancreatic Adenocarcinoma,NCI,Neoplastic Process
+1288,C0014609,Epithelium,LCH,Tissue
+1289,C0014609,Epithelium,MSH,Tissue
+1290,C0014609,Epithelium,SNM,Tissue
+1291,C0014609,Epithelium,UWDA,Tissue
+1292,C0014609,epithelium,AOD,Tissue
+1293,C0014609,epithelium,CSP,Tissue
+1294,C0014609,Epithelium,FMA,Tissue
+1295,C0014609,epithelium,CHV,Tissue
+1296,C0014609,Epithelium,LCH_NW,Tissue
+1297,C0014609,Epithelium,SNOMEDCT_US,Tissue
+1298,C0014609,Epithelium,PSY,Tissue
+1299,C0014609,Epithelium,NCI,Tissue
+1300,C0682540,spindle cell,AOD,Cell
+1301,C0682540,spindle cell,CHV,Cell
+1302,C0016030,Fibroblast,MSH,Cell
+1303,C0016030,Fibroblast,SNM,Cell
+1304,C0016030,Fibroblast,SNMI,Cell
+1305,C0016030,Fibroblast,UWDA,Cell
+1306,C0016030,fibroblast,AOD,Cell
+1307,C0016030,fibroblast,CSP,Cell
+1308,C0016030,Fibroblast,FMA,Cell
+1309,C0016030,fibroblast,CHV,Cell
+1310,C0016030,Fibroblast,SNOMEDCT_US,Cell
+1311,C0016030,Fibroblast,LNC,Cell
+1312,C0016030,Fibroblast,NCI,Cell
+1313,C0035412,Rhabdomyosarcoma,COSTAR,Neoplastic Process
+1314,C0035412,Rhabdomyosarcoma,LCH,Neoplastic Process
+1315,C0035412,Rhabdomyosarcoma,MSH,Neoplastic Process
+1316,C0035412,Rhabdomyosarcoma,RCD,Neoplastic Process
+1317,C0035412,Rhabdomyosarcoma,SNM,Neoplastic Process
+1318,C0035412,RHABDOMYOSARCOMA,CCPSS,Neoplastic Process
+1319,C0035412,RHABDOMYOSARCOMA,DXP,Neoplastic Process
+1320,C0035412,rhabdomyosarcoma,AOD,Neoplastic Process
+1321,C0035412,rhabdomyosarcoma,CSP,Neoplastic Process
+1322,C0035412,Rhabdomyosarcoma,OMIM,Neoplastic Process
+1323,C0035412,rhabdomyosarcoma,MEDCIN,Neoplastic Process
+1324,C0035412,rhabdomyosarcoma,CHV,Neoplastic Process
+1325,C0035412,Rhabdomyosarcoma,MEDLINEPLUS,Neoplastic Process
+1326,C0035412,Rhabdomyosarcoma,LCH_NW,Neoplastic Process
+1327,C0035412,Rhabdomyosarcoma,HPO,Neoplastic Process
+1328,C0035412,Rhabdomyosarcoma,MDR,Neoplastic Process
+1330,C0035412,Rhabdomyosarcoma,SNOMEDCT_US,Neoplastic Process
+1332,C0035412,Rhabdomyosarcoma,ORPHANET,Neoplastic Process
+1333,C0035412,Rhabdomyosarcoma,NCI,Neoplastic Process
+1334,C0035412,Rhabdomyosarcoma,MTH,Neoplastic Process
+1335,C0549184,None,RCD,Finding
+1336,C0549184,None,SNMI,Finding
+1337,C1706277,None,NCI,Finding
+1338,C0549184,NONE,CCPSS,Finding
+1339,C0549184,none,CHV,Finding
+1340,C0456148,None,NCI,Intellectual Product
+1341,C5200984,None,LNC,Finding
+1342,C0549184,None,SNOMEDCT_US,Finding
+1343,C0549184,None,MTH,Finding
+1344,C0549184,None,NCI,Finding
+1345,C1556151,None,HL7V2.5,Functional Concept
+1346,C1556147,None,HL7V2.5,Idea or Concept
+1347,C1556146,None,HL7V2.5,Idea or Concept
+1348,C1556152,None,HL7V2.5,Functional Concept
+1349,C1550437,None,HL7V3.0,Functional Concept
+1350,C1556150,None,HL7V3.0,Idea or Concept
+1351,C1551387,None,HL7V3.0,Functional Concept
+1352,C1550083,None,HL7V3.0,Intellectual Product
+1353,C1553523,none,HL7V3.0,Intellectual Product
+1354,C1547191,none,HL7V3.0,Qualitative Concept
+1355,C1546509,none,HL7V3.0,Idea or Concept
+1356,C1556148,None,HL7V2.5,Functional Concept
+1357,C1550437,None,HL7V2.5,Functional Concept
+1358,C0225335,Mesothelial cells,LNC,Cell
+1359,C0225335,mesothelial cells,CHV,Cell
+1375,C0013935,embryos,CHV,Embryonic Structure
+1376,C0013935,Embryos,LCH_NW,Embryonic Structure
+1377,C0013935,Embryos,MSH,Embryonic Structure
+1378,C0007635,cultured cells,CHV,Cell
+1379,C0007635,Cultured cells,SNOMEDCT_US,Cell
+1380,C0007635,Cultured Cells,MSH,Cell
+1381,C0007635,Cultured Cells,MTH,Cell
+1382,C0024432,Macrophage,SNM,Cell
+1383,C0024432,Macrophage,SNMI,Cell
+1384,C0024432,macrophage,AOD,Cell
+1385,C0024432,macrophage,CSP,Cell
+1386,C0024432,Macrophage,FMA,Cell
+1387,C0024432,macrophage,CHV,Cell
+1388,C0024432,Macrophage,MSH,Cell
+1389,C0024432,Macrophage,CPM,Cell
+1390,C0024432,Macrophage,SNOMEDCT_US,Cell
+1391,C0024432,Macrophage,NCI,Cell
+1392,C0024432,macrophage,MTH,Cell
+1398,C0032112,Plasma cell,RCD,Cell
+1399,C0032112,Plasma cell,SNM,Cell
+1400,C0032112,Plasma Cell,MSH,Cell
+1401,C0032112,plasma cell,AOD,Cell
+1402,C0032112,plasma cell,CSP,Cell
+1403,C0032112,Plasma cell,FMA,Cell
+1404,C0032112,Plasma cell,LNC,Cell
+1405,C0032112,plasma cell,CHV,Cell
+1406,C0032112,Plasma cell,SNOMEDCT_US,Cell
+1408,C0032112,Plasma Cell,NCI,Cell
+1409,C0026764,Plasma cell myeloma,SNM,Neoplastic Process
+1410,C0026764,Plasma cell myeloma,SNMI,Neoplastic Process
+1411,C0026764,plasma cell myeloma,CSP,Neoplastic Process
+1412,C0026764,PLASMA CELL MYELOMA,QMR,Neoplastic Process
+1413,C0026764,Plasma cell myeloma,ICD10CM,Neoplastic Process
+1414,C0026764,plasma cell myeloma,CHV,Neoplastic Process
+1415,C0026764,Plasma cell myeloma,MDR,Neoplastic Process
+1417,C0026764,Plasma Cell Myeloma,MSH,Neoplastic Process
+1418,C0026764,Plasma Cell Myeloma,PDQ,Neoplastic Process
+1419,C0026764,Plasma cell myeloma,SNOMEDCT_US,Neoplastic Process
+1421,C0026764,Plasma cell myeloma,ORPHANET,Neoplastic Process
+1422,C0026764,plasma cell myeloma,PDQ,Neoplastic Process
+1424,C0026764,Plasma Cell Myeloma,NCI,Neoplastic Process
+1425,C5187432,-,LNC,Finding
+1435,C4479344,NSC,OMIM,Disease or Syndrome
+1450,C1512944,Gamma Delta T Cells,MSH,Cell
+1451,C0229657,Plasmablast,SNM,Cell
+1452,C0229657,Plasmablast,SNMI,Cell
+1453,C0229657,Plasmablast,FMA,Cell
+1454,C0229657,Plasmablast,SNOMEDCT_US,Cell
+1455,C0229657,Plasmablast,NCI,Cell
+1456,C1513872,Naive B Cell,NCI,Cell
+1457,C0439064,Multiple,RCD,Quantitative Concept
+1458,C0439064,Multiple,SNMI,Quantitative Concept
+1459,C0439064,MULTIPLE,CCPSS,Quantitative Concept
+1460,C0439064,multiple,CHV,Quantitative Concept
+1461,C0439064,Multiple,LNC,Quantitative Concept
+1462,C0439064,Multiple,SNOMEDCT_US,Quantitative Concept
+1463,C0439064,Multiple,NCI,Quantitative Concept
+1464,C0022131,islet cells,CHV,"Body Part, Organ, or Organ Component"
+1465,C0022131,Islet Cells,MSH,"Body Part, Organ, or Organ Component"
+1466,C0022131,Islet Cells,NCI,"Body Part, Organ, or Organ Component"
+1467,C0020507,Hyperplastic,SNMI,Pathologic Function
+1468,C0020507,Hyperplastic,NCI,Pathologic Function
+1469,C0020564,hypertrophied,CHV,Pathologic Function
+1470,C0020564,Hypertrophied,LNC,Pathologic Function
+1471,C1321301,Peripheral blood mononuclear cell,FMA,Cell
+1472,C1321301,Peripheral Blood Mononuclear Cell,MSH,Cell
+1473,C1321301,Peripheral blood mononuclear cell,SNOMEDCT_US,Cell
+1474,C1321301,Peripheral Blood Mononuclear Cell,NCI,Cell
+1475,C3178844,Mesenchymal Stromal Cell,MSH,Cell
+1476,C3178844,Mesenchymal Stromal Cell,NCI,Cell
+1477,C0026987,Myelofibrosis,ICPC2P,Neoplastic Process
+1478,C0026987,Myelofibrosis,LCH,Neoplastic Process
+1479,C0026987,Myelofibrosis,MDR,Neoplastic Process
+1480,C0026987,Myelofibrosis,MTH,Neoplastic Process
+1481,C0026987,Myelofibrosis,RCD,Neoplastic Process
+1482,C0026987,Myelofibrosis,SNM,Neoplastic Process
+1483,C0026987,MYELOFIBROSIS,CCPSS,Neoplastic Process
+1484,C0026987,MYELOFIBROSIS,COSTAR,Neoplastic Process
+1485,C0026987,MYELOFIBROSIS,CST,Neoplastic Process
+1486,C0001815,MYELOFIBROSIS,DXP,Neoplastic Process
+1487,C0026987,MYELOFIBROSIS,WHO,Neoplastic Process
+1488,C0026987,myelofibrosis,CSP,Neoplastic Process
+1489,C0026987,Myelofibrosis,ICD9CM,Neoplastic Process
+1490,C0026987,myelofibrosis,MEDCIN,Neoplastic Process
+1491,C0026987,MYELOFIBROSIS,OMIM,Neoplastic Process
+1492,C0026987,Myelofibrosis,OMIM,Neoplastic Process
+1493,C0026987,Myelofibrosis,ICD10CM,Neoplastic Process
+1494,C0026987,myelofibrosis,CHV,Neoplastic Process
+1495,C0026987,Myelofibrosis,LCH_NW,Neoplastic Process
+1496,C0026987,Myelofibrosis,HPO,Neoplastic Process
+1498,C0001815,Myelofibrosis,MSH,Neoplastic Process
+1499,C0026987,Myelofibrosis,SNOMEDCT_US,Neoplastic Process
+1500,C0026987,myelofibrosis,ICPC2ICD10ENG,Neoplastic Process
+1501,C0026987,Myelofibrosis,NCI,Neoplastic Process
+1502,C0026987,myelofibrosis,ICPC2P,Neoplastic Process
+1508,C0332148,PB,SNMI,Finding
+1509,C0023175,Pb,AOD,Hazardous or Poisonous Substance
+1510,C0023175,Pb,AOD,"Element, Ion, or Isotope"
+1511,C1415801,PB,OMIM,Gene or Genome
+1512,C0023175,Pb,CHV,Hazardous or Poisonous Substance
+1513,C0023175,Pb,CHV,"Element, Ion, or Isotope"
+1514,C0524167,Pb,MDR,Laboratory Procedure
+1515,C3537453,GCB,NCI,Gene or Genome
+1516,C1334895,GCB,OMIM,Gene or Genome
+1531,C0227525,liver cells,CHV,Cell
+1532,C0227525,Liver cells,LCH_NW,Cell
+1533,C0577059,normal liver,CHV,Finding
+1534,C0494165,LIVER METASTASIS,CCPSS,Neoplastic Process
+1535,C0494165,liver metastasis,CHV,Neoplastic Process
+1536,C0494165,Liver metastasis,LCH_NW,Neoplastic Process
+1537,C0494165,Liver Metastasis,NCI,Neoplastic Process
+1538,C1827293,Invasive Bladder Carcinoma,NCI,Neoplastic Process
+1539,C1449562,Primary Cell Culture,MSH,Laboratory Procedure
+1540,C1449562,Primary Cell Culture,NCI,Laboratory Procedure
+1541,C0027757,Neural tissue,UWDA,Tissue
+1542,C0027757,Neural tissue,SNOMEDCT_US,Tissue
+1543,C0027757,neural tissue,AOD,Tissue
+1544,C0027757,Neural tissue,FMA,Tissue
+1545,C0027757,neural tissue,CHV,Tissue
+1589,C1720722,Mix,MTH,Qualitative Concept
+1590,C0205430,Mix,NCI,Functional Concept
+1591,C4553942,Mix,NCI,Functional Concept
+1592,C0205430,mix,CHV,Functional Concept
+1593,C1421951,MIX,OMIM,Gene or Genome
+1594,C4553942,Mix,SNOMEDCT_US,Functional Concept
+1595,C2700323,WT,NCI,Fish
+1596,C1883559,WT,NCI,Gene or Genome
+1597,C5444688,wt,NCI,Laboratory or Test Result
+1598,C3658289,hiPSC,MSH,Cell
+1599,C0242379,lung cancer,AOD,Neoplastic Process
+1600,C0242379,lung cancer,BI,Neoplastic Process
+1601,C0242379,Lung cancer,RCD,Neoplastic Process
+1602,C0242379,LUNG CANCER,OMIM,Neoplastic Process
+1603,C0242379,lung cancer,MEDCIN,Neoplastic Process
+1604,C0242379,LUNG CANCER,CCPSS,Neoplastic Process
+1606,C0242379,lung cancer,CHV,Neoplastic Process
+1607,C0242379,Lung Cancer,MEDLINEPLUS,Neoplastic Process
+1608,C0242379,Lung cancer,LNC,Neoplastic Process
+1609,C0242379,Lung cancer,MDR,Neoplastic Process
+1610,C0242379,Lung cancer,HPO,Neoplastic Process
+1611,C0242379,Lung cancer,SNOMEDCT_US,Neoplastic Process
+1612,C0684249,lung cancer,PDQ,Neoplastic Process
+1613,C0242379,lung cancer,CSP,Neoplastic Process
+1616,C0684249,Lung Cancer,NCI,Neoplastic Process
+1617,C0242379,Lung Cancer,MSH,Neoplastic Process
+1618,C0004561,B-Lymphocytes,MSH,Cell
+1619,C0004561,b-lymphocytes,CHV,Cell
+1620,C0004561,B-Lymphocytes,MTH,Cell
+1621,C0004561,B-Lymphocytes,NCI,Cell
+1622,C0014762,Erythroblasts,MSH,Cell
+1623,C0014762,Erythroblasts,MTH,Cell
+1624,C0483203,erythroblasts,MEDCIN,Finding
+1625,C0014762,erythroblasts,CHV,Cell
+1626,C0014762,Erythroblasts,MDR,Cell
+1627,C0014762,Erythroblasts,NCI,Cell
+1628,C1087003,Glia,NCBI,Plant
+1629,C0027836,Glia,SNM,Cell
+1631,C0027836,Glia,SNMI,Cell
+1632,C0027836,Glia,UWDA,Cell
+1633,C0027836,glia,CSP,Cell
+1634,C0027836,GLIA,SNMI,Cell
+1635,C0027836,Glia,FMA,Cell
+1636,C0027836,glia,CHV,Cell
+1637,C1087003,glia,CHV,Plant
+1638,C0027836,Glia,MSH,Cell
+1639,C0027836,Glia,SNOMEDCT_US,Cell
+1640,C0027836,Glia,NCI,Cell
+1641,C0812306,THP1,HGNC,Gene or Genome
+1642,C1705396,THP1,NCI,Gene or Genome
+1643,C0011306,Dendritic Cells,MSH,Cell
+1644,C0011306,dendritic cells,CHV,Cell
+1645,C0011306,Dendritic cells,LCH_NW,Cell
+1646,C0011306,Dendritic Cells,NCI,Cell
+1647,C0011306,Dendritic Cells,MTH,Cell
+1648,C0734999,Pancreatic islet cell,LNC,Cell
+1649,C0734999,pancreatic islet cell,CHV,Cell
+1650,C0734999,Pancreatic islet cell,UWDA,Cell
+1652,C0022131,Islets of Langerhans,MSH,"Body Part, Organ, or Organ Component"
+1653,C0022131,Islets of Langerhans,MTH,"Body Part, Organ, or Organ Component"
+1654,C0022131,Islets of Langerhans,SNM,"Body Part, Organ, or Organ Component"
+1655,C0022131,Islets of Langerhans,SNMI,"Body Part, Organ, or Organ Component"
+1656,C0022131,islets of Langerhans,CSP,"Body Part, Organ, or Organ Component"
+1657,C0022131,Islets of Langerhans,FMA,"Body Part, Organ, or Organ Component"
+1658,C0022131,islets of langerhans,CHV,"Body Part, Organ, or Organ Component"
+1659,C0022131,Islets of Langerhans,UWDA,"Body Part, Organ, or Organ Component"
+1660,C0022131,Islets of Langerhans,SNOMEDCT_US,"Body Part, Organ, or Organ Component"
+1661,C0022131,Islets of Langerhans,NCI,"Body Part, Organ, or Organ Component"
+1662,C0007112,prostate adenocarcinoma,CHV,Neoplastic Process
+1663,C0007112,Prostate adenocarcinoma,SNOMEDCT_VET,Neoplastic Process
+1664,C0007112,Prostate Adenocarcinoma,PDQ,Neoplastic Process
+1665,C0007112,Prostate Adenocarcinoma,NCI,Neoplastic Process
+1666,C0014180,Endometrium,LCH,"Body Part, Organ, or Organ Component"
+1667,C0014180,Endometrium,MSH,"Body Part, Organ, or Organ Component"
+1668,C0014180,Endometrium,MTH,"Body Part, Organ, or Organ Component"
+1669,C0014180,Endometrium,RCD,"Body Part, Organ, or Organ Component"
+1670,C0014180,Endometrium,SNM,"Body Part, Organ, or Organ Component"
+1672,C0014180,Endometrium,ULT,"Body Part, Organ, or Organ Component"
+1673,C0014180,Endometrium,UWDA,"Body Part, Organ, or Organ Component"
+1674,C0014180,endometrium,AOD,"Body Part, Organ, or Organ Component"
+1675,C0014180,endometrium,CSP,"Body Part, Organ, or Organ Component"
+1676,C0014180,ENDOMETRIUM,SNMI,"Body Part, Organ, or Organ Component"
+1677,C0014180,Endometrium,FMA,"Body Part, Organ, or Organ Component"
+1678,C0014180,Endometrium,LNC,"Body Part, Organ, or Organ Component"
+1679,C0014180,endometrium,CHV,"Body Part, Organ, or Organ Component"
+1681,C0014180,Endometrium,LCH_NW,"Body Part, Organ, or Organ Component"
+1682,C0014180,Endometrium,SNOMEDCT_US,"Body Part, Organ, or Organ Component"
+1685,C0014180,Endometrium,NCI,"Body Part, Organ, or Organ Component"
+1686,C1550633,Endometrium,HL7V3.0,Body Substance
+1687,C0014180,Endometrium,HL7V2.5,"Body Part, Organ, or Organ Component"
+1688,C1546618,Endometrium,HL7V2.5,Intellectual Product
+1689,C0022646,Kidney,MSH,"Body Part, Organ, or Organ Component"
+1690,C0022646,Kidney,MTH,"Body Part, Organ, or Organ Component"
+1691,C0022646,Kidney,PCDS,"Body Part, Organ, or Organ Component"
+1692,C0022646,Kidney,RCD,"Body Part, Organ, or Organ Component"
+1693,C0022646,Kidney,SNM,"Body Part, Organ, or Organ Component"
+1695,C0022646,Kidney,ULT,"Body Part, Organ, or Organ Component"
+1696,C0022646,Kidney,UWDA,"Body Part, Organ, or Organ Component"
+1697,C0022646,kidney,AOD,"Body Part, Organ, or Organ Component"
+1698,C0022646,kidney,CSP,"Body Part, Organ, or Organ Component"
+1699,C0022646,KIDNEY,CCPSS,"Body Part, Organ, or Organ Component"
+1700,C0022646,Kidney,FMA,"Body Part, Organ, or Organ Component"
+1701,C0022646,Kidney,ICF,"Body Part, Organ, or Organ Component"
+1702,C0022646,Kidney,LNC,"Body Part, Organ, or Organ Component"
+1703,C0022646,kidney,CHV,"Body Part, Organ, or Organ Component"
+1704,C0227665,kidney,CHV,"Body Part, Organ, or Organ Component"
+1708,C0022646,Kidney,SNOMEDCT_US,"Body Part, Organ, or Organ Component"
+1709,C4554465,kidney,MEDCIN,Diagnostic Procedure
+1712,C0022646,Kidney,NCI,"Body Part, Organ, or Organ Component"
+1713,C0022646,Kidney,HL7V2.5,"Body Part, Organ, or Organ Component"
+1716,C4288191,Sorted Cells,NCI,Body Substance
+1717,C1519521,Fresh Tissue,NCI,Tissue
+1718,C0370231,Whole blood,RCD,Body Substance
+1719,C0370231,Whole blood,SNM,Body Substance
+1720,C0370231,Whole blood,LNC,Body Substance
+1721,C0370231,whole blood,CHV,Body Substance
+1725,C1608383,Whole Blood,NCI,Body Substance
+1726,C1546552,Whole blood,HL7V2.5,Intellectual Product
+1727,C1608383,Whole blood,HL7V3.0,Body Substance
+1728,C0370231,whole blood,MTH,Body Substance
+1729,C0370231,Whole blood,SNOMEDCT_US,Body Substance
+1730,C1257975,Mesenchymal Stem Cell,NCI,Cell
+1731,C1257975,mesenchymal stem cell,CHV,Cell
+1732,C1257975,Mesenchymal Stem Cell,MSH,Cell
+1733,C1257975,Mesenchymal stem cell,FMA,Cell
+1734,C1257975,Mesenchymal Stem Cell,PDQ,Cell
+1735,C1257975,Mesenchymal stem cell,SNOMEDCT_US,Cell
+1736,C0022688,nk cells,CHV,Cell
+1737,C0022688,NK Cells,MSH,Cell
+1738,C5400722,NK Cells,DRUGBANK,Cell
+1739,C0022688,NK Cells,NCI,Cell
+1740,C0039538,Teratoma,LCH,Neoplastic Process
+1741,C0039538,Teratoma,MSH,Neoplastic Process
+1742,C0039538,Teratoma,MTH,Neoplastic Process
+1743,C0039538,Teratoma,RCD,Neoplastic Process
+1744,C0039538,Teratoma,SNM,Neoplastic Process
+1745,C0039538,TERATOMA,CCPSS,Neoplastic Process
+1746,C0039538,TERATOMA,CST,Neoplastic Process
+1747,C0039538,TERATOMA,WHO,Neoplastic Process
+1748,C0039538,teratoma,AOD,Neoplastic Process
+1749,C0039538,teratoma,CSP,Neoplastic Process
+1750,C0039538,teratoma,CHV,Neoplastic Process
+1751,C0039538,Teratoma,LCH_NW,Neoplastic Process
+1752,C0039538,Teratoma,HPO,Neoplastic Process
+1753,C0039538,Teratoma,MDR,Neoplastic Process
+1754,C0039538,Teratoma,SNOMEDCT_US,Neoplastic Process
+1756,C0039538,teratoma,PDQ,Neoplastic Process
+1757,C0039538,Teratoma,PDQ,Neoplastic Process
+1758,C0039538,teratoma,MEDCIN,Neoplastic Process
+1760,C0039538,Teratoma,NCI,Neoplastic Process
+1761,C0205225,Primary,MTH,Qualitative Concept
+1762,C0205225,Primary,RCD,Qualitative Concept
+1763,C0205225,Primary,SNMI,Qualitative Concept
+1764,C0205225,primary,CHV,Qualitative Concept
+1765,C0439612,Primary,SNOMEDCT_VET,Temporal Concept
+1766,C0205225,Primary,SNOMEDCT_US,Qualitative Concept
+1767,C0205225,Primary,LNC,Qualitative Concept
+1768,C0205225,Primary,NCI,Qualitative Concept
+1769,C0022688,natural killer cells,CHV,Cell
+1770,C0022688,Natural Killer Cells,MSH,Cell
+1771,C0022688,Natural Killer Cells,PSY,Cell
+1772,C0022688,Natural Killer Cells,MTH,Cell
+1773,C0030274,Pancreas,LCH,"Body Part, Organ, or Organ Component"
+1774,C0030274,Pancreas,MSH,"Body Part, Organ, or Organ Component"
+1775,C0030274,Pancreas,MTH,"Body Part, Organ, or Organ Component"
+1776,C0030274,Pancreas,MTHMST,"Body Part, Organ, or Organ Component"
+1777,C0030274,Pancreas,RCD,"Body Part, Organ, or Organ Component"
+1778,C0030274,Pancreas,SNM,"Body Part, Organ, or Organ Component"
+1780,C0030274,Pancreas,UWDA,"Body Part, Organ, or Organ Component"
+1781,C0030274,PANCREAS,CCPSS,"Body Part, Organ, or Organ Component"
+1782,C0030274,PANCREAS,SNMI,"Body Part, Organ, or Organ Component"
+1783,C0030274,pancreas,AOD,"Body Part, Organ, or Organ Component"
+1784,C0030274,pancreas,CSP,"Body Part, Organ, or Organ Component"
+1785,C0030274,Pancreas,OMIM,"Body Part, Organ, or Organ Component"
+1786,C0030274,Pancreas,FMA,"Body Part, Organ, or Organ Component"
+1787,C0030274,Pancreas,LNC,"Body Part, Organ, or Organ Component"
+1788,C0771711,pancreas,CHV,Organic Chemical
+1789,C0771711,pancreas,CHV,Pharmacologic Substance
+1790,C0030274,pancreas,CHV,"Body Part, Organ, or Organ Component"
+1792,C0030274,Pancreas,LCH_NW,"Body Part, Organ, or Organ Component"
+1793,C0771711,Pancreas,LNC,Organic Chemical
+1794,C0771711,Pancreas,LNC,Pharmacologic Substance
+1795,C0771711,pancreas,NDDF,Organic Chemical
+1796,C0771711,pancreas,NDDF,Pharmacologic Substance
+1798,C0030274,Pancreas,SNOMEDCT_US,"Body Part, Organ, or Organ Component"
+1799,C4037927,Pancreas,LNC,"Body Part, Organ, or Organ Component"
+1801,C0030274,Pancreas,PSY,"Body Part, Organ, or Organ Component"
+1802,C0030274,Pancreas,NCI,"Body Part, Organ, or Organ Component"
+1803,C0030274,Pancreas,HL7V2.5,"Body Part, Organ, or Organ Component"
+1804,C0019829,Hodgkin lymphoma,OMIM,Neoplastic Process
+1805,C0019829,Hodgkin Lymphoma,NCI,Neoplastic Process
+1806,C0019829,Hodgkin lymphoma,ICD10CM,Neoplastic Process
+1807,C0019829,hodgkin lymphoma,CHV,Neoplastic Process
+1808,C0019829,HODGKIN LYMPHOMA,OMIM,Neoplastic Process
+1809,C0019829,Hodgkin lymphoma,HPO,Neoplastic Process
+1810,C0019829,Hodgkin Lymphoma,MSH,Neoplastic Process
+1811,C0019829,Hodgkin lymphoma,LNC,Neoplastic Process
+1812,C0019829,Hodgkin lymphoma,PDQ,Neoplastic Process
+1813,C0019829,Hodgkin lymphoma,CCSR_ICD10CM,Neoplastic Process
+1814,C0019829,Hodgkin lymphoma,MEDCIN,Neoplastic Process
+1815,C0019829,Hodgkin lymphoma,SNOMEDCT_US,Neoplastic Process
+1816,C5557287,Hodgkin Lymphoma,NCI,Intellectual Product
+1817,C0019829,Hodgkin lymphoma,ORPHANET,Neoplastic Process
+1818,C0019829,Hodgkin Lymphoma,MEDLINEPLUS,Neoplastic Process
+1819,C0349632,Splenic Marginal Zone Lymphoma,NCI,Neoplastic Process
+1820,C0349632,Splenic marginal zone lymphoma,ICD10CM,Neoplastic Process
+1821,C0349632,splenic marginal zone lymphoma,CHV,Neoplastic Process
+1822,C0349632,Splenic marginal zone lymphoma,MDR,Neoplastic Process
+1824,C0349632,Splenic marginal zone lymphoma,SNOMEDCT_US,Neoplastic Process
+1825,C0349632,Splenic marginal zone lymphoma,ORPHANET,Neoplastic Process
+1826,C0349632,splenic marginal zone lymphoma,PDQ,Neoplastic Process
+1827,C4330475,Immune Cell,NCI,Cell
+1836,C0014257,Endothelium,LCH,Tissue
+1837,C0014257,Endothelium,MSH,Tissue
+1838,C0014257,Endothelium,SNM,Tissue
+1839,C0014257,Endothelium,UWDA,Tissue
+1840,C0014257,endothelium,AOD,Tissue
+1841,C0014257,Endothelium,FMA,Tissue
+1842,C0014257,endothelium,CHV,Tissue
+1843,C0014257,Endothelium,LCH_NW,Tissue
+1844,C0014257,Endothelium,SNOMEDCT_US,Tissue
+1845,C0014257,Endothelium,NCI,Tissue
+1846,C0368761,blast cells,AOD,Cell
+1847,C0523113,blast cells,CHV,Laboratory Procedure
+1848,C0038250,blast cells,CHV,Cell
+1849,C0523113,Blast cells,MDR,Laboratory Procedure
+1850,C0368761,Blast Cells,CPM,Cell
+1852,C0368761,Blast Cells,NCI,Cell
+1853,C0018894,Helper T cell,SNMI,Cell
+1854,C0018894,Helper T cell,FMA,Cell
+1855,C0018894,helper t cell,CHV,Cell
+1856,C0018894,Helper T cell,SNOMEDCT_US,Cell
+1857,C0018894,Helper T Cell,MSH,Cell
+1858,C0281508,Desmoplastic Small Round Cell Tumor,MSH,Neoplastic Process
+1859,C0281508,Desmoplastic small round cell tumor,MDR,Neoplastic Process
+1861,C0281508,Desmoplastic Small Round Cell Tumor,MTH,Neoplastic Process
+1862,C1332966,desmoplastic small round cell tumor,PDQ,Neoplastic Process
+1863,C0281508,Desmoplastic small round cell tumor,SNOMEDCT_US,Neoplastic Process
+1865,C0281508,Desmoplastic small round cell tumor,ORPHANET,Neoplastic Process
+1866,C0281508,Desmoplastic Small Round Cell Tumor,NCI,Neoplastic Process
+1867,C0027950,polymorphonuclear neutrophils,CHV,Cell
+1868,C0027950,Polymorphonuclear Neutrophils,MSH,Cell
+1869,C0027950,Polymorphonuclear Neutrophils,NCI,Cell
+1870,C1546745,Polymorphonuclear neutrophils,HL7V2.5,Intellectual Product
+1871,C1550658,Polymorphonuclear neutrophils,HL7V3.0,Body Substance
+1872,C5551176,Tumor cell,SNOMEDCT_US,Cell
+1873,C5551176,tumor cell,CHV,Cell
+1874,C0431085,Tumor Cell,NCI,Cell
+1875,C5235893,Bone Marrow-Derived Mononuclear Cells,NCI,Cell
+1883,C0079722,Tumor-Infiltrating Lymphocyte,MSH,Cell
+1884,C0332568,Pad,SNM,Neoplastic Process
+1885,C1706364,Pad,NCI,Manufactured Object
+1886,C1425478,PAD,OMIM,Gene or Genome
+1887,C2347441,PAD,VANDF,Biomedical or Dental Material
+1888,C1882271,Pad,SNOMEDCT_US,Quantitative Concept
+1889,C2347441,Pad,NCI,Biomedical or Dental Material
+1890,C0182158,pad,CHV,Medical Device
+1891,C0332568,pad,CHV,Neoplastic Process
+1892,C1882271,Pad,NCI,Quantitative Concept
+1893,C1425244,PAD,HGNC,Gene or Genome
+1894,C1425478,PAD,HGNC,Gene or Genome
+1895,C1704436,PAD,MEDLINEPLUS,Disease or Syndrome
+1897,C3540603,PAD,NCI,Gene or Genome
+1898,C3669270,Pad,SNOMEDCT_VET,Anatomical Structure
+1899,C4319657,Pad,SNOMEDCT_US,Quantitative Concept
+1900,C3814046,PAD,PDQ,Therapeutic or Preventive Procedure
+1901,C0332568,Pad,SNOMEDCT_US,Neoplastic Process
+1902,C2347441,PAD,NDDF,Biomedical or Dental Material
+1903,C2347441,Pad,HL7V3.0,Biomedical or Dental Material
+1904,C5392114,Tfh Cells,MSH,Cell
+1905,C0039198,Treg Cells,MSH,Cell
+1916,C0225828,cardiomyocytes,CHV,Cell
+1917,C0225828,Cardiomyocytes,MSH,Cell
+1940,C0872076,Pluripotent Stem Cells,MTH,Cell
+1941,C0872076,pluripotent stem cells,CHV,Cell
+1942,C0872076,Pluripotent Stem Cells,MSH,Cell
+1943,C0039198,Regulatory T Cells,MSH,Cell
+1944,C2717959,IPS Cell,MSH,Cell
+1945,C0682638,Memory B Cells,MSH,Cell
+1946,C2717959,Induced Pluripotent Stem Cell,NCI,Cell
+1947,C2717959,Induced Pluripotent Stem Cell,MSH,Cell
+1948,C2936411,Th17 Cells,MSH,Cell
+1949,C0028785,Occipital cortex,FMA,"Body Part, Organ, or Organ Component"
+1950,C0028785,occipital cortex,CSP,"Body Part, Organ, or Organ Component"
+1951,C0028785,occipital cortex,CHV,"Body Part, Organ, or Organ Component"
+1952,C0028785,occipital cortex,NEU,"Body Part, Organ, or Organ Component"
+1953,C3811911,Occipital Cortex,MSH,"Body Part, Organ, or Organ Component"
+1954,C3811911,occipital cortex,NEU,"Body Part, Organ, or Organ Component"
+1955,C0228221,Occipital Cortex,NCI,"Body Part, Organ, or Organ Component"
+1956,C3887642,Hippocampus,MSH,"Body Part, Organ, or Organ Component"
+1957,C0949582,Hippocampus,NCBI,Fish
+1958,C0019564,Hippocampus,SNM,"Body Part, Organ, or Organ Component"
+1959,C0019564,Hippocampus,SNMI,"Body Part, Organ, or Organ Component"
+1960,C3887642,hippocampus,AOD,"Body Part, Organ, or Organ Component"
+1961,C3887642,hippocampus,CSP,"Body Part, Organ, or Organ Component"
+1962,C0949582,hippocampus,CHV,Fish
+1963,C3887642,hippocampus,CHV,"Body Part, Organ, or Organ Component"
+1965,C0019564,Hippocampus,FMA,"Body Part, Organ, or Organ Component"
+1966,C0019564,hippocampus,NEU,"Body Part, Organ, or Organ Component"
+1967,C0598598,hippocampus,NEU,"Body Part, Organ, or Organ Component"
+1968,C3887642,hippocampus,NEU,"Body Part, Organ, or Organ Component"
+1969,C0175202,hippocampus,NEU,"Body Part, Organ, or Organ Component"
+1970,C0598598,Hippocampus,NEU,"Body Part, Organ, or Organ Component"
+1971,C3887642,Hippocampus,NEU,"Body Part, Organ, or Organ Component"
+1972,C0019564,Hippocampus,SNOMEDCT_US,"Body Part, Organ, or Organ Component"
+1973,C0949582,Hippocampus,SNOMEDCT_US,Fish
+1974,C0019564,Hippocampus,PSY,"Body Part, Organ, or Organ Component"
+1975,C0019564,Hippocampus,NCI,"Body Part, Organ, or Organ Component"
+1976,C0016733,Frontal cortex,FMA,"Body Part, Organ, or Organ Component"
+1977,C0228196,frontal cortex,AOD,"Body Part, Organ, or Organ Component"
+1978,C0016733,frontal cortex,CSP,"Body Part, Organ, or Organ Component"
+1979,C0016733,frontal cortex,CHV,"Body Part, Organ, or Organ Component"
+1980,C0016733,frontal cortex,NEU,"Body Part, Organ, or Organ Component"
+1981,C0228196,frontal cortex,NEU,"Body Part, Organ, or Organ Component"
+1982,C0016733,Frontal Cortex,MSH,"Body Part, Organ, or Organ Component"
+1984,C0228196,Frontal Cortex,NCI,"Body Part, Organ, or Organ Component"
+1985,C0278701,Gastric adenocarcinoma,OMIM,Neoplastic Process
+1986,C0278701,gastric adenocarcinoma,CHV,Neoplastic Process
+1987,C0278701,Gastric adenocarcinoma,SNOMEDCT_VET,Neoplastic Process
+1988,C0278701,Gastric Adenocarcinoma,PDQ,Neoplastic Process
+1989,C0278701,Gastric adenocarcinoma,HPO,Neoplastic Process
+1990,C0278701,Gastric Adenocarcinoma,NCI,Neoplastic Process
+1991,C0278701,Gastric Adenocarcinoma,MTH,Neoplastic Process
+1992,C0022688,Natural Killer Cell,MSH,Cell
+1993,C0022688,natural killer cell,AOD,Cell
+1994,C0022688,natural killer cell,CSP,Cell
+1995,C0022688,Natural killer cell,SNOMEDCT_US,Cell
+1996,C0022688,Natural killer cell,FMA,Cell
+1997,C0022688,natural killer cell,CHV,Cell
+1998,C5400722,Natural Killer Cell,DRUGBANK,Cell
+1999,C5400722,Natural Killer Cell,MTH,Cell
+2000,C0022688,Natural Killer Cell,NCI,Cell
+2001,C5401424,Innate Lymphoid Cell,NCI,Cell
+2002,C5401424,Innate Lymphoid Cell,MTH,Cell
+2003,C0011306,Dendritic cell,SNM,Cell
+2004,C0011306,Dendritic cell,SNMI,Cell
+2005,C0011306,Dendritic Cell,MSH,Cell
+2006,C0011306,dendritic cell,CSP,Cell
+2007,C0011306,dendritic cell,CHV,Cell
+2008,C0003315,Dendritic cell,FMA,Cell
+2009,C0011306,Dendritic Cell,NCI,Cell
+2022,C1417809,CNP,OMIM,Gene or Genome
+2023,C1413553,CNP,OMIM,Gene or Genome
+2024,C1417809,CNP,HGNC,Gene or Genome
+2025,C1413553,CNP,HGNC,Gene or Genome
+2026,C3889729,CNP,PDQ,Organic Chemical
+2027,C3889729,CNP,PDQ,"Indicator, Reagent, or Diagnostic Aid"
+2028,C2347599,CNP,LNC,Professional or Occupational Group
+2029,C1171346,hESCs,MSH,Cell
+2033,C3539878,Triple negative breast cancer,MDR,Neoplastic Process
+2035,C3539878,Triple Negative Breast Cancer,MSH,Neoplastic Process
+2036,C0596890,MCF7,NCI,Cell
+2037,C0021853,Intestinal,RCD,"Body Part, Organ, or Organ Component"
+2038,C0021853,Intestinal,SNMI,"Body Part, Organ, or Organ Component"
+2039,C0021853,intestinal,CHV,"Body Part, Organ, or Organ Component"
+2040,C0021853,Intestinal,LNC,"Body Part, Organ, or Organ Component"
+2041,C5702674,Intestinal,SNOMEDCT_US,Finding
+2042,C0021853,Intestinal,NCI,"Body Part, Organ, or Organ Component"
+2043,C0030551,Parental,NCI,Family Group
+2044,C0030551,Parental,LNC,Family Group
+2045,C1523748,HSC,GO,Cell Component
+2046,C0018956,HSC,NCI,Cell
+2047,C1414862,HSC,HGNC,Gene or Genome
+2048,C1417248,MPP,OMIM,Gene or Genome
+2049,C1513753,MPP,NCI,Cell
+2050,C1413769,MLP,OMIM,Gene or Genome
+2051,C1413769,MLP,HGNC,Gene or Genome
+2052,C3890909,MLP,NCI,Gene or Genome
+2053,C1537665,MLP,OMIM,Gene or Genome
+2054,C1537665,MLP,HGNC,Gene or Genome
+2055,C1332807,MEP,OMIM,Gene or Genome
+2056,C1707163,MEP,NCI,Gene or Genome
+2057,C4082175,MEP,NCI,Diagnostic Procedure
+2058,C0280541,MEP,PDQ,Therapeutic or Preventive Procedure
+2059,C0084989,MEP,PDQ,Therapeutic or Preventive Procedure
+2060,C1310906,MEP,NCI,"Amino Acid, Peptide, or Protein"
+2061,C1310906,MEP,NCI,Enzyme
+2062,C0010729,CMP,SNMI,"Nucleic Acid, Nucleoside, or Nucleotide"
+2063,C1417041,CMP,OMIM,Gene or Genome
+2064,C0010729,CMP,MSH,"Nucleic Acid, Nucleoside, or Nucleotide"
+2065,C0519825,CMP,NCI,Laboratory Procedure
+2066,C0010729,CMP,SNOMEDCT_US,"Nucleic Acid, Nucleoside, or Nucleotide"
+2067,C1417041,CMP,HGNC,Gene or Genome
+2068,C0596993,CMP,NCI,Cell
+2069,C0054385,CMP,PDQ,Therapeutic or Preventive Procedure
+2070,C0018346,GMP,AOD,"Nucleic Acid, Nucleoside, or Nucleotide"
+2071,C0018346,GMP,AOD,Biologically Active Substance
+2072,C0018346,GMP,CSP,"Nucleic Acid, Nucleoside, or Nucleotide"
+2073,C0018346,GMP,CSP,Biologically Active Substance
+2074,C0018346,GMP,SNMI,"Nucleic Acid, Nucleoside, or Nucleotide"
+2075,C0018346,GMP,SNMI,Biologically Active Substance
+2076,C0018346,gmp,CHV,"Nucleic Acid, Nucleoside, or Nucleotide"
+2077,C0018346,gmp,CHV,Biologically Active Substance
+2078,C1417862,GMP,HGNC,Gene or Genome
+2079,C3540519,GMP,NCI,"Amino Acid, Peptide, or Protein"
+2080,C3540519,GMP,NCI,Enzyme
+2081,C0018346,GMP,SNOMEDCT_US,"Nucleic Acid, Nucleoside, or Nucleotide"
+2082,C0018346,GMP,SNOMEDCT_US,Biologically Active Substance
+2083,C1706982,GMP,NCI,Cell
+2084,C0023516,WBC,CCPSS,Cell
+2085,C0023516,WBC,MTH,Cell
+2086,C0023516,WBC,LNC,Cell
+2087,C0023516,WBC,CHV,Cell
+2088,C0023516,WBC,MDR,Cell
+2089,C0162597,Stromal Cells,MSH,Cell
+2090,C0162597,stromal cells,CHV,Cell
+2091,C0162597,Stromal Cells,NCI,Cell
+2092,C0242629,cd8 cell,CHV,Cell
+2093,C0242629,CD8 Cell,NCI,Cell
+2097,C0006142,breast cancer,AOD,Neoplastic Process
+2098,C0006142,breast cancer,BI,Neoplastic Process
+2099,C0006142,Breast cancer,RCD,Neoplastic Process
+2100,C0006142,Breast cancer,OMIM,Neoplastic Process
+2101,C0006142,BREAST CANCER,OMIM,Neoplastic Process
+2102,C0006142,breast cancer,MEDCIN,Neoplastic Process
+2104,C0006142,BREAST CANCER,CCPSS,Neoplastic Process
+2105,C0006142,breast cancer,CHV,Neoplastic Process
+2106,C0678222,breast cancer,CHV,Neoplastic Process
+2107,C0006142,Breast Cancer,MEDLINEPLUS,Neoplastic Process
+2108,C0006142,Breast cancer,LNC,Neoplastic Process
+2109,C0678222,Breast cancer,HPO,Neoplastic Process
+2110,C0006142,Breast cancer,MDR,Neoplastic Process
+2112,C0006142,Breast cancer,SNOMEDCT_US,Neoplastic Process
+2113,C0006142,breast cancer,PDQ,Neoplastic Process
+2114,C0006142,breast cancer,CSP,Neoplastic Process
+2115,C0678222,Breast Cancer,NCI,Neoplastic Process
+2116,C0006142,Breast Cancer,MSH,Neoplastic Process
+2117,C0024432,Monocyte-Derived Macrophages,MSH,Cell
+2130,C0007226,Cardiovascular,SNMI,Body System
+2131,C3887460,CARDIOVASCULAR,OMIM,Body System
+2132,C0007226,Cardiovascular,NCI,Body System
+2133,C0007226,cardiovascular,BI,Body System
+2134,C0007226,CARDIOVASCULAR,CCPSS,Body System
+2135,C3887460,Cardiovascular,LNC,Body System
+2137,C3887460,Cardiovascular,MTH,Body System
+2139,C3887460,Cardiovascular,NCI,Body System
+2145,C0004561,B-cell,RCD,Cell
+2146,C0004561,B-cell,LNC,Cell
+2147,C0004561,b-cell,CHV,Cell
+2149,C0004561,B-cell,SNOMEDCT_US,Cell
+2151,C0004561,B-Cell,NCI,Cell
+2156,C0037868,Sperm,SNMI,Cell
+2157,C0037868,sperm,AOD,Cell
+2158,C0037868,sperm,CSP,Cell
+2159,C0037868,Sperm,FMA,Cell
+2160,C0037868,sperm,CHV,Cell
+2161,C0037868,Sperm,UWDA,Cell
+2162,C0037868,Sperm,MSH,Cell
+2163,C0037868,Sperm,SNOMEDCT_US,Cell
+2164,C0037868,Sperm,PSY,Cell
+2165,C0037868,Sperm,NCI,Cell
+2172,C0445208,RPE,RCD,Classification
+2173,C1419621,RPE,OMIM,Gene or Genome
+2174,C1419621,RPE,HGNC,Gene or Genome
+2175,C4050303,RPE,NCI,Intellectual Product
+2176,C0445208,RPE,SNOMEDCT_US,Classification
+2177,C0035322,RPE,NCI,"Body Part, Organ, or Organ Component"
+2178,C0205824,Dedifferentiated Liposarcoma,MSH,Neoplastic Process
+2179,C0205824,Dedifferentiated liposarcoma,ICD10AM,Neoplastic Process
+2180,C0205824,Dedifferentiated liposarcoma,RCD,Neoplastic Process
+2181,C0205824,Dedifferentiated liposarcoma,SNMI,Neoplastic Process
+2182,C0205824,dedifferentiated liposarcoma,MEDCIN,Neoplastic Process
+2183,C0205824,Dedifferentiated liposarcoma,MDR,Neoplastic Process
+2185,C0205824,dedifferentiated liposarcoma,PDQ,Neoplastic Process
+2186,C0205824,Dedifferentiated liposarcoma,SNOMEDCT_US,Neoplastic Process
+2188,C0205824,Dedifferentiated liposarcoma,ORPHANET,Neoplastic Process
+2189,C0205824,Dedifferentiated Liposarcoma,NCI,Neoplastic Process
+2190,C0023516,Leukocytes,MSH,Cell
+2191,C0023516,leukocytes,AOD,Cell
+2192,C0023516,leukocytes,MTH,Cell
+2193,C0023516,Leukocytes,LNC,Cell
+2194,C0023516,leukocytes,CHV,Cell
+2198,C0023516,leukocytes,NDDF,Cell
+2200,C0023516,Leukocytes,CPM,Cell
+2203,C0023516,Leukocytes,MTH,Cell
+2204,C0023516,Leukocytes,PSY,Cell
+2205,C0023516,Leukocytes,NCI,Cell
+2206,C1550647,Leukocytes,HL7V3.0,Body Substance
+2207,C0023516,Leukocytes,HL7V2.5,Cell
+2208,C1547962,Leukocytes,HL7V2.5,Intellectual Product
+2220,C5544421,Stromal Vascular Fraction,MSH,Body Substance
+2227,C4277548,Cancer-Associated Fibroblasts,MSH,Cell
+2228,C4277548,Cancer-Associated Fibroblasts,MTH,Cell
+2229,C0039194,t-cells,CHV,Cell
+2230,C0039194,T-Cells,MSH,Cell
+2231,C0039194,T-Cells,NCI,Cell
+2232,C1621958,GBM,OMIM,Neoplastic Process
+2233,C1621958,GBM,ORPHANET,Neoplastic Process
+2234,C0599297,GBM,NCI,"Body Part, Organ, or Organ Component"
+2238,C0596508,ES cell,CSP,Cell
+2239,C0596508,es cell,CHV,Cell
+2247,C4744926,Bone Marrow Mononuclear Cell,NCI,Cell
+2248,C4744926,Bone Marrow Mononuclear Cell,MTH,Cell
+2249,C0029418,Osteoblast,MSH,Cell
+2250,C0029418,Osteoblast,SNM,Cell
+2251,C0029418,Osteoblast,SNMI,Cell
+2252,C0029418,Osteoblast,UWDA,Cell
+2253,C0029418,osteoblast,AOD,Cell
+2254,C0029418,osteoblast,CSP,Cell
+2255,C0029418,Osteoblast,FMA,Cell
+2256,C0029418,osteoblast,CHV,Cell
+2257,C0029418,Osteoblast,SNOMEDCT_US,Cell
+2258,C0029418,Osteoblast,NCI,Cell
+2259,C0872076,Pluripotent stem cell,FMA,Cell
+2260,C0872076,pluripotent stem cell,CHV,Cell
+2261,C0872076,pluripotent stem cell,CSP,Cell
+2262,C0872076,Pluripotent Stem Cell,MSH,Cell
+2263,C0872076,Pluripotent stem cell,UWDA,Cell
+2264,C0872076,Pluripotent Stem Cell,NCI,Cell
+2276,C0206728,Plexiform neurofibroma,ICD10AM,Neoplastic Process
+2277,C0206728,Plexiform neurofibroma,RCD,Neoplastic Process
+2278,C0206728,Plexiform neurofibroma,SNM,Neoplastic Process
+2279,C0206728,Plexiform neurofibroma,SNMI,Neoplastic Process
+2280,C0206728,Plexiform Neurofibroma,MSH,Neoplastic Process
+2281,C0206728,plexiform neurofibroma,PDQ,Neoplastic Process
+2282,C0206728,Plexiform neurofibroma,OMIM,Neoplastic Process
+2283,C0206728,plexiform neurofibroma,CHV,Neoplastic Process
+2284,C0206728,Plexiform neurofibroma,HPO,Neoplastic Process
+2285,C0206728,Plexiform neurofibroma,MDR,Neoplastic Process
+2286,C0206728,Plexiform neurofibroma,SNOMEDCT_US,Neoplastic Process
+2288,C0206728,Plexiform Neurofibroma,NCI,Neoplastic Process
+2289,C0206728,Plexiform Neurofibroma,MTH,Neoplastic Process
+2290,C0346057,Cutaneous neurofibroma,RCD,Neoplastic Process
+2291,C0346057,Cutaneous Neurofibroma,NCI,Neoplastic Process
+2292,C0346057,Cutaneous neurofibroma,SNOMEDCT_US,Neoplastic Process
+2293,C0346057,Cutaneous neurofibroma,MTH,Neoplastic Process
+2294,C1709160,Neoplastic,NCI,Qualitative Concept
+2295,C0028944,Oligodendrocyte,MSH,Cell
+2296,C0028944,Oligodendrocyte,SNM,Cell
+2297,C0028944,Oligodendrocyte,SNMI,Cell
+2298,C0028944,oligodendrocyte,AOD,Cell
+2299,C0028944,oligodendrocyte,CSP,Cell
+2300,C0028944,Oligodendrocyte,FMA,Cell
+2301,C0028944,oligodendrocyte,CHV,Cell
+2302,C0028944,Oligodendrocyte,SNOMEDCT_US,Cell
+2303,C0028944,Oligodendrocyte,NCI,Cell
+2304,C4330852,OPC,PDQ,Pharmacologic Substance
+2306,C1801960,Vascular,SNMI,Qualitative Concept
+2307,C1801960,Vascular,OMIM,Qualitative Concept
+2308,C1801960,Vascular,MTH,Qualitative Concept
+2309,C1801960,vascular,CSP,Qualitative Concept
+2310,C0005847,vascular,CHV,"Body Part, Organ, or Organ Component"
+2311,C0005847,Vascular,SNOMEDCT_VET,"Body Part, Organ, or Organ Component"
+2312,C1801960,Vascular,NCI,Qualitative Concept
+2331,C0017471,Germ Cell,MSH,Cell
+2332,C0017471,germ cell,AOD,Cell
+2333,C0017471,germ cell,CSP,Cell
+2334,C0017471,germ cell,CHV,Cell
+2335,C0017471,Germ cell,UWDA,Cell
+2336,C0017471,Germ cell,SNOMEDCT_US,Cell
+2337,C0017471,Germ Cell,NCI,Cell
+2351,C5780152,Tumor biopsy,MDR,Diagnostic Procedure
+2353,C0001280,Activated macrophage,SNM,Cell
+2354,C0001280,Activated macrophage,SNMI,Cell
+2355,C0001280,activated macrophage,CHV,Cell
+2356,C0001280,Activated macrophage,SNOMEDCT_US,Cell
+2357,C0017638,Glioma,MDR,Neoplastic Process
+2358,C0017638,Glioma,MSH,Neoplastic Process
+2359,C0017638,Glioma,MTH,Neoplastic Process
+2360,C0017638,Glioma,RCD,Neoplastic Process
+2361,C0017638,GLIOMA,COSTAR,Neoplastic Process
+2362,C0017638,GLIOMA,DXP,Neoplastic Process
+2363,C0017638,glioma,AOD,Neoplastic Process
+2364,C0017638,glioma,CSP,Neoplastic Process
+2365,C0017638,Glioma,OMIM,Neoplastic Process
+2366,C0017638,Glioma,SNOMEDCT_US,Neoplastic Process
+2367,C0017638,glioma,CHV,Neoplastic Process
+2368,C0017638,Glioma,MEDLINEPLUS,Neoplastic Process
+2369,C0017638,glioma,MEDCIN,Neoplastic Process
+2370,C0017638,Glioma,NCI,Neoplastic Process
+2371,C0017638,Glioma,HPO,Neoplastic Process
+2374,C0017638,Glioma,ORPHANET,Neoplastic Process
+2375,C0036387,Schwann cell,AOD,Cell
+2376,C0036387,Schwann cell,CSP,Cell
+2377,C0036387,Schwann cell,SNM,Cell
+2378,C0036387,Schwann cell,SNMI,Cell
+2379,C0036387,Schwann cell,FMA,Cell
+2380,C0036387,schwann cell,CHV,Cell
+2381,C0036387,Schwann cell,SNOMEDCT_US,Cell
+2382,C0036387,Schwann Cell,MSH,Cell
+2383,C0036387,Schwann Cell,NCI,Cell
+2384,C0028587,NPC,GO,Cell Component
+2385,C0220756,NPC,OMIM,Disease or Syndrome
+2386,C0598988,npc,CHV,Cell Component
+2387,C2931822,NPC,OMIM,Neoplastic Process
+2388,C0598988,NPC,NCI,Cell Component
+2389,C0169014,EPC,MSH,Organic Chemical
+2390,C0169014,EPC,MSH,Pharmacologic Substance
+2405,C0055598,VCAP,PDQ,Therapeutic or Preventive Procedure
+2406,C0163868,VCAP,NCI,Therapeutic or Preventive Procedure
+2407,C0135615,PC3,CSP,"Amino Acid, Peptide, or Protein"
+2408,C0135615,PC3,CSP,Enzyme
+2409,C0450691,PC3,RCD,Body Location or Region
+2410,C1704969,PC3,NCI,Gene or Genome
+2411,C1418388,PC3,OMIM,Gene or Genome
+2412,C1366526,PC3,OMIM,Gene or Genome
+2413,C1366526,PC3,HGNC,Gene or Genome
+2414,C1418388,PC3,HGNC,Gene or Genome
+2415,C1423866,PC3,HGNC,Gene or Genome
+2416,C3714948,PC3,OMIM,Disease or Syndrome
+2417,C4282434,PC3,NCI,Gene or Genome
+2418,C1423866,PC3,OMIM,Gene or Genome
+2419,C0450691,PC3,SNOMEDCT_US,Body Location or Region
+2420,C5781379,PC3,NCI,Gene or Genome
+2431,C0009402,colorectal cancer,AOD,Neoplastic Process
+2432,C0009402,colorectal cancer,BI,Neoplastic Process
+2433,C0009402,COLORECTAL CANCER,OMIM,Neoplastic Process
+2434,C0009402,Colorectal cancer,CCS,Neoplastic Process
+2435,C0009402,colorectal cancer,CHV,Neoplastic Process
+2436,C0009402,Colorectal Cancer,MEDLINEPLUS,Neoplastic Process
+2437,C0009402,Colorectal cancer,OMIM,Neoplastic Process
+2438,C0009402,colorectal cancer,MEDCIN,Neoplastic Process
+2446,C0009402,Colorectal cancer,MDR,Neoplastic Process
+2447,C0009402,Colorectal cancer,NANDA-I,Neoplastic Process
+2449,C4722085,Colorectal cancer,SNOMEDCT_US,Neoplastic Process
+2450,C0009402,Colorectal Cancer,MSH,Neoplastic Process
+2451,C0009402,colorectal cancer,PDQ,Neoplastic Process
+2452,C0009402,Colorectal Cancer,NCI,Neoplastic Process
+2453,C0009402,colorectal cancer,CSP,Neoplastic Process
+2454,C1140680,ovarian cancer,CSP,Neoplastic Process
+2455,C1140680,OVARIAN CANCER,CCPSS,Neoplastic Process
+2456,C1140680,OVARIAN CANCER,CST,Neoplastic Process
+2457,C1140680,ovarian cancer,MEDCIN,Neoplastic Process
+2459,C1140680,OVARIAN CANCER,OMIM,Neoplastic Process
+2460,C1140680,Ovarian cancer,OMIM,Neoplastic Process
+2461,C1140680,ovarian cancer,CHV,Neoplastic Process
+2463,C1140680,Ovarian Cancer,MEDLINEPLUS,Neoplastic Process
+2464,C1140680,Ovarian cancer,LNC,Neoplastic Process
+2465,C1140680,Ovarian cancer,SNOMEDCT_US,Neoplastic Process
+2466,C1140680,Ovarian cancer,MDR,Neoplastic Process
+2467,C1140680,Ovarian Cancer,MSH,Neoplastic Process
+2469,C1140680,Ovarian cancer,HPO,Neoplastic Process
+2470,C0919267,ovarian cancer,PDQ,Neoplastic Process
+2471,C1140680,Ovarian cancer,ORPHANET,Neoplastic Process
+2472,C1140680,Ovarian Cancer,NCI,Neoplastic Process
+2479,C0019409,Heterogeneous,NCI,Qualitative Concept
+2480,C4505105,Oligodendrocyte Precursor Cells,MSH,Cell
+2481,C0041178,Trophoblast,LCH,Embryonic Structure
+2482,C0041178,Trophoblast,SNM,Embryonic Structure
+2483,C0041178,trophoblast,CSP,Embryonic Structure
+2484,C0041178,Trophoblast,FMA,Embryonic Structure
+2485,C0041178,trophoblast,CHV,Embryonic Structure
+2486,C0041178,Trophoblast,NCI,Embryonic Structure
+2487,C0041178,Trophoblast,LCH_NW,Embryonic Structure
+2488,C0041178,Trophoblast,MSH,Embryonic Structure
+2489,C0041178,Trophoblast,SNOMEDCT_US,Embryonic Structure
+2490,C0041178,trophoblast,MTH,Embryonic Structure
+2506,C2350466,Natural Killer T Cells,MSH,Cell
+2507,C2350467,Invariant Natural Killer T Cells,MSH,Cell
+2512,C1113654,Neural stem cell,FMA,Cell
+2513,C1113654,Neural Stem Cell,MSH,Cell
+2514,C1113654,Neural Stem Cell,NCI,Cell
+2515,C1171346,Human Embryonic Stem Cells,MSH,Cell
+2520,C2350466,NKT Cells,MSH,Cell
+2521,C1277042,Parathyroid cell,SNOMEDCT_US,Cell
+2522,C4038423,cervical cells,LNC,Cell
+2524,C2699546,DC,NCI,Gene or Genome
+2525,C1413938,DC,HGNC,Gene or Genome
+2526,C0012764,DC,LNC,Geographic Area
+2527,C0012764,DC,NCI,Geographic Area
+2528,C0011485,dC,DRUGBANK,"Nucleic Acid, Nucleoside, or Nucleotide"
+2529,C0011485,dC,DRUGBANK,Biologically Active Substance
+2530,C0265965,DC,ORPHANET,Disease or Syndrome
+2531,C0011485,dC,PDQ,"Nucleic Acid, Nucleoside, or Nucleotide"
+2532,C0011485,dC,PDQ,Biologically Active Substance

@@ -1,0 +1,87 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+
+# Snakemake's per-run bookkeeping, written next to the Snakefile it ran.
+.snakemake/
+
+# Virtual Environment. Both spellings: a venv carries absolute symlinks into
+# the interpreter that built it, and a pyvenv.cfg naming where it was built.
+venv/
+env/
+ENV/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Project specific
+crawl_output/
+logs/
+*.log
+worker_*.log
+
+# Data files
+*.txt
+*.csv
+*.gz
+!requirements*.txt
+!README.md
+!all_query_results/umls_*.csv
+
+# Environment
+.env
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+CLAUDE.md
+AGENTS.md
+
+legacy_*.py
+
+# SRR Pipeline - large data/binary files
+# `results/` is where the Makefile's stage-3 target writes Cell Ranger output:
+# BAMs and HDF5 matrices, hundreds of MB per sample.
+results/
+srr_pipeline_package/results/
+srr_pipeline_package/tools/
+10x_test_data/
+sample_sra/
+results_backup_*/
+
+# Cycle test outputs
+test_cycles*/
+test_full_pipeline/
+test_output/
+sample_crawl_output/
+
+# A second Compose project's results. COMPOSE_PROJECT_NAME=<name> puts this
+# run's crawl_output/, first_pass_output/, logs/ and workflow_output/ under
+# projects/<name>/ so two runs on one host cannot overwrite each other.
+projects/
+
+# Internal working notes, not part of the public tree. `.dockerignore` and
+# cycle_test/tests/test_public_release_boundaries.py already draw this line;
+# without the rule here a single `git add -A` crosses it permanently.
+docs/internal/
+
+# Working notes and drafts. They quote hosts, data paths and people, and
+# none of it is written for a reader outside the team.
+wiki/
+
+# Stage 3 inputs, staged into the working tree by the README's setup steps.
+# Tens of GB apiece: the Cell Ranger install and the reference transcriptome.
+cellranger/
+ref/
+
+# Timestamped copies `make clean` takes before it deletes.
+backup_*/

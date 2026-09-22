@@ -1,0 +1,2427 @@
+@import "tailwindcss";
+
+/* Dark mode follows the reader's choice, not the operating system's.
+ *
+ * Tailwind's own `dark:` reads prefers-color-scheme, which is the right default
+ * and the wrong one here: the header offers three answers — follow the system,
+ * light, dark — and the first is the only one where the OS gets a vote. So the
+ * variant is pointed at an attribute instead, and lib/preferences.ts is what
+ * resolves the reader's choice against the OS and writes it there.
+ *
+ * This is infrastructure and nothing more. No rule in this file has a dark
+ * variant yet, so the toggle changes the attribute and the page does not change
+ * with it — deliberately, because restyling the site is its own piece of work
+ * and this is the seam it will need. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* The site's colours, named for what they are for.
+ *
+ * Every surface, every border and every shade of text on the site is one of
+ * these. They are named by role and not by hue — `surface`, `edge`, `ink` — so
+ * that a rule can be read without knowing what colour it will come out, and so
+ * that the dark block below can answer differently without a single use site
+ * changing.
+ *
+ * Not in the @theme inline block below, and that is the whole point of them
+ * being here. `inline` writes the value into every utility that uses it and then
+ * drops the variable, so overriding one for dark mode changes nothing — which is
+ * exactly what was wrong before. A plain @theme keeps the variable, and the
+ * utilities keep pointing at it.
+ *
+ * The scale runs from the page backwards:
+ *
+ *   canvas    the page itself
+ *   surface   a card sitting on it
+ *   sunken    a well inside a card — an input, a toggle's track
+ *   raised    a hovered surface
+ *   edge      hairlines: card borders, dividers, table rules
+ *   placeholder  a block standing in for content that has not arrived — a
+ *             skeleton's bars, a progress track. The same value as edge in both
+ *             themes, and named apart from it because the two answer different
+ *             questions and will not always agree
+ *   edge-firm the same where it has to be seen against a fill
+ *   ink       headings, and anything that has to be read first
+ *   ink-body  the values in a table, the second sentence of a paragraph
+ *   ink-soft  labels, captions, the quieter half of a pair
+ *   ink-faint disabled, placeholder, a count beside a name
+ *   brand     the navy the site is built round
+ *   on-brand  what is legible on top of it
+ *   brand-deep  the same navy for the one card that *is* a block of it rather
+ *             than a surface wearing it. brand goes pale in the dark so that it
+ *             can be read against near-black; a card filled with that would be
+ *             the brightest thing on the page. This one stays deep and lifts
+ *             only enough to sit off the canvas, so white still reads on it
+ *   inverse   a chip that contradicts the page — a tooltip, and little else
+ *   on-inverse what is legible on that
+ *   accent    the teal beside the navy
+ *   highlight what the similarity map picks a blob out with, and the paler tone
+ *             the unpicked ones are drawn in. Both go lighter in the dark for
+ *             the same reason brand does
+ *   mark-hull the logo's boat, and mark-plume / -deep / -cool the three colours
+ *             its bird is painted in. All four are the brand colour here and
+ *             answered properly only by the two coloured palettes, so the mark
+ *             is a plain silhouette unless the reader has asked for otherwise
+ *   header    the bar at the top, header-well a field sunk into it, and sea the
+ *             water the mark floats on. All three are a surface or the brand
+ *             here, because in a palette built out of greys the header is just
+ *             another card. They are named apart because one palette makes the
+ *             header a sky and the water underneath it deep — and a card that
+ *             turned sky-blue with it would be wrong
+ *
+ * inverse is the one token that flips rather than shifts: a tooltip is dark on a
+ * light page and light on a dark one, because what it is for is standing apart
+ * from whatever it was summoned over.
+ *
+ * Light is stated here rather than in the dark block, because light is what the
+ * server renders and what the page falls back to when nothing has been chosen.
+ *
+ * `static` because Tailwind otherwise emits only the theme variables some
+ * utility happens to use, and half of these are reached from hand-written rules
+ * further down this file instead. A token that exists in the dark block and
+ * nowhere else is a colour that changes to something undefined. */
+@theme static {
+  --color-canvas: #f8fafc;
+  --color-surface: #ffffff;
+  --color-sunken: #f1f5f9;
+  --color-raised: #f8fafc;
+  --color-edge: #e2e8f0;
+  --color-placeholder: #e2e8f0;
+  --color-edge-firm: #cbd5e1;
+  --color-ink: #0f172a;
+  --color-ink-body: #334155;
+  --color-ink-soft: #64748b;
+  --color-ink-faint: #94a3b8;
+  --color-brand: #1a365d;
+  --color-brand-soft: #2c4a75;
+  --color-on-brand: #ffffff;
+  --color-brand-deep: #1a365d;
+  --color-brand-deep-soft: #2c4a75;
+  /* What can be read on brand-deep, which is not always what can be read on
+     brand. On a light palette the two are the same colour and this is a
+     formality; on a dark one they are opposites. brand goes pale in the dark so
+     that it can be read against near-black, which means the thing written on it
+     has to be dark — while brand-deep stays dark, so the thing written on *it*
+     has to be pale. One token was serving both and the darker palettes were
+     getting near-black on near-black: the export card's heading, its copy and
+     its button label were all present and all invisible.
+     Defaulting to on-brand rather than to a colour, so that a palette which has
+     not taken brand pale inherits the right answer without being asked. */
+  --color-on-brand-deep: var(--color-on-brand);
+  --color-inverse: #1e293b;
+  --color-on-inverse: #f8fafc;
+  --color-accent: #0d9488;
+  --color-highlight: #7c3aed;
+  --color-highlight-soft: #a78bfa;
+  --color-mark-hull: var(--color-brand);
+  --color-mark-plume: var(--color-brand);
+  --color-mark-plume-deep: var(--color-brand);
+  --color-mark-plume-cool: var(--color-brand);
+  /* The wordmark's two ends. Both are the brand until a palette says otherwise,
+     which is the letters painted one flat colour — what they were before any of
+     this. Real tokens and not `currentColor`, because a letter carrying a
+     clipped gradient has its own colour set to transparent and currentColor
+     inside its background would resolve to that. */
+  --wordmark-from: var(--color-brand);
+  --wordmark-to: var(--color-brand);
+  --color-header: var(--color-surface);
+  --color-header-well: var(--color-sunken);
+  --color-header-raised: var(--color-raised);
+  --color-sea: var(--color-brand);
+
+  /* The donut's slices and the organism bar's.
+   *
+   * Not roles like everything above — a categorical set has one job, which is to
+   * stay distinguishable from itself, and no amount of naming will say which of
+   * six a slice should be. What they are is a set, and the numbering says so.
+   *
+   * The first is the site's own colour, so the largest share of anything is
+   * always the colour the site already is. The last is Other, which is why it is
+   * the only grey.
+   *
+   * Custom properties and not literal values, because these are handed to a
+   * conic-gradient and a background — both of which take a var() —
+   * and that is all it takes for a palette to answer them. The tissue families
+   * could not be done this way: their pale wash and their ink are computed from
+   * the hue in JavaScript, and a var() cannot be read by the code that computes
+   * them. */
+  --chart-1: var(--color-brand);
+  --chart-2: #0d9488;
+  --chart-3: #9333ea;
+  --chart-4: #f97316;
+  --chart-5: #ec4899;
+  --chart-6: #94a3b8;
+}
+
+/* And the same eleven, answered for a dark page.
+ *
+ * Read down the two lists side by side: the order is the same and the direction
+ * is reversed. Canvas is the darkest thing rather than the lightest, a card is a
+ * step *up* from the page rather than a step down, and ink runs from near-white
+ * to a grey that still reads.
+ *
+ * Two are not simply mirrored. Brand goes lighter rather than darker: navy is
+ * the site's colour against white and a hole in the page against near-black, so
+ * what carries the identity in the dark is a paler version of it. And on-brand
+ * follows it down, because white on a pale navy is worse than dark on it.
+ *
+ * The surfaces are lifted with light rather than separated with borders, which
+ * is how a dark interface says depth — and it is why sunken is *lighter* than
+ * surface here and darker than it above. A well cut into a pale card is a shadow
+ * and a well cut into a dark one is a place more light reaches; a search field
+ * that went darker still, on the reasoning that "sunken" means "down", is a
+ * field nobody could see the edges of.
+ *
+ * The four surfaces climb: canvas, then the card on it, then the field inside
+ * the card, then whatever is hovered. Each step is worth seeing on its own, and
+ * the first is the widest, because the gap between the page and a card is the
+ * one that has to carry across a whole screen.
+ *
+ * brand is not the navy darkened. Navy against near-black is a hole rather than
+ * a colour, so what carries the identity here is a clean pale blue — clean
+ * being the point: the first attempt sat at a greyer, smokier blue and read as
+ * a colour that had been left out in the rain. */
+[data-theme="dark"] {
+  --color-canvas: #060a12;
+  --color-surface: #18222f;
+  --color-sunken: #232f40;
+  --color-raised: #2c3a4e;
+  --color-edge: #2e3c50;
+  --color-edge-firm: #4a5c78;
+  --color-placeholder: #2e3c50;
+  --color-ink: #f2f6fc;
+  --color-ink-body: #d3dded;
+  --color-ink-soft: #aebdd3;
+  --color-ink-faint: #8092ac;
+  --color-brand: #8ab4f8;
+  --color-brand-soft: #a9caff;
+  /* White. The wordmark's letters take their colour from these tokens rather
+     than from a utility class, so it has to be said here. */
+  --wordmark-from: #ffffff;
+  --wordmark-to: #ffffff;
+  --color-on-brand: #0a1120;
+  --color-brand-deep: #16304f;
+  /* Not on-brand's near-black, which on this navy is a 1.5 and unreadable. */
+  --color-on-brand-deep: var(--color-ink);
+  --color-brand-deep-soft: #22436b;
+  --color-inverse: #e2e8f0;
+  --color-on-inverse: #0f172a;
+  --color-accent: #45d9c6;
+  --color-highlight: #b39bff;
+  --color-highlight-soft: #6f5aa8;
+  /* The mark tokens are not restated. They point at --color-brand in the block
+     above, which this block has already answered, so the silhouette follows the
+     brand into the dark without being told to. */
+}
+
+/* And the same names again, twice, for a reader who asked for colour.
+ *
+ * These are a different question from the two above, and the file is laid out to
+ * say so: light and dark are the same site at two brightnesses, and a palette is
+ * the site made of other colours. They come last because they must win — the
+ * selectors are all one attribute on <html> and so all of equal weight, and with
+ * equal weight the last one written is the one that paints.
+ *
+ * Two of them rather than one, because the first attempt at a single "colourful"
+ * was two schemes wearing each other's clothes. It put the loading character's
+ * browns on the page and a teal beside them, and neither was wrong on its own —
+ * what was wrong was that a warm scheme and a cool one were being asked to be
+ * the same scheme. Split, each can be the whole of itself.
+ *
+ * What they share is the method. Every surface is one temperature and everything
+ * marked on it is the other, or a deeper tone of the same; nothing has to sit
+ * beside a colour of its own temperature and compete with it. And the values are
+ * never the swatch as picked — a colour chosen to look good in a square is not
+ * one that carries eight point type, so each was deepened or lightened against
+ * its own background until it passed and no further. Every pair in both blocks
+ * was checked; the weakest in each is ink-faint, which is the token that is
+ * weakest in the light palette too.
+ *
+ * Neither has a dark counterpart, and each says so in its registry entry rather
+ * than half-answering here. */
+
+/* Nautical chart: a warm scheme, and the one the loading character is drawn in.
+ *
+ * The colours were measured off its own frames — cream at 14% of every opaque
+ * pixel, the outline browns around #41230f, the gold at #f6c666 — which is what
+ * the palette is for. The character sat in the middle of a grey and navy site
+ * looking like it had wandered in from somewhere else.
+ *
+ * The gold is the clearest case of a swatch not being a value: #f6c666 is the
+ * character's most recognisable colour and has 1.6:1 against parchment, so what
+ * carries the identity here is that hue taken down to #8f5410, which is nearly
+ * six.
+ *
+ * It keeps to browns, warm reds and the greens that agree with them, and holds
+ * the line at green — no teal, no blue. A single cool accent in a scheme this
+ * warm does not read as variety, it reads as the one thing nobody
+ * recoloured. */
+[data-palette="nautical"] {
+  --color-canvas: #fbf1de;
+  --color-surface: #fffcf6;
+  --color-sunken: #f5e7cf;
+  --color-raised: #f8eddb;
+  --color-edge: #e8d6b4;
+  --color-edge-firm: #cfb385;
+  --color-placeholder: #e8d6b4;
+  --color-ink: #3a2312;
+  --color-ink-body: #5c4028;
+  --color-ink-soft: #856444;
+  --color-ink-faint: #ac8f6a;
+  --color-brand: #8f5410;
+  --color-brand-soft: #a86a1e;
+  --color-on-brand: #fffcf6;
+  --color-brand-deep: #6d3f0c;
+  --color-brand-deep-soft: #8f5410;
+  --color-inverse: #3a2312;
+  --color-on-inverse: #fbf1de;
+  --color-accent: #5d7a2b;
+  --color-highlight: #a83a1f;
+  --color-highlight-soft: #d59277;
+
+  /* Aged paper, a well cut into it, and the chart's own ink for the water. A
+     nautical chart draws the sea in the same brown it draws everything else. */
+  --color-header: #f7ead0;
+  --color-header-well: #ecd9b0;
+  --color-header-raised: #f3e3c2;
+  --color-sea: #8f5410;
+
+  /* The mark keeps the colours it was painted in — the wing's own yellow falling
+     through orange, and the cool blue-green on its outer feathers. They are the
+     illustration's, they are why this palette exists, and the mark is a picture
+     rather than a scheme: the one cool note the rest of this palette refuses is
+     allowed here because it is what the bird is. */
+  --color-mark-hull: #8a5a30;
+  --color-mark-plume: #f2b01e;
+  --color-mark-plume-deep: #e2812a;
+  --color-mark-plume-cool: #3fc0ac;
+
+  /* Moss before rust, and not the other way round. The first slice is the brand
+     brown, and a rust beside it is the same colour with a little more red in it
+     — two slices that had to be told apart by area rather than by colour. The
+     green is the one thing in this palette that is not a brown, so it goes where
+     the contrast is needed most. */
+  --chart-2: #5d7a2b;
+  --chart-3: #a8471f;
+  --chart-4: #c98b2e;
+  --chart-5: #7a4b2a;
+  --chart-6: #a89880;
+}
+
+/* Tropical: the other half, and the one that is actually about water.
+ *
+ * Blues, teals, greens and a sun yellow. The page is foam, the ink is the deep
+ * end of the same green-blue, and the one warm note is `highlight` — warm on
+ * purpose, because the similarity map uses it to pick one blob out of a field of
+ * blue and a cool highlight in a cool field is not a highlight. */
+[data-palette="tropical"] {
+  /* Deeper than it was, and deeper on purpose. This palette's body ground was
+     #f0faf6 — near enough to white that white light falling on it had nothing
+     to fall on, and the caustics below were being drawn in a colour the page
+     was already almost made of. Taken down twice now: at #e4f3ee there were
+     still only six units of lightness between the ground and pure white, which
+     is not enough range to watch something move about in. This leaves room for
+     the light to be light, and the white cards gain lift at the same time.
+     Still above --color-sunken, which is the well inside a card and has to keep
+     reading as the lowest thing on the page. */
+  --color-canvas: #dcefe6;
+  --color-surface: #ffffff;
+  --color-sunken: #dcf2ea;
+  --color-raised: #eaf8f2;
+  --color-edge: #b9e2d4;
+  --color-edge-firm: #8fcbb8;
+  --color-placeholder: #b9e2d4;
+  --color-ink: #06343a;
+  --color-ink-body: #145059;
+  --color-ink-soft: #3d7580;
+  --color-ink-faint: #79a8ae;
+  --color-brand: #0e6f7e;
+  --color-brand-soft: #17879a;
+  --color-on-brand: #ffffff;
+  --color-brand-deep: #0a5460;
+  --color-brand-deep-soft: #0e6f7e;
+  --color-inverse: #06343a;
+  --color-on-inverse: #f0faf6;
+  --color-accent: #1a8046;
+  /* Hibiscus, and the one colour here that is not water, sand or leaf.
+     `highlight` is what the similarity map picks one blob out of a field with,
+     and what the sample page scores a match in — it has to be unlike everything
+     around it before it has to belong. An amber did belong, and read as one more
+     brown; this is the teal's opposite, which is what a highlight is for. */
+  --color-highlight: #b0357f;
+  --color-highlight-soft: #e2a6c8;
+
+  /* Sun on the left, sky across the rest, and real depth under the mark.
+     --color-header stays a flat sky, so everything that needs to know what the
+     bar is made of still gets one colour — the knockout behind the settings
+     buttons' slash reads it, and a gradient cannot be sampled at a point.
+     The sun is short because it is the sun and not a wash: solid to about where
+     the mark ends, then a long way to sky. It is #fae5a0 and not the deeper
+     yellow it wants to be because the wordmark is brand-coloured and sits in it;
+     at #f7dd8a that reads at 4.36 and here it reads at 4.67. */
+  /* Sky, a well cut into it, and real depth under the mark.
+     The sky is an aqua rather than the blue it wants to be, and the reason is
+     the edge it meets. The page below is a green-leaning foam at hue 156 and
+     a proper sky sits at about 199, so at the header's bottom edge the hue
+     would jump forty degrees while nothing else changed — which reads as two
+     pages stacked rather than as one page with a bar on it. This is at 173,
+     halfway between them: still plainly a lit sky at the top of the window, and
+     not a different family from what it borders.
+     A vertical fade from sky to sage is worse. It fixes the seam and costs the
+     header its own colour, and it fights the sun already crossing it — two
+     gradients over one bar is one more than the bar can carry.
+     Moving the colour is the smaller change and the better one.
+     The well and the hovered tint follow it, both a step off the bar rather than
+     off the page: `sunken` is a foam-coloured field and comes out at 1.04 here,
+     which is a search box with no edges. */
+  --color-header: #cdf0ec;
+  --color-header-well: #b2e3dc;
+  --color-header-raised: #dcf5f1;
+  --color-sea: #075e6b;
+  /* The sun, and how much of the bar it gets.
+     min() of a length and a share of the window, which is what makes it shrink
+     on a narrow one without changing anything on a wide one. Both stops cross
+     over at about 1200px: above that the pixel value wins and the header looks
+     exactly as it did, and below it the window's share takes over and the sun
+     pulls in with everything else. Flat pixels put a fifth of a phone screen
+     under a sun; flat percentages moved it off the mark entirely on a wide
+     monitor, where the content stops widening at 1600 and the logo is nowhere
+     near the left edge. */
+  --header-image: linear-gradient(
+    to right,
+    #fae5a0 0,
+    #fae5a0 min(72px, 6vw),
+    var(--color-header) min(340px, 28vw)
+  );
+
+  /* Here the mark is not painted part by part. Boat, bird and tail are one shape
+     lit from the top left, and these two are the ends of that one run — see
+     --mark-fill-* below for how the switch is made.
+     Two and not three: the run goes straight from the yellow to the teal with
+     nothing in between, which is why there is no --deep here. Passing through
+     the orange made the whole mark read as orange-to-mint, because the orange is
+     where the middle of a gradient is looked at.
+     The cool end is the wordmark's teal and not the mark's own blue-green. The
+     illustration's #3fc0ac is a mint — pale and green-leaning — and at the size
+     of a wingtip that passes, but taken across the whole shape it was the colour
+     the mark ended in and it read as mint rather than as water. */
+  --color-mark-plume: #fac431;
+  --color-mark-plume-cool: #0e6f7e;
+
+  /* The wordmark, which runs the same way for the same reason — G's top left to
+     R's bottom right.
+     Both ends are the mark's, so the word and the drawing beside it are lit by
+     the same sun rather than by two.
+     Both ends are exactly the mark's, so the word and the drawing beside it are
+     lit by the same sun rather than by two nearly-the-same ones. A darker yellow
+     was tried here for the contrast it would buy and it read as one letter in a
+     different colour from the rest.
+     What it costs is stated plainly: on a header this light the yellow sits near
+     1.3 to one, under any floor. Only the first letter is near it — the run is
+     half teal by the third — and the teal end carries 4.7, so the word as a
+     whole is legible while its opening letter is decoration. A deliberate trade
+     for the logo, and not a pattern to copy anywhere else on the site. */
+  --wordmark-from: #fac431;
+  --wordmark-to: #0e6f7e;
+
+  --chart-2: #12a08c;
+  --chart-3: #1a8046;
+  --chart-4: #e0a92a;
+  --chart-5: #2f7fb8;
+  --chart-6: #93b3b8;
+}
+
+/* And one for a dark room.
+ *
+ * The first palette here that is dark rather than light, and it is the plain dark
+ * page turned from slate towards violet — same construction, same order of
+ * surfaces, a different hue running through all of it. Where plain answers
+ * near-black and a pale blue, this runs the arc the reader asked for: rose to
+ * violet to indigo to blue.
+ *
+ * Warm and cool are not split by surface here the way they are in the two light
+ * palettes, because a night sky does not have a warm half. Everything structural
+ * is on the violet-indigo arc and the warm notes are points of light on it — the
+ * mark, and the pink the accent is. That is the same discipline arrived at from
+ * the other side: nothing sits next to a colour of its own temperature and
+ * competes with it, because there is only one temperature and the exceptions are
+ * meant to be seen.
+ *
+ * Dark-only, and it says so in its registry entry rather than half-answering a
+ * light page here. A sky at midnight has nothing to say about noon.
+ *
+ * The surfaces climb further apart than plain's do — 1.13, 1.12 and 1.30 against
+ * its 1.09 — because a violet dark is less legible than a neutral one at the same
+ * separation: the eye reads a hue shift as part of the colour and a lightness
+ * shift as depth, so the depth has to be carried by lightness alone. Every pair
+ * was checked and the weakest is 2.11, which is edge-firm, and that is a
+ * hairline. Every text pair is above 4.8. */
+[data-palette="night"] {
+  --color-canvas: #08061a;
+  --color-surface: #191433;
+  --color-sunken: #241d45;
+  --color-raised: #2f2757;
+  --color-edge: #302a58;
+  --color-edge-firm: #4e4585;
+  --color-placeholder: #302a58;
+  --color-ink: #f4f0ff;
+  --color-ink-body: #ddd6f5;
+  --color-ink-soft: #b3a9d6;
+  --color-ink-faint: #8a80b0;
+  --color-brand: #a89bff;
+  --color-brand-soft: #c2b8ff;
+  --color-on-brand: #120c26;
+  /* Same trade as the plain dark theme's: brand is pale here so on-brand is
+     near-black, and near-black on the deep violet of a filled card is nothing
+     at all. */
+  --color-on-brand-deep: var(--color-ink);
+  --color-brand-deep: #2b1f5c;
+  --color-brand-deep-soft: #3d2d7d;
+  --color-inverse: #e8e3ff;
+  --color-on-inverse: #17102e;
+  --color-accent: #f27ab8;
+  --color-highlight: #c9a2ff;
+  --color-highlight-soft: #6b53a8;
+
+  /* The bar is the darkest thing above the fold and the water on it is the one
+     bright band — which is the right way round for a night sky, where the sea
+     carries the moonlight and the sky does not. No --header-image: the use site
+     falls back to none, and a gradient in the dark would be a smear rather than
+     a sun. */
+  --color-header: #120e2b;
+  --color-header-well: #2a2258;
+  --color-header-raised: #322a63;
+  --color-sea: #a99bff;
+  /* The waves and the gulls are drawn as fractions of the sea's colour — seven
+     percent for the furthest — and those fractions were picked against a white
+     bar. Over this one they came out as almost nothing. Turned up together, so
+     the near, middle and far layers keep the distances between them that are
+     what makes the sea read as depth.
+     1.6 and not the 1.9 it started at: at 1.9 the water was legible but forward,
+     and the header stopped being a night sky with a sea in it and became a sea.
+     This is the least that still reads. */
+  --sea-ink: 1.6;
+
+  /* The mark is lit rather than silhouetted, and it is the one warm thing on the
+     page. Gold at the crest falling through the accent's pink to the violet the
+     wingtips take — a lantern in a boat, which is what the drawing is anyway.
+     The hull stays cool and dark, because a boat at night is a shape against the
+     water and not a lit surface. */
+  /* The hull was edge-firm, which is a border colour and read as a boat drawn in
+     the dark rather than one on the water. This is the palette's own pale
+     lavender: brighter than the water it sits on and brighter than the violet
+     the bird's run ends in, so the three stay apart. */
+  --color-mark-hull: var(--color-highlight);
+  --color-mark-plume: #ffd98a;
+  --color-mark-plume-deep: #f0a3d0;
+  --color-mark-plume-cool: #9b8cf5;
+
+  /* The word runs the same way as the drawing beside it, so the two are lit by
+     the same thing. Both ends carry against this bar — 9.7 and 6.6 — which the
+     light palettes' wordmarks cannot say, and it is only because a bright colour
+     on a dark bar has room that a pale one on a light bar does not. */
+  --wordmark-from: #f0a3d0;
+  --wordmark-to: #9b8cf5;
+
+  --chart-2: #58c8e8;
+  --chart-3: #e879b8;
+  --chart-4: #f0b95e;
+  --chart-5: #9b8cf5;
+  --chart-6: #7c74a0;
+}
+
+@theme inline {
+  --color-primary: #1a365d;
+  --color-primary-light: #2c4a75;
+  --color-accent-light: #14b8a6;
+  --color-rna: #0d9488;
+  --color-chip: #9333ea;
+  --color-atac: #f97316;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "Roboto Mono", monospace;
+
+  /* Card surfaces. Every white content surface uses these rather than picking a
+     radius and a shadow per element, which is how the pages ended up with five
+     different treatments for the same kind of box. Change the value here and the
+     whole site follows.
+
+     One layer, no offset. Tailwind's own shadows stack two layers and push both
+     down a pixel, which reads as a doubled shadow that is heavier under the card
+     than beside it. A single ring of blur centred on the box falls evenly on all
+     four sides. The 6px is the doubled blur (Tailwind's sm is 3px); the raised
+     state doubles it again and darkens slightly, since spreading the same ink
+     over twice the distance would otherwise read as a weaker hover, not a
+     stronger one. */
+  --radius-card: 0.75rem; /* 12px */
+  --shadow-card: 0 0 6px 0 rgb(0 0 0 / 0.1);
+  --shadow-card-raised: 0 0 12px 0 rgb(0 0 0 / 0.13);
+
+  /* There was a --shadow-card-dark here, a stronger blur tinted with the export
+     card's own navy so that it would separate from the page rather than from
+     the card. It was the right idea for one palette and a bug in the other
+     three: the tint was written as a literal — the plain light theme's brand —
+     so a sand-coloured page and a night sky both got a blue glow around that one
+     card, and it was the only blue left on either.
+     Not re-themed, removed. Making it a token would have meant four more values
+     to keep in step for an effect nobody had asked for; the plain card shadow
+     under it was doing the work either way. */
+
+  /* Controls — a toggle pill, a small button, an input. Half the card's blur so
+     that a control sitting on a card (the Table/JSON toggle inside the extended
+     metadata card, say) reads as one shadow with something on top of it, not as
+     two shadows of equal weight stacked on each other. */
+  --shadow-control: 0 0 3px 0 rgb(0 0 0 / 0.08);
+
+  /* Things that float over the page — the filter popover, the button that
+     appears on a card at hover. Same even ring, widest and darkest of the three,
+     because the distance from the page is what says it is detached. */
+  --shadow-overlay: 0 0 18px 0 rgb(0 0 0 / 0.16);
+
+  /* The tissue-system palette is not here but in lib/tissueFamily.ts. Its two
+     readers are both JavaScript — a card's band and the dashboard's composition
+     bar — and a custom property declared in this block is inlined into the
+     utilities that use it and then dropped, so a var() reached from JS resolves
+     to nothing. */
+}
+
+@layer base {
+  /* No scrollbar is reserved at the page level any more, and none is needed:
+     the shell in layout.tsx fixes the window and every page scrolls inside a
+     container of its own, so no navigation can add or remove a page scrollbar
+     and shift the layout sideways. Reserving it here was the earlier fix, and
+     it cost 8px off the width of everything on the page — visible as a header
+     whose background stopped short of the window edge. */
+  body {
+    font-family: var(--font-sans);
+    /* The two tokens the page itself is made of. Everything else sits on top of
+       these, so they are the only place the theme has to reach for the shell to
+       change colour. */
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+  }
+
+  /* An icon renders as its ligature text ("search", "notifications") until the
+     icon font arrives, which is far wider than the glyph that replaces it. Fixing
+     the box to the glyph's own 1em advance keeps that swap from moving anything;
+     the font is requested with display=block so nothing shows in the meantime. */
+  .material-symbols-outlined {
+    display: inline-block;
+    width: 1em;
+    overflow: hidden;
+  }
+}
+
+/* Type roles.
+
+   The same kind of text was written out differently everywhere it appeared: the
+   label over a list of results was text-sm/semibold on the search page and
+   text-xs/bold on the dashboard, a card's figure was font-black in one place and
+   font-bold in another. Naming the few roles that recur keeps them in step —
+   change one here and both pages follow.
+
+   Anything not listed is body copy, which is text-sm. */
+@layer components {
+  /* The small capitals above a card's contents: a KPI's label, a chart's title,
+     the heading over a list of results, a filter category's name. */
+  .type-eyebrow {
+    @apply text-xs font-bold uppercase tracking-wider text-ink-soft;
+  }
+
+  /* The name of a panel, with the line that explains it. */
+  .type-panel-title {
+    @apply text-xl font-bold text-ink;
+  }
+  .type-panel-sub {
+    @apply text-sm text-ink-soft;
+  }
+
+  /* A figure the card exists to show. The size stays at the use site: it depends
+     on how much room that particular card has to give it. */
+  .type-figure {
+    @apply font-bold text-ink tracking-tight;
+  }
+}
+
+/* Scroll containers inside a page have the same problem as the page itself: the
+   scrollbar appears when their content grows and everything under it jumps. */
+.scroll-stable {
+  scrollbar-gutter: stable;
+}
+
+/* Room for a card's shadow inside a scroll container.
+ *
+ * A scroll container clips on both axes however only one of them was asked to
+ * scroll, so a column that scrolls vertically also cuts its cards' shadows off
+ * square at the left and right edges. The padding gives the shadow somewhere to
+ * fall and the negative margin takes it back out of the layout, so the cards
+ * stay exactly where they were.
+ *
+ * 8px is the card shadow's own blur rounded up, and it is also half the gap
+ * between the two columns — so the two columns' padding meets in the middle of
+ * that gap without overlapping. Widening it would have them overlap, and a
+ * shadow wider than this is clipped again. */
+.shadow-room {
+  padding-inline: 8px;
+  margin-inline: -8px;
+}
+
+/* The similarity map arriving: everything but the query itself starts collapsed
+   on the centre and springs out to where it belongs.
+
+   One transform on one group, which is why it costs nothing to run with a
+   hundred blobs in it — the alternative, animating each blob from the centre to
+   its own position, is a hundred animations and a hundred sets of coordinates to
+   interpolate. The origin is set on the element instead of here: it is the map's
+   own centre, which differs between the sidebar's map and the expanded one.
+
+   The easing is as decelerating as a curve gets: most of the distance is covered
+   in the first fifth of the time and the rest is the map coming to rest, which is
+   what makes it read as thrown outward rather than slid into place. */
+@keyframes map-bloom {
+  from {
+    transform: scale(0.06);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.map-bloom {
+  animation: map-bloom 840ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .map-bloom {
+    animation: none;
+  }
+}
+
+/* A label arriving on the map — the one a blob gives up when it is hovered, and
+   the whole set coming back when the pointer leaves.
+
+   Short, and only on the way in. Text that appears instantly is read as a flash
+   however briefly it is there; text that leaves instantly is just gone, which is
+   what was wanted. */
+@keyframes map-label-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.map-label-in {
+  animation: map-label-in 150ms ease-out both;
+}
+
+/* A blob and its spoke crossing between the plain and the hovered state.
+ *
+ * These are presentation attributes, which are CSS properties like any other, so
+ * a transition on them applies to a change React makes by re-rendering. Without
+ * it the map snaps between two states as the pointer moves and reads as
+ * flickering; with it, moving across a crowd is a wave rather than a strobe. */
+.map-node {
+  transition: opacity 170ms ease-out;
+}
+.map-blob {
+  transition:
+    fill 170ms ease-out,
+    r 170ms ease-out;
+}
+.map-spoke {
+  transition:
+    stroke 170ms ease-out,
+    stroke-width 170ms ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .map-label-in {
+    animation: none;
+  }
+  .map-node,
+  .map-blob,
+  .map-spoke {
+    transition: none;
+  }
+}
+
+/* The header's sea.
+ *
+ * Each travelling layer slides left by exactly one repeat of its own wave, so
+ * the crest that leaves at the left is the crest arriving at the right and the
+ * loop closes without a seam. They run at different speeds; that difference is
+ * the parallax, and it is the only thing saying one is further away.
+ *
+ * Nothing here decides its own timing. Every floating thing takes its period
+ * from the near wave and its phase from where it sits along that wave, both
+ * given to it inline from HeaderSea.tsx, because a float whose rhythm is chosen
+ * for how it looks rises when there is no crest under it and the whole picture
+ * comes apart. */
+@keyframes sea-drift {
+  to {
+    transform: translateX(var(--sea-tile));
+  }
+}
+.sea-drift {
+  animation: sea-drift var(--sea-dur) linear infinite;
+}
+
+/* Everything that floats shares one period and differs only in where in that
+   period it is held. A float rides level at the crest and level in the trough
+   and tilts on the slope between them, which is why the tilt is a quarter of a
+   cycle behind the rise rather than in step with it.
+ *
+ * The easing is a sine approximation rather than ease-in-out: with five stops in
+ * the cycle, ease-in-out comes to a stop and sets off again at each one, and the
+ * bob reads as five little movements instead of one continuous one. */
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0) rotate(calc(-1 * var(--bob-tilt, 6deg)));
+  }
+  25% {
+    transform: translateY(calc(-1 * var(--bob-rise, 2.8px))) rotate(0deg);
+  }
+  50% {
+    transform: translateY(0) rotate(var(--bob-tilt, 6deg));
+  }
+  75% {
+    transform: translateY(var(--bob-rise, 2.8px)) rotate(0deg);
+  }
+}
+
+/* The bird is inside the boat's group, so this is not its own attitude but the
+   difference between its attitude and the hull's — and the difference is that it
+   leans further than the hull rather than holding itself upright against it. The
+   same sign as the hull's tilt, so the two add and the bird turns further than
+   the hull it stands in, which is what says they are two things and not one
+   drawing.
+
+   Not the same amount each way. The creature faces the bow, and swung as far
+   forward as back it ends up against it; the swing is the same size but sits
+   further aft, so what it leaves is room in front and lean behind.
+
+   It does not rise. It is already being carried up by the hull. */
+@keyframes bird-lean {
+  0%,
+  100% {
+    transform: rotate(calc(-1 * var(--lean-fore, 1.5deg)));
+  }
+  50% {
+    transform: rotate(var(--lean-aft, 5.5deg));
+  }
+}
+
+/* The tail's flick is not here. It needs its pivot stated rather than measured
+   against a reference box, because it hangs inside two ancestors that are
+   themselves turning and CSS leaves what the box means in that case open enough
+   to have sent the tail sliding out of its socket. SVG's own animateTransform
+   takes the centre outright — see HeaderSea.tsx. */
+
+/* Duration and delay are missing on purpose: both come inline from the near
+   wave's own period and from where the element sits along it. The values here
+   are only what a float is like — how far it rises and how far it leans — and
+   the fallbacks keep something moving if a call site forgets. */
+.letter-float,
+.boat-float,
+.bird-lean {
+  animation-duration: 7.5s;
+  animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
+  animation-iteration-count: infinite;
+}
+
+/* Each letter of the wordmark floats on its own, and the crest reaches them one
+   after another, so the bob travels through the word the way the water does. */
+.letter-float {
+  display: inline-block;
+  animation-name: bob;
+  --bob-rise: 2.8px;
+  --bob-tilt: 3.4deg;
+}
+
+/* transform-box: view-box so that transform-origin is read in the drawing's own
+   coordinates. Without it the origin of a transform on an SVG element is the
+   corner of the whole SVG viewport, and a rotation about a point that far away
+   throws the element clean off the header.
+
+   A hull leans further than it lifts — it is long enough to sit on both the
+   crest and the slope behind it at once, which is a tilt rather than a rise. */
+/* The three pivots, in the artwork's own coordinates — measured off the drawing
+   rather than chosen, and readable against it in any editor. `view-box` counts
+   from the top-left of the mark's box, and the mark's box is the export's own,
+   so these are the numbers as measured and not a conversion of them. */
+/* --bob-rise is set inline instead of here. A px inside an SVG transform is a
+   user unit, and the mark's box is 380 units drawn 36 pixels wide — so the 2.6px
+   that the letters rise would be a quarter of a pixel here. The conversion needs
+   both the box and the rendered size, which live together in HeaderSea.tsx.
+   Degrees do not scale, so the tilt stays. */
+.boat-float {
+  transform-box: view-box;
+  transform-origin: 190px 300px; /* where the hull meets the water */
+  animation-name: bob;
+  --bob-tilt: 5.5deg;
+}
+
+.bird-lean {
+  transform-box: view-box;
+  transform-origin: 173px 260px; /* where it sits in the hull */
+  animation-name: bird-lean;
+}
+
+/* A row of choices where exactly one is taken: search mode, species, how many
+   results to show.
+ *
+ * A track with the taken one lifted out of it. Lifted by an outline as well as
+ * by a fill, which is the part that was missing — the chosen chip was a white
+ * rectangle on a pale grey one, told apart by a shadow so faint it read as an
+ * accident of rendering rather than as a choice, and in the dark it was darker
+ * than the track it sat in.
+ *
+ * The three of them were written out three times and drifted; they are one thing
+ * and now they say so in one place. */
+.segment-track {
+  background-color: var(--color-sunken);
+  border: 1px solid var(--color-edge);
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+}
+.segment {
+  border-radius: 0.375rem;
+  color: var(--color-ink-soft);
+  transition:
+    background-color 150ms ease,
+    color 150ms ease,
+    box-shadow 150ms ease;
+}
+.segment:hover:not(.segment-on):not(:disabled) {
+  color: var(--color-ink);
+}
+/* The chosen one steps up out of the track — up in the light because the track
+   is grey and the page is white, and up again in the dark because there the
+   whole language of depth runs the other way. The outline is what carries it in
+   both: a fill alone is a difference of a few per cent, and a few per cent is
+   what a shadow was already failing to say. */
+.segment-on {
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  box-shadow: var(--shadow-control);
+  outline: 1px solid var(--color-edge-firm);
+  outline-offset: -1px;
+}
+[data-theme="dark"] .segment-on {
+  background-color: var(--color-raised);
+  box-shadow: none;
+}
+
+/* A toggle that is off: its icon faded, and a line struck through it.
+ *
+ * Drawn rather than swapped for a second icon. Material Symbols has no "off"
+ * twin for most of its glyphs, and a rule here works over any of them.
+ *
+ * The line is drawn twice. Underneath, a thicker one in whatever the button is
+ * sitting on, which clears a channel through the glyph; on top, the line itself.
+ * A single stroke laid straight over an icon of the same colour reads as part of
+ * the drawing rather than as something crossing it. The knockout colour is a
+ * variable because the button takes a background on hover, and a channel cut in
+ * the wrong white is worse than no channel at all.
+ *
+ * Both grow from nothing along their own length, so turning the setting off
+ * reads as the line being drawn across the icon rather than as one picture
+ * replacing another. */
+/* The gap cut through the icon so that the slash reads as a slash rather than as
+   a line drawn over a glyph. It has to be painted in whatever is behind it, and
+   what is behind it is the header — not a card. Those were the same colour until
+   a palette made the header a sky, and then the knockout stayed white and the
+   cut showed as a white stripe across the icon. */
+.icon-slash {
+  --slash-knockout: var(--color-header);
+}
+.icon-slash:hover {
+  --slash-knockout: var(
+    --color-header-raised
+  ); /* the hover background it sits on */
+}
+.icon-slash > .material-symbols-outlined {
+  transition: opacity 180ms ease-out;
+}
+.icon-slash[data-on="false"] > .material-symbols-outlined {
+  opacity: 0.4;
+}
+.icon-slash::before,
+.icon-slash::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 2px;
+  transform: translate(-50%, -50%) rotate(-45deg) scaleX(0);
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+/* Both stated, though a positioned pseudo-element already paints over inline
+   content. It is the one thing here that would fail silently and look like a
+   spacing problem rather than an ordering one. */
+.icon-slash::before {
+  z-index: 1;
+  width: 24px;
+  height: 6.5px;
+  background: var(--slash-knockout);
+}
+.icon-slash::after {
+  z-index: 2;
+  width: 21px;
+  height: 1.75px;
+  background: currentColor;
+}
+.icon-slash[data-on="false"]::before,
+.icon-slash[data-on="false"]::after {
+  transform: translate(-50%, -50%) rotate(-45deg) scaleX(1);
+}
+
+/* The theme button's three faces, crossfading.
+ *
+ * All three are always drawn and all but one is transparent, which is what lets
+ * every change between them be a fade — including the one between light and
+ * dark. Swapping the ligature inside a single span changes the glyph outright,
+ * and beside the hover fade on the system face that read as one of the two being
+ * broken. */
+.theme-switch > span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 200ms ease-out;
+}
+.theme-switch[data-resolved="light"] > [data-face="light"],
+.theme-switch[data-resolved="dark"] > [data-face="dark"] {
+  opacity: 1;
+}
+/* Only where the question has an answer worth giving: in the fixed modes a
+   monitor would be saying something untrue. */
+.theme-switch[data-mode="system"]:hover > [data-face="light"],
+.theme-switch[data-mode="system"]:hover > [data-face="dark"] {
+  opacity: 0;
+}
+.theme-switch[data-mode="system"]:hover > [data-face="system"] {
+  opacity: 1;
+}
+
+/* Struck out, when a palette has already decided the brightness.
+ *
+ * Two rules, and the first is the one that matters. This button wears both
+ * .icon-slash and .theme-switch, and they disagree about what opacity means:
+ * .icon-slash dims the single glyph it strikes through, while .theme-switch
+ * keeps three glyphs stacked and hides all but one. So icon-slash's dimming —
+ * which is written against `.material-symbols-outlined` and weighs more than the
+ * `> span` that hides them — turned all three faces up to 40% at once, and the
+ * sun, the moon and the monitor came up on top of each other.
+ *
+ * So the hiding is restated here at a weight that holds, and then the one face
+ * that should be showing is dimmed by name.
+ *
+ * The monitor needs its own line, and the reason is worth writing down because
+ * counting it wrong is what left it appearing. A pseudo-class weighs the same as
+ * a class, so `.theme-switch[data-mode="system"]:hover > [data-face="system"]` is
+ * four of them — heavier than the hiding rule above, which is three and an
+ * element. That rule turned the monitor back on when the button was hovered, on
+ * a button whose whole point was that hovering it answers nothing. Naming both
+ * states is five, which holds.
+ *
+ * The knockout stays the header's own colour for the same reason the hover
+ * background goes: the button has no hover background any more, so a slash cut
+ * for one would show. */
+.theme-switch[data-on="false"] > span.material-symbols-outlined {
+  opacity: 0;
+}
+.theme-switch[data-on="false"][data-resolved="light"] > [data-face="light"],
+.theme-switch[data-on="false"][data-resolved="dark"] > [data-face="dark"] {
+  opacity: 0.4;
+}
+.theme-switch[data-on="false"][data-mode="system"]:hover
+  > [data-face="system"] {
+  opacity: 0;
+}
+.theme-switch[aria-disabled="true"] {
+  cursor: default;
+}
+.theme-switch[aria-disabled="true"]:hover {
+  background-color: transparent;
+  color: var(--color-ink-soft);
+  --slash-knockout: var(--color-header);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .icon-slash::before,
+  .icon-slash::after,
+  .icon-slash > .material-symbols-outlined,
+  .theme-switch > span {
+    transition: none;
+  }
+}
+
+/* Which fill each part of the mark takes.
+ *
+ * The mark is drawn once and painted two ways. Everywhere else it is a boat in
+ * one colour with a bird in another and a cool coat on the wingtips — three
+ * decisions about three parts. Tropical treats the whole thing as one shape lit
+ * from the top left, so every part takes the same run and the wingtip coat is
+ * simply not painted.
+ *
+ * Custom properties rather than a branch in the component, because that is all
+ * the difference is: the same four paths, the same gradients defined in the same
+ * <defs>, and a stylesheet saying which of them each path should use. A url() in
+ * a custom property resolves against the document, and the gradients are inline
+ * in it, so this works without the component knowing which palette is showing.
+ *
+ * The wingtip coat goes transparent rather than being removed. It is a second
+ * copy of the bird's own path drawn over the first, so painting it in nothing is
+ * exactly the same picture as not drawing it, and it saves the component a
+ * condition it would otherwise have to be told. */
+:root {
+  --mark-fill-boat: var(--color-mark-hull);
+  --mark-fill-bird: url(#mark-plume);
+  --mark-fill-wing: url(#mark-wing);
+  --mark-fill-tail: var(--color-mark-plume-deep);
+}
+[data-palette="tropical"] {
+  --mark-fill-boat: url(#mark-whole);
+  --mark-fill-bird: url(#mark-whole);
+  --mark-fill-wing: transparent;
+  --mark-fill-tail: url(#mark-whole);
+}
+
+/* The header bar.
+ *
+ * A colour and an image, because one palette paints it with a gradient — a sun
+ * on the left and sky across the rest — and a utility class can only give it a
+ * flat fill. The colour stays underneath and is what everything that has to
+ * sample the bar reads: the knockout cut through the settings icons for their
+ * slash is a solid block, and a block cannot be a gradient. */
+.site-header {
+  background-color: var(--color-header);
+  background-image: var(--header-image, none);
+}
+
+/* The pattern drifting across the header bar.
+ *
+ * A layer of its own rather than another entry in .site-header's background,
+ * for three reasons that each rule that out on their own: the bar's background
+ * is already spoken for by a palette that paints a sun on it, the pattern has to
+ * be masked by something that does *not* travel with it, and a background
+ * position animated at sixty frames a second repaints the whole bar where a
+ * transform does not.
+ *
+ * So: a box that clips and fades, and inside it one that moves. Nothing shows
+ * unless a palette sets --weave-ink; plain gets no rule and so no layer.
+ *
+ * The fade lives on the outer box, which is the whole trick. Put it on the
+ * moving one and the soft ends travel with the pattern, and what you have is a
+ * patch of crosses sliding past rather than a texture the bar is made of. Here
+ * the pattern flows through a window that stays where it is: solid out at the
+ * two ends, gone across the middle where the search field and the wordmark want
+ * a clean ground. */
+.header-weave {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  mask-image: linear-gradient(
+    to right,
+    #000 0%,
+    #000 8%,
+    transparent 32%,
+    transparent 68%,
+    #000 92%,
+    #000 100%
+  );
+}
+
+/* The travelling sheet.
+ *
+ * One tile wider than the box and starting one tile to its left, so that it
+ * covers the bar at both ends of the run. It slides by exactly one tile and
+ * starts over — the same idea as the waves, and for the same reason: the
+ * pattern repeats at that interval, so the frame it ends on and the frame it
+ * begins on are the same picture and the loop has no seam. A long strip sliding
+ * a long way would look identical and cost a texture the width of the animation
+ * instead of the width of the bar.
+ *
+ * The crosses arrive as a mask and not as an image, so their colour is a
+ * property this stylesheet can set and every palette can answer. A coloured
+ * data URI would be a colour compiled into a string, which is the one place a
+ * theme cannot reach. */
+.header-weave::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(-1 * var(--weave-tile, 20px));
+  right: 0;
+  background-color: var(--weave-ink, transparent);
+  mask-image: var(--weave-mark);
+  mask-size: var(--weave-tile, 20px) var(--weave-tile, 20px);
+  mask-repeat: repeat;
+  /* Dropped so the middle of the three rows sits on the middle of the bar.
+     Left alone the grid starts at the top edge and the rows land at 10.5, 30.5
+     and 50.5 in a 64px bar — a row and a half high above centre, which is small
+     enough to look like a mistake rather than a choice.
+     2px and not 1.5px, which would centre it exactly: a one-pixel arm centred on
+     a whole pixel covers half of each of the two either side of it and goes
+     soft. Half a pixel low and sharp beats dead centre and blurred. */
+  mask-position: 0 2px;
+  animation: weave-drift var(--weave-dur, 8s) linear infinite;
+}
+
+@keyframes weave-drift {
+  to {
+    transform: translateX(var(--weave-tile, 20px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header-weave::before {
+    animation: none;
+  }
+}
+
+/* Sunlight coming through the header bar.
+ *
+ * The box clips and nothing else. The shafts overhang the bar top and bottom by
+ * more than its own height, which is what makes them shafts rather than stripes:
+ * light that begins and ends inside the thing it is falling on has no source. */
+.header-rays {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* One shaft.
+ *
+ * Long, leaning, and brightest at the end it comes from. The gradient runs down
+ * the element and the element is turned, so the fade follows the beam rather
+ * than the bar — the light is strongest where it enters and gone by the time it
+ * has crossed.
+ *
+ * Soft down both long edges, and softened by a mask rather than by a blur. A
+ * blur is a filter, and a filter on five elements inside a bar that repaints on
+ * every scroll is five surfaces to re-render for an edge a gradient can give
+ * away for nothing. The stops are bunched near the middle so the falloff is
+ * closer to a curve than to the straight ramp two stops would make.
+ *
+ * rotate and translate as their own properties, not packed into transform: the
+ * sway animates the position and the tilt does not, and written as one shorthand
+ * each keyframe would have to restate the angle it is not changing. */
+/* Where a shaft by the logo sits, gathered for the width of the window.
+ *
+ * The number is a plain one and the unit is put on here, so that the whole
+ * group can be squeezed and slid without the component knowing anything about
+ * breakpoints. Two knobs and they do different jobs: the spread pulls the three
+ * of them towards each other, and the nudge moves the group bodily right.
+ *
+ * The nudge is the one that has to exist. The row's inset steps down from 32 to
+ * 24 to 16 as the window narrows, so an offset measured left of the mark ends
+ * up that much further past the window's own edge — and the leftmost shaft,
+ * which starts 34 to the left of the mark, was cut in half and then lost
+ * entirely. Giving the group back roughly what the inset took keeps it on the
+ * glass. */
+.header-rays-track .header-ray {
+  left: calc(
+    (var(--ray-at, 0) * var(--ray-spread, 1) + var(--ray-nudge, 0)) * 1px
+  );
+}
+
+@media (width < 64rem) {
+  .header-rays-track {
+    --ray-spread: 0.95;
+    --ray-nudge: 14;
+  }
+}
+
+@media (width < 40rem) {
+  .header-rays-track {
+    --ray-spread: 0.88;
+    --ray-nudge: 30;
+  }
+}
+
+/* And below the width at which the header stops carrying a search field, the
+   two at the far end go. At this width that end of the bar is not margin — it
+   is where the search and the menu live — and light thrown across a row of
+   buttons is not weather, it is glare. The selector is the child combinator doing real
+   work: the three by the logo are inside the track and these two are not. */
+@media (width < 48rem) {
+  .header-rays > .header-ray {
+    display: none;
+  }
+}
+
+.header-ray {
+  position: absolute;
+  /* Hung so that the bright end of the run is inside the bar rather than above
+     it. At -70%/240% the shaft entered the header a third of the way through its
+     own fade and everything visible was the tail of it. */
+  top: -55%;
+  height: 210%;
+  /* Negative, and that is the whole of the sign convention: a positive rotation
+     in CSS is clockwise, which swings the top of a standing element to the right
+     and its foot to the left — a beam running up to the right, which is the
+     wrong way for light coming from the top left corner. The data stays positive
+     and means lean; the direction is decided once, here. */
+  rotate: calc(-1 * var(--ray-tilt, 25deg));
+  /* Holding full for the first quarter before it starts to go. A gradient that
+     begins fading at its first pixel has no beam in it, only a fade. */
+  background-image: linear-gradient(
+    to bottom,
+    var(--ray-ink, transparent) 0%,
+    var(--ray-ink, transparent) 26%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #0006 18%,
+    #000e 38%,
+    #000 46%,
+    #000 54%,
+    #000e 62%,
+    #0006 82%,
+    transparent 100%
+  );
+  opacity: var(--ray-low, 0.3);
+  animation:
+    ray-sway var(--ray-sway, 15s) ease-in-out infinite alternate,
+    ray-pulse var(--ray-pulse, 11s) ease-in-out infinite alternate;
+  animation-delay: var(--ray-delay, 0s), var(--ray-delay, 0s);
+}
+
+@keyframes ray-sway {
+  from {
+    translate: calc(-1 * var(--ray-throw, 8px)) 0;
+  }
+  to {
+    translate: var(--ray-throw, 8px) 0;
+  }
+}
+
+@keyframes ray-pulse {
+  from {
+    opacity: var(--ray-low, 0.3);
+  }
+  to {
+    opacity: var(--ray-peak, 1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header-ray {
+    animation: none;
+  }
+}
+
+/* The Milky Way across the header, and the stars along it.
+ *
+ * Capped and centred to the same box as the header's row, which is what lets
+ * HeaderStars.tsx measure everything from the left edge of the content instead
+ * of the left edge of the window. The margin is stated because preflight zeroes
+ * it, and an absolutely positioned box with both edges pinned is centred by
+ * `margin: auto` and by nothing else.
+ *
+ * The mask is the window the sky is seen through: it opens after the wordmark
+ * and closes before the search field. The right edge is measured from the middle
+ * of the bar because that is where the field is — 288px of half-width and a
+ * margin — so it follows the field in as the window narrows rather than being a
+ * number that is right at one size.
+ *
+ * On the whole subtree, so the stars are cut to the same window as the band they
+ * lie in. A star that carried on past the edge of its own galaxy would be the
+ * one thing in the picture with nothing behind it. */
+.header-stars {
+  position: absolute;
+  inset: 0;
+  left: 0;
+  right: 0;
+  max-width: 1600px;
+  margin-inline: auto;
+  overflow: hidden;
+  pointer-events: none;
+  mask-image: linear-gradient(
+    to right,
+    transparent 180px,
+    #000 215px,
+    #000 calc(50% - 340px),
+    transparent calc(50% - 285px)
+  );
+}
+
+/* The stars run to the foot of the bar and pass under the water rather than
+   stopping above it. Cutting them at the waterline was tried and it flattened
+   the bar — a sky with a floor in it is a strip, and the whole height is what
+   makes it a sky. The water is drawn at a tenth of an opacity here, so the ones
+   below the line show through, and they read as reflections rather than as
+   mistakes. */
+
+/* The rest of the sky: the width of the window, not of the content, and no mask
+   at all. It has nothing to be cut to — a star anywhere on the bar is a star,
+   and the ones behind the wordmark and the nav are what stops the galaxy from
+   looking like a sticker.
+   Behind them, though, not among them: the row is later in the header than this
+   is, and the search field carries an opaque fill, so nothing here lands on top
+   of anything that has to be read. */
+.header-sky {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* The band itself: a long soft streak, drawn as a rectangle and turned.
+ *
+ * Turning a box is the whole reason this is not one gradient at an angle. The
+ * shape wanted is a streak with a colour running along it and a fade across it,
+ * which is two gradients on two different axes; angled gradients would have to
+ * agree about a diagonal in a box that is six times wider than it is tall, where
+ * a gradient's angle and the angle you see are not the same number. Turned, both
+ * gradients are square to the box and the only angle in the file is the one the
+ * stars are laid out on. */
+.header-stars::before {
+  content: "";
+  position: absolute;
+  left: var(--band-x);
+  top: var(--band-y);
+  width: var(--band-w);
+  height: var(--band-h);
+  transform: rotate(var(--band-tilt));
+  opacity: var(--galaxy-ink, 0);
+  /* Along the streak: deep at the low end, brighter as it climbs, and gone at
+     both tips so it has no ends to see. */
+  background-image: linear-gradient(
+    to right,
+    transparent 0%,
+    var(--galaxy-from, transparent) 30%,
+    var(--galaxy-to, transparent) 72%,
+    transparent 100%
+  );
+  /* Across it: a narrow spine with a long falloff either side, which is what
+     makes a band of light rather than a bar. */
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #000 44%,
+    #000 56%,
+    transparent 100%
+  );
+}
+
+.header-star {
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--star-ink, transparent);
+  opacity: var(--star-peak, 0.6);
+  animation: star-pulse var(--star-pulse, 6s) ease-in-out infinite;
+  animation-delay: var(--star-delay, 0s);
+}
+
+/* Dimming and coming back, not blinking out. A star that goes to nothing reads
+   as a fault in the screen; one that drops to a third of itself and returns
+   reads as air moving in front of it, which is what it is. */
+@keyframes star-pulse {
+  0%,
+  100% {
+    opacity: var(--star-peak, 0.6);
+  }
+  50% {
+    opacity: calc(var(--star-peak, 0.6) * 0.3);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header-star {
+    animation: none;
+  }
+}
+
+/* The one sky with anything in it. Indigo where the band is lowest and a paler
+   violet as it climbs, which is the way round a real one runs — the bright part
+   of the Milky Way is the part you are looking through the most of. */
+[data-palette="night"] {
+  --galaxy-from: #2a1f63;
+  --galaxy-to: #7657c4;
+  --galaxy-ink: 0.62;
+  --star-ink: #ffffff;
+}
+
+/* Sun through shallow water: warm, and almost white, because a shaft of light is
+   the colour of the source washed out by everything it has passed through.
+   Nearly white and nearly opaque, and it has to be both. The left of this bar is
+   already a wash of yellow — the sun — and a warm translucent beam laid over a
+   warm ground is two similar colours agreeing with each other, which is the same
+   as nothing being there. What separates a shaft from the sun behind it is that
+   it is brighter, not that it is warmer.
+   0.72 rather than the 0.92 it was for one look: the shafts were legible and
+   then some, and a godray that you read before you read the header is a
+   decoration rather than weather. The near-white stays — the strength came
+   down, the hue did not, because the hue is what made them visible at all. */
+[data-palette="tropical"] {
+  --ray-ink: color-mix(in oklab, #fffdf2 62%, transparent);
+}
+
+/* The paper a page is printed on.
+ *
+ * A grain laid behind a scrolling column, drifting a little slower than the
+ * column itself so that the page reads as ink on something rather than as a
+ * colour. Only where a page asks for it: the dashboard puts it behind the charts
+ * and the explorer and not behind the filters, and the search page puts it
+ * behind the results and not behind the sidebar, because a texture under a panel
+ * that scrolls separately is a second sheet of paper and the room only has one.
+ *
+ * The grain is generated, not photographed. A JPEG of real paper would be forty
+ * kilobytes of one particular colour, and this site has four palettes and will
+ * have more — the brown fibre of a chart is wrong under a night sky. So the
+ * texture arrives as a mask, which carries only the shape of the noise, and the
+ * colour is a property every palette can answer. It costs about three hundred
+ * bytes and no request, and the browser draws the tile once and repeats it.
+ *
+ * Nothing shows unless a palette sets --paper-ink. */
+/* baseFrequency is the size of the tooth, and the only number here worth
+   turning. It is a frequency, so smaller means larger: at 0.75 the grain is
+   about a pixel across, which on a dense display is below the size at which a
+   thing can be seen at all and reads as a faintly dirty flat colour. At 0.2 the
+   coarsest of the four octaves is five pixels, which is not a tooth but a
+   texture you can pick out one lump of.
+   0.4 is halfway between them, and halfway by size rather than by the number:
+   1.3 pixels and 5 pixels meet at 2.5, and it is the size that is being judged.
+   */
+:root {
+  --paper-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.4' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23p)'/%3E%3C/svg%3E");
+}
+
+/* The room the sheet lies in: a whole page's worth of body, edge to edge.
+ *
+ * It has to be the page and not the column being read, and that is forced
+ * rather than chosen. The obvious place for the sheet is inside the scroller,
+ * where it would travel with the text for free and need only to be held back a
+ * little. But the search page caps its content at 1600 and centres it, so no
+ * box inside that scroller can reach the window — on a wide display the grain
+ * stopped in a rectangle with bare canvas either side of it, which is a tinted
+ * panel, not paper.
+ *
+ * So the sheet sits outside the cap, where it covers everything, and takes its
+ * movement from a scroller named further down the tree. isolate because a
+ * z-index of -1 goes behind the nearest ancestor stacking context, and without
+ * it that is the element whose canvas colour would paint over the grain. */
+.paper-room {
+  position: relative;
+  isolation: isolate;
+  timeline-scope: --paper;
+}
+
+/* Two sheets and not one.
+ *
+ * A palette that wants a flat texture sets the near one and leaves the far one
+ * alone, and the far one draws nothing — which is what chart paper does. A
+ * palette that wants light on water sets both, because that is the only way to
+ * get it: caustics are not a pattern, they are what happens where two moving
+ * patterns are bright at the same place, and a single layer sliding past cannot
+ * be bright at the same place as itself. Two layers of the same thing at
+ * different scales, drifting at different speeds in different directions, is
+ * how a renderer that cannot trace light fakes it, and it is convincing for the
+ * same reason the real thing looks the way it does.
+ *
+ * Both sheets keep the scroll drag. The second animation is what makes them
+ * move on their own, and it is on the `translate` property rather than inside
+ * the transform, so the two compose instead of the later one winning. */
+.paper-room::before,
+.paper-room::after {
+  content: "";
+  /* Fixed, not absolute, and that is a layout fix rather than a positioning
+     one. These sheets deliberately overhang their room by a tile on every side,
+     and an absolutely positioned box that overhangs still counts towards the
+     scrollable overflow of everything above it. `overflow: hidden` on the body
+     does not stop that — when the root element's overflow is visible the body's
+     is propagated to the viewport instead, so the body is not clipping anything
+     and the overhang reaches the viewport's own scroll area. In a normal window
+     that is invisible. Under Chrome's device emulation the layout viewport is
+     sized to fit the content, so a page two thousand pixels wider than the
+     phone got scaled down to fit and the whole design appeared to stretch.
+     A fixed box contributes no scrollable overflow at all, and the room is the
+     window here anyway — the page does not scroll, its columns do. */
+  position: fixed;
+  z-index: -1;
+  pointer-events: none;
+  background-repeat: repeat;
+  /* Two ways in, and both stay open. A sheet can be a shape masked out of a
+     colour the palette names, which keeps the colour a token — that is how the
+     night sky's grain and its scattered stars are drawn. Or it can be an image
+     with its colours already in it, which is what the two that animate use: a
+     mask is applied while the layer is rastered and keeps it off the
+     compositor, and a layer that moves cannot afford that. The cost of baking
+     is that such a sheet belongs to one palette and cannot be recoloured by
+     another — worth it for a bay's caustics, which move, and not worth it for
+     a sheet that just lies there.
+     Whichever is unset resolves to nothing and gets out of the way. */
+  mask-repeat: repeat;
+  /* Slack around the sheet, because one that moves has to be bigger than the
+     hole it moves across. Without it the element's own edge travels with the
+     pattern and what you watch is a rectangle sliding off, trailing bare
+     canvas — a picture being dragged, not water.
+     A plain distance and not one tile. A sheet that travelled a whole tile and
+     started over would need slack matching the tile; these rock back and forth
+     about where they sit, so it only has to cover the throw and the corner the
+     turn swings out. That decouples the slack from the pattern's scale, which
+     is what lets the pattern be as large as it likes without the layer growing
+     to match. Nought unless a palette moves. */
+  inset: calc(-1 * var(--paper-bleed, 0px)) calc(-1 * var(--paper-bleed, 0px))
+    calc(-30vh - var(--paper-bleed, 0px)) calc(-1 * var(--paper-bleed, 0px));
+}
+
+/* animation-timeline after the shorthand in both, and it has to be: the
+   `animation` shorthand resets animation-timeline to auto along with everything
+   else it owns, so a timeline stated once above and a shorthand written below it
+   is a scroll-linked animation quietly turned back into a timed one. */
+.paper-room::before {
+  background-color: var(--paper-ink, transparent);
+  background-image: var(--paper-image, none);
+  background-size: var(--paper-tile, 256px) var(--paper-tile, 256px);
+  background-position: var(--paper-lie, 0 0);
+  mask-image: var(--paper-grain);
+  mask-size: var(--paper-tile, 256px) var(--paper-tile, 256px);
+  animation:
+    paper-drag linear both,
+    sheet-near var(--paper-drift, 74s) ease-in-out infinite alternate,
+    turn-near var(--paper-turn, 26s) ease-in-out infinite alternate;
+  animation-timeline: --paper, auto, auto;
+}
+
+.paper-room::after {
+  background-color: var(--paper-ink-far, transparent);
+  background-image: var(--paper-image-far, none);
+  background-size: var(--paper-tile-far, 256px) var(--paper-tile-far, 256px);
+  background-position: var(--paper-lie-far, 0 0);
+  mask-image: var(--paper-grain-far);
+  mask-size: var(--paper-tile-far, 256px) var(--paper-tile-far, 256px);
+  animation:
+    paper-drag linear both,
+    sheet-far var(--paper-drift-far, 103s) ease-in-out infinite alternate,
+    turn-far var(--paper-turn-far, 37s) ease-in-out infinite alternate;
+  animation-timeline: --paper, auto, auto, auto;
+}
+
+/* Each sheet travels exactly one tile of its own and starts over, so the frame
+   it ends on and the frame it begins on are the same picture — the waves in the
+   header do this too, and for the same reason. Diagonally on the near sheet and
+   flat and the other way on the far one: two layers moving on the same line
+   only ever slide past each other, and it is the crossing that makes the net.
+   Nought by default, so a palette with one flat sheet gets no drift at all. */
+@keyframes sheet-near {
+  from {
+    translate: calc(-1 * var(--paper-sway, 0px))
+      calc(-1 * var(--paper-heave, 0px));
+  }
+  to {
+    translate: var(--paper-sway, 0px) var(--paper-heave, 0px);
+  }
+}
+
+@keyframes sheet-far {
+  from {
+    translate: var(--paper-sway, 0px) calc(-1 * var(--paper-heave, 0px));
+  }
+  to {
+    translate: calc(-1 * var(--paper-sway, 0px)) var(--paper-heave, 0px);
+  }
+}
+
+/* The turn, and the reason there is a shimmer at all.
+ *
+ * Two rigid patterns sliding past each other on straight lines is a slide. The
+ * crossings move, but the net keeps its shape while it does, and what the eye
+ * reports is two sheets — which is what it was reporting.
+ *
+ * Turning them fixes that, and it works because a rotation is not a uniform
+ * displacement: near the middle almost nothing moves and out at the edges a
+ * great deal does, so every crossing travels a different distance in a
+ * different direction and the net has to keep re-forming instead of merely
+ * arriving somewhere else. It is a third property again — rotate, beside
+ * translate and transform — so it composes with the rocking rather than
+ * replacing it.
+ *
+ * Opposite ways, so the two turn against each other and the light and its
+ * shadow are never twice the same distance apart. Nought unless a palette
+ * asks, so a sheet that is chart paper stays exactly where it was put. */
+@keyframes turn-near {
+  from {
+    rotate: calc(-1 * var(--paper-swirl, 0deg));
+  }
+  to {
+    rotate: var(--paper-swirl, 0deg);
+  }
+}
+
+@keyframes turn-far {
+  from {
+    rotate: var(--paper-swirl, 0deg);
+  }
+  to {
+    rotate: calc(-1 * var(--paper-swirl, 0deg));
+  }
+}
+
+/* Which scroller the sheet listens to. A page has more than one and they are
+   not equal: the dashboard's filter list and the search page's sidebar scroll
+   on their own, and a sheet that followed those would slide about while the
+   reading stayed still. Each page names the one that is the reading. */
+.paper-scroller {
+  scroll-timeline: --paper block;
+}
+
+/* Two of them where the page changes which box scrolls at a breakpoint. Only
+   ever one at a time: two boxes claiming the same timeline name in the same
+   scope leaves it undefined, so the queries have to be exclusive rather than
+   merely different. */
+@media (width >= 64rem) {
+  .paper-scroller-lg {
+    scroll-timeline: --paper block;
+  }
+}
+@media (width < 64rem) {
+  .paper-scroller-sm {
+    scroll-timeline: --paper block;
+  }
+}
+
+/* The drag.
+ *
+ * The sheet is outside the scroller, so nothing moves it but this. It rises as
+ * you read, by less than the reading rises — the page goes up by however tall
+ * it is and the sheet by a fifth of a window, and the gap between those two is
+ * the whole effect.
+ *
+ * Stated in vh and not in a percentage of the scroll, which is not a length CSS
+ * can be given. That means the sheet covers the same ground on a short page as
+ * on a long one, so it keeps closer pace with a short page than with a long
+ * one. Twenty is chosen from the short end: it is under the speed of the
+ * reading even on the shortest page that scrolls at all, which is the one thing
+ * that would look wrong — paper cannot overtake what is printed on it.
+ *
+ * Browsers without a scroll timeline run this in no time at all and hold the
+ * end of it, which for a field of noise is an offset nobody can measure. */
+@keyframes paper-drag {
+  to {
+    transform: translateY(calc(-1 * var(--paper-lift, 20vh)));
+  }
+}
+
+/* The far sheet rises less than the near one, and that difference is the only
+   thing saying one is behind the other.
+   It has to be less rather than none: a sheet that does not move at all is
+   pinned to the glass, and what reads as distance is a thing that moves and is
+   slower, not a thing that is still. Both are still slower than the reading, so
+   the order from front to back is text, near sheet, far sheet — which is the
+   order they are in. Nothing until a palette lays a second sheet; the far one
+   draws nothing without --paper-ink-far and a still nothing costs the same as a
+   moving one. */
+.paper-room::after {
+  --paper-lift: 7vh;
+}
+
+/* Chart paper, and the same brown everything else on this palette is drawn in.
+   The grain averages half opacity, so this lands as a wash of about eight
+   percent with the tooth of the sheet showing through it. One sheet, flat: the
+   far one and the drift are both left unset, and both default to nothing. */
+/* The same sheet as before, painted rather than masked.
+   Identical on the page — the brown is this palette's brand at sixteen percent
+   over a field of the same grain — and carrying no mask, which is what would
+   rasterise the layer, keep it off the compositor and stutter the scroll. The
+   filter is told to work in sRGB, without which the colour written here is read
+   as linear light and comes out half a stop pale. */
+[data-palette="nautical"] {
+  --paper-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='g' x='0' y='0' width='256' height='256' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.4' numOctaves='4' seed='0' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.561 0 0 0 0 0.329 0 0 0 0 0.063 1 0 0 0 0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='table' tableValues='0 0.25 0.5 0.75 1'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23g)' opacity='0.16'/%3E%3C/svg%3E");
+  --paper-tile: 256px;
+}
+
+/* Caustics: the net of light the sun makes on the floor of shallow water.
+ *
+ * The same turbulence the paper is made of, read differently. Where the paper
+ * takes the noise as it comes and gets a field of grain, this pulls a single
+ * contour out of it — the transfer table is zero everywhere but one step, so
+ * only the pixels whose noise value lands in a narrow band around the middle
+ * survive. A contour of a smooth field is a closed wandering curve, and a field
+ * this size has a great many of them, which is a net.
+ *
+ * That is what caustics are. Light through a wavy surface is focused onto the
+ * places where the surface happens to be curving the right way, and those
+ * places are a level set of the wave. So this is not a picture of the effect,
+ * it is the effect's own shape arrived at the same way.
+ *
+ * Two of them at different scales and different seeds, drifting apart. Each
+ * travels exactly one of its own tiles, so each loops without a seam, and
+ * because 512 and 384 do not divide each other the pair does not come back to
+ * the same arrangement for a very long time. */
+
+/* Star dust: the page as the rest of the sky the header is the top of.
+ *
+ * Chart paper is a surface and caustics are an event, and the third of these
+ * ought to be neither — a body filled with grain would be a night-coloured
+ * version of the nautical sheet, and a body with anything that moves on its own
+ * would be a second header. What is left is depth, and the way to draw depth is
+ * to put something very far away behind the reading and let it fall behind as
+ * you scroll. Which the sheet already does: the drag is what makes distant
+ * things read as distant, and here it is the one palette where that is
+ * literally true rather than a metaphor about paper.
+ *
+ * Two sheets, and the difference between them is the whole point. The near one
+ * carries nine larger stars and rises a fifth of a window as you read; the far
+ * one carries nine smaller dimmer ones and rises seven hundredths. Neither of
+ * those is the speed of the reading, so the order front to back is text, near
+ * field, far field — three depths from two layers and a number.
+ *
+ * Stars and nothing else. There was a haze of fine noise behind them, and it had
+ * to go: at that frequency the grain is about two pixels across, and two pixels
+ * of anything on a layer being slid by fractions of a pixel is resampled every
+ * frame and crawls. The same is true of a star small enough — the first far
+ * field ran down to 0.7 of a radius, which is a dot a pixel and a half wide and
+ * therefore never a dot, always a smear of one shape or another depending on
+ * where it lands. Nothing here is under 0.95 now, and there are eighteen of them
+ * across both sheets rather than forty-one.
+ *
+ * Neither drifts on its own. Stars do not wander in the few minutes anyone
+ * spends on a page, and a starfield sliding under a table of results is read as
+ * the table moving.
+ *
+ * The tiles are 640 and 544 because these have shapes. Noise repeating every
+ * 256px is not seen — there is nothing in it to recognise — but nine dots in a
+ * fixed arrangement are a constellation, and a constellation appearing six times
+ * across a window is wallpaper. Two sizes that do not divide each other also
+ * means the two fields do not come back into the same arrangement until they are
+ * 10880px apart, which is wider than any window they will be seen in.
+ *
+ * The colours are painted into the images rather than masked out of a token,
+ * and that is the same trade the caustics make above: a masked layer is composed
+ * during raster and cannot be handed to the compositor, so a scroll-driven
+ * animation on one leaves the main thread redrawing a window-sized layer on
+ * every scroll frame — twice over, here. These carry no mask, so the drag is an
+ * ordinary composited transform. It costs the tokens, and this is the only
+ * palette that lays either sheet, so there was nothing to recolour.
+ *
+ * The cost it does carry is the crawl above. A composited layer is rastered once
+ * and then moved, and moving a bitmap by a fraction of a pixel means resampling
+ * it — which is invisible for anything soft and wide, and is exactly what makes
+ * fine noise and sub-pixel dots shimmer. So the choice of what goes on these
+ * sheets is not free of how they are drawn: they can be composited because there
+ * is nothing on them small enough to mind. */
+[data-palette="night"] {
+  --paper-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='640'%3E%3Cg fill='%23efeaff' opacity='0.52'%3E%3Ccircle cx='164.2' cy='126.8' r='1.94'/%3E%3Ccircle cx='320.5' cy='167.6' r='1.93'/%3E%3Ccircle cx='458.9' cy='178.4' r='1.59'/%3E%3Ccircle cx='94.8' cy='336.3' r='1.51'/%3E%3Ccircle cx='261.9' cy='373.2' r='1.78'/%3E%3Ccircle cx='618.1' cy='325.4' r='1.4'/%3E%3Ccircle cx='138.7' cy='583.2' r='1.58'/%3E%3Ccircle cx='393.5' cy='536.4' r='1.5'/%3E%3Ccircle cx='539.8' cy='533.4' r='1.61'/%3E%3C/g%3E%3C/svg%3E");
+  --paper-tile: 640px;
+  --paper-grain: none;
+
+  --paper-image-far: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='544' height='544'%3E%3Cg fill='%23cfc8ee' opacity='0.34'%3E%3Ccircle cx='65.6' cy='27.9' r='1.29'/%3E%3Ccircle cx='207' cy='161.5' r='1.27'/%3E%3Ccircle cx='437.6' cy='131.4' r='1.23'/%3E%3Ccircle cx='48.2' cy='270.5' r='1.11'/%3E%3Ccircle cx='339.6' cy='231.7' r='1.05'/%3E%3Ccircle cx='415.2' cy='262.6' r='1.28'/%3E%3Ccircle cx='50.4' cy='495.9' r='1.33'/%3E%3Ccircle cx='248.8' cy='524.9' r='1.33'/%3E%3Ccircle cx='512.2' cy='402.1' r='1.01'/%3E%3C/g%3E%3C/svg%3E");
+  --paper-tile-far: 544px;
+  --paper-grain-far: none;
+}
+
+/* Except on the dashboard, where the sky is not worth having.
+ *
+ * That page is charts and a full-height explorer card, and between them they
+ * leave a gutter and very little else — a starfield with nine dots to a tile
+ * shows two or three of them, in a margin, and two or three stars is not a sky,
+ * it is specks. The search page has whole columns of open canvas between its
+ * cards and gets the whole effect.
+ *
+ * display and not a transparent fill, so the layers are not composed at all
+ * rather than composed and found to be empty. Only this palette says so: the
+ * other two draw something worth seeing in a gutter. */
+[data-palette="night"] [data-room="dashboard"]::before,
+[data-palette="night"] [data-room="dashboard"]::after {
+  display: none;
+}
+
+/* One small cross, centred on a half pixel so that its two one-pixel arms land
+   on the pixel grid instead of straddling it and going soft. Black because it is
+   read for its alpha alone; the colour comes from what it is masking. */
+:root {
+  --weave-mark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cpath d='M10.5 8v5M8 10.5h5' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E");
+}
+
+/* Chart paper: the crosses a survey sheet is pricked with, creeping across the
+   bar slowly enough that you notice it has moved rather than watch it move. */
+[data-palette="nautical"] {
+  --weave-ink: color-mix(in oklab, var(--color-brand) 26%, transparent);
+  --weave-tile: 20px;
+  --weave-dur: 8s;
+
+  /* Full ink, and so all three the same.
+     Elsewhere they fade with distance, which is how the sea reads as deep. A
+     chart is not deep — it is a flat sheet with marks on it, and every mark on a
+     sheet is the same pen. At 1 they take the colour they were already
+     inheriting at full strength, which on this palette is the brown the hull and
+     the wordmark are drawn in, and three thin brown strokes on cream stop being
+     distant birds and become something drawn on the chart. */
+  --gull-ink: 1;
+}
+
+/* The theme chooser: a panel hung under the button that opens it.
+ *
+ * A modal <dialog> is centred by the user agent with `inset: 0; margin: auto`,
+ * and Tailwind's preflight zeroes every margin on the page — so the auto that
+ * was doing the centring is gone and the panel lands in the top-left corner.
+ * That is worth knowing rather than working around, because the fix is the same
+ * either way: state the position outright.
+ *
+ * The two custom properties are measured from the button when it opens, in
+ * ThemePicker. A modal dialog is in the top layer and positioned against the
+ * viewport, so a viewport-relative rect can be used as it comes.
+ *
+ * It grows out of its top-right corner, which is the corner nearest the button,
+ * so the panel reads as having come from there rather than having appeared over
+ * the page.
+ *
+ * The backdrop is kept and made invisible. It is what catches a click outside
+ * and closes the panel — which is the behaviour wanted from something anchored
+ * to a button — and dimming the page behind a colour picker was hiding the one
+ * thing the reader opened it to look at. */
+/* top, right and max-height are set on the element by useAnchoredPanel, which
+   measures the button this hangs from. The values here are what a panel gets
+   before that has happened, or if the button turns out not to be on screen —
+   the near corner, which is where it would have gone anyway. */
+.anchored-panel {
+  position: fixed;
+  inset: auto;
+  top: 4rem;
+  right: 1rem;
+  margin: 0;
+  border: 1px solid var(--color-edge);
+  /* Capped against the window as well as against the button it hangs from. The
+     width the component asks for already backs off on a small screen; this is
+     the guarantee, and it is what stops a panel from reaching past the far edge
+     if the measured offset is ever larger than expected. */
+  max-width: calc(100vw - 1rem);
+  max-height: calc(100dvh - 4rem - 1rem);
+  transform-origin: top right;
+}
+/* A column, so that the height cap above has something to act on. As a plain
+   block the cap clamps the box while the list inside runs past the bottom edge
+   and is cut off — on a phone with four themes on offer, the last of them
+   cannot be seen or reached.
+   
+   On [open] and not on the element, because `display` is how a dialog is hidden
+   — set here unconditionally, a closed one would be on the screen. */
+.anchored-panel[open] {
+  display: flex;
+  flex-direction: column;
+}
+/* Opening and closing, both of them.
+ *
+ * A transition and not a keyframe animation, because a keyframe can only play on
+ * the way in: by the time the dialog is closing, `display: none` has already
+ * applied and there is no element left to animate — a shut that reads as a
+ * dropped frame.
+ *
+ * That is what the two discrete properties are for. `display` and `overlay` both
+ * change in one step rather than over a range, so they normally take effect
+ * immediately and cut the transition off; `allow-discrete` holds them until the
+ * end, which keeps the element painted and in the top layer long enough to
+ * shrink away. @starting-style is the other half — an element that has only just
+ * been rendered has nothing to transition *from*, so this is where it says what
+ * it was a moment before it existed.
+ *
+ * Where a browser does not know these, the panel still opens and closes; it just
+ * does it at once. Nothing is left invisible or stranded, which is why this is
+ * worth doing in the stylesheet rather than by holding a closing state in React
+ * and waiting on an event. */
+/* The two directions are eased differently, and they have to be.
+ *
+ * A transition takes its timing from the state it is going *to*, so one
+ * declaration is one direction. Both were written on the closed state, which
+ * meant the panel left on the same curve it arrived on — and that curve is a
+ * fast-out one. Arriving, spending most of the distance in the first few
+ * milliseconds and settling is exactly right. Leaving, it is a jump to nearly
+ * the end followed by a slow crawl the rest of the way, which is what read as
+ * the panel snapping to a smaller size and only then animating.
+ *
+ * So the closed state gets a curve that starts slow, and the open state keeps
+ * the one that ends slow. Away from the pointer quickly, back to it gently. */
+.anchored-panel {
+  opacity: 0;
+  transform: scale(0.82);
+  transition:
+    opacity 150ms ease-in,
+    transform 150ms cubic-bezier(0.4, 0, 0.9, 0.6),
+    overlay 150ms allow-discrete,
+    display 150ms allow-discrete;
+}
+.anchored-panel[open] {
+  opacity: 1;
+  transform: scale(1);
+  transition:
+    opacity 190ms ease-out,
+    transform 220ms cubic-bezier(0.16, 1, 0.3, 1),
+    overlay 220ms allow-discrete,
+    display 220ms allow-discrete;
+}
+@starting-style {
+  .anchored-panel[open] {
+    opacity: 0;
+    transform: scale(0.82);
+  }
+}
+.anchored-panel::backdrop {
+  background: transparent;
+}
+@media (prefers-reduced-motion: reduce) {
+  .anchored-panel,
+  .anchored-panel[open] {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* A page's side column, as a drawer, hung from the bottom of the header.
+ *
+ * --panel-top is the header's measured lower edge, set by the component. The
+ * fallback is only for the frame before the first measurement; nothing is drawn
+ * then, because the panel is closed.
+ *
+ * z-index below the header's own 50, so that a drawer which stops at the
+ * header's edge cannot ever be found on top of it. They do not overlap, and this
+ * is what keeps that true when one of them next changes height.
+ *
+ * The width is capped twice over: wide enough for a filter list at 22rem, and
+ * never so wide on a small phone that there is no page left beside it to tap on
+ * to get out. */
+.side-panel {
+  position: fixed;
+  top: var(--panel-top, 4rem);
+  right: 0;
+  bottom: 0;
+  left: auto;
+  z-index: 45;
+  width: min(22rem, 86vw);
+  max-width: none;
+  max-height: none;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-left: 1px solid var(--color-edge);
+  transform: translateX(100%);
+  /* No `overlay` here, unlike the chooser: that property only exists for
+     elements in the top layer, and this one is opened rather than shown modally
+     so it never enters it. `display` still needs holding, or the panel is
+     removed the instant it starts sliding away. */
+  transition:
+    transform 260ms cubic-bezier(0.16, 1, 0.3, 1),
+    display 260ms allow-discrete;
+}
+.side-panel[open] {
+  transform: translateX(0);
+}
+@starting-style {
+  .side-panel[open] {
+    transform: translateX(100%);
+  }
+}
+
+/* The shade behind it, and the reason it is an element rather than ::backdrop.
+ *
+ * A ::backdrop belongs to the dialog and is created and destroyed with it, so it
+ * cannot fade — it appeared and vanished at full strength while the panel beside
+ * it was still sliding, which read as a flash rather than as a shadow. This is
+ * always in the tree and only ever changes opacity, so there is something for
+ * the transition to hold on to.
+ *
+ * It starts where the panel starts. The header above the line is not covered,
+ * not dimmed and not "outside" — clicking it does what the header does. */
+.side-panel-veil {
+  position: fixed;
+  inset: var(--panel-top, 4rem) 0 0 0;
+  z-index: 44;
+  background: color-mix(in oklab, var(--color-ink), transparent 58%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 260ms ease;
+}
+.side-panel-veil[data-open="true"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .side-panel,
+  .side-panel-veil {
+    transition: none;
+  }
+  .side-panel {
+    transform: none;
+  }
+}
+
+/* The global indicator rising and sinking away again.
+ *
+ * One layer. There were two, so that a speech bubble behind the character could
+ * lag it on the way in and out; the bubble is gone and the delay that staggered
+ * them with it.
+ *
+ * Slower going down than coming up. Arriving, it is telling you something and
+ * wants to be seen doing it; leaving, it is only getting out of the way, and a
+ * thing that leaves as briskly as it came reads as having been dismissed.
+ *
+ * Only the sliding is here. The frames themselves cut rather than fade — a
+ * flipbook is hard cuts, and a crossfade between two drawings of the same
+ * character reads as a ghost rather than as movement — so there is no
+ * transition on them to write. */
+.loading-glide {
+  transition: transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* The character's shadow.
+ *
+ * drop-shadow and not box-shadow: the frames are cut-outs, and box-shadow would
+ * put a rectangle behind a griffin. drop-shadow reads the alpha, so what falls
+ * on the page is the shape of the bird and the book.
+ *
+ * Two of them. One blur wide enough to be soft is also faint enough at its
+ * centre to leave the drawing looking unattached; a short one under it gives the
+ * contact, and the wide one gives the spread. Tinted with the page's navy rather
+ * than black, for the same reason the cards are — black on a pale surface reads
+ * as grey rather than as shade.
+ *
+ * It sits on the layer and not on each frame, so it is computed once per frame
+ * shown rather than eight times over for seven invisible ones. */
+.loading-character {
+  filter: drop-shadow(0 2px 3px rgb(26 54 93 / 0.3))
+    drop-shadow(0 8px 18px rgb(26 54 93 / 0.2));
+}
+.loading-glide[data-afloat="false"] {
+  transition-duration: 620ms;
+  transition-timing-function: cubic-bezier(0.55, 0, 0.85, 0.4);
+}
+@media (prefers-reduced-motion: reduce) {
+  .loading-glide {
+    transition: none;
+    transition-delay: 0ms;
+  }
+}
+
+/* The gulls' wingbeat is not here. It is a shape being redrawn rather than a
+   shape being moved, so it is written on the element as SVG's own <animate> —
+   see HeaderSea.tsx. Two attempts at doing it from this file failed for reasons
+   worth leaving written down: scaling squashed the stroke along with the wing,
+   so the line thinned away to nothing at the middle of every beat, and rotating
+   the two halves about the body kept the line but bent the bird at a hinge.
+   Neither is a wing, and a wing is a curve that changes.
+
+   What is here is the slow wander on top of it, on its own much longer period,
+   so that three birds beating their wings do not read as three copies of one. */
+@keyframes gull-drift {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(4px, -3px);
+  }
+}
+.gull-drift {
+  animation-name: gull-drift;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sea-drift,
+  .letter-float,
+  .boat-float,
+  .bird-lean,
+  .gull-drift {
+    animation: none;
+  }
+}
+
+/* A result card's title block, which trades its two colours when the card is
+   hovered: the pale wash becomes the ink and the ink becomes the wash.
+
+   The rule lives here rather than on the element because the colours are
+   per-sample values computed in the component and passed as custom properties.
+   A hover variant cannot reach into an inline style, but it can swap which
+   property each part reads. */
+.tissue-island {
+  /* Declared here as well as set per card. A reference to a property the
+     stylesheet never defines is dropped as dead by the build, which took the
+     whole rule with it; these keep it alive and are overridden by the inline
+     values on every card that has a system. */
+  --island-wash: #f1f5f9;
+  --island-ink: #334155;
+  background-color: var(--island-wash);
+  color: var(--island-ink);
+  transition:
+    background-color 150ms ease,
+    color 150ms ease;
+}
+.group:hover .tissue-island {
+  background-color: var(--island-ink);
+  color: var(--island-wash);
+}
+/* On a dark card the pale wash would be the brightest thing on the page and the
+   card would read as a label with a card attached. The two colours trade places,
+   and so does what hovering does with them: the block is the deep tone at rest
+   and the pale one when reached for, which is the same gesture seen from the
+   other side. */
+[data-theme="dark"] .tissue-island {
+  background-color: var(--island-ink);
+  color: var(--island-wash);
+}
+[data-theme="dark"] .group:hover .tissue-island {
+  background-color: var(--island-wash);
+  color: var(--island-ink);
+}
+
+/* A card's field chips: which field a value came from, said in colour.
+ *
+ * Rules rather than utility classes, which is a change of form and not of
+ * intent. Three themes have to answer these and a utility can carry one dark
+ * variant and nothing else — the palette had no way in, so a sand-coloured page
+ * kept a blue, a violet and an amber chip from a scheme it has nothing to do
+ * with.
+ *
+ * The three hues have to stay apart from each other before they agree with
+ * anything: a card can carry all three at once, and a reader scanning a grid is
+ * using the colour to tell "where it came from" from "what the cells are" from
+ * "what was wrong". Under the shoreline palette that is deep water, the teal and
+ * the terracotta — the three colours that palette already owns. */
+.chip-tissue,
+.chip-cell,
+.chip-disease {
+  background-color: var(--chip-wash);
+  color: var(--chip-ink);
+  border-color: var(--chip-edge);
+}
+.chip-tissue {
+  --chip-wash: #eff6ff;
+  --chip-ink: #1d4ed8;
+  --chip-edge: #dbeafe;
+}
+.chip-cell {
+  --chip-wash: #f5f3ff;
+  --chip-ink: #6d28d9;
+  --chip-edge: #ede9fe;
+}
+.chip-disease {
+  --chip-wash: #fffbeb;
+  --chip-ink: #b45309;
+  --chip-edge: #fef3c7;
+}
+[data-theme="dark"] .chip-tissue {
+  --chip-wash: #1e3a5f;
+  --chip-ink: #bfdbfe;
+  --chip-edge: #2f5480;
+}
+[data-theme="dark"] .chip-cell {
+  --chip-wash: #332a5c;
+  --chip-ink: #ddd6fe;
+  --chip-edge: #4a3d7d;
+}
+[data-theme="dark"] .chip-disease {
+  --chip-wash: #4a3212;
+  --chip-ink: #fde68a;
+  --chip-edge: #6b4a1c;
+}
+/* Warm scheme, three warm hues: sepia, moss, rust. The three still have to be
+   told apart from each other before they agree with anything — a card can carry
+   all of them at once. */
+[data-palette="nautical"] .chip-tissue {
+  --chip-wash: #f2e6d0;
+  --chip-ink: #7a4a12;
+  --chip-edge: #e4d2af;
+}
+[data-palette="nautical"] .chip-cell {
+  --chip-wash: #e8eeda;
+  --chip-ink: #4a6820;
+  --chip-edge: #d5dfc0;
+}
+[data-palette="nautical"] .chip-disease {
+  --chip-wash: #f8e2d8;
+  --chip-ink: #9c3819;
+  --chip-edge: #eecbba;
+}
+[data-palette="tropical"] .chip-tissue {
+  --chip-wash: #d7ecf7;
+  --chip-ink: #16607f;
+  --chip-edge: #b9dcee;
+}
+[data-palette="tropical"] .chip-cell {
+  --chip-wash: #d3f0e8;
+  --chip-ink: #0e7061;
+  --chip-edge: #b0e2d6;
+}
+[data-palette="tropical"] .chip-disease {
+  --chip-wash: #fdefd2;
+  --chip-ink: #8a5a06;
+  --chip-edge: #f6dfae;
+}
+/* Night's are the same three fields on the violet arc: a blue, a violet and the
+   accent's pink. They come after the dark block on purpose — the two selectors
+   weigh the same, so it is the order that decides which a night page uses. */
+[data-palette="night"] .chip-tissue {
+  --chip-wash: #1f2a55;
+  --chip-ink: #a9c8ff;
+  --chip-edge: #33437d;
+}
+[data-palette="night"] .chip-cell {
+  --chip-wash: #2a1f4d;
+  --chip-ink: #d3c2ff;
+  --chip-edge: #453a78;
+}
+[data-palette="night"] .chip-disease {
+  --chip-wash: #4a1f38;
+  --chip-ink: #ffb3d8;
+  --chip-edge: #6e3355;
+}
+
+/* The metadata explorer's head — its title and tabs — stays put once the charts
+   above have scrolled past, while the results and the pager keep moving under
+   it.
+
+   It stops flush at the top rather than leaving the margin the card has at rest.
+   Holding that margin means painting over the strip a stuck element leaves
+   behind, and CSS cannot tell stuck from resting: the paint is there the whole
+   time, cutting off the card's top border, its rounded corners and its shadow
+   while you are still scrolling towards it. Flush costs a little air and keeps
+   the card whole. */
+.explorer-head {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+/* A page of results is taller than the loading state that replaces it, so the
+   scroller's height moves under the reader. Chrome would compensate by shifting
+   the scroll position back, which undoes the deliberate jump to the top of the
+   explorer on a page change. */
+.no-scroll-anchor {
+  overflow-anchor: none;
+}
+
+/* The dashboard's filter sidebar ends where the header's logo begins, so the
+   main column beside it lines up with the header's own content. The header
+   centres its row in a 1600px box with a 2rem inset, which is how far in the
+   logo sits; the sidebar takes exactly that width.
+
+   The max() is the reason it does not disturb narrower windows: until that
+   distance exceeds the sidebar's own 18rem the sidebar keeps its width and
+   nothing moves. It only starts growing once the space to the left of the logo
+   is wider than the sidebar already was. */
+.dashboard-sidebar {
+  /* The 8px is the page scrollbar declared above: 100vw counts it, the header's
+     centring does not, so it comes off before the halves are taken. Written out
+     rather than shared as a variable because the build inlines a variable like
+     that at its use sites and drops the definition, which leaves the reference
+     inside this one unresolvable. */
+  --logo-inset: calc(2rem + max(0px, (100vw - 8px - 1600px) / 2));
+  /* 72rem is where a 4K window lands, and the sidebar stops there: past that the
+     main column would keep its 1600px while the sidebar swallowed the rest. */
+  width: clamp(18rem, var(--logo-inset), 72rem);
+}
+
+/* The custom scrollbar is for the page and nothing else.
+
+   Styling ::-webkit-scrollbar at all makes a browser abandon the platform's
+   scrollbar for a drawn one, and a drawn scrollbar is always present: it holds
+   a strip of width whenever it is visible, so the content beside it moves as it
+   comes and goes. That is worth it for the page itself, where the strip is
+   reserved once and never changes.
+
+   Everywhere else the platform's scrollbar is the better one. On macOS it is an
+   overlay: it takes no width at all, sits above the content, and fades itself in
+   and out as you scroll — which is what these panels want and what no amount of
+   CSS reproduces convincingly. Where the platform's scrollbar does take width
+   (Windows, Linux) `.scroll-stable` reserves it up front so it still cannot
+   shift anything. */
+html::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+html::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.hero-pattern {
+  background-color: #1a365d;
+  background-image: radial-gradient(#2c4a75 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* The floor of a shallow bay. What it is and why it is a program rather than a
+ * picture is in WaterFloor.tsx; this is where it sits and what it looks like.
+ *
+ * Fixed and behind everything in the room. Sized in CSS and rendered at a third
+ * of that — the canvas element carries no width or height of its own, so it is
+ * the stylesheet that says how big the picture is and JavaScript that says how
+ * many pixels are worked out to fill it. */
+.water-glass {
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* The look, all of it, still in the palette's hands.
+ *
+ * Colours as three plain numbers each rather than as a colour, because they go
+ * to a shader and a shader takes floats. That is the one concession: they are
+ * not tokens another palette could reach, but then a bay's caustics belong to
+ * the bay.
+ *
+ *   --water-scale   how many cells fit across the window: larger is smaller
+ *                   cells, more of them. The density knob, and now the only
+ *                   one — there is no second way to make it busier
+ *   --water-speed   how fast the two fields slide past each other, which is how
+ *                   fast the net changes shape — the one knob that decides
+ *                   whether this reads as water
+ *   --water-width   how thick a vein is
+ *   --water-drift-* how fast the whole bay runs, in cells per second, positive
+ *                   being right and down. It needs no loop and has none: the
+ *                   field is worked out from the coordinate, so it goes on for
+ *                   ever in every direction and moving through it is only a
+ *                   matter of looking somewhere else
+ *   --water-cast-*  how far the shadow lies from its own light, down and right
+ */
+[data-palette="tropical"] {
+  --water-light: 1 1 1;
+  --water-shade: 0.47 0.65 0.68;
+  --water-light-a: 0.5;
+  --water-shade-a: 0.22;
+  --water-scale: 8;
+  --water-scale-at: 1920;
+  --water-spread: 0.5;
+  --water-speed: 0.2;
+  --water-warp: 3;
+  --water-warp-roll: 0.006;
+  --water-core: 0.09;
+  --water-glow: 14;
+  --water-fps: 45;
+  --water-detail: 0.55;
+  --water-lift: 0.95 0.99 0.97;
+  --water-lift-a: 1;
+  --water-lift-to: 0.42;
+  --water-calm-hold: 0.5;
+  --water-calm-fade: 0.9;
+  --water-drift-x: 0.1;
+  --water-drift-y: 0.1;
+  --water-cast-x: 0.03;
+  --water-cast-y: 0.3;
+}

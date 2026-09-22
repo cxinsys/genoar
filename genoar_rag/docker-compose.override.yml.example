@@ -1,0 +1,53 @@
+# Development on your own machine. Copy this to docker-compose.override.yml and
+# compose will merge it on top of docker-compose.yml without being told to.
+#
+#     cp docker-compose.override.yml.example docker-compose.override.yml
+#     docker compose up -d frontend
+#
+# The copy is gitignored, so it stays on the machine that made it. The
+# deployments never see one and go on serving the production build.
+#
+# This file is for development only. A deployment serving a second dataset
+# wants docker-compose.override.datasets.example instead — copying this one
+# onto a server would also switch the frontend to its dev build.
+#
+# Undoing things the built images do on purpose:
+services:
+  # Restart the server when the source changes. The image does not, because it
+  # is the image the deployments run and a watcher there reloads on any write to
+  # the bind-mounted host tree. Here that is the point: ./backend is already
+  # mounted at /app by docker-compose.yml, so an edit on the host takes effect
+  # without a restart. It also pins uvicorn to one worker, which is fine for one
+  # developer and is the other reason it does not ship.
+  backend:
+    command:
+      - uvicorn
+      - app.main:app
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8000"
+      - --reload
+
+  frontend:
+    build:
+      context: ./frontend
+      # The first stage, which still has TypeScript, Tailwind and the rest.
+      # `next dev` needs all of them; the stage that ships was pruned down to
+      # next, react and react-dom and cannot compile anything.
+      target: build
+    volumes:
+      # The source, live. This hides the image's own copy — which is the point
+      # here and the reason it must not happen in production, where hiding /app
+      # would hide the build and leave `next start` with nothing to start.
+      - ./frontend:/app
+      # Except node_modules. The mount above would otherwise bury the ones the
+      # image installed, and the host's are for the host's platform.
+      - /app/node_modules
+    environment:
+      # In production the rewrite destination is baked in at build time. A dev
+      # server re-reads next.config.mjs as it goes, so here it comes from the
+      # environment instead — and without it the container would proxy to its
+      # own localhost and every call to the backend would fail.
+      - API_URL=http://backend:8000
+    command: npm run dev

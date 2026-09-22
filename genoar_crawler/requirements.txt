@@ -1,0 +1,10 @@
+# GENOAR Crawler Requirements
+# Every package here is imported by genoar_crawler/. The crawler drives a real
+# browser rather than fetching pages, so it needs no HTTP or HTML-parsing
+# library; ChromeDriver is installed by the Dockerfile, not by pip.
+
+# Browser automation
+selenium>=4.0.0
+
+# Parsing the crawler's own tabular output
+pandas>=1.3.0

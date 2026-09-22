@@ -1,0 +1,182 @@
+services:
+  backend:
+    build: ./backend
+    # Come back after a crash, and after the host reboots. On a deployment this
+    # is what keeps the service from quietly staying down until someone notices.
+    #
+    # Rootless Podman honours the policy while its own machinery is running, so
+    # the crash case works as written; the reboot case additionally needs
+    # `systemctl --user enable podman-restart` and lingering on for the account.
+    restart: unless-stopped
+    ports:
+      # Loopback only. The browser never talks to this service: the frontend
+      # rewrites /api and /health to it over the compose network, so the only
+      # client a published port serves is a person on the host with curl.
+      # Publishing it on every interface put the raw API — and, before it was
+      # turned off, its Swagger UI — on whatever network the host is attached
+      # to.
+      - "127.0.0.1:${BACKEND_PORT:-8001}:8000"
+    volumes:
+      - ./backend:/app
+      - ${DB_FILE:-./data/sra_hybrid.db}:/data/sra_hybrid.db:ro
+      # Human (SapBERT) index. Its `.meta.json` sidecar is mounted too so the backend
+      # can verify the index was built with the configured model.
+      - ${HUMAN_FAISS_INDEX:-./data/faiss_human.bin}:/data/genoar/faiss_human.bin:ro
+      - ${HUMAN_FAISS_INDEX:-./data/faiss_human.bin}.meta.json:/data/genoar/faiss_human.bin.meta.json:ro
+      - ${HUMAN_RUN_MAPPING:-./data/run_mapping_human.json}:/data/genoar/run_mapping_human.json:ro
+      # Stage 3 output (the pipeline's success dir). Read-only: the service only
+      # serves these files. The default is where the root Makefile's stage-3
+      # target writes; point PROCESSED_RESULTS elsewhere if the pipeline ran on
+      # another host or disk. Compose creates the path if it is missing, in which
+      # case every run simply reports as unprocessed.
+      - ${PROCESSED_RESULTS:-../results/success}:/data/genoar/results:ro
+      # Mouse (all-MiniLM-L6-v2) index, same arrangement as human.
+      - ${MOUSE_FAISS_INDEX:-./data/faiss_mouse.bin}:/data/genoar/faiss_mouse.bin:ro
+      - ${MOUSE_FAISS_INDEX:-./data/faiss_mouse.bin}.meta.json:/data/genoar/faiss_mouse.bin.meta.json:ro
+      - ${MOUSE_RUN_MAPPING:-./data/run_mapping_mouse.json}:/data/genoar/run_mapping_mouse.json:ro
+    environment:
+      # DB_BACKEND=mysql (default) uses the DB_* server settings; DB_BACKEND=sqlite reads DB_PATH.
+      - DB_BACKEND=${DB_BACKEND:-mysql}
+      - DB_PATH=/data/sra_hybrid.db
+      - DB_HOST=${DB_HOST:-mariadb}
+      - DB_PORT=${DB_PORT:-3306}
+      - DB_USER=${DB_USER:-genoar}
+      - DB_PASSWORD=${DB_PASSWORD:-}
+      - DB_NAME=${DB_NAME:-genoar}
+      # Species-routed vector search (human=SapBERT, mouse=all-MiniLM-L6-v2).
+      # The path pairs use `${VAR-default}` — no colon — on purpose: unset
+      # keeps the container path every deployment has used, while an *empty*
+      # value in .env passes through empty and turns that species off (both
+      # of a pair, or startup refuses). `${VAR:-default}` would swallow the
+      # empty value and silently re-enable the species.
+      - SEMANTIC_SEARCH_ENABLED=${SEMANTIC_SEARCH_ENABLED:-true}
+      - HUMAN_EMBEDDING_MODEL_NAME=${HUMAN_EMBEDDING_MODEL_NAME:-cambridgeltl/SapBERT-from-PubMedBERT-fulltext}
+      - HUMAN_FAISS_INDEX_PATH=${HUMAN_FAISS_INDEX_PATH-/data/genoar/faiss_human.bin}
+      - HUMAN_RUN_MAPPING_PATH=${HUMAN_RUN_MAPPING_PATH-/data/genoar/run_mapping_human.json}
+      # The bodies of data this deployment serves. Empty serves one, built from
+      # the settings above, and no dataset ever appears in a URL — which is what
+      # a deployment with a single database wants and gets by saying nothing.
+      #
+      # Naming more than one lets the dashboard describe different data from the
+      # search page. Only the list itself lives here; each dataset's own
+      # settings (`DATASET_<NAME>_*`) go in `datasets.env` next to this file —
+      # see there and backend/app/config.py. They cannot go in `.env`: Compose
+      # reads `.env` for ${...} substitution in this file but does not pass its
+      # entries into containers, so a `DATASET_*` line there would silently
+      # never reach the backend.
+      - DATASETS=${DATASETS:-}
+      # Cell Ranger outputs, read from the mounted results dir. Stage 3 leaves a
+      # receipt beside each run's output saying which run produced it and whether
+      # that run verified it.
+      - PROCESSED_RESULTS_DIR=${PROCESSED_RESULTS_DIR:-/data/genoar/results}
+      # Output whose receipt records an adoption, and output whose receipt cannot
+      # be read, are withheld either way. This decides the remaining case: output
+      # with no receipt at all, which is what a deployment holds if its results
+      # predate receipts. false serves it. true withholds it.
+      - PROCESSED_RESULTS_REQUIRE_RECEIPT=${PROCESSED_RESULTS_REQUIRE_RECEIPT:-false}
+      # Extra layouts under that directory, for processed data not written the
+      # way stage 3 writes it. Empty for a deployment whose results dir is one
+      # level of run ids. See backend/app/config.py.
+      - PROCESSED_RESULTS_LAYOUTS=${PROCESSED_RESULTS_LAYOUTS:-}
+      - MOUSE_EMBEDDING_MODEL_NAME=${MOUSE_EMBEDDING_MODEL_NAME:-sentence-transformers/all-MiniLM-L6-v2}
+      - MOUSE_FAISS_INDEX_PATH=${MOUSE_FAISS_INDEX_PATH-/data/genoar/faiss_mouse.bin}
+      - MOUSE_RUN_MAPPING_PATH=${MOUSE_RUN_MAPPING_PATH-/data/genoar/run_mapping_mouse.json}
+      # Refuse to query an index built with a different model than configured.
+      - REQUIRE_INDEX_MODEL_MATCH=${REQUIRE_INDEX_MODEL_MATCH:-true}
+      - EMBEDDING_MODEL_CACHE_DIR=/app/.cache/huggingface
+    # Per-dataset settings (DATASET_<NAME>_*), passed through verbatim. The
+    # names are chosen by each deployment, so they cannot be enumerated above;
+    # a file forwards whatever a deployment wrote. Optional: a single-dataset
+    # deployment has no such file and nothing changes. The file is gitignored —
+    # like docker-compose.override.yml, it describes one machine. Example:
+    #
+    #   DATASET_ATLAS_DB_NAME=genoar_atlas
+    #   DATASET_ATLAS_DB_PATH=/data/genoar/atlas.db
+    #   DATASET_ATLAS_HUMAN_FAISS_INDEX_PATH=/data/genoar/atlas_human.bin
+    #   DATASET_ATLAS_HUMAN_RUN_MAPPING_PATH=/data/genoar/atlas_human.json
+    #   DATASET_ATLAS_LABEL=Second dataset
+    #
+    # (with DATASETS=main,atlas and DASHBOARD_DATASET=atlas in .env). A
+    # secondary dataset that omits its DB target refuses to start rather than
+    # inherit the primary's — see backend/app/config.py. Its files also have
+    # to be mounted: copy docker-compose.override.datasets.example to
+    # docker-compose.override.yml, and give MariaDB deployments their schema
+    # via mariadb-init/ below.
+    #
+    # `required: false` needs Compose v2.24+ (the file is optional — a
+    # single-dataset deployment has none).
+    env_file:
+      - path: ./datasets.env
+        required: false
+
+  # MariaDB backend. Off by default; start it with:  docker compose --profile mysql up
+  # Then set DB_BACKEND=mysql in .env so the backend connects here.
+  mariadb:
+    image: mariadb:11
+    restart: unless-stopped
+    profiles: ["mysql"]
+    ports:
+      # Bound to the loopback address, not every interface. The backend reaches
+      # this over the compose network and never through a published port, so the
+      # only client this needs to serve is a person on the host running `mysql`
+      # or the migration script. Publishing it wider would put the database on
+      # whatever network the host is attached to.
+      - "127.0.0.1:${DB_PORT_HOST:-3306}:3306"
+    environment:
+      # No `:-` defaults on the two passwords, deliberately. A default here is
+      # not a placeholder, it is the password: `--profile mysql up` without a
+      # .env would start a reachable server whose credentials are printed in
+      # this file, and start it successfully, so nothing would say so.
+      #
+      # Unset instead passes an empty value through, and the image refuses to
+      # initialise on it — "Database is uninitialized and password option is not
+      # specified" — which is the failure this wants. It cannot be `${VAR:?}`:
+      # Compose interpolates the whole file before it selects profiles, so that
+      # would also stop every deployment that never starts this service.
+      - MARIADB_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
+      - MARIADB_DATABASE=${DB_NAME:-genoar}
+      - MARIADB_USER=${DB_USER:-genoar}
+      - MARIADB_PASSWORD=${DB_PASSWORD}
+    volumes:
+      - mariadb_data:/var/lib/mysql
+      # Extra schemas, one per secondary dataset. The image runs every *.sql
+      # in this directory — but only when mariadb_data is first created; on an
+      # existing deployment run the statements by hand (see the example file).
+      - ./mariadb-init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        # A build argument and not an environment variable, because that is
+        # when it is read. Next bakes rewrite destinations into the build;
+        # setting this on the running container changes nothing.
+        API_URL: http://backend:8000
+        # Which of the configured datasets the dashboard describes. Empty — the
+        # default — means the same one the search page uses, which is every
+        # deployment that serves a single body of data. A build argument for
+        # the same reason as API_URL: a page cannot ask which data it is about
+        # before it draws itself, and changing this means changing what data is
+        # deployed, which is a rebuild either way.
+        NEXT_PUBLIC_DASHBOARD_DATASET: "${DASHBOARD_DATASET:-}"
+    restart: unless-stopped
+    ports:
+      - "${FRONTEND_PORT:-3005}:3000"
+    # No mount of the source. The image builds the site and serves what it
+    # built; a mount of the host's directory over /app would hide that build and
+    # leave `next start` with nothing to start.
+    #
+    # Which means a deploy is now a rebuild — `compose build frontend` — where
+    # before it was a merge and a restart. That is the trade, and it is the
+    # right way round: the old arrangement skipped the build by never doing one,
+    # and paid for it on every page load instead.
+    depends_on:
+      - backend
+
+volumes:
+  mariadb_data:

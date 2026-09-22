@@ -1,0 +1,137 @@
+services:
+  # All-in-one GENOAR service: crawling and analysis in a single container
+  genoar:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: genoar:latest
+
+    # Deliberately no `container_name:`.
+    #
+    # A container name is host-global. It is not namespaced by the Compose
+    # project, so a pinned name made this service one shared object across
+    # every checkout, every project name and every user on the machine:
+    #   * a second `docker compose up` did not start a second container, it
+    #     recreated this one - which is how a running 90-minute crawl was
+    #     killed and left nothing behind but `exit 137`;
+    #   * a stopped container of that name blocked the next run outright with
+    #     "the container name /genoar-pipeline is already in use".
+    # Without it Compose names the container <project>-genoar-<n>, which is
+    # unique per project, so two projects can run at once. See the label below
+    # and `docker compose ps` for how to find it.
+    labels:
+      genoar.role: "pipeline"
+
+    # Chrome writes its renderer shared memory to /dev/shm. Docker's 64MB
+    # default is not enough for several parallel Selenium sessions: renderers
+    # die mid-crawl and the worker looks like it vanished.
+    shm_size: "2gb"
+
+    # Bind mounts, so results survive the container.
+    #
+    # GENOAR_OUTPUT_ROOT is what keeps two projects' results apart, and it has
+    # to exist because the project name does not reach these paths. Removing
+    # `container_name:` and the pinned network name made the *containers*
+    # per-project, and `make run COMPOSE_PROJECT_NAME=second` was documented on
+    # the strength of that - but every project bind-mounted the same four host
+    # directories out of the checkout, so a second run shared:
+    #
+    #   * crawl_output/runs/, where each run's plan, worker directories and
+    #     merged manifest live;
+    #   * crawl_output/crawl_manifest.json, the pointer at "the newest completed
+    #     run", which every run deletes as it starts;
+    #   * first_pass_output/, whose tables are named by content, not by run, so
+    #     the second project's quietly replaced the first's.
+    #
+    # Neither run was at fault and neither could tell. So the documented
+    # instruction was an instruction to corrupt a run, and this is what makes it
+    # true instead: `make run` derives GENOAR_OUTPUT_ROOT from the project name
+    # (`.` for the default project, ./projects/<name> for any other) and every
+    # output mount hangs off it.
+    #
+    # The default is `.`, the checkout root, which is exactly where these
+    # directories have always been - the Snakefile, `make fetch-sra`, the
+    # crawler's own default output directory and both READMEs all name them
+    # there. Running `docker compose up` by hand rather than through `make`
+    # therefore behaves as it always did; give it GENOAR_OUTPUT_ROOT yourself if
+    # you are starting a second project that way.
+    #
+    # all_query_results and workflow are inputs, not results, and stay shared: a
+    # second project has no copy of the UMLS tables, and pointing it at a fresh
+    # empty directory would look like a clean start rather than a missing input.
+    volumes:
+      # Crawled data
+      - ${GENOAR_OUTPUT_ROOT:-.}/crawl_output:/app/crawl_output
+      # UMLS data (input, shared, read-only: a run reads the export, and must
+      # not be able to write a substitute into the user's checkout)
+      - ./all_query_results:/app/all_query_results:ro
+      # Analysis results
+      - ${GENOAR_OUTPUT_ROOT:-.}/first_pass_output:/app/first_pass_output
+      # Logs
+      - ${GENOAR_OUTPUT_ROOT:-.}/logs:/app/logs
+      # Workflow results
+      - ${GENOAR_OUTPUT_ROOT:-.}/workflow_output:/app/workflow_output
+      # Config files (input, shared)
+      - ./workflow:/app/workflow:ro
+
+    # Environment
+    environment:
+      # Crawler settings.
+      # WORKERS defaults to 1, matching the Makefile. Parallel crawling is now
+      # run-scoped (each worker owns runs/<run_id>/workers/worker-<n>/), but the
+      # conservative default stands until it has been exercised on a real
+      # multi-page run. Running `docker compose up` directly must not quietly
+      # pick a riskier default than `make run` does.
+      - PAGES=${PAGES:-100}
+      - WORKERS=${WORKERS:-1}
+      - SELENIUM_HEADLESS=true
+      - DISPLAY=:99
+
+      # Analysis settings. Snakemake's core count is unrelated to crawl
+      # parallelism, so it keeps its own default of 4; it only follows WORKERS
+      # when the user has set WORKERS deliberately.
+      - SNAKEMAKE_CORES=${WORKERS:-4}
+      - PYTHONPATH=/app
+
+      # Run mode (complete, crawl, analyze, test)
+      - MODE=${MODE:-complete}
+
+      # Log level
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+
+    # Entry point: the workflow driver script
+    command: ["/app/workflow/run.sh"]
+
+    # Restart policy
+    restart: "no"
+
+    # Network
+    networks:
+      - genoar-network
+
+    # Resource limits (optional)
+    deploy:
+      resources:
+        limits:
+          cpus: '${CPU_LIMIT:-4}'
+          memory: ${MEMORY_LIMIT:-8G}
+        reservations:
+          cpus: '${CPU_RESERVE:-2}'
+          memory: ${MEMORY_RESERVE:-4G}
+
+# Networks
+networks:
+  genoar-network:
+    driver: bridge
+    # Deliberately no `name:` either. A pinned network name is host-global in
+    # exactly the way a pinned container name is: two projects would attach to
+    # one network, and `docker compose down` in either would try to remove the
+    # network the other is still using. Compose names it
+    # <project>_genoar-network, one per project.
+
+# Named volumes (optional; bind mounts are used for now)
+# volumes:
+#   crawl_data:
+#     driver: local
+#   analysis_data:
+#     driver: local

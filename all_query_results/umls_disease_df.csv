@@ -1,0 +1,2732 @@
+,CUI,STR,SAB,STY
+0,C0033860,Psoriasis,ICD10,Disease or Syndrome
+1,C0033860,Psoriasis,ICD10AM,Disease or Syndrome
+2,C0033860,Psoriasis,ICPC,Disease or Syndrome
+3,C0033860,Psoriasis,ICPC2P,Disease or Syndrome
+4,C0033860,Psoriasis,LCH,Disease or Syndrome
+5,C0033860,Psoriasis,MDR,Disease or Syndrome
+6,C0033860,Psoriasis,MSH,Disease or Syndrome
+7,C0033860,Psoriasis,RCD,Disease or Syndrome
+8,C0033860,Psoriasis,SNM,Disease or Syndrome
+9,C0033860,PSORIASIS,CCPSS,Disease or Syndrome
+10,C0033860,PSORIASIS,COSTAR,Disease or Syndrome
+11,C0033860,PSORIASIS,CST,Disease or Syndrome
+12,C0033860,PSORIASIS,DXP,Disease or Syndrome
+14,C0033860,PSORIASIS,WHO,Disease or Syndrome
+15,C0033860,psoriasis,AOD,Disease or Syndrome
+16,C0033860,psoriasis,BI,Disease or Syndrome
+17,C0033860,psoriasis,CSP,Disease or Syndrome
+18,C0033860,psoriasis,MEDCIN,Disease or Syndrome
+19,C0033860,Psoriasis,ICD10CM,Disease or Syndrome
+20,C0033860,psoriasis,CHV,Disease or Syndrome
+21,C0033860,Psoriasis,MEDLINEPLUS,Disease or Syndrome
+22,C0033860,Psoriasis,OMIM,Disease or Syndrome
+23,C0033860,Psoriasis,LCH_NW,Disease or Syndrome
+24,C0033860,Psoriasis,LNC,Disease or Syndrome
+26,C0033860,Psoriasis,HPO,Disease or Syndrome
+27,C0033860,Psoriasis,SNOMEDCT_US,Disease or Syndrome
+28,C0033860,Psoriasis,ICPC2EENG,Disease or Syndrome
+29,C0033860,psoriasis,ICPC2ICD10ENG,Disease or Syndrome
+30,C0033860,Psoriasis,NCI,Disease or Syndrome
+31,C0033860,psoriasis,ICPC2P,Disease or Syndrome
+32,C3898900,Healthy,NCI,Qualitative Concept
+33,C3898900,Healthy,LNC,Qualitative Concept
+34,C3898900,Healthy,HPO,Qualitative Concept
+35,C3898900,Healthy,MTH,Qualitative Concept
+36,C2986479,Healthy Control,NCI,Qualitative Concept
+38,C0001418,Adenocarcinoma,LCH,Neoplastic Process
+39,C0001418,Adenocarcinoma,MSH,Neoplastic Process
+40,C0001418,Adenocarcinoma,RCD,Neoplastic Process
+41,C0001418,Adenocarcinoma,SNM,Neoplastic Process
+42,C0001418,ADENOCARCINOMA,CCPSS,Neoplastic Process
+43,C0001418,ADENOCARCINOMA,CST,Neoplastic Process
+44,C0001418,adenocarcinoma,AOD,Neoplastic Process
+45,C0001418,adenocarcinoma,CSP,Neoplastic Process
+46,C0001418,Adenocarcinoma,OMIM,Neoplastic Process
+47,C0001418,adenocarcinoma,MEDCIN,Neoplastic Process
+48,C5551397,Adenocarcinoma,SNOMEDCT_US,Neoplastic Process
+49,C0001418,adenocarcinoma,CHV,Neoplastic Process
+50,C0001418,Adenocarcinoma,LCH_NW,Neoplastic Process
+51,C0001418,Adenocarcinoma,LNC,Neoplastic Process
+52,C0001418,Adenocarcinoma,MDR,Neoplastic Process
+54,C0001418,Adenocarcinoma,SNOMEDCT_US,Neoplastic Process
+55,C0001418,Adenocarcinoma,NCI,Neoplastic Process
+56,C0001418,Adenocarcinoma,MTH,Neoplastic Process
+57,C0205307,Normal,RCD,Qualitative Concept
+58,C0205307,Normal,SNMI,Qualitative Concept
+59,C1873497,Normal,OMIM,Finding
+60,C1704701,Normal,NCI,Quantitative Concept
+61,C0205307,NORMAL,CCPSS,Qualitative Concept
+62,C0205307,Normal,LNC,Qualitative Concept
+63,C0205307,normal,CHV,Qualitative Concept
+65,C1553406,normal,HL7V3.0,Qualitative Concept
+66,C0205307,Normal,SNOMEDCT_US,Qualitative Concept
+68,C0205307,Normal,NCI,Qualitative Concept
+69,C0205307,Normal,MTH,Qualitative Concept
+70,C0205307,Normal,HL7V2.5,Qualitative Concept
+71,C1550457,Normal,HL7V3.0,Finding
+72,C1551394,Normal,HL7V3.0,Finding
+74,C1550469,normal,HL7V3.0,Idea or Concept
+75,C1553386,normal,HL7V3.0,Intellectual Product
+76,C1553399,normal,HL7V3.0,Idea or Concept
+77,C1553402,normal,HL7V3.0,Idea or Concept
+79,C0029408,OA,CSP,Disease or Syndrome
+80,C0029408,OA,MEDCIN,Disease or Syndrome
+81,C0029408,oa,BI,Disease or Syndrome
+82,C0029408,OA,MEDLINEPLUS,Disease or Syndrome
+83,C3887876,OA,OMIM,Finding
+84,C0010346,Crohn's Disease,COSTAR,Disease or Syndrome
+85,C0010346,CROHN'S DISEASE,DXP,Disease or Syndrome
+86,C0010346,CROHN'S DISEASE,WHO,Disease or Syndrome
+87,C0010346,Crohn's disease,AOD,Disease or Syndrome
+88,C0010346,Crohn's disease,CSP,Disease or Syndrome
+89,C0010346,Crohn's disease,MDR,Disease or Syndrome
+90,C0010346,Crohn's disease,MTHMST,Disease or Syndrome
+91,C0010346,Crohn's disease,RCD,Disease or Syndrome
+92,C0010346,Crohn's disease,SNM,Disease or Syndrome
+93,C0010346,Crohn's Disease,NCI,Disease or Syndrome
+94,C0010346,Crohn's disease,MEDCIN,Disease or Syndrome
+95,C0010346,crohn's disease,BI,Disease or Syndrome
+96,C0010346,Crohn's disease,CHV,Disease or Syndrome
+98,C0010346,Crohn's Disease,MEDLINEPLUS,Disease or Syndrome
+99,C0010346,Crohn's disease,LCH_NW,Disease or Syndrome
+100,C0010346,Crohn's disease,HPO,Disease or Syndrome
+102,C0010346,Crohn's Disease,MSH,Disease or Syndrome
+103,C0010346,Crohn's Disease,LNC,Disease or Syndrome
+104,C0010346,Crohn's disease,SNOMEDCT_US,Disease or Syndrome
+105,C0010346,Crohn's disease,PDQ,Disease or Syndrome
+106,C0220621,pediatric AML,PDQ,Neoplastic Process
+107,C0220621,Pediatric AML,NCI,Neoplastic Process
+108,C0152013,Lung adenocarcinoma,OMIM,Neoplastic Process
+109,C0152013,lung adenocarcinoma,MEDCIN,Neoplastic Process
+110,C0152013,lung adenocarcinoma,CHV,Neoplastic Process
+111,C0152013,Lung adenocarcinoma,SNOMEDCT_VET,Neoplastic Process
+112,C0152013,Lung adenocarcinoma,HPO,Neoplastic Process
+113,C0152013,Lung adenocarcinoma,MDR,Neoplastic Process
+115,C0152013,Lung Adenocarcinoma,MSH,Neoplastic Process
+116,C0152013,Lung Adenocarcinoma,PDQ,Neoplastic Process
+117,C0152013,Lung Adenocarcinoma,OMIM,Neoplastic Process
+118,C0152013,Lung Adenocarcinoma,NCI,Neoplastic Process
+119,C5203670,COVID-19,MDR,Disease or Syndrome
+121,C5203670,COVID-19,ICD10CM,Disease or Syndrome
+122,C5203670,COVID-19,MSH,Disease or Syndrome
+123,C5203670,COVID-19,SNOMEDCT_US,Disease or Syndrome
+124,C5203670,COVID-19,NCI,Disease or Syndrome
+125,C5203670,COVID-19,MEDLINEPLUS,Disease or Syndrome
+126,C5203670,COVID-19,CCSR_ICD10CM,Disease or Syndrome
+127,C5203670,COVID-19,LNC,Disease or Syndrome
+128,C0025202,Melanoma,ICPC2P,Neoplastic Process
+129,C0025202,Melanoma,LCH,Neoplastic Process
+130,C0025202,Melanoma,MSH,Neoplastic Process
+131,C0025202,Melanoma,SNM,Neoplastic Process
+132,C0025202,MELANOMA,COSTAR,Neoplastic Process
+133,C0025202,melanoma,AOD,Neoplastic Process
+134,C0025202,melanoma,BI,Neoplastic Process
+135,C0025202,melanoma,CSP,Neoplastic Process
+136,C0025202,Melanoma,OMIM,Neoplastic Process
+137,C0025202,melanoma,CHV,Neoplastic Process
+138,C0025202,Melanoma,MEDLINEPLUS,Neoplastic Process
+139,C0025202,Melanoma,LCH_NW,Neoplastic Process
+140,C0025202,Melanoma,LNC,Neoplastic Process
+141,C0025202,Melanoma,HPO,Neoplastic Process
+142,C0025202,Melanoma,MDR,Neoplastic Process
+143,C0796561,melanoma,CVX,Pharmacologic Substance
+144,C0796561,melanoma,CVX,Immunologic Factor
+145,C0025202,melanoma,PDQ,Neoplastic Process
+146,C0025202,melanoma,ICPC2ICD10ENG,Neoplastic Process
+147,C0025202,Melanoma,NCI,Neoplastic Process
+148,C0025202,melanoma,MTH,Neoplastic Process
+149,C0796561,melanoma,HL7V2.5,Pharmacologic Substance
+150,C0796561,melanoma,HL7V2.5,Immunologic Factor
+151,C0796561,melanoma,HL7V3.0,Pharmacologic Substance
+152,C0796561,melanoma,HL7V3.0,Immunologic Factor
+153,C0025202,melanoma,ICPC2P,Neoplastic Process
+154,C0750887,adrenal cancer,MEDCIN,Neoplastic Process
+155,C0750887,adrenal cancer,AOD,Neoplastic Process
+156,C0750887,adrenal cancer,CHV,Neoplastic Process
+157,C0750887,Adrenal Cancer,MTH,Neoplastic Process
+158,C0750887,Adrenal Cancer,MSH,Neoplastic Process
+159,C0750887,adrenal cancer,CSP,Neoplastic Process
+160,C0005684,bladder cancer,BI,Neoplastic Process
+161,C0005684,Bladder cancer,RCD,Neoplastic Process
+162,C0005684,BLADDER CANCER,OMIM,Neoplastic Process
+163,C0005684,bladder cancer,MEDCIN,Neoplastic Process
+164,C0005684,BLADDER CANCER,CCPSS,Neoplastic Process
+166,C0005684,bladder cancer,CHV,Neoplastic Process
+167,C0005684,Bladder Cancer,MEDLINEPLUS,Neoplastic Process
+168,C0005684,Bladder cancer,MDR,Neoplastic Process
+169,C0005684,Bladder Cancer,MSH,Neoplastic Process
+170,C0005684,Bladder cancer,OMIM,Neoplastic Process
+171,C0005695,Bladder cancer,HPO,Neoplastic Process
+173,C0005684,Bladder cancer,SNOMEDCT_US,Neoplastic Process
+174,C0005684,bladder cancer,PDQ,Neoplastic Process
+175,C0005684,Bladder cancer,PDQ,Neoplastic Process
+176,C0005684,bladder cancer,CSP,Neoplastic Process
+177,C0699885,Bladder Cancer,NCI,Neoplastic Process
+178,C0740457,kidney cancer,AOD,Neoplastic Process
+179,C0740457,kidney cancer,MEDCIN,Neoplastic Process
+180,C0740457,kidney cancer,CHV,Neoplastic Process
+182,C0740457,Kidney Cancer,MEDLINEPLUS,Neoplastic Process
+183,C0740457,KIDNEY CANCER,OMIM,Neoplastic Process
+184,C1378703,Kidney cancer,HPO,Neoplastic Process
+185,C0740457,Kidney cancer,MDR,Neoplastic Process
+186,C0740457,Kidney Cancer,MSH,Neoplastic Process
+187,C0740457,Kidney Cancer,LNC,Neoplastic Process
+188,C0740457,kidney cancer,PDQ,Neoplastic Process
+189,C0740457,kidney cancer,CSP,Neoplastic Process
+190,C1378703,Kidney Cancer,NCI,Neoplastic Process
+191,C0242379,lung cancer,AOD,Neoplastic Process
+192,C0242379,lung cancer,BI,Neoplastic Process
+193,C0242379,Lung cancer,RCD,Neoplastic Process
+194,C0242379,LUNG CANCER,OMIM,Neoplastic Process
+195,C0242379,lung cancer,MEDCIN,Neoplastic Process
+196,C0242379,LUNG CANCER,CCPSS,Neoplastic Process
+198,C0242379,lung cancer,CHV,Neoplastic Process
+199,C0242379,Lung Cancer,MEDLINEPLUS,Neoplastic Process
+200,C0242379,Lung cancer,LNC,Neoplastic Process
+201,C0242379,Lung cancer,MDR,Neoplastic Process
+202,C0242379,Lung cancer,HPO,Neoplastic Process
+203,C0242379,Lung cancer,SNOMEDCT_US,Neoplastic Process
+204,C0684249,lung cancer,PDQ,Neoplastic Process
+205,C0242379,lung cancer,CSP,Neoplastic Process
+208,C0684249,Lung Cancer,NCI,Neoplastic Process
+209,C0242379,Lung Cancer,MSH,Neoplastic Process
+210,C1261473,Sarcoma,LCH,Neoplastic Process
+211,C1261473,Sarcoma,MSH,Neoplastic Process
+212,C1261473,Sarcoma,RCD,Neoplastic Process
+213,C1261473,Sarcoma,SNM,Neoplastic Process
+214,C1261473,SARCOMA,CCPSS,Neoplastic Process
+215,C1261473,SARCOMA,COSTAR,Neoplastic Process
+216,C1261473,SARCOMA,CST,Neoplastic Process
+217,C1261473,SARCOMA,WHO,Neoplastic Process
+218,C1261473,sarcoma,AOD,Neoplastic Process
+219,C1261473,sarcoma,CSP,Neoplastic Process
+220,C1261473,Sarcoma,NCI,Neoplastic Process
+221,C1261473,Sarcoma,SNOMEDCT_US,Neoplastic Process
+222,C1261473,sarcoma,MEDCIN,Neoplastic Process
+223,C1261473,Sarcoma,OMIM,Neoplastic Process
+224,C1261473,Sarcoma,MTH,Neoplastic Process
+225,C4551686,sarcoma,CHV,Neoplastic Process
+226,C1261473,Sarcoma,LCH_NW,Neoplastic Process
+227,C1261473,Sarcoma,HPO,Neoplastic Process
+228,C1261473,Sarcoma,MDR,Neoplastic Process
+230,C1261473,Sarcoma,CCSR_ICD10CM,Neoplastic Process
+232,C1261473,sarcoma,PDQ,Neoplastic Process
+233,C1261473,Sarcoma,ICPC2P,Neoplastic Process
+234,C1261473,sarcoma,ICPC2P,Neoplastic Process
+235,C0009402,colorectal cancer,AOD,Neoplastic Process
+236,C0009402,colorectal cancer,BI,Neoplastic Process
+237,C0009402,COLORECTAL CANCER,OMIM,Neoplastic Process
+238,C0009402,Colorectal cancer,CCS,Neoplastic Process
+239,C0009402,colorectal cancer,CHV,Neoplastic Process
+240,C0009402,Colorectal Cancer,MEDLINEPLUS,Neoplastic Process
+241,C0009402,Colorectal cancer,OMIM,Neoplastic Process
+242,C0009402,colorectal cancer,MEDCIN,Neoplastic Process
+250,C0009402,Colorectal cancer,MDR,Neoplastic Process
+251,C0009402,Colorectal cancer,NANDA-I,Neoplastic Process
+253,C4722085,Colorectal cancer,SNOMEDCT_US,Neoplastic Process
+254,C0009402,Colorectal Cancer,MSH,Neoplastic Process
+255,C0009402,colorectal cancer,PDQ,Neoplastic Process
+256,C0009402,Colorectal Cancer,NCI,Neoplastic Process
+257,C0009402,colorectal cancer,CSP,Neoplastic Process
+258,C0153452,GALLBLADDER CANCER,CCPSS,Neoplastic Process
+259,C0153452,gallbladder cancer,CHV,Neoplastic Process
+260,C0235782,Gallbladder Cancer,MEDLINEPLUS,Neoplastic Process
+261,C0153452,Gallbladder cancer,MDR,Neoplastic Process
+262,C0153452,Gallbladder Cancer,MSH,Neoplastic Process
+264,C4525297,Gallbladder cancer,PDQ,Neoplastic Process
+265,C4525302,Gallbladder cancer,PDQ,Neoplastic Process
+266,C4525305,Gallbladder cancer,PDQ,Neoplastic Process
+267,C4525300,Gallbladder cancer,PDQ,Neoplastic Process
+268,C4525301,Gallbladder cancer,PDQ,Neoplastic Process
+269,C0153452,gallbladder cancer,PDQ,Neoplastic Process
+270,C0153452,Gallbladder cancer,PDQ,Neoplastic Process
+271,C0153452,gallbladder cancer,CSP,Neoplastic Process
+272,C0235782,Gallbladder Cancer,NCI,Neoplastic Process
+273,C0017636,Glioblastoma,ICPC2P,Neoplastic Process
+274,C0017636,Glioblastoma,MDR,Neoplastic Process
+275,C0017636,Glioblastoma,MSH,Neoplastic Process
+276,C0017636,Glioblastoma,RCD,Neoplastic Process
+277,C0017636,Glioblastoma,SNM,Neoplastic Process
+278,C0017636,Glioblastoma,OMIM,Neoplastic Process
+279,C0017636,glioblastoma,CHV,Neoplastic Process
+282,C1621958,Glioblastoma,HPO,Neoplastic Process
+283,C1621958,Glioblastoma,SNOMEDCT_US,Neoplastic Process
+284,C1621958,Glioblastoma,ORPHANET,Neoplastic Process
+285,C0017636,Glioblastoma,MTH,Neoplastic Process
+286,C1621958,Glioblastoma,NCI,Neoplastic Process
+287,C0017636,glioblastoma,CSP,Neoplastic Process
+288,C0017636,glioblastoma,ICPC2P,Neoplastic Process
+289,C0699889,GYNECOLOGIC CANCER,CCPSS,Neoplastic Process
+290,C0699889,gynecologic cancer,CHV,Neoplastic Process
+291,C0699889,gynecologic cancer,PDQ,Neoplastic Process
+292,C0699889,Gynecologic Cancer,NCI,Neoplastic Process
+293,C3544266,Hepatobiliary cancer,MDR,Neoplastic Process
+295,C0346647,pancreatic cancer,AOD,Neoplastic Process
+296,C0346647,pancreatic cancer,CSP,Neoplastic Process
+297,C0346647,Pancreatic cancer,RCD,Neoplastic Process
+298,C0346647,Pancreatic cancer,OMIM,Neoplastic Process
+299,C0346647,Pancreatic cancer,MEDCIN,Neoplastic Process
+300,C0346647,pancreatic cancer,CHV,Neoplastic Process
+301,C0235974,PANCREATIC CANCER,OMIM,Neoplastic Process
+302,C0346647,Pancreatic Cancer,MEDLINEPLUS,Neoplastic Process
+303,C0346647,Pancreatic cancer,MDR,Neoplastic Process
+304,C0346647,Pancreatic Cancer,MSH,Neoplastic Process
+305,C0346647,Pancreatic cancer,HPO,Neoplastic Process
+306,C0346647,Pancreatic cancer,SNOMEDCT_US,Neoplastic Process
+307,C0346647,pancreatic cancer,PDQ,Neoplastic Process
+308,C0346647,Pancreatic cancer,PDQ,Neoplastic Process
+309,C0235974,Pancreatic Cancer,NCI,Neoplastic Process
+310,C1292769,B-cell acute lymphoblastic leukemia,RCDAE,Neoplastic Process
+311,C1292769,B-cell acute lymphoblastic leukemia,OMIM,Neoplastic Process
+312,C1292769,B-cell acute lymphoblastic leukemia,SNOMEDCT_US,Neoplastic Process
+313,C1292769,B-cell acute lymphoblastic leukemia,MDR,Neoplastic Process
+314,C1292769,B-cell acute lymphoblastic leukemia,LNC,Neoplastic Process
+317,C1292769,B-Cell Acute Lymphoblastic Leukemia,NCI,Neoplastic Process
+318,C0023467,Acute myeloid leukemia,ICD10AE,Neoplastic Process
+319,C0023467,Acute myeloid leukemia,ICD10AMAE,Neoplastic Process
+321,C0023467,Acute myeloid leukemia,RCDAE,Neoplastic Process
+322,C0023467,Acute myeloid leukemia,RCDSA,Neoplastic Process
+323,C0023467,Acute myeloid leukemia,SNM,Neoplastic Process
+324,C0023467,Acute myeloid leukemia,SNMI,Neoplastic Process
+325,C0023467,acute myeloid leukemia,CSP,Neoplastic Process
+326,C0023467,Acute myeloid leukemia,OMIM,Neoplastic Process
+327,C0023467,acute myeloid leukemia,CHV,Neoplastic Process
+328,C0023467,Acute Myeloid Leukemia,MEDLINEPLUS,Neoplastic Process
+329,C0023467,Acute myeloid leukemia,LCH_NW,Neoplastic Process
+330,C0023467,Acute myeloid leukemia,HPO,Neoplastic Process
+331,C0023467,Acute myeloid leukemia,MDR,Neoplastic Process
+332,C0023467,Acute Myeloid Leukemia,MSH,Neoplastic Process
+334,C0023467,Acute myeloid leukemia,SNOMEDCT_US,Neoplastic Process
+335,C0023467,Acute myeloid leukemia,LNC,Neoplastic Process
+337,C0023467,Acute myeloid leukemia,ORPHANET,Neoplastic Process
+338,C0023467,acute myeloid leukemia,MEDCIN,Neoplastic Process
+342,C0023467,acute myeloid leukemia,PDQ,Neoplastic Process
+343,C0023467,Acute Myeloid Leukemia,NCI,Neoplastic Process
+344,C0023467,acute myeloid leukemia,ICPC2P,Neoplastic Process
+345,C0280634,Adult Acute Monocytic Leukemia,MTH,Neoplastic Process
+346,C0280634,Adult Acute Monocytic Leukemia,PDQ,Neoplastic Process
+347,C0280634,Adult Acute Monocytic Leukemia,NCI,Neoplastic Process
+363,C0023493,Adult T-cell leukemia/lymphoma,ICD10AMAE,Neoplastic Process
+364,C0023493,Adult T-cell leukemia/lymphoma,SNMI,Neoplastic Process
+365,C0023493,Adult T-Cell Leukemia/Lymphoma,NCI,Neoplastic Process
+366,C0023493,Adult T-cell leukemia/lymphoma,MEDCIN,Neoplastic Process
+367,C0023493,Adult T-cell leukemia/lymphoma,SNOMEDCT_US,Neoplastic Process
+369,C0023493,Adult T-cell leukemia/lymphoma,ORPHANET,Neoplastic Process
+370,C0023493,adult T-cell leukemia/lymphoma,PDQ,Neoplastic Process
+371,C2587213,CONTROL,CCPSS,Functional Concept
+372,C0308718,CONTROL,SNMI,Pharmacologic Substance
+373,C2587213,Control,LCH,Functional Concept
+374,C0728976,Control,MMSL,Organic Chemical
+375,C0728976,Control,MMSL,Pharmacologic Substance
+376,C2587213,Control,RCD,Functional Concept
+377,C0009932,Control,NCI,Group
+378,C1882979,Control,NCI,Conceptual Entity
+379,C2587213,Control,NCI,Functional Concept
+380,C0308718,CONTROL,CHV,Pharmacologic Substance
+381,C3274648,Control,NCI,Qualitative Concept
+382,C1882979,Control,LNC,Conceptual Entity
+383,C2587213,Control,SNOMEDCT_US,Functional Concept
+385,C1550141,Control,HL7V2.5,Substance
+386,C1547100,Control,HL7V2.5,Idea or Concept
+387,C0243148,control,MSH,Qualitative Concept
+388,C0002395,Alzheimer disease (AD),JABL,Disease or Syndrome
+389,C0030567,Parkinson disease (PD),CHV,Disease or Syndrome
+394,C0279702,CCRCC,ORPHANET,Neoplastic Process
+395,C0332133,AD,SNMI,Finding
+396,C0002395,AD,OMIM,Disease or Syndrome
+397,C0547043,ad,NCI,Spatial Concept
+398,C0228318,AD,FMA,"Body Part, Organ, or Organ Component"
+399,C0228318,ad,CHV,"Body Part, Organ, or Organ Component"
+400,C0002395,AD,MEDLINEPLUS,Disease or Syndrome
+401,C0332133,AD,SNOMEDCT_US,Finding
+402,C0050841,AD,PDQ,Therapeutic or Preventive Procedure
+403,C0280573,AD,PDQ,Therapeutic or Preventive Procedure
+404,C0010934,AD,PDQ,"Amino Acid, Peptide, or Protein"
+405,C0010934,AD,PDQ,Antibiotic
+406,C1630418,AD,MMSL,Pharmacologic Substance
+407,C3539781,Progressive Disease,NCI,Disease or Syndrome
+408,C4553229,Progressive Disease,NCI,Intellectual Product
+409,C4553228,Progressive Disease,NCI,Intellectual Product
+410,C1335499,Progressive disease,LNC,Disease or Syndrome
+411,C4723839,Progressive Disease,NCI,Finding
+412,C5202991,Progressive Disease,NCI,Finding
+413,C5202924,Progressive Disease,NCI,Finding
+414,C5202921,Progressive Disease,NCI,Finding
+415,C5575533,Progressive Disease,NCI,Classification
+416,C1335499,Progressive Disease,NCI,Disease or Syndrome
+417,C1335499,Progressive Disease,MTH,Disease or Syndrome
+418,C0677874,complete response,CHV,Finding
+419,C0677874,Complete response,LNC,Finding
+420,C4724446,Complete Response,NCI,Finding
+421,C5203034,Complete Response,NCI,Finding
+422,C5203025,Complete Response,NCI,Finding
+423,C5575821,Complete Response,NCI,Classification
+424,C4048328,CERVICAL CANCER,CCPSS,Neoplastic Process
+425,C0302592,CERVICAL CANCER,DXP,Neoplastic Process
+426,C4048328,cervical cancer,BI,Neoplastic Process
+427,C4048328,cervical cancer,CSP,Neoplastic Process
+428,C4048328,CERVICAL CANCER,OMIM,Neoplastic Process
+429,C4048328,cervical cancer,MEDCIN,Neoplastic Process
+430,C0007847,cervical cancer,MEDCIN,Neoplastic Process
+431,C4048328,cervical cancer,CHV,Neoplastic Process
+432,C4048328,Cervical Cancer,MEDLINEPLUS,Neoplastic Process
+433,C0007847,Cervical cancer,SNOMEDCT_US,Neoplastic Process
+434,C4048328,Cervical cancer,MDR,Neoplastic Process
+435,C4048328,Cervical Cancer,MSH,Neoplastic Process
+436,C4048328,cervical cancer,MTH,Neoplastic Process
+437,C4048328,Cervical cancer,OMIM,Neoplastic Process
+438,C4048328,cervical cancer,PDQ,Neoplastic Process
+439,C4048328,Cervical cancer,PDQ,Neoplastic Process
+440,C0302592,Cervical Cancer,NCI,Neoplastic Process
+441,C0002395,Alzheimer's Disease,MTH,Disease or Syndrome
+442,C0002395,ALZHEIMER'S DISEASE,COSTAR,Disease or Syndrome
+443,C0002395,ALZHEIMER'S DISEASE,WHO,Disease or Syndrome
+444,C0002395,Alzheimer's disease,AOD,Disease or Syndrome
+445,C0002395,Alzheimer's disease,CSP,Disease or Syndrome
+446,C0002395,Alzheimer's disease,ICD10,Disease or Syndrome
+447,C0002395,Alzheimer's disease,ICD10AM,Disease or Syndrome
+448,C0002395,Alzheimer's disease,LCH,Disease or Syndrome
+449,C0002395,Alzheimer's disease,RCD,Disease or Syndrome
+450,C0002395,Alzheimer's disease,SNM,Disease or Syndrome
+451,C0002395,alzheimer's disease,BI,Disease or Syndrome
+452,C0002395,Alzheimer's disease,ICD10CM,Disease or Syndrome
+453,C0002395,Alzheimer's disease,LNC,Disease or Syndrome
+454,C0002395,Alzheimer's disease,CHV,Disease or Syndrome
+455,C0002395,Alzheimer's Disease,MEDLINEPLUS,Disease or Syndrome
+457,C0002395,Alzheimer's disease,LCH_NW,Disease or Syndrome
+458,C0002395,Alzheimer's disease,MDR,Disease or Syndrome
+459,C0002395,Alzheimer's Disease,MSH,Disease or Syndrome
+461,C0002395,Alzheimer's disease,SNOMEDCT_US,Disease or Syndrome
+463,C0002395,Alzheimer's Disease,NCI,Disease or Syndrome
+464,C0002395,Alzheimer's disease,ICD9CM,Disease or Syndrome
+465,C0007131,NSCLC,CSP,Neoplastic Process
+466,C0007131,nsclc,CHV,Neoplastic Process
+467,C0007131,NSCLC,PDQ,Neoplastic Process
+468,C0036421,Systemic sclerosis,ICD10,Disease or Syndrome
+469,C0036421,Systemic sclerosis,ICD10AM,Disease or Syndrome
+470,C0036421,Systemic sclerosis,RCD,Disease or Syndrome
+471,C0036421,Systemic sclerosis,SNMI,Disease or Syndrome
+472,C0036421,systemic sclerosis,CSP,Disease or Syndrome
+473,C0036421,Systemic Sclerosis,NCI,Disease or Syndrome
+474,C0036421,SYSTEMIC SCLEROSIS,CCPSS,Disease or Syndrome
+475,C0036421,systemic sclerosis,CHV,Disease or Syndrome
+476,C0036421,Systemic sclerosis,MEDLINEPLUS,Disease or Syndrome
+477,C0036421,Systemic Sclerosis,MEDLINEPLUS,Disease or Syndrome
+478,C0036421,Systemic Sclerosis,MSH,Disease or Syndrome
+479,C0036421,Systemic sclerosis,MDR,Disease or Syndrome
+480,C0036421,Systemic sclerosis,SNOMEDCT_US,Disease or Syndrome
+481,C0036421,Systemic Sclerosis,PDQ,Disease or Syndrome
+482,C0036421,Systemic sclerosis,ORPHANET,Disease or Syndrome
+483,C0036421,Systemic sclerosis,ICD9CM,Disease or Syndrome
+484,C3203102,Idiopathic pulmonary arterial hypertension,MTH,Disease or Syndrome
+485,C3203102,Idiopathic Pulmonary Arterial Hypertension,NCI,Disease or Syndrome
+486,C3203102,Idiopathic pulmonary arterial hypertension,SNOMEDCT_US,Disease or Syndrome
+487,C3203102,Idiopathic pulmonary arterial hypertension,MDR,Disease or Syndrome
+488,C3203102,Idiopathic Pulmonary Arterial Hypertension,MSH,Disease or Syndrome
+489,C3203102,Idiopathic pulmonary arterial hypertension,ICD10CM,Disease or Syndrome
+490,C3203102,Idiopathic pulmonary arterial hypertension,ORPHANET,Disease or Syndrome
+491,C3203102,idiopathic pulmonary arterial hypertension,MEDCIN,Disease or Syndrome
+492,C2705716,Normal control,LNC,Qualitative Concept
+494,C2939175,Meconium ileus,ICD10,Disease or Syndrome
+495,C2939175,Meconium ileus,MDR,Disease or Syndrome
+496,C2939175,Meconium ileus,RCD,Disease or Syndrome
+497,C2939175,Meconium ileus,SNMI,Disease or Syndrome
+498,C2939175,Meconium ileus,MTH,Disease or Syndrome
+499,C2939175,meconium ileus,CHV,Disease or Syndrome
+501,C2939175,Meconium Ileus,NCI,Disease or Syndrome
+502,C2939175,MECONIUM ILEUS,OMIM,Disease or Syndrome
+504,C2939175,Meconium ileus,HPO,Disease or Syndrome
+506,C2939175,Meconium Ileus,MSH,Disease or Syndrome
+507,C2939175,Meconium ileus,SNOMEDCT_US,Disease or Syndrome
+508,C2939175,Meconium ileus,MTHICD9,Disease or Syndrome
+509,C0265706,GASTROSCHISIS,CCPSS,Disease or Syndrome
+510,C0265706,GASTROSCHISIS,CST,Disease or Syndrome
+511,C0265706,Gastroschisis,ICD10,Disease or Syndrome
+512,C0265706,Gastroschisis,ICD10AM,Disease or Syndrome
+513,C0265706,Gastroschisis,MDR,Disease or Syndrome
+514,C0265706,Gastroschisis,MSH,Disease or Syndrome
+515,C0265706,Gastroschisis,RCD,Disease or Syndrome
+516,C0265706,Gastroschisis,SNM,Disease or Syndrome
+517,C0265706,Gastroschisis,SNMI,Disease or Syndrome
+518,C0265706,GASTROSCHISIS,OMIM,Disease or Syndrome
+519,C0265706,Gastroschisis,OMIM,Disease or Syndrome
+520,C0265706,gastroschisis,MEDCIN,Disease or Syndrome
+521,C0265706,Gastroschisis,ICD9CM,Disease or Syndrome
+522,C0265706,Gastroschisis,NCI,Disease or Syndrome
+523,C0265706,Gastroschisis,ICD10CM,Disease or Syndrome
+524,C0265706,gastroschisis,CHV,Disease or Syndrome
+525,C0265706,Gastroschisis,LNC,Disease or Syndrome
+526,C0265706,Gastroschisis,HPO,Disease or Syndrome
+528,C0265706,Gastroschisis,MTH,Disease or Syndrome
+529,C0265706,Gastroschisis,SNOMEDCT_US,Disease or Syndrome
+530,C0265706,Gastroschisis,ORPHANET,Disease or Syndrome
+531,C0265706,gastroschisis,ICPC2ICD10ENG,Disease or Syndrome
+532,C4082937,Necrotizing enterocolitis,SNMI,Disease or Syndrome
+533,C4082937,Necrotizing Enterocolitis,NCI,Disease or Syndrome
+534,C4082937,necrotizing enterocolitis,CHV,Disease or Syndrome
+535,C0520459,Necrotizing Enterocolitis,MTH,Disease or Syndrome
+536,C0520459,Necrotizing enterocolitis,MDR,Disease or Syndrome
+537,C0520459,Necrotizing Enterocolitis,MSH,Disease or Syndrome
+538,C0520459,Necrotizing enterocolitis,ICD10CM,Disease or Syndrome
+539,C0520459,necrotizing enterocolitis,MEDCIN,Disease or Syndrome
+540,C4082937,Necrotizing enterocolitis,SNOMEDCT_US,Disease or Syndrome
+541,C0520459,Necrotizing enterocolitis,HPO,Disease or Syndrome
+542,C0520459,Necrotizing enterocolitis,OMIM,Disease or Syndrome
+543,C0520459,Necrotizing enterocolitis,ORPHANET,Disease or Syndrome
+544,C4082937,necrotizing enterocolitis,CSP,Disease or Syndrome
+568,C1706256,Case,NCI,Conceptual Entity
+569,C1533148,Case,SNOMEDCT_US,Quantitative Concept
+570,C0868928,case,CHV,Functional Concept
+571,C1533148,Case,NCI,Quantitative Concept
+572,C3274647,Case,NCI,Qualitative Concept
+573,C0868928,Case,SNOMEDCT_US,Functional Concept
+574,C0022661,esrd,CHV,Disease or Syndrome
+575,C0022661,ESRD,LNC,Disease or Syndrome
+576,C0035078,ESRD,MEDLINEPLUS,Disease or Syndrome
+578,C0022661,ESRD,MSH,Disease or Syndrome
+579,C2316810,ESRD,NCI,Disease or Syndrome
+597,C0030567,PARKINSON'S DISEASE,COSTAR,Disease or Syndrome
+598,C0030567,PARKINSON'S DISEASE,DXP,Disease or Syndrome
+599,C0030567,Parkinson's disease,AOD,Disease or Syndrome
+600,C0030567,Parkinson's disease,CSP,Disease or Syndrome
+601,C0030567,Parkinson's disease,ICD10,Disease or Syndrome
+602,C0030567,Parkinson's disease,ICD10AM,Disease or Syndrome
+603,C0030567,Parkinson's disease,RCD,Disease or Syndrome
+604,C0030567,Parkinson's disease,SNM,Disease or Syndrome
+605,C0030567,parkinson's disease,BI,Disease or Syndrome
+606,C0030567,Parkinson's disease,LNC,Disease or Syndrome
+607,C0030567,Parkinson's disease,CHV,Disease or Syndrome
+608,C0030567,Parkinson's Disease,MEDLINEPLUS,Disease or Syndrome
+610,C0030567,Parkinson's disease,LCH_NW,Disease or Syndrome
+611,C0030567,Parkinson's disease,MDR,Disease or Syndrome
+612,C0030567,Parkinson's disease,NANDA-I,Disease or Syndrome
+613,C0030567,Parkinson's Disease,MSH,Disease or Syndrome
+616,C0030567,Parkinson's disease,SNOMEDCT_US,Disease or Syndrome
+618,C0030567,Parkinson's disease,ICD10CM,Disease or Syndrome
+619,C0030567,Parkinson's Disease,NCI,Disease or Syndrome
+620,C0030567,Parkinson's disease,ICD9CM,Disease or Syndrome
+621,C0009324,Ulcerative colitis,AIR,Disease or Syndrome
+622,C0009324,Ulcerative colitis,ICD10,Disease or Syndrome
+623,C0009324,Ulcerative colitis,ICD10AM,Disease or Syndrome
+624,C0009324,Ulcerative colitis,RCD,Disease or Syndrome
+625,C0009324,Ulcerative colitis,SNM,Disease or Syndrome
+626,C0009324,ULCERATIVE COLITIS,COSTAR,Disease or Syndrome
+627,C0009324,ULCERATIVE COLITIS,CST,Disease or Syndrome
+628,C0009324,ULCERATIVE COLITIS,QMR,Disease or Syndrome
+629,C0009324,ulcerative colitis,AOD,Disease or Syndrome
+630,C0009324,ulcerative colitis,BI,Disease or Syndrome
+631,C0009324,ulcerative colitis,CSP,Disease or Syndrome
+632,C0009324,ulcerative colitis,MEDCIN,Disease or Syndrome
+633,C0009324,ULCERATIVE COLITIS,OMIM,Disease or Syndrome
+634,C0009324,Ulcerative colitis,ICD10CM,Disease or Syndrome
+635,C0009324,ulcerative colitis,CHV,Disease or Syndrome
+636,C0009324,Ulcerative Colitis,MEDLINEPLUS,Disease or Syndrome
+637,C0009324,Ulcerative colitis,LCH_NW,Disease or Syndrome
+638,C0009324,Ulcerative colitis,HPO,Disease or Syndrome
+639,C0009324,Ulcerative colitis,MDR,Disease or Syndrome
+640,C0009324,Ulcerative Colitis,MSH,Disease or Syndrome
+641,C0009324,Ulcerative colitis,OMIM,Disease or Syndrome
+642,C0009324,Ulcerative colitis,SNOMEDCT_US,Disease or Syndrome
+643,C0009324,Ulcerative Colitis,MTH,Disease or Syndrome
+644,C0009324,Ulcerative Colitis,PSY,Disease or Syndrome
+645,C0009324,Ulcerative Colitis,NCI,Disease or Syndrome
+646,C0009324,Ulcerative colitis,ICD9CM,Disease or Syndrome
+647,C0009324,ulcerative colitis,ICPC2P,Disease or Syndrome
+648,C0040028,ESSENTIAL THROMBOCYTHEMIA,COSTAR,Disease or Syndrome
+649,C0040028,Essential Thrombocythemia,MSH,Disease or Syndrome
+650,C0040028,essential thrombocythemia,CSP,Disease or Syndrome
+651,C0040028,Essential thrombocythemia,RCDAE,Disease or Syndrome
+652,C0040028,Essential thrombocythemia,SNMI,Disease or Syndrome
+653,C0040028,Essential thrombocythemia,ICD9CM,Disease or Syndrome
+654,C0040028,essential thrombocythemia,MEDCIN,Disease or Syndrome
+655,C0040028,essential thrombocythemia,CHV,Disease or Syndrome
+656,C0040028,Essential thrombocythemia,MDR,Disease or Syndrome
+657,C0040028,Essential thrombocythemia,OMIM,Disease or Syndrome
+659,C0040028,Essential thrombocythemia,SNOMEDCT_US,Disease or Syndrome
+660,C0040028,Essential thrombocythemia,ORPHANET,Disease or Syndrome
+661,C0040028,essential thrombocythemia,PDQ,Disease or Syndrome
+662,C0040028,Essential Thrombocythemia,NCI,Disease or Syndrome
+696,C1532322,Infectious endophthalmitis,MEDCIN,Disease or Syndrome
+697,C1532322,Infectious endophthalmitis,MDR,Disease or Syndrome
+698,C1532322,Infectious Endophthalmitis,MSH,Disease or Syndrome
+699,C1532322,Infectious endophthalmitis,SNOMEDCT_US,Disease or Syndrome
+700,C0268837,Cystitis glandularis,MDR,Disease or Syndrome
+701,C0268837,Cystitis glandularis,SNM,Disease or Syndrome
+702,C0268837,Cystitis glandularis,SNMI,Disease or Syndrome
+703,C0268837,cystitis glandularis,CHV,Disease or Syndrome
+705,C0268837,Cystitis glandularis,SNOMEDCT_US,Disease or Syndrome
+706,C0268837,Cystitis Glandularis,NCI,Disease or Syndrome
+707,C0019682,human immunodeficiency virus,AOD,Virus
+708,C0019682,human immunodeficiency virus,BI,Virus
+709,C0019682,human immunodeficiency virus,CSP,Virus
+710,C0019682,Human immunodeficiency virus,RCD,Virus
+711,C0019682,human immunodeficiency virus,CHV,Virus
+712,C0019682,Human Immunodeficiency Virus,MEDLINEPLUS,Virus
+713,C0019682,Human immunodeficiency virus,MEDLINEPLUS,Virus
+714,C0019682,Human Immunodeficiency Virus,MSH,Virus
+715,C0019682,Human immunodeficiency virus,SNOMEDCT_US,Virus
+716,C0019693,Human Immunodeficiency Virus,PSY,Disease or Syndrome
+717,C0019682,Human Immunodeficiency Virus,NCI,Virus
+718,C0026769,MS,CCPSS,Disease or Syndrome
+719,C0026769,MS,CSP,Disease or Syndrome
+720,C0026769,MS,DXP,Disease or Syndrome
+721,C0026269,ms,BI,Disease or Syndrome
+722,C0026769,ms,BI,Disease or Syndrome
+723,C0439223,ms,RCD,Temporal Concept
+724,C1868685,MS,OMIM,Finding
+725,C1417453,MS,OMIM,Gene or Genome
+726,C2349943,Ms,NCI,Conceptual Entity
+727,C0183396,MS,NCI,Medical Device
+728,C0026769,MS,CHV,Disease or Syndrome
+729,C0026269,MS,CHV,Disease or Syndrome
+730,C0439223,MS,CHV,Temporal Concept
+731,C0026769,MS,MEDLINEPLUS,Disease or Syndrome
+733,C3539704,MS,NCI,Gene or Genome
+734,C3713294,MS,NCI,"Amino Acid, Peptide, or Protein"
+735,C3713294,MS,NCI,Enzyme
+736,C0026221,MS,LNC,Geographic Area
+737,C0026769,MS,MDR,Disease or Syndrome
+738,C0439223,ms,SNOMEDCT_US,Temporal Concept
+739,C5445266,mS,NCI,Quantitative Concept
+740,C1552156,Ms,HL7V3.0,"Body Part, Organ, or Organ Component"
+741,C0024117,COPD,CCPSS,Disease or Syndrome
+742,C0024117,COPD,CSP,Disease or Syndrome
+743,C0024117,COPD,DXP,Disease or Syndrome
+744,C0024117,COPD,SNMI,Disease or Syndrome
+745,C0024117,copd,BI,Disease or Syndrome
+746,C0024117,COPD,MEDCIN,Disease or Syndrome
+747,C0024117,COPD,CHV,Disease or Syndrome
+748,C0024117,COPD,OMIM,Disease or Syndrome
+749,C3714496,COPD,SNOMEDCT_VET,Disease or Syndrome
+750,C0024117,COPD,MEDLINEPLUS,Disease or Syndrome
+751,C0024117,COPD,MDR,Disease or Syndrome
+752,C0024117,COPD,MSH,Disease or Syndrome
+753,C1412502,COPD,OMIM,Gene or Genome
+754,C0024117,COPD,HPO,Disease or Syndrome
+755,C0024117,COPD,LNC,Disease or Syndrome
+756,C1412502,COPD,HGNC,Gene or Genome
+757,C1647218,COPD,MMSL,Pharmacologic Substance
+758,C0002874,Aplastic anemia,CCS,Disease or Syndrome
+759,C0002874,Aplastic anemia,RCDAE,Disease or Syndrome
+760,C0002874,Aplastic anemia,SNM,Disease or Syndrome
+761,C0002874,APLASTIC ANEMIA,COSTAR,Disease or Syndrome
+762,C0002874,APLASTIC ANEMIA,CST,Disease or Syndrome
+763,C0002874,APLASTIC ANEMIA,QMR,Disease or Syndrome
+764,C0002874,aplastic anemia,AOD,Disease or Syndrome
+765,C0002874,aplastic anemia,CSP,Disease or Syndrome
+766,C0002874,aplastic anemia,PDQ,Disease or Syndrome
+767,C0002874,Aplastic anemia,OMIM,Disease or Syndrome
+768,C0002874,APLASTIC ANEMIA,OMIM,Disease or Syndrome
+769,C0002874,aplastic anemia,MEDCIN,Disease or Syndrome
+770,C0002874,aplastic anemia,CHV,Disease or Syndrome
+771,C0002874,Aplastic Anemia,MEDLINEPLUS,Disease or Syndrome
+772,C0002874,Aplastic anemia,LCH_NW,Disease or Syndrome
+775,C0002874,Aplastic anemia,HPO,Disease or Syndrome
+776,C0002874,Aplastic anemia,MDR,Disease or Syndrome
+777,C0002874,Aplastic Anemia,MSH,Disease or Syndrome
+779,C0002874,Aplastic anemia,SNOMEDCT_US,Disease or Syndrome
+780,C0002874,Aplastic anemia,CCSR_ICD10CM,Disease or Syndrome
+781,C0002874,Aplastic Anemia,MTH,Disease or Syndrome
+782,C0002874,Aplastic Anemia,NCI,Disease or Syndrome
+783,C0002874,aplastic anemia,ICPC2P,Disease or Syndrome
+806,C0023467,AML,CSP,Neoplastic Process
+807,C0023467,AML,DXP,Neoplastic Process
+808,C0023467,AML,OMIM,Neoplastic Process
+809,C0023467,aml,BI,Neoplastic Process
+810,C0023467,aml,CHV,Neoplastic Process
+811,C0023467,AML,MEDLINEPLUS,Neoplastic Process
+813,C0023467,AML,HPO,Neoplastic Process
+814,C0023467,AML,ORPHANET,Neoplastic Process
+815,C0023467,AML,PDQ,Neoplastic Process
+816,C2826025,MPAL,ORPHANET,Neoplastic Process
+817,C4314520,Tall,OMIM,Finding
+818,C1096063,intractable epilepsy,CHV,Disease or Syndrome
+819,C1096063,Intractable epilepsy,MDR,Disease or Syndrome
+820,C1096063,Intractable Epilepsy,MSH,Disease or Syndrome
+821,C1096063,Intractable epilepsy,OMIM,Disease or Syndrome
+822,C1096063,Intractable Epilepsy,NCI,Disease or Syndrome
+823,C0014544,Epilepsy,CCS,Disease or Syndrome
+824,C0014544,Epilepsy,ICD10,Disease or Syndrome
+825,C0014544,Epilepsy,ICD10AM,Disease or Syndrome
+826,C0014544,Epilepsy,ICPC2P,Disease or Syndrome
+827,C0014544,Epilepsy,LCH,Disease or Syndrome
+828,C0014544,Epilepsy,MSH,Disease or Syndrome
+829,C0014544,Epilepsy,MTH,Disease or Syndrome
+830,C0014544,Epilepsy,RCD,Disease or Syndrome
+831,C0014544,Epilepsy,SNM,Disease or Syndrome
+832,C0014544,EPILEPSY,COSTAR,Disease or Syndrome
+833,C0014544,EPILEPSY,CST,Disease or Syndrome
+834,C0014544,EPILEPSY,DXP,Disease or Syndrome
+835,C0014544,EPILEPSY,WHO,Disease or Syndrome
+836,C0014544,epilepsy,AOD,Disease or Syndrome
+837,C0014544,epilepsy,BI,Disease or Syndrome
+838,C0014544,epilepsy,CSP,Disease or Syndrome
+839,C0014544,epilepsy,MEDCIN,Disease or Syndrome
+840,C0014544,Epilepsy,OMIM,Disease or Syndrome
+841,C0014544,Epilepsy,LNC,Disease or Syndrome
+842,C0014544,epilepsy,CHV,Disease or Syndrome
+843,C0014544,Epilepsy,MEDLINEPLUS,Disease or Syndrome
+845,C0014544,Epilepsy,LCH_NW,Disease or Syndrome
+847,C0014544,Epilepsy,NCI,Disease or Syndrome
+848,C0014544,Epilepsy,HPO,Disease or Syndrome
+849,C0014544,Epilepsy,MDR,Disease or Syndrome
+852,C0014544,Epilepsy,SNOMEDCT_US,Disease or Syndrome
+855,C0014544,Epilepsy,ICPC2EENG,Disease or Syndrome
+856,C0014544,epilepsy,ICPC2ICD10ENG,Disease or Syndrome
+857,C0014544,Epilepsy,PSY,Disease or Syndrome
+858,C0014544,epilepsy,ICPC2P,Disease or Syndrome
+859,C0752347,DLB,OMIM,Disease or Syndrome
+860,C3890365,DLB,GO,Cell Component
+861,C0011989,PDD,OMIM,Disease or Syndrome
+862,C0432206,PDD,OMIM,Disease or Syndrome
+863,C0008838,PDD,PDQ,Pharmacologic Substance
+864,C0008838,PDD,PDQ,Inorganic Chemical
+865,C0524528,PDD,CSP,Mental or Behavioral Dysfunction
+866,C2362652,PD,SNMI,Qualitative Concept
+867,C3160718,PD,OMIM,Disease or Syndrome
+868,C4553229,PD,NCI,Intellectual Product
+869,C4553228,PD,NCI,Intellectual Product
+870,C5202920,PD,NCI,Finding
+871,C5202924,PD,NCI,Finding
+872,C5202921,PD,NCI,Finding
+873,C5202923,PD,NCI,Finding
+874,C5202925,PD,NCI,Finding
+875,C5202926,PD,NCI,Finding
+876,C5575533,PD,NCI,Classification
+888,C0026764,Multiple Myeloma,MSH,Neoplastic Process
+889,C0026764,Multiple Myeloma,MTH,Neoplastic Process
+890,C0026764,MULTIPLE MYELOMA,CCPSS,Neoplastic Process
+891,C0026764,MULTIPLE MYELOMA,COSTAR,Neoplastic Process
+892,C0026764,MULTIPLE MYELOMA,CST,Neoplastic Process
+893,C0026764,MULTIPLE MYELOMA,WHO,Neoplastic Process
+894,C0026764,Multiple myeloma,CCS,Neoplastic Process
+896,C0026764,Multiple myeloma,ICD10,Neoplastic Process
+897,C0026764,Multiple myeloma,ICD10AM,Neoplastic Process
+899,C0026764,Multiple myeloma,LCH,Neoplastic Process
+900,C0026764,Multiple myeloma,RCD,Neoplastic Process
+901,C0026764,Multiple myeloma,SNM,Neoplastic Process
+902,C0026764,Multiple myeloma,SNMI,Neoplastic Process
+903,C0026764,multiple myeloma,AOD,Neoplastic Process
+904,C0026764,multiple myeloma,CSP,Neoplastic Process
+905,C0026764,multiple myeloma,MEDCIN,Neoplastic Process
+906,C0026764,Multiple myeloma,ICD10CM,Neoplastic Process
+907,C0026764,multiple myeloma,CHV,Neoplastic Process
+908,C0026764,Multiple myeloma,OMIM,Neoplastic Process
+909,C0026764,Multiple Myeloma,MEDLINEPLUS,Neoplastic Process
+910,C0026764,Multiple myeloma,LCH_NW,Neoplastic Process
+911,C0026764,Multiple myeloma,HPO,Neoplastic Process
+912,C0026764,Multiple myeloma,MDR,Neoplastic Process
+913,C0026764,Multiple myeloma,LNC,Neoplastic Process
+914,C0026764,Multiple myeloma,CCSR_ICD10CM,Neoplastic Process
+915,C0026764,Multiple myeloma,SNOMEDCT_US,Neoplastic Process
+916,C0026764,Multiple myeloma,ORPHANET,Neoplastic Process
+917,C0026764,multiple myeloma,PDQ,Neoplastic Process
+920,C0026764,Multiple Myeloma,NCI,Neoplastic Process
+922,C0026764,Multiple myeloma,ICD9CM,Neoplastic Process
+923,C0026764,multiple myeloma,ICPC2P,Neoplastic Process
+924,C1800706,IPF,CSP,Disease or Syndrome
+925,C1800706,IPF,OMIM,Disease or Syndrome
+926,C0034069,IPF,MEDLINEPLUS,Disease or Syndrome
+927,C1800706,IPF,ORPHANET,Disease or Syndrome
+928,C0079773,CUTANEOUS T-CELL LYMPHOMA,QMR,Neoplastic Process
+929,C0079773,Cutaneous T-cell lymphoma,RCD,Neoplastic Process
+930,C0079773,cutaneous t-cell lymphoma,CHV,Neoplastic Process
+931,C0079773,Cutaneous T-cell lymphoma,HPO,Neoplastic Process
+932,C0079773,Cutaneous T-Cell Lymphoma,MSH,Neoplastic Process
+933,C0079773,cutaneous T-cell lymphoma,PDQ,Neoplastic Process
+934,C0079773,Cutaneous T-cell lymphoma,MDR,Neoplastic Process
+936,C0079773,Cutaneous T-cell lymphoma,SNOMEDCT_US,Neoplastic Process
+937,C0079773,Cutaneous T-cell lymphoma,MEDCIN,Neoplastic Process
+939,C0027651,Tumor,MTHMST,Neoplastic Process
+940,C0027651,Tumor,RCDAE,Neoplastic Process
+941,C0027651,Tumor,SNM,Neoplastic Process
+942,C0027651,TUMOR,CCPSS,Neoplastic Process
+943,C0027651,TUMOR,COSTAR,Neoplastic Process
+944,C0027651,tumor,AOD,Neoplastic Process
+945,C0027651,tumor,CSP,Neoplastic Process
+946,C0027651,Tumor,LNC,Neoplastic Process
+947,C0027651,tumor,CHV,Neoplastic Process
+948,C3273930,Tumor,NCI,Finding
+949,C0027651,Tumor,MEDLINEPLUS,Neoplastic Process
+953,C0027651,Tumor,NANDA-I,Neoplastic Process
+955,C0027651,Tumor,HPO,Neoplastic Process
+956,C0027651,Tumor,SNOMEDCT_US,Neoplastic Process
+957,C0027651,Tumor,MDR,Neoplastic Process
+959,C0027651,Tumor,MSH,Neoplastic Process
+960,C1578706,Tumor,HL7V2.5,Intellectual Product
+961,C0028945,Oligodendroglioma,MDR,Neoplastic Process
+962,C0028945,Oligodendroglioma,MSH,Neoplastic Process
+963,C0028945,Oligodendroglioma,RCD,Neoplastic Process
+964,C0028945,Oligodendroglioma,SNM,Neoplastic Process
+965,C0028945,OLIGODENDROGLIOMA,OMIM,Neoplastic Process
+966,C0028945,oligodendroglioma,CSP,Neoplastic Process
+967,C0028945,Oligodendroglioma,OMIM,Neoplastic Process
+968,C0028945,Oligodendroglioma,SNOMEDCT_US,Neoplastic Process
+969,C0028945,oligodendroglioma,CHV,Neoplastic Process
+971,C0028945,Oligodendroglioma,HPO,Neoplastic Process
+973,C0028945,Oligodendroglioma,ORPHANET,Neoplastic Process
+974,C0751396,Oligodendroglioma,NCI,Neoplastic Process
+975,C0028945,oligodendroglioma,MTH,Neoplastic Process
+976,C1621958,Glioblastoma Multiforme,COSTAR,Neoplastic Process
+977,C1621958,GLIOBLASTOMA MULTIFORME,DXP,Neoplastic Process
+978,C1621958,Glioblastoma multiforme,MDR,Neoplastic Process
+979,C1621958,Glioblastoma multiforme,RCD,Neoplastic Process
+980,C1621958,Glioblastoma multiforme,SNM,Neoplastic Process
+981,C1621958,Glioblastoma multiforme,SNMI,Neoplastic Process
+982,C1621958,glioblastoma multiforme,AOD,Neoplastic Process
+983,C1621958,glioblastoma multiforme,CSP,Neoplastic Process
+984,C1621958,GLIOBLASTOMA MULTIFORME,OMIM,Neoplastic Process
+985,C1621958,Glioblastoma Multiforme,MTH,Neoplastic Process
+986,C1621958,Glioblastoma multiforme,SNOMEDCT_US,Neoplastic Process
+987,C1621958,glioblastoma multiforme,CHV,Neoplastic Process
+988,C1621958,Glioblastoma multiforme,OMIM,Neoplastic Process
+989,C1621958,glioblastoma multiforme,MEDCIN,Neoplastic Process
+990,C1621958,Glioblastoma multiforme,LCH_NW,Neoplastic Process
+991,C1621958,Glioblastoma multiforme,HPO,Neoplastic Process
+994,C1621958,Glioblastoma multiforme,ORPHANET,Neoplastic Process
+995,C1621958,Glioblastoma Multiforme,MSH,Neoplastic Process
+996,C0280785,diffuse astrocytoma,CHV,Neoplastic Process
+997,C0280785,diffuse astrocytoma,PDQ,Neoplastic Process
+998,C0280785,Diffuse astrocytoma,SNOMEDCT_US,Neoplastic Process
+999,C0280785,Diffuse astrocytoma,ORPHANET,Neoplastic Process
+1000,C0280785,Diffuse Astrocytoma,MTH,Neoplastic Process
+1001,C0280785,Diffuse Astrocytoma,NCI,Neoplastic Process
+1002,C0334590,Anaplastic oligodendroglioma,RCD,Neoplastic Process
+1003,C0334590,anaplastic oligodendroglioma,CHV,Neoplastic Process
+1004,C0334590,Anaplastic oligodendroglioma,MDR,Neoplastic Process
+1006,C0334590,Anaplastic Oligodendroglioma,MSH,Neoplastic Process
+1007,C0334590,Anaplastic oligodendroglioma,SNOMEDCT_US,Neoplastic Process
+1008,C0334590,Anaplastic oligodendroglioma,ORPHANET,Neoplastic Process
+1009,C0334590,Anaplastic Oligodendroglioma,NCI,Neoplastic Process
+1010,C0334590,Anaplastic Oligodendroglioma,MTH,Neoplastic Process
+1011,C0004114,Astrocytoma,ICPC2P,Neoplastic Process
+1012,C0004114,Astrocytoma,MDR,Neoplastic Process
+1013,C0004114,Astrocytoma,MSH,Neoplastic Process
+1014,C0004114,Astrocytoma,RCD,Neoplastic Process
+1015,C0004114,Astrocytoma,SNM,Neoplastic Process
+1016,C0004114,ASTROCYTOMA,COSTAR,Neoplastic Process
+1017,C0004114,ASTROCYTOMA,WHO,Neoplastic Process
+1018,C0004114,astrocytoma,AOD,Neoplastic Process
+1019,C0004114,astrocytoma,CSP,Neoplastic Process
+1020,C0004114,ASTROCYTOMA,OMIM,Neoplastic Process
+1021,C0004114,Astrocytoma,OMIM,Neoplastic Process
+1022,C0004114,Astrocytoma,NCI,Neoplastic Process
+1023,C0004114,astrocytoma,CHV,Neoplastic Process
+1024,C0004114,Astrocytoma,HPO,Neoplastic Process
+1026,C0004114,Astrocytoma,MTH,Neoplastic Process
+1027,C0004114,Astrocytoma,SNOMEDCT_US,Neoplastic Process
+1028,C0004114,Astrocytoma,ORPHANET,Neoplastic Process
+1029,C0004114,astrocytoma,ICPC2P,Neoplastic Process
+1031,C0030246,Palmoplantar pustulosis,RCD,Disease or Syndrome
+1032,C0030246,palmoplantar pustulosis,CHV,Disease or Syndrome
+1033,C4759670,PALMOPLANTAR PUSTULOSIS,OMIM,Disease or Syndrome
+1034,C0030246,Palmoplantar pustulosis,HPO,Disease or Syndrome
+1035,C0030246,Palmoplantar pustulosis,MDR,Disease or Syndrome
+1037,C0030246,Palmoplantar pustulosis,SNOMEDCT_US,Disease or Syndrome
+1038,C0030246,Palmoplantar pustulosis,ORPHANET,Disease or Syndrome
+1039,C0030246,Palmoplantar Pustulosis,NCI,Disease or Syndrome
+1067,C0035020,Relapse,MTH,Phenomenon or Process
+1069,C0035020,Relapse,RCD,Phenomenon or Process
+1070,C0035020,Relapse,SNMI,Phenomenon or Process
+1071,C0277556,Relapse,NCI,Disease or Syndrome
+1072,C0035020,relapse,AOD,Phenomenon or Process
+1073,C0035020,RELAPSE,CCPSS,Phenomenon or Process
+1074,C0035020,relapse,CHV,Phenomenon or Process
+1075,C0205336,relapse,CHV,Temporal Concept
+1076,C0035020,Relapse,SNOMEDCT_US,Phenomenon or Process
+1077,C0035020,Relapse,MSH,Phenomenon or Process
+1078,C0544452,Remission,MTH,Finding
+1079,C0544452,Remission,RCD,Finding
+1080,C0544452,remission,AOD,Finding
+1081,C0544452,remission,CHV,Finding
+1082,C0687702,remission,CHV,Neoplastic Process
+1083,C0544452,Remission,LNC,Finding
+1084,C0544452,Remission,SNOMEDCT_US,Finding
+1085,C0544452,Remission,NCI,Finding
+1106,C3203102,IPAH,ORPHANET,Disease or Syndrome
+1107,C0278827,Recurrent Bladder Cancer,NCI,Neoplastic Process
+1108,C0278827,recurrent bladder cancer,PDQ,Neoplastic Process
+1110,C0023418,Leukemia,ICPC,Neoplastic Process
+1111,C0023418,Leukemia,LCH,Neoplastic Process
+1112,C0023418,Leukemia,MSH,Neoplastic Process
+1113,C0023418,Leukemia,SNM,Neoplastic Process
+1114,C0023418,LEUKEMIA,CCPSS,Neoplastic Process
+1115,C0023418,LEUKEMIA,COSTAR,Neoplastic Process
+1116,C0023418,LEUKEMIA,CST,Neoplastic Process
+1117,C0023418,LEUKEMIA,DXP,Neoplastic Process
+1118,C0023418,LEUKEMIA,MTH,Neoplastic Process
+1119,C0023418,leukemia,AOD,Neoplastic Process
+1120,C0023418,leukemia,BI,Neoplastic Process
+1121,C0023418,leukemia,CSP,Neoplastic Process
+1122,C0023418,Leukemia,OMIM,Neoplastic Process
+1123,C0023418,leukemia,MEDCIN,Neoplastic Process
+1124,C0023418,leukemia,CHV,Neoplastic Process
+1125,C0023418,Leukemia,MEDLINEPLUS,Neoplastic Process
+1126,C0023418,Leukemia,LCH_NW,Neoplastic Process
+1127,C0023418,Leukemia,HPO,Neoplastic Process
+1128,C0023418,Leukemia,MDR,Neoplastic Process
+1130,C0023418,Leukemia,LNC,Neoplastic Process
+1131,C0023418,Leukemia,SNOMEDCT_US,Neoplastic Process
+1133,C0023418,leukemia,PDQ,Neoplastic Process
+1134,C0023418,Leukemia,MTHICPC2EAE,Neoplastic Process
+1135,C0023418,leukemia,ICPC2ICD10ENG,Neoplastic Process
+1136,C0023418,Leukemia,NCI,Neoplastic Process
+1137,C0023418,leukemia,MTH,Neoplastic Process
+1138,C0023418,leukemia,ICPC2P,Neoplastic Process
+1139,C0278601,inflammatory breast cancer,CHV,Neoplastic Process
+1140,C0278601,Inflammatory breast cancer,MDR,Neoplastic Process
+1141,C0278601,Inflammatory Breast Cancer,MSH,Neoplastic Process
+1142,C0278601,inflammatory breast cancer,PDQ,Neoplastic Process
+1143,C0278601,Inflammatory Breast Cancer,NCI,Neoplastic Process
+1144,C0017661,IgA nephropathy,CSP,Disease or Syndrome
+1145,C0017661,IgA nephropathy,RCD,Disease or Syndrome
+1146,C0017661,IGA NEPHROPATHY,QMR,Disease or Syndrome
+1147,C0017661,IgA nephropathy,MDR,Disease or Syndrome
+1148,C0017661,iga nephropathy,CHV,Disease or Syndrome
+1149,C0017661,IgA nephropathy,OMIM,Disease or Syndrome
+1150,C0017661,IgA nephropathy,HPO,Disease or Syndrome
+1152,C0017661,IgA nephropathy,MEDCIN,Disease or Syndrome
+1153,C0017661,IGA Nephropathy,MSH,Disease or Syndrome
+1154,C0017661,IgA nephropathy,SNOMEDCT_US,Disease or Syndrome
+1155,C0017661,IgA Nephropathy,NCI,Disease or Syndrome
+1158,C2355591,MSSA,MTHICD9,Finding
+1159,C1635274,MSSA,SNOMEDCT_US,Bacterium
+1160,C0343401,MRSA,MTHICD9,Disease or Syndrome
+1161,C1265292,MRSA,CHV,Bacterium
+1162,C0343401,MRSA,CHV,Disease or Syndrome
+1163,C0343401,MRSA,MEDLINEPLUS,Disease or Syndrome
+1164,C1265292,MRSA,MSH,Bacterium
+1165,C0343401,MRSA,PDQ,Disease or Syndrome
+1166,C1265292,MRSA,SNOMEDCT_US,Bacterium
+1167,C5780970,MRSA,NCI,Gene or Genome
+1168,C1265292,MRSA,CSP,Bacterium
+1169,C0023480,CMML,MEDCIN,Neoplastic Process
+1170,C0023480,cmml,CHV,Neoplastic Process
+1171,C0023480,CMML,OMIM,Neoplastic Process
+1172,C0023480,CMML,PDQ,Neoplastic Process
+1173,C0023480,CMML,ORPHANET,Neoplastic Process
+1174,C0263666,Juvenile dermatomyositis,ICD10,Disease or Syndrome
+1175,C0263666,Juvenile dermatomyositis,ICD10AM,Disease or Syndrome
+1176,C0263666,Juvenile dermatomyositis,RCD,Disease or Syndrome
+1177,C0263666,juvenile dermatomyositis,CHV,Disease or Syndrome
+1178,C0263666,Juvenile Dermatomyositis,NCI,Disease or Syndrome
+1179,C0263666,Juvenile dermatomyositis,MDR,Disease or Syndrome
+1180,C0263666,Juvenile dermatomyositis,ICD10CM,Disease or Syndrome
+1181,C0263666,juvenile dermatomyositis,MEDCIN,Disease or Syndrome
+1182,C0263666,Juvenile Dermatomyositis,MSH,Disease or Syndrome
+1183,C0263666,Juvenile dermatomyositis,SNOMEDCT_US,Disease or Syndrome
+1184,C0263666,Juvenile dermatomyositis,ORPHANET,Disease or Syndrome
+1185,C1947935,NF,SNMI,Functional Concept
+1186,C3256791,NF,MTHSPL,Pharmacologic Substance
+1187,C1826398,NF,HGNC,Gene or Genome
+1188,C1800706,Idiopathic pulmonary fibrosis,RCD,Disease or Syndrome
+1189,C1800706,idiopathic pulmonary fibrosis,CSP,Disease or Syndrome
+1190,C1800706,idiopathic pulmonary fibrosis,MEDCIN,Disease or Syndrome
+1191,C1800706,Idiopathic Pulmonary Fibrosis,MSH,Disease or Syndrome
+1192,C1800706,idiopathic pulmonary fibrosis,CHV,Disease or Syndrome
+1193,C1800706,Idiopathic pulmonary fibrosis,ICD10CM,Disease or Syndrome
+1194,C1800706,Idiopathic pulmonary fibrosis,ICD9CM,Disease or Syndrome
+1195,C1800706,Idiopathic Pulmonary Fibrosis,MTH,Disease or Syndrome
+1196,C1800706,Idiopathic pulmonary fibrosis,MEDLINEPLUS,Disease or Syndrome
+1197,C1800706,Idiopathic pulmonary fibrosis,SNOMEDCT_US,Disease or Syndrome
+1198,C1800706,Idiopathic pulmonary fibrosis,MDR,Disease or Syndrome
+1199,C1800706,Idiopathic pulmonary fibrosis,ORPHANET,Disease or Syndrome
+1200,C1800706,Idiopathic Pulmonary Fibrosis,NCI,Disease or Syndrome
+1202,C0026769,Multiple Sclerosis,MSH,Disease or Syndrome
+1203,C0026769,Multiple Sclerosis,MTH,Disease or Syndrome
+1204,C0026769,MULTIPLE SCLEROSIS,CCPSS,Disease or Syndrome
+1205,C0026769,MULTIPLE SCLEROSIS,COSTAR,Disease or Syndrome
+1206,C0026769,MULTIPLE SCLEROSIS,CST,Disease or Syndrome
+1207,C0026769,MULTIPLE SCLEROSIS,QMR,Disease or Syndrome
+1208,C0026769,Multiple sclerosis,CCS,Disease or Syndrome
+1210,C0026769,Multiple sclerosis,ICD10,Disease or Syndrome
+1211,C0026769,Multiple sclerosis,ICD10AM,Disease or Syndrome
+1212,C0026769,Multiple sclerosis,ICPC,Disease or Syndrome
+1213,C0026769,Multiple sclerosis,ICPC2P,Disease or Syndrome
+1214,C0026769,Multiple sclerosis,LCH,Disease or Syndrome
+1215,C0026769,Multiple sclerosis,MDR,Disease or Syndrome
+1216,C0026769,Multiple sclerosis,RCD,Disease or Syndrome
+1217,C0026769,Multiple sclerosis,SNM,Disease or Syndrome
+1218,C0026769,multiple sclerosis,AOD,Disease or Syndrome
+1219,C0026769,multiple sclerosis,BI,Disease or Syndrome
+1220,C0026769,multiple sclerosis,CSP,Disease or Syndrome
+1221,C0026769,multiple sclerosis,MEDCIN,Disease or Syndrome
+1222,C0026769,Multiple sclerosis,ICD10CM,Disease or Syndrome
+1223,C0026769,Multiple sclerosis,LNC,Disease or Syndrome
+1224,C0026769,multiple sclerosis,CHV,Disease or Syndrome
+1225,C0026769,Multiple Sclerosis,MEDLINEPLUS,Disease or Syndrome
+1227,C0026769,Multiple sclerosis,LCH_NW,Disease or Syndrome
+1228,C0026769,Multiple Sclerosis,LNC,Disease or Syndrome
+1230,C0026769,Multiple sclerosis,NANDA-I,Disease or Syndrome
+1231,C0026769,Multiple sclerosis,SNOMEDCT_US,Disease or Syndrome
+1232,C0026769,multiple sclerosis,PDQ,Disease or Syndrome
+1233,C0026769,Multiple sclerosis,CCSR_ICD10CM,Disease or Syndrome
+1235,C0026769,Multiple sclerosis,ICPC2EENG,Disease or Syndrome
+1236,C0026769,multiple sclerosis,ICPC2ICD10ENG,Disease or Syndrome
+1237,C0026769,Multiple Sclerosis,PSY,Disease or Syndrome
+1238,C0026769,Multiple Sclerosis,NCI,Disease or Syndrome
+1239,C0026769,Multiple sclerosis,ICD9CM,Disease or Syndrome
+1240,C0026769,multiple sclerosis,ICPC2P,Disease or Syndrome
+1241,C0011854,T1d,LNC,Disease or Syndrome
+1242,C0011854,T1D,OMIM,Disease or Syndrome
+1243,C0033572,Prostate,MSH,"Body Part, Organ, or Organ Component"
+1244,C0033572,Prostate,MTH,"Body Part, Organ, or Organ Component"
+1245,C0033572,Prostate,RCD,"Body Part, Organ, or Organ Component"
+1246,C0033572,Prostate,SNM,"Body Part, Organ, or Organ Component"
+1247,C0033572,Prostate,UWDA,"Body Part, Organ, or Organ Component"
+1248,C0033572,PROSTATE,CCPSS,"Body Part, Organ, or Organ Component"
+1249,C0033572,PROSTATE,SNMI,"Body Part, Organ, or Organ Component"
+1250,C0033572,prostate,AOD,"Body Part, Organ, or Organ Component"
+1251,C0033572,prostate,CSP,"Body Part, Organ, or Organ Component"
+1252,C0033572,Prostate,FMA,"Body Part, Organ, or Organ Component"
+1253,C0033572,Prostate,ICF,"Body Part, Organ, or Organ Component"
+1254,C0033572,Prostate,ICF-CY,"Body Part, Organ, or Organ Component"
+1255,C0033572,Prostate,LNC,"Body Part, Organ, or Organ Component"
+1256,C0033572,prostate,CHV,"Body Part, Organ, or Organ Component"
+1258,C0033572,Prostate,LCH_NW,"Body Part, Organ, or Organ Component"
+1260,C0033572,Prostate,SNOMEDCT_US,"Body Part, Organ, or Organ Component"
+1262,C4266527,Prostate,LNC,"Body Part, Organ, or Organ Component"
+1263,C0033572,Prostate,PSY,"Body Part, Organ, or Organ Component"
+1264,C0033572,Prostate,NCI,"Body Part, Organ, or Organ Component"
+1265,C0009932,Control Group,MSH,Group
+1266,C0009932,control group,AOD,Group
+1267,C0009932,control group,CHV,Group
+1268,C0009932,Control Group,NCI,Group
+1269,C0241863,DIABETIC,DXP,Finding
+1270,C0241863,diabetic,CHV,Finding
+1271,C0241863,Diabetic,MDR,Finding
+1272,C0241863,Diabetic,LNC,Finding
+1273,C4687677,Metastatic Neuroendocrine Tumor,NCI,Neoplastic Process
+1274,C0334583,Pilocytic astrocytoma,ICD10AM,Neoplastic Process
+1275,C0334583,Pilocytic astrocytoma,RCD,Neoplastic Process
+1276,C0334583,Pilocytic astrocytoma,SNM,Neoplastic Process
+1277,C0334583,Pilocytic astrocytoma,SNMI,Neoplastic Process
+1278,C0334583,Pilocytic astrocytoma,OMIM,Neoplastic Process
+1279,C0334583,pilocytic astrocytoma,CHV,Neoplastic Process
+1280,C0334583,Pilocytic Astrocytoma,MSH,Neoplastic Process
+1281,C0334583,Pilocytic astrocytoma,SNOMEDCT_US,Neoplastic Process
+1283,C0334583,Pilocytic astrocytoma,HPO,Neoplastic Process
+1284,C0334583,Pilocytic astrocytoma,ORPHANET,Neoplastic Process
+1285,C0334583,Pilocytic Astrocytoma,MTH,Neoplastic Process
+1286,C0334583,Pilocytic Astrocytoma,NCI,Neoplastic Process
+1287,C1519086,Pilomyxoid astrocytoma,SNOMEDCT_US,Neoplastic Process
+1288,C1519086,Pilomyxoid astrocytoma,MTH,Neoplastic Process
+1290,C1519086,Pilomyxoid astrocytoma,ORPHANET,Neoplastic Process
+1291,C1519086,Pilomyxoid Astrocytoma,NCI,Neoplastic Process
+1292,C0023440,Erythroleukemia,ICD10AMAE,Neoplastic Process
+1293,C0023440,Erythroleukemia,RCDAE,Neoplastic Process
+1294,C0023440,Erythroleukemia,RCDSA,Neoplastic Process
+1295,C0023440,Erythroleukemia,SNM,Neoplastic Process
+1296,C0023440,Erythroleukemia,SNMI,Neoplastic Process
+1297,C0023440,ERYTHROLEUKEMIA,CST,Neoplastic Process
+1298,C0023440,ERYTHROLEUKEMIA,DXP,Neoplastic Process
+1299,C0023440,ERYTHROLEUKEMIA,QMR,Neoplastic Process
+1300,C0023440,ERYTHROLEUKEMIA,WHO,Neoplastic Process
+1301,C0023440,erythroleukemia,CSP,Neoplastic Process
+1302,C0023440,erythroleukemia,MEDCIN,Neoplastic Process
+1303,C0023440,Erythroleukemia,ICD10CM,Neoplastic Process
+1304,C0023440,erythroleukemia,CHV,Neoplastic Process
+1305,C0023440,Erythroleukemia,MSH,Neoplastic Process
+1306,C0023440,Erythroleukemia,SNOMEDCT_US,Neoplastic Process
+1308,C0023440,Erythroleukemia,OMIM,Neoplastic Process
+1309,C0023440,Erythroleukemia,MDR,Neoplastic Process
+1310,C0023440,Erythroleukemia,ORPHANET,Neoplastic Process
+1311,C0023440,erythroleukemia,ICPC2ICD10ENG,Neoplastic Process
+1312,C4520840,Erythroleukemia,NCI,Neoplastic Process
+1313,C0232989,NORMAL PREGNANCY,DXP,Finding
+1314,C0232989,Normal pregnancy,MTH,Finding
+1315,C0232989,Normal pregnancy,RCD,Finding
+1316,C0232989,Normal pregnancy,SNMI,Finding
+1317,C0232989,normal pregnancy,MEDCIN,Finding
+1318,C0232989,normal pregnancy,CHV,Finding
+1319,C0232989,Normal Pregnancy,NCI,Finding
+1320,C0232989,Normal pregnancy,MDR,Finding
+1321,C0232989,Normal pregnancy,SNOMEDCT_US,Finding
+1322,C0700573,Normal pregnancy,ICD9CM,Finding
+1323,C0279626,Esophageal squamous cell carcinoma,MDR,Neoplastic Process
+1325,C0279626,Esophageal Squamous Cell Carcinoma,MSH,Neoplastic Process
+1326,C0279626,Esophageal Squamous Cell Carcinoma,PDQ,Neoplastic Process
+1327,C0279626,Esophageal squamous cell carcinoma,OMIM,Neoplastic Process
+1328,C0279626,Esophageal squamous cell carcinoma,ORPHANET,Neoplastic Process
+1329,C0279626,Esophageal Squamous Cell Carcinoma,NCI,Neoplastic Process
+1330,C0024623,gastric cancer,AOD,Neoplastic Process
+1331,C0024623,gastric cancer,BI,Neoplastic Process
+1332,C0024623,Gastric cancer,RCD,Neoplastic Process
+1334,C0024623,gastric cancer,MEDCIN,Neoplastic Process
+1335,C0024623,GASTRIC CANCER,CCPSS,Neoplastic Process
+1337,C0024623,gastric cancer,CHV,Neoplastic Process
+1338,C0024623,GASTRIC CANCER,OMIM,Neoplastic Process
+1339,C0024623,Gastric cancer,MEDLINEPLUS,Neoplastic Process
+1340,C0024623,Gastric Cancer,MEDLINEPLUS,Neoplastic Process
+1341,C0024623,Gastric cancer,HPO,Neoplastic Process
+1342,C0024623,Gastric cancer,MDR,Neoplastic Process
+1343,C0024623,Gastric Cancer,MSH,Neoplastic Process
+1344,C0024623,Gastric cancer,OMIM,Neoplastic Process
+1345,C0024623,Gastric Cancer,LNC,Neoplastic Process
+1347,C0024623,Gastric cancer,SNOMEDCT_US,Neoplastic Process
+1348,C0024623,gastric cancer,PDQ,Neoplastic Process
+1349,C0024623,gastric cancer,CSP,Neoplastic Process
+1350,C0699791,Gastric Cancer,NCI,Neoplastic Process
+1351,C0024623,Gastric cancer,MTHICD9,Neoplastic Process
+1352,C5421319,Endometrial Neuroendocrine Carcinoma,NCI,Neoplastic Process
+1353,C5539773,Recurrent implantation failure,HPO,Finding
+1354,C4732829,Focal cortical dysplasia type IIId,HPO,Disease or Syndrome
+1355,C4732824,Focal cortical dysplasia type Ic,HPO,Disease or Syndrome
+1356,C4478700,Focal cortical dysplasia type IIa,HPO,Disease or Syndrome
+1357,C4478700,Focal cortical dysplasia type IIa,SNOMEDCT_US,Disease or Syndrome
+1358,C1708335,Healthy Volunteer,NCI,Population Group
+1359,C1708335,Healthy Volunteer,MSH,Population Group
+1360,C0079744,Diffuse Large B-Cell Lymphoma,MTH,Neoplastic Process
+1361,C0079744,Diffuse large B-cell lymphoma,ICD10CM,Neoplastic Process
+1362,C0079744,diffuse large b-cell lymphoma,CHV,Neoplastic Process
+1363,C0079744,Diffuse large B-cell lymphoma,MDR,Neoplastic Process
+1365,C0079744,Diffuse large B-cell lymphoma,LNC,Neoplastic Process
+1366,C0079744,Diffuse Large B-Cell Lymphoma,MSH,Neoplastic Process
+1368,C0079744,Diffuse large B-cell lymphoma,MEDCIN,Neoplastic Process
+1369,C0079744,Diffuse large B-cell lymphoma,ORPHANET,Neoplastic Process
+1370,C0079744,Diffuse Large B-Cell Lymphoma,NCI,Neoplastic Process
+1371,C0332235,Lepromatous,SNMI,Functional Concept
+1372,C0332235,Lepromatous,SNOMEDCT_US,Functional Concept
+1373,C0023434,CLL,CSP,Neoplastic Process
+1374,C0023434,CLL,DXP,Neoplastic Process
+1375,C0023434,CLL,OMIM,Neoplastic Process
+1376,C0023434,CLL,MEDCIN,Neoplastic Process
+1377,C0023434,cll,BI,Neoplastic Process
+1378,C0023434,cll,CHV,Neoplastic Process
+1379,C0023434,CLL,MEDLINEPLUS,Neoplastic Process
+1381,C0023434,CLL,MDR,Neoplastic Process
+1382,C0023434,CLL,PDQ,Neoplastic Process
+1383,C1835836,SLL,OMIM,Gene or Genome
+1384,C4049739,SLL,NCI,Gene or Genome
+1385,C0855095,SLL,PDQ,Neoplastic Process
+1386,C0023434,Chronic lymphocytic leukemia,ICD10AE,Neoplastic Process
+1387,C0023434,Chronic lymphocytic leukemia,ICD10AMAE,Neoplastic Process
+1389,C0023434,Chronic lymphocytic leukemia,RCDAE,Neoplastic Process
+1390,C0023434,Chronic lymphocytic leukemia,SNM,Neoplastic Process
+1391,C0023434,Chronic lymphocytic leukemia,SNMI,Neoplastic Process
+1392,C0023434,CHRONIC LYMPHOCYTIC LEUKEMIA,COSTAR,Neoplastic Process
+1393,C0023434,CHRONIC LYMPHOCYTIC LEUKEMIA,CST,Neoplastic Process
+1394,C0023434,chronic lymphocytic leukemia,BI,Neoplastic Process
+1395,C0023434,chronic lymphocytic leukemia,CSP,Neoplastic Process
+1396,C0023434,chronic lymphocytic leukemia,MEDCIN,Neoplastic Process
+1397,C0023434,chronic lymphocytic leukemia,CHV,Neoplastic Process
+1398,C0023434,Chronic Lymphocytic Leukemia,MEDLINEPLUS,Neoplastic Process
+1399,C0023434,Chronic lymphocytic leukemia,SNOMEDCT_VET,Neoplastic Process
+1400,C0023434,Chronic lymphocytic leukemia,LCH_NW,Neoplastic Process
+1401,C0023434,Chronic lymphocytic leukemia,HPO,Neoplastic Process
+1402,C0023434,Chronic lymphocytic leukemia,MDR,Neoplastic Process
+1403,C0023434,Chronic Lymphocytic Leukemia,MSH,Neoplastic Process
+1404,C0023434,Chronic lymphocytic leukemia,LNC,Neoplastic Process
+1406,C0023434,Chronic lymphocytic leukemia,OMIM,Neoplastic Process
+1408,C0023434,Chronic lymphocytic leukemia,SNOMEDCT_US,Neoplastic Process
+1409,C0023434,chronic lymphocytic leukemia,PDQ,Neoplastic Process
+1410,C0023434,Chronic Lymphocytic Leukemia,NCI,Neoplastic Process
+1411,C0023434,Chronic Lymphocytic Leukemia,MTH,Neoplastic Process
+1412,C0023434,chronic lymphocytic leukemia,ICPC2P,Neoplastic Process
+1413,C0349631,Richter's transformation,PDQ,Neoplastic Process
+1414,C0349631,Richter's Transformation,NCI,Neoplastic Process
+1415,C1862382,AA,OMIM,Disease or Syndrome
+1416,C0001972,AA,AOD,Self-help or Relief Organization
+1417,C0001972,aa,CHV,Self-help or Relief Organization
+1418,C1235746,Aa,NCBI,Plant
+1419,C4554792,AA,LNC,Finding
+1420,C1420679,AA,HGNC,Gene or Genome
+1421,C0003872,Psoriatic Arthritis,AIR,Disease or Syndrome
+1422,C0003872,PSORIATIC ARTHRITIS,COSTAR,Disease or Syndrome
+1423,C0003872,PSORIATIC ARTHRITIS,QMR,Disease or Syndrome
+1424,C0003872,Psoriatic arthritis,AIR,Disease or Syndrome
+1425,C0003872,Psoriatic arthritis,RCD,Disease or Syndrome
+1426,C0003872,Psoriatic Arthritis,NCI,Disease or Syndrome
+1427,C0003872,psoriatic arthritis,CHV,Disease or Syndrome
+1428,C0003872,Psoriatic Arthritis,MEDLINEPLUS,Disease or Syndrome
+1429,C0003872,Psoriatic arthritis,LCH_NW,Disease or Syndrome
+1430,C0003872,Psoriatic arthritis,SNOMEDCT_US,Disease or Syndrome
+1431,C0003872,Psoriatic arthritis,MDR,Disease or Syndrome
+1432,C0003872,Psoriatic Arthritis,MSH,Disease or Syndrome
+1433,C0003872,psoriatic arthritis,CSP,Disease or Syndrome
+1434,C0003872,psoriatic arthritis,ICPC2P,Disease or Syndrome
+1435,C0376358,prostate cancer,BI,Neoplastic Process
+1436,C0376358,prostate cancer,CSP,Neoplastic Process
+1437,C0376358,PROSTATE CANCER,OMIM,Neoplastic Process
+1438,C0376358,Prostate cancer,OMIM,Neoplastic Process
+1439,C0376358,prostate cancer,MEDCIN,Neoplastic Process
+1440,C0376358,PROSTATE CANCER,CCPSS,Neoplastic Process
+1441,C0376358,prostate cancer,CHV,Neoplastic Process
+1442,C0376358,Prostate Cancer,MEDLINEPLUS,Neoplastic Process
+1443,C0376358,Prostate cancer,LNC,Neoplastic Process
+1446,C0376358,Prostate cancer,HPO,Neoplastic Process
+1447,C0600139,Prostate cancer,SNOMEDCT_US,Neoplastic Process
+1448,C0376358,Prostate cancer,MDR,Neoplastic Process
+1450,C0376358,prostate cancer,PDQ,Neoplastic Process
+1451,C0376358,Prostate cancer,PDQ,Neoplastic Process
+1452,C0600139,Prostate Cancer,NCI,Neoplastic Process
+1453,C0376358,Prostate Cancer,MSH,Neoplastic Process
+1454,C1704272,Benign prostatic hyperplasia,MDR,Pathologic Function
+1455,C1704272,Benign prostatic hyperplasia,RCD,Pathologic Function
+1456,C1704272,Benign Prostatic Hyperplasia,MSH,Pathologic Function
+1457,C1704272,Benign Prostatic Hyperplasia,MTH,Pathologic Function
+1458,C1704272,benign prostatic hyperplasia,PDQ,Pathologic Function
+1459,C1704272,benign prostatic hyperplasia,CHV,Pathologic Function
+1460,C1704272,benign prostatic hyperplasia,CSP,Pathologic Function
+1461,C1704272,benign prostatic hyperplasia,MEDLINEPLUS,Pathologic Function
+1462,C1704272,Benign prostatic hyperplasia,HPO,Pathologic Function
+1464,C1704272,Benign prostatic hyperplasia,ICD10CM,Pathologic Function
+1465,C1704272,Benign prostatic hyperplasia,SNOMEDCT_US,Pathologic Function
+1466,C1704272,Benign Prostatic Hyperplasia,NCI,Pathologic Function
+1467,C0014175,Endometriosis,CCS,Disease or Syndrome
+1469,C0014175,Endometriosis,ICD10,Disease or Syndrome
+1470,C0014175,Endometriosis,ICD10AM,Disease or Syndrome
+1471,C0014175,Endometriosis,ICPC2P,Disease or Syndrome
+1472,C0014175,Endometriosis,LCH,Disease or Syndrome
+1473,C0014175,Endometriosis,MDR,Disease or Syndrome
+1474,C0014175,Endometriosis,MSH,Disease or Syndrome
+1475,C0014175,Endometriosis,RCD,Disease or Syndrome
+1476,C0014175,Endometriosis,SNM,Disease or Syndrome
+1477,C0014175,ENDOMETRIOSIS,CCPSS,Disease or Syndrome
+1478,C0014175,ENDOMETRIOSIS,COSTAR,Disease or Syndrome
+1479,C0014175,ENDOMETRIOSIS,CST,Disease or Syndrome
+1480,C0014175,ENDOMETRIOSIS,DXP,Disease or Syndrome
+1482,C0014175,ENDOMETRIOSIS,QMR,Disease or Syndrome
+1483,C0014175,ENDOMETRIOSIS,WHO,Disease or Syndrome
+1484,C0014175,endometriosis,BI,Disease or Syndrome
+1485,C0014175,endometriosis,CSP,Disease or Syndrome
+1486,C0014175,endometriosis,MEDCIN,Disease or Syndrome
+1487,C0014175,Endometriosis,ICD10CM,Disease or Syndrome
+1488,C0014175,endometriosis,CHV,Disease or Syndrome
+1489,C0014175,Endometriosis,MEDLINEPLUS,Disease or Syndrome
+1490,C0014175,Endometriosis,MTH,Disease or Syndrome
+1491,C0014175,Endometriosis,OMIM,Disease or Syndrome
+1492,C0014175,Endometriosis,LCH_NW,Disease or Syndrome
+1493,C0014175,Endometriosis,HPO,Disease or Syndrome
+1495,C0014175,Endometriosis,SNOMEDCT_US,Disease or Syndrome
+1497,C0014175,Endometriosis,CCSR_ICD10CM,Disease or Syndrome
+1498,C0014175,endometriosis,ICPC2ICD10ENG,Disease or Syndrome
+1499,C0014175,Endometriosis,NCI,Disease or Syndrome
+1500,C0014175,Endometriosis,ICD9CM,Disease or Syndrome
+1501,C0014175,endometriosis,ICPC2P,Disease or Syndrome
+1502,C0042133,Uterine Leiomyoma,COSTAR,Neoplastic Process
+1503,C0042133,UTERINE LEIOMYOMA,CCPSS,Neoplastic Process
+1504,C0042133,uterine leiomyoma,CHV,Neoplastic Process
+1505,C0042133,Uterine leiomyoma,HPO,Neoplastic Process
+1506,C0042133,Uterine leiomyoma,MDR,Neoplastic Process
+1508,C0042133,Uterine leiomyoma,SNOMEDCT_US,Neoplastic Process
+1509,C0042133,Uterine leiomyoma,ICD9CM,Neoplastic Process
+1510,C0022735,Klinefelter Syndrome,MSH,Disease or Syndrome
+1511,C0022735,KLINEFELTER SYNDROME,DXP,Disease or Syndrome
+1513,C0022735,Klinefelter syndrome,ICPC2P,Disease or Syndrome
+1514,C0022735,Klinefelter syndrome,JABL,Disease or Syndrome
+1515,C0022735,Klinefelter syndrome,SNMI,Disease or Syndrome
+1516,C0022735,Klinefelter Syndrome,NCI,Disease or Syndrome
+1517,C0022735,Klinefelter Syndrome,MTH,Disease or Syndrome
+1518,C0022735,klinefelter syndrome,CHV,Disease or Syndrome
+1519,C0022735,Klinefelter syndrome,OMIM,Disease or Syndrome
+1520,C0022735,Klinefelter syndrome,SNOMEDCT_US,Disease or Syndrome
+1521,C0022735,Klinefelter Syndrome,MEDLINEPLUS,Disease or Syndrome
+1522,C0022735,klinefelter syndrome,ICPC2P,Disease or Syndrome
+1523,C1413809,CTRL,OMIM,Gene or Genome
+1524,C1413809,CTRL,HGNC,Gene or Genome
+1525,C1865343,OPLL,OMIM,Disease or Syndrome
+1535,C0400966,NAFLD,MSH,Disease or Syndrome
+1536,C0400966,NAFLD,MEDLINEPLUS,Disease or Syndrome
+1537,C3241937,NASH,MEDLINEPLUS,Disease or Syndrome
+1538,C3241937,NASH,MDR,Disease or Syndrome
+1539,C1419799,SAA,OMIM,Gene or Genome
+1540,C0002723,SAA,NCI,"Amino Acid, Peptide, or Protein"
+1541,C0002723,SAA,NCI,Immunologic Factor
+1542,C1419799,SAA,HGNC,Gene or Genome
+1543,C5551065,SAA,NCI,Gene or Genome
+1544,C5551047,SAA,NCI,Gene or Genome
+1545,C5551373,SAA,NCI,"Amino Acid, Peptide, or Protein"
+1546,C5551373,SAA,NCI,Biologically Active Substance
+1547,C1413512,Hc,HGNC,Gene or Genome
+1548,C0020268,HC,PDQ,Organic Chemical
+1549,C0020268,HC,PDQ,Pharmacologic Substance
+1550,C0020268,HC,PDQ,Hormone
+1551,C0560005,mCi,RCD,Quantitative Concept
+1552,C1270972,MCI,MEDLINEPLUS,Mental or Behavioral Dysfunction
+1554,C3463911,MCI,HGNC,Gene or Genome
+1555,C3463911,MCI,OMIM,Gene or Genome
+1556,C0560005,mCi,SNOMEDCT_US,Quantitative Concept
+1573,C0003873,Rheumatoid arthritis,AIR,Disease or Syndrome
+1574,C0003873,Rheumatoid arthritis,ICPC2P,Disease or Syndrome
+1575,C0003873,Rheumatoid arthritis,MDR,Disease or Syndrome
+1576,C0003873,Rheumatoid arthritis,RCD,Disease or Syndrome
+1577,C0003873,Rheumatoid arthritis,SNM,Disease or Syndrome
+1578,C0003873,Rheumatoid arthritis,SNMI,Disease or Syndrome
+1579,C0003873,RHEUMATOID ARTHRITIS,COSTAR,Disease or Syndrome
+1580,C0003873,RHEUMATOID ARTHRITIS,CST,Disease or Syndrome
+1581,C0003873,RHEUMATOID ARTHRITIS,DXP,Disease or Syndrome
+1582,C0003873,RHEUMATOID ARTHRITIS,QMR,Disease or Syndrome
+1583,C0003873,Rheumatoid Arthritis,AIR,Disease or Syndrome
+1584,C0003873,Rheumatoid Arthritis,MTH,Disease or Syndrome
+1585,C0003873,rheumatoid arthritis,AOD,Disease or Syndrome
+1586,C0003873,rheumatoid arthritis,BI,Disease or Syndrome
+1587,C0003873,rheumatoid arthritis,CSP,Disease or Syndrome
+1588,C0003873,RHEUMATOID ARTHRITIS,OMIM,Disease or Syndrome
+1589,C0003873,rheumatoid arthritis,MEDCIN,Disease or Syndrome
+1590,C0003873,rheumatoid arthritis,CHV,Disease or Syndrome
+1591,C0003873,Rheumatoid Arthritis,MEDLINEPLUS,Disease or Syndrome
+1592,C0003873,Rheumatoid arthritis,LCH_NW,Disease or Syndrome
+1593,C0003873,Rheumatoid Arthritis,LNC,Disease or Syndrome
+1595,C0003873,Rheumatoid arthritis,HPO,Disease or Syndrome
+1597,C0003873,Rheumatoid Arthritis,MSH,Disease or Syndrome
+1598,C0003873,Rheumatoid arthritis,OMIM,Disease or Syndrome
+1600,C0003873,Rheumatoid arthritis,SNOMEDCT_US,Disease or Syndrome
+1601,C0003873,Rheumatoid arthritis,NANDA-I,Disease or Syndrome
+1602,C0003873,Rheumatoid Arthritis,PSY,Disease or Syndrome
+1603,C0003873,Rheumatoid Arthritis,NCI,Disease or Syndrome
+1604,C0003873,Rheumatoid arthritis,ICD9CM,Disease or Syndrome
+1605,C0003873,rheumatoid arthritis,ICPC2P,Disease or Syndrome
+1620,C0344735,PAVC,ORPHANET,Congenital Abnormality
+1621,C0152101,HLHS,ORPHANET,Disease or Syndrome
+1622,C1449563,DCM,CSP,Disease or Syndrome
+1623,C0007193,DCM,HPO,Disease or Syndrome
+1624,C0024901,DCM,ORPHANET,Neoplastic Process
+1625,C0046764,DCM,PDQ,Organic Chemical
+1626,C0046764,DCM,PDQ,Pharmacologic Substance
+1627,C1825291,TOF,OMIM,Gene or Genome
+1628,C0039685,TOF,OMIM,Congenital Abnormality
+1629,C1825291,TOF,HGNC,Gene or Genome
+1630,C0013018,Donor,MSH,Population Group
+1631,C0013018,Donor,RCD,Population Group
+1632,C0013018,Donor,NCI,Population Group
+1633,C0040288,Donor,NCI,Population Group
+1634,C0013018,donor,CHV,Population Group
+1635,C0013018,Donor,LNC,Population Group
+1636,C3263710,Donor,LNC,Clinical Attribute
+1639,C0040288,Donor,LNC,Population Group
+1642,C0013018,donor,ICPC2ICD10ENG,Population Group
+1643,C1547101,Donor,HL7V2.5,Population Group
+1644,C1547101,donor,HL7V3.0,Population Group
+1645,C0013018,Donor,ICPC2P,Population Group
+1646,C0013018,donor,ICPC2P,Population Group
+1647,C0262500,hcm,BI,Health Care Activity
+1648,C0262500,hcm,CHV,Health Care Activity
+1649,C0007194,HCM,HPO,Disease or Syndrome
+1667,C0011854,Type 1 Diabetes,NCI,Disease or Syndrome
+1668,C0011854,Type 1 diabetes,OMIM,Disease or Syndrome
+1669,C0011854,type 1 diabetes,CHV,Disease or Syndrome
+1670,C0011854,Type 1 Diabetes,MSH,Disease or Syndrome
+1671,C0011854,Type 1 Diabetes,MEDLINEPLUS,Disease or Syndrome
+1672,C0011854,Type 1 diabetes,HPO,Disease or Syndrome
+1673,C0011854,type 1 diabetes,CSP,Disease or Syndrome
+1674,C0011854,type 1 diabetes,ICPC2P,Disease or Syndrome
+1675,C0007194,Hypertrophic cardiomyopathy,MDR,Disease or Syndrome
+1676,C0007194,Hypertrophic cardiomyopathy,RCD,Disease or Syndrome
+1677,C0007194,Hypertrophic cardiomyopathy,SNM,Disease or Syndrome
+1678,C4551472,Hypertrophic cardiomyopathy,SNMI,Disease or Syndrome
+1679,C0007194,Hypertrophic Cardiomyopathy,MSH,Disease or Syndrome
+1680,C0007194,Hypertrophic Cardiomyopathy,MTH,Disease or Syndrome
+1681,C0007194,hypertrophic cardiomyopathy,AOD,Disease or Syndrome
+1682,C0007194,hypertrophic cardiomyopathy,CSP,Disease or Syndrome
+1683,C0007194,hypertrophic cardiomyopathy,MEDCIN,Disease or Syndrome
+1684,C0007194,hypertrophic cardiomyopathy,CHV,Disease or Syndrome
+1685,C0007194,Hypertrophic cardiomyopathy,ICD9CM,Disease or Syndrome
+1686,C0007194,Hypertrophic cardiomyopathy,MEDLINEPLUS,Disease or Syndrome
+1687,C0007194,Hypertrophic cardiomyopathy,OMIM,Disease or Syndrome
+1688,C0007194,Hypertrophic cardiomyopathy,HPO,Disease or Syndrome
+1690,C0007194,Hypertrophic cardiomyopathy,SNOMEDCT_US,Disease or Syndrome
+1691,C0007194,Hypertrophic Cardiomyopathy,NCI,Disease or Syndrome
+1693,C0007194,hypertrophic cardiomyopathy,ICPC2P,Disease or Syndrome
+1694,C0268381,AL amyloidosis,RCD,Disease or Syndrome
+1695,C0268381,AL amyloidosis,SNMI,Disease or Syndrome
+1696,C0268381,al amyloidosis,CHV,Disease or Syndrome
+1697,C0268381,AL AMYLOIDOSIS,OMIM,Disease or Syndrome
+1698,C0268381,AL Amyloidosis,MSH,Disease or Syndrome
+1699,C0268381,AL amyloidosis,SNOMEDCT_US,Disease or Syndrome
+1700,C0268381,AL Amyloidosis,NCI,Disease or Syndrome
+1701,C0268381,AL amyloidosis,MDR,Disease or Syndrome
+1702,C0268381,AL amyloidosis,ORPHANET,Disease or Syndrome
+1703,C0162871,abdominal aortic aneurysm (AAA),CHV,Anatomical Abnormality
+1704,C1832661,PDAC,OMIM,Disease or Syndrome
+1705,C0022595,DARIER DISEASE,DXP,Disease or Syndrome
+1706,C0022595,Darier Disease,MSH,Disease or Syndrome
+1707,C0022595,Darier Disease,NCI,Disease or Syndrome
+1708,C0022595,darier disease,CHV,Disease or Syndrome
+1709,C0022595,DARIER DISEASE,OMIM,Disease or Syndrome
+1711,C0022595,Darier disease,SNOMEDCT_US,Disease or Syndrome
+1712,C0022595,Darier disease,ORPHANET,Disease or Syndrome
+1742,C0011644,Scleroderma,MDR,Disease or Syndrome
+1743,C0011644,Scleroderma,MTH,Disease or Syndrome
+1744,C1027109,Scleroderma,NCBI,Fungus
+1745,C0011644,Scleroderma,RCD,Disease or Syndrome
+1746,C0011644,Scleroderma,SNM,Disease or Syndrome
+1747,C0011644,Scleroderma,SNMI,Disease or Syndrome
+1748,C0011644,SCLERODERMA,CCPSS,Disease or Syndrome
+1749,C0011644,SCLERODERMA,COSTAR,Disease or Syndrome
+1750,C0011644,SCLERODERMA,CST,Disease or Syndrome
+1751,C0011644,SCLERODERMA,DXP,Disease or Syndrome
+1752,C0011644,SCLERODERMA,WHO,Disease or Syndrome
+1753,C0011644,scleroderma,AOD,Disease or Syndrome
+1754,C0011644,scleroderma,CSP,Disease or Syndrome
+1755,C1027109,Scleroderma,SNOMEDCT_US,Fungus
+1756,C0011644,Scleroderma,OMIM,Disease or Syndrome
+1757,C0011644,scleroderma,MEDCIN,Disease or Syndrome
+1758,C0036421,scleroderma,CHV,Disease or Syndrome
+1759,C0011644,scleroderma,CHV,Disease or Syndrome
+1760,C1027109,scleroderma,CHV,Fungus
+1761,C0011644,Scleroderma,MEDLINEPLUS,Disease or Syndrome
+1762,C0011644,Scleroderma,LNC,Disease or Syndrome
+1763,C0011644,Scleroderma,HPO,Disease or Syndrome
+1765,C0323390,Scleroderma,NANDA-I,Eukaryote
+1766,C0011644,Scleroderma,ORPHANET,Disease or Syndrome
+1767,C0011644,Scleroderma,SNOMEDCT_US,Disease or Syndrome
+1768,C0011644,scleroderma,ICPC2ICD10ENG,Disease or Syndrome
+1769,C0011644,Scleroderma,NCI,Disease or Syndrome
+1770,C0011644,Scleroderma,MTHICD9,Disease or Syndrome
+1824,C0011860,T2D,OMIM,Disease or Syndrome
+1825,C3854130,T2d,LNC,Finding
+1826,C3854130,T2d,MTH,Finding
+1827,C3854130,T2d,NCI,Finding
+1828,C0345905,Intrahepatic cholangiocarcinoma,MDR,Neoplastic Process
+1829,C0345905,Intrahepatic Cholangiocarcinoma,MSH,Neoplastic Process
+1830,C0345905,Intrahepatic cholangiocarcinoma,SNOMEDCT_US,Neoplastic Process
+1831,C0345905,Intrahepatic Cholangiocarcinoma,NCI,Neoplastic Process
+1832,C0345905,Intrahepatic Cholangiocarcinoma,MTH,Neoplastic Process
+1833,C0349782,Ischemic cardiomyopathy,ICD10AE,Disease or Syndrome
+1834,C0349782,Ischemic cardiomyopathy,ICD10AMAE,Disease or Syndrome
+1835,C0349782,Ischemic cardiomyopathy,RCDAE,Disease or Syndrome
+1836,C0349782,ischemic cardiomyopathy,BI,Disease or Syndrome
+1837,C0349782,Ischemic cardiomyopathy,MTH,Disease or Syndrome
+1838,C0349782,Ischemic cardiomyopathy,ICD10CM,Disease or Syndrome
+1839,C0349782,ischemic cardiomyopathy,CHV,Disease or Syndrome
+1840,C0349782,Ischemic cardiomyopathy,MDR,Disease or Syndrome
+1842,C0349782,Ischemic cardiomyopathy,SNOMEDCT_US,Disease or Syndrome
+1843,C0033838,KIMURA DISEASE,DXP,Disease or Syndrome
+1844,C0033838,Kimura Disease,NCI,Disease or Syndrome
+1845,C0033838,Kimura disease,SNOMEDCT_US,Disease or Syndrome
+1846,C0033838,kimura disease,CHV,Disease or Syndrome
+1847,C0033838,Kimura Disease,MSH,Disease or Syndrome
+1848,C0033838,Kimura disease,ORPHANET,Disease or Syndrome
+1849,C0279543,Chronic myeloid leukemia,ICD10AE,Neoplastic Process
+1850,C0279543,Chronic myeloid leukemia,ICD10AMAE,Neoplastic Process
+1852,C0279543,Chronic myeloid leukemia,RCDAE,Neoplastic Process
+1853,C0279543,Chronic myeloid leukemia,SNM,Neoplastic Process
+1854,C0279543,Chronic myeloid leukemia,SNMI,Neoplastic Process
+1855,C0279543,Chronic Myeloid Leukemia,MSH,Neoplastic Process
+1856,C0279543,chronic myeloid leukemia,CSP,Neoplastic Process
+1857,C0279543,chronic myeloid leukemia,CHV,Neoplastic Process
+1858,C0279543,Chronic Myeloid Leukemia,MEDLINEPLUS,Neoplastic Process
+1859,C0279543,Chronic myeloid leukemia,LCH_NW,Neoplastic Process
+1860,C0279543,Chronic myeloid leukemia,HPO,Neoplastic Process
+1861,C0279543,Chronic myeloid leukemia,MDR,Neoplastic Process
+1863,C0279543,Chronic myeloid leukemia,SNOMEDCT_US,Neoplastic Process
+1864,C0279543,Chronic Myeloid Leukemia,PDQ,Neoplastic Process
+1865,C0279543,Chronic myeloid leukemia,LNC,Neoplastic Process
+1867,C0279543,Chronic myeloid leukemia,ORPHANET,Neoplastic Process
+1868,C1292771,Chronic Myeloid Leukemia,NCI,Neoplastic Process
+1869,C0279543,chronic myeloid leukemia,ICPC2P,Neoplastic Process
+1870,C0549184,None,RCD,Finding
+1871,C0549184,None,SNMI,Finding
+1872,C1706277,None,NCI,Finding
+1873,C0549184,NONE,CCPSS,Finding
+1874,C0549184,none,CHV,Finding
+1875,C0456148,None,NCI,Intellectual Product
+1876,C5200984,None,LNC,Finding
+1877,C0549184,None,SNOMEDCT_US,Finding
+1878,C0549184,None,MTH,Finding
+1879,C0549184,None,NCI,Finding
+1880,C1556151,None,HL7V2.5,Functional Concept
+1881,C1556147,None,HL7V2.5,Idea or Concept
+1882,C1556146,None,HL7V2.5,Idea or Concept
+1883,C1556152,None,HL7V2.5,Functional Concept
+1884,C1550437,None,HL7V3.0,Functional Concept
+1885,C1556150,None,HL7V3.0,Idea or Concept
+1886,C1551387,None,HL7V3.0,Functional Concept
+1887,C1550083,None,HL7V3.0,Intellectual Product
+1888,C1553523,none,HL7V3.0,Intellectual Product
+1889,C1547191,none,HL7V3.0,Qualitative Concept
+1890,C1546509,none,HL7V3.0,Idea or Concept
+1891,C1556148,None,HL7V2.5,Functional Concept
+1892,C1550437,None,HL7V2.5,Functional Concept
+1893,C0266929,Chronic periodontitis,ICD10,Disease or Syndrome
+1894,C0266929,Chronic periodontitis,ICD10AM,Disease or Syndrome
+1895,C0266929,Chronic periodontitis,RCD,Disease or Syndrome
+1896,C0266929,Chronic periodontitis,SNMI,Disease or Syndrome
+1897,C0266929,Chronic periodontitis,ICD9CM,Disease or Syndrome
+1898,C0266929,chronic periodontitis,MEDCIN,Disease or Syndrome
+1899,C0266929,Chronic Periodontitis,MSH,Disease or Syndrome
+1900,C0266929,Chronic Periodontitis,MTH,Disease or Syndrome
+1901,C0266929,Chronic periodontitis,ICD10CM,Disease or Syndrome
+1902,C0266929,chronic periodontitis,CHV,Disease or Syndrome
+1903,C0266929,Chronic periodontitis,MDR,Disease or Syndrome
+1904,C0266929,Chronic periodontitis,SNOMEDCT_US,Disease or Syndrome
+1905,C0266929,Chronic Periodontitis,NCI,Disease or Syndrome
+1906,C0031106,aggressive periodontitis,MEDCIN,Disease or Syndrome
+1907,C0031106,Aggressive Periodontitis,MSH,Disease or Syndrome
+1908,C0031106,Aggressive periodontitis,ICD10CM,Disease or Syndrome
+1909,C0031106,Aggressive periodontitis,SNOMEDCT_US,Disease or Syndrome
+1910,C0001342,Aggressive periodontitis,OMIM,Disease or Syndrome
+1911,C0031106,Aggressive Periodontitis,MTH,Disease or Syndrome
+1912,C0752347,dementia with Lewy bodies,MEDCIN,Disease or Syndrome
+1913,C0752347,Dementia with Lewy bodies,MDR,Disease or Syndrome
+1914,C0752347,dementia with lewy bodies,CHV,Disease or Syndrome
+1915,C0752347,Dementia with lewy bodies,ICD9CM,Disease or Syndrome
+1916,C0752347,Dementia with Lewy bodies,MEDLINEPLUS,Disease or Syndrome
+1917,C0752347,Dementia with Lewy Bodies,MEDLINEPLUS,Disease or Syndrome
+1919,C0752347,Dementia with Lewy Bodies,PSY,Disease or Syndrome
+1944,C0431391,Hemimegalencephaly,RCD,Disease or Syndrome
+1945,C0431391,hemimegalencephaly,CHV,Disease or Syndrome
+1946,C0431391,Hemimegalencephaly,OMIM,Disease or Syndrome
+1947,C0431391,Hemimegalencephaly,MSH,Disease or Syndrome
+1948,C0431391,Hemimegalencephaly,HPO,Disease or Syndrome
+1949,C0431391,Hemimegalencephaly,SNOMEDCT_US,Disease or Syndrome
+1950,C0431391,Hemimegalencephaly,NCI,Disease or Syndrome
+1951,C0431391,Hemimegalencephaly,ORPHANET,Disease or Syndrome
+1952,C0431391,Hemimegalencephaly,MDR,Disease or Syndrome
+1953,C2938983,Focal cortical dysplasia,OMIM,Congenital Abnormality
+1954,C2938983,Focal cortical dysplasia,MDR,Congenital Abnormality
+1955,C2938983,Focal cortical dysplasia,HPO,Congenital Abnormality
+1956,C2938983,Focal Cortical Dysplasia,MSH,Congenital Abnormality
+1957,C0041341,tuberous sclerosis complex,PDQ,Neoplastic Process
+1958,C0041341,Tuberous Sclerosis Complex,NCI,Neoplastic Process
+1959,C2247022,tuberous sclerosis complex,GO,Cell Component
+1960,C2247022,Tuberous sclerosis complex,MEDLINEPLUS,Cell Component
+1961,C0041341,TUBEROUS SCLEROSIS COMPLEX,OMIM,Neoplastic Process
+1962,C0041341,Tuberous Sclerosis Complex,MSH,Neoplastic Process
+1963,C0041341,Tuberous sclerosis complex,MDR,Neoplastic Process
+1965,C0041341,Tuberous sclerosis complex,ORPHANET,Neoplastic Process
+1966,C0033845,IIH,ORPHANET,Disease or Syndrome
+1967,C4321495,Ve,NCI,Finding
+1968,C5202914,VE,NCI,Hazardous or Poisonous Substance
+1969,C0235480,PAROXYSMAL ATRIAL FIBRILLATION,COSTAR,Disease or Syndrome
+1970,C0235480,Paroxysmal atrial fibrillation,MTH,Disease or Syndrome
+1971,C0235480,Paroxysmal atrial fibrillation,RCD,Disease or Syndrome
+1972,C0235480,paroxysmal atrial fibrillation,MEDCIN,Disease or Syndrome
+1973,C0235480,paroxysmal atrial fibrillation,BI,Disease or Syndrome
+1974,C0235480,Paroxysmal Atrial Fibrillation,NCI,Disease or Syndrome
+1975,C0235480,paroxysmal atrial fibrillation,CHV,Disease or Syndrome
+1976,C0235480,Paroxysmal atrial fibrillation,ICD10CM,Disease or Syndrome
+1977,C0235480,Paroxysmal atrial fibrillation,OMIM,Disease or Syndrome
+1978,C0235480,Paroxysmal atrial fibrillation,HPO,Disease or Syndrome
+1979,C0235480,Paroxysmal atrial fibrillation,MDR,Disease or Syndrome
+1980,C0235480,Paroxysmal Atrial Fibrillation,MSH,Disease or Syndrome
+1981,C0235480,Paroxysmal atrial fibrillation,SNOMEDCT_US,Disease or Syndrome
+1982,C0235480,paroxysmal atrial fibrillation,ICPC2P,Disease or Syndrome
+1983,C0677874,Cancer-Free,NCI,Finding
+1995,C0149782,lung squamous cell carcinoma,CHV,Neoplastic Process
+1996,C0149782,Lung Squamous Cell Carcinoma,NCI,Neoplastic Process
+1997,C0346340,Adenoid Cystic Carcinoma of the Lacrimal Gland,NCI,Neoplastic Process
+1998,C0280324,Laryngeal squamous cell carcinoma,MDR,Neoplastic Process
+2000,C0280324,Laryngeal Squamous Cell Carcinoma,MSH,Neoplastic Process
+2001,C0280324,laryngeal squamous cell carcinoma,PDQ,Neoplastic Process
+2002,C0280324,Laryngeal Squamous Cell Carcinoma,NCI,Neoplastic Process
+2003,C0280324,Laryngeal Squamous Cell Carcinoma,MTH,Neoplastic Process
+2004,C0029408,Osteoarthritis,CCS,Disease or Syndrome
+2006,C0029408,Osteoarthritis,ICPC2P,Disease or Syndrome
+2007,C0029408,Osteoarthritis,LCH,Disease or Syndrome
+2008,C0029408,Osteoarthritis,MSH,Disease or Syndrome
+2009,C0029408,Osteoarthritis,RCD,Disease or Syndrome
+2010,C0029408,Osteoarthritis,SNM,Disease or Syndrome
+2011,C0029408,OSTEOARTHRITIS,COSTAR,Disease or Syndrome
+2012,C0029408,OSTEOARTHRITIS,DXP,Disease or Syndrome
+2014,C0029408,OSTEOARTHRITIS,QMR,Disease or Syndrome
+2015,C0029408,osteoarthritis,AOD,Disease or Syndrome
+2016,C0029408,osteoarthritis,BI,Disease or Syndrome
+2017,C0029408,osteoarthritis,CSP,Disease or Syndrome
+2018,C0029408,Osteoarthritis,OMIM,Disease or Syndrome
+2019,C0029408,osteoarthritis,MEDCIN,Disease or Syndrome
+2020,C0029408,osteoarthritis,CHV,Disease or Syndrome
+2021,C0029408,Osteoarthritis,MEDLINEPLUS,Disease or Syndrome
+2022,C0029408,Osteoarthritis,LCH_NW,Disease or Syndrome
+2023,C0029408,Osteoarthritis,LNC,Disease or Syndrome
+2024,C0029408,Osteoarthritis,HPO,Disease or Syndrome
+2025,C0029408,Osteoarthritis,MDR,Disease or Syndrome
+2027,C0029408,Osteoarthritis,SNOMEDCT_US,Disease or Syndrome
+2028,C0029408,Osteoarthritis,CCSR_ICD10CM,Disease or Syndrome
+2029,C0029408,osteoarthritis,ICPC2ICD10ENG,Disease or Syndrome
+2030,C0029408,Osteoarthritis,NCI,Disease or Syndrome
+2031,C0029408,osteoarthritis,ICPC2P,Disease or Syndrome
+2032,C1706158,DBA,NCI,Gene or Genome
+2033,C1335641,DBA,HGNC,Gene or Genome
+2034,C2676137,DBA,OMIM,Disease or Syndrome
+2035,C0002940,Aneurysm,MDR,Pathologic Function
+2036,C0002940,Aneurysm,MSH,Pathologic Function
+2037,C0002940,Aneurysm,SNM,Pathologic Function
+2038,C0002940,ANEURYSM,CCPSS,Pathologic Function
+2039,C0002940,ANEURYSM,COSTAR,Pathologic Function
+2040,C0002940,ANEURYSM,CST,Pathologic Function
+2041,C0002940,ANEURYSM,DXP,Pathologic Function
+2042,C0002940,ANEURYSM,WHO,Pathologic Function
+2043,C0002940,aneurysm,AOD,Pathologic Function
+2044,C0002940,aneurysm,CSP,Pathologic Function
+2045,C0002940,Aneurysm,SNOMEDCT_US,Pathologic Function
+2046,C0002940,aneurysm,CHV,Pathologic Function
+2048,C0002940,Aneurysm,NANDA-I,Pathologic Function
+2049,C0002940,Aneurysm,HPO,Pathologic Function
+2051,C0002940,Aneurysm,LNC,Pathologic Function
+2052,C0002940,aneurysm,ICPC2ICD10ENG,Pathologic Function
+2053,C0002940,Aneurysm,MTH,Pathologic Function
+2054,C0002940,Aneurysm,NCI,Pathologic Function
+2074,C0453926,Dress,RCD,Manufactured Object
+2075,C0453926,dress,CHV,Manufactured Object
+2076,C0453926,Dress,SNOMEDCT_US,Manufactured Object
+2077,C1142264,Chronic limb-threatening ischemia,MDR,Disease or Syndrome
+2078,C1142264,Chronic Limb-Threatening Ischemia,MSH,Disease or Syndrome
+2079,C0029410,Hip Osteoarthritis,MSH,Disease or Syndrome
+2080,C0029410,Hip osteoarthritis,OMIM,Disease or Syndrome
+2081,C0029410,hip osteoarthritis,CHV,Disease or Syndrome
+2082,C0029410,Hip osteoarthritis,HPO,Disease or Syndrome
+2083,C0029410,Hip Osteoarthritis,NCI,Disease or Syndrome
+2084,C5197665,Idiopathic multicentric Castleman disease,ORPHANET,Disease or Syndrome
+2085,C0001815,Primary myelofibrosis,MTHICD9,Neoplastic Process
+2086,C0001815,primary myelofibrosis,MEDCIN,Neoplastic Process
+2087,C0001815,Primary Myelofibrosis,MSH,Neoplastic Process
+2088,C0001815,Primary Myelofibrosis,NCI,Neoplastic Process
+2089,C0001815,primary myelofibrosis,CHV,Neoplastic Process
+2090,C0001815,Primary myelofibrosis,MDR,Neoplastic Process
+2092,C0001815,primary myelofibrosis,PDQ,Neoplastic Process
+2093,C0001815,Primary myelofibrosis,ORPHANET,Neoplastic Process
+2094,C0001815,Primary myelofibrosis,SNOMEDCT_US,Neoplastic Process
+2096,C0001815,Primary Myelofibrosis,MTH,Neoplastic Process
+2097,C0018920,Cavernous hemangioma,ICD10AMAE,Neoplastic Process
+2098,C0018920,Cavernous hemangioma,RCDAE,Neoplastic Process
+2099,C0018920,Cavernous hemangioma,RCDSA,Neoplastic Process
+2100,C0018920,Cavernous hemangioma,SNM,Neoplastic Process
+2101,C0018920,Cavernous hemangioma,SNMI,Neoplastic Process
+2102,C0018920,Cavernous Hemangioma,COSTAR,Neoplastic Process
+2103,C0018920,Cavernous hemangioma,OMIM,Neoplastic Process
+2104,C0018920,cavernous hemangioma,MEDCIN,Neoplastic Process
+2106,C0018920,cavernous hemangioma,CHV,Neoplastic Process
+2108,C0018920,Cavernous hemangioma,HPO,Neoplastic Process
+2109,C0018920,Cavernous Hemangioma,MSH,Neoplastic Process
+2110,C0018920,Cavernous hemangioma,SNOMEDCT_US,Neoplastic Process
+2111,C0018920,Cavernous Hemangioma,NCI,Neoplastic Process
+2113,C0007193,Dilated cardiomyopathy,ICD10,Disease or Syndrome
+2114,C0007193,Dilated cardiomyopathy,ICD10AM,Disease or Syndrome
+2115,C0007193,Dilated cardiomyopathy,RCD,Disease or Syndrome
+2116,C0007193,Dilated cardiomyopathy,OMIM,Disease or Syndrome
+2117,C0007193,dilated cardiomyopathy,AOD,Disease or Syndrome
+2118,C0007193,dilated cardiomyopathy,BI,Disease or Syndrome
+2119,C0007193,dilated cardiomyopathy,MEDCIN,Disease or Syndrome
+2120,C0007193,Dilated Cardiomyopathy,NCI,Disease or Syndrome
+2121,C0007193,Dilated cardiomyopathy,ICD10CM,Disease or Syndrome
+2122,C0007193,dilated cardiomyopathy,CHV,Disease or Syndrome
+2123,C0007193,Dilated cardiomyopathy,MEDLINEPLUS,Disease or Syndrome
+2124,C0007193,Dilated cardiomyopathy,SNOMEDCT_US,Disease or Syndrome
+2125,C0007193,Dilated cardiomyopathy,HPO,Disease or Syndrome
+2126,C0007193,Dilated cardiomyopathy,NANDA-I,Disease or Syndrome
+2127,C0007193,Dilated Cardiomyopathy,MSH,Disease or Syndrome
+2128,C0007193,Dilated cardiomyopathy,ORPHANET,Disease or Syndrome
+2129,C0007193,Dilated cardiomyopathy,MDR,Disease or Syndrome
+2150,C3714636,Pneumonitis,SNM,Disease or Syndrome
+2151,C3714636,PNEUMONITIS,CCPSS,Disease or Syndrome
+2152,C3714636,PNEUMONITIS,COSTAR,Disease or Syndrome
+2153,C3714636,PNEUMONITIS,CST,Disease or Syndrome
+2154,C3714636,PNEUMONITIS,DXP,Disease or Syndrome
+2155,C3714636,PNEUMONITIS,WHO,Disease or Syndrome
+2156,C3714636,pneumonitis,AOD,Disease or Syndrome
+2157,C3714636,pneumonitis,CSP,Disease or Syndrome
+2160,C3714636,pneumonitis,MEDCIN,Disease or Syndrome
+2161,C3714636,pneumonitis,CHV,Disease or Syndrome
+2162,C3714636,Pneumonitis,NCI,Disease or Syndrome
+2163,C3714636,Pneumonitis,MTH,Disease or Syndrome
+2164,C3714636,Pneumonitis,MSH,Disease or Syndrome
+2165,C3714636,Pneumonitis,MDR,Disease or Syndrome
+2167,C3714636,Pneumonitis,SNOMEDCT_US,Disease or Syndrome
+2168,C3714636,Pneumonitis,OMIM,Disease or Syndrome
+2169,C3714636,pneumonitis,ICPC2ICD10ENG,Disease or Syndrome
+2170,C3714636,Pneumonitis,ICPC2P,Disease or Syndrome
+2171,C3714636,pneumonitis,ICPC2P,Disease or Syndrome
+2172,C0003864,Arthritis,ICPC2P,Disease or Syndrome
+2173,C0003864,Arthritis,LCH,Disease or Syndrome
+2174,C0003864,Arthritis,MSH,Disease or Syndrome
+2175,C0003864,Arthritis,RCD,Disease or Syndrome
+2176,C0003864,Arthritis,SNM,Disease or Syndrome
+2177,C0003864,ARTHRITIS,CCPSS,Disease or Syndrome
+2178,C0003864,ARTHRITIS,COSTAR,Disease or Syndrome
+2179,C0003864,ARTHRITIS,CST,Disease or Syndrome
+2180,C0003864,ARTHRITIS,DXP,Disease or Syndrome
+2181,C0003864,ARTHRITIS,WHO,Disease or Syndrome
+2182,C0003864,arthritis,AOD,Disease or Syndrome
+2183,C0003864,arthritis,BI,Disease or Syndrome
+2184,C0003864,arthritis,CSP,Disease or Syndrome
+2185,C0003864,Arthritis,OMIM,Disease or Syndrome
+2186,C0003864,arthritis,MEDCIN,Disease or Syndrome
+2187,C0003864,Arthritis,LNC,Disease or Syndrome
+2188,C0003864,arthritis,CHV,Disease or Syndrome
+2189,C0003864,Arthritis,MEDLINEPLUS,Disease or Syndrome
+2191,C0003864,Arthritis,LCH_NW,Disease or Syndrome
+2193,C0003864,Arthritis,MTH,Disease or Syndrome
+2194,C0003864,Arthritis,HPO,Disease or Syndrome
+2195,C0003864,Arthritis,MDR,Disease or Syndrome
+2196,C0003864,Arthritis,NANDA-I,Disease or Syndrome
+2200,C0003864,Arthritis,SNOMEDCT_US,Disease or Syndrome
+2202,C0003864,arthritis,ICPC2ICD10ENG,Disease or Syndrome
+2203,C0003864,Arthritis,PSY,Disease or Syndrome
+2204,C0003864,Arthritis,NCI,Disease or Syndrome
+2205,C0003864,Arthritis,MTHICD9,Disease or Syndrome
+2206,C0003864,arthritis,ICPC2P,Disease or Syndrome
+2207,C0040147,Thyroiditis,ICD10,Disease or Syndrome
+2208,C0040147,Thyroiditis,ICD10AM,Disease or Syndrome
+2209,C0040147,Thyroiditis,ICPC2P,Disease or Syndrome
+2210,C0040147,Thyroiditis,LCH,Disease or Syndrome
+2211,C0040147,Thyroiditis,MSH,Disease or Syndrome
+2212,C0040147,Thyroiditis,RCD,Disease or Syndrome
+2213,C0040147,Thyroiditis,SNM,Disease or Syndrome
+2214,C0040147,THYROIDITIS,CCPSS,Disease or Syndrome
+2215,C0040147,THYROIDITIS,COSTAR,Disease or Syndrome
+2216,C0040147,THYROIDITIS,CST,Disease or Syndrome
+2217,C0040147,THYROIDITIS,DXP,Disease or Syndrome
+2218,C0040147,THYROIDITIS,WHO,Disease or Syndrome
+2219,C0040147,thyroiditis,AOD,Disease or Syndrome
+2220,C0040147,thyroiditis,BI,Disease or Syndrome
+2221,C0040147,thyroiditis,CSP,Disease or Syndrome
+2222,C0040147,Thyroiditis,MTH,Disease or Syndrome
+2223,C0040147,thyroiditis,MEDCIN,Disease or Syndrome
+2224,C0040147,Thyroiditis,ICD10CM,Disease or Syndrome
+2225,C0040147,thyroiditis,CHV,Disease or Syndrome
+2226,C0040147,Thyroiditis,OMIM,Disease or Syndrome
+2227,C0040147,Thyroiditis,LCH_NW,Disease or Syndrome
+2228,C0040147,Thyroiditis,HPO,Disease or Syndrome
+2229,C0040147,Thyroiditis,MDR,Disease or Syndrome
+2231,C0040147,Thyroiditis,SNOMEDCT_US,Disease or Syndrome
+2232,C0040147,thyroiditis,ICPC2ICD10ENG,Disease or Syndrome
+2233,C0040147,Thyroiditis,NCI,Disease or Syndrome
+2234,C0040147,Thyroiditis,ICD9CM,Disease or Syndrome
+2235,C0040147,thyroiditis,ICPC2P,Disease or Syndrome
+2236,C0205225,Primary,MTH,Qualitative Concept
+2237,C0205225,Primary,RCD,Qualitative Concept
+2238,C0205225,Primary,SNMI,Qualitative Concept
+2239,C0205225,primary,CHV,Qualitative Concept
+2240,C0439612,Primary,SNOMEDCT_VET,Temporal Concept
+2241,C0205225,Primary,SNOMEDCT_US,Qualitative Concept
+2242,C0205225,Primary,LNC,Qualitative Concept
+2243,C0205225,Primary,NCI,Qualitative Concept
+2244,C2945760,Recurrent,RCD,Temporal Concept
+2245,C2945760,Recurrent,SNMI,Temporal Concept
+2246,C2945760,RECURRENT,DXP,Temporal Concept
+2247,C2945760,recurrent,CHV,Temporal Concept
+2248,C2945760,Recurrent,MTH,Temporal Concept
+2249,C2945760,Recurrent,SNOMEDCT_US,Temporal Concept
+2250,C1455761,Recurrent,LNC,Temporal Concept
+2251,C2945760,Recurrent,HPO,Temporal Concept
+2252,C2945760,Recurrent,NCI,Temporal Concept
+2253,C0011881,Diabetic Kidney Disease,NCI,Disease or Syndrome
+2254,C0011881,Diabetic Kidney Disease,MSH,Disease or Syndrome
+2255,C0011881,Diabetic Kidney Disease,LNC,Disease or Syndrome
+2256,C0011881,Diabetic kidney disease,MDR,Disease or Syndrome
+2257,C0009402,CRC,OMIM,Neoplastic Process
+2258,C4050364,CRc,NCI,Finding
+2259,C0009402,CRC,PDQ,Neoplastic Process
+2260,C5401389,CRC,NCI,Cell
+2261,C0086445,Idiopathic Membranous Nephropathy,MSH,Disease or Syndrome
+2262,C0086445,Idiopathic membranous nephropathy,SNOMEDCT_US,Disease or Syndrome
+2263,C0332441,Normal tissue,SNM,Finding
+2264,C0040300,Normal Tissue,NCI,Tissue
+2265,C0332441,normal tissue,CHV,Finding
+2266,C0332441,Normal tissue,SNOMEDCT_US,Finding
+2267,C0392492,Chronic apical periodontitis,ICD10,Disease or Syndrome
+2268,C0392492,Chronic apical periodontitis,ICD10AM,Disease or Syndrome
+2269,C0392492,Chronic apical periodontitis,SNMI,Disease or Syndrome
+2270,C0392492,chronic apical periodontitis,MEDCIN,Disease or Syndrome
+2271,C0392492,Chronic apical periodontitis,ICD10CM,Disease or Syndrome
+2272,C0392492,chronic apical periodontitis,CHV,Disease or Syndrome
+2273,C0392492,Chronic apical periodontitis,MDR,Disease or Syndrome
+2274,C0392492,Chronic apical periodontitis,SNOMEDCT_US,Disease or Syndrome
+2275,C0392492,Chronic apical periodontitis,ICD9CM,Disease or Syndrome
+2276,C1449699,Tumor Burden,MSH,Diagnostic Procedure
+2277,C1449699,Tumor Burden,NCI,Diagnostic Procedure
+2278,C0036202,Sarcoidosis,AIR,Disease or Syndrome
+2279,C0036202,Sarcoidosis,ICD10,Disease or Syndrome
+2280,C0036202,Sarcoidosis,ICD10AM,Disease or Syndrome
+2281,C0036202,Sarcoidosis,ICPC2P,Disease or Syndrome
+2282,C0036202,Sarcoidosis,LCH,Disease or Syndrome
+2283,C0036202,Sarcoidosis,MSH,Disease or Syndrome
+2284,C0036202,Sarcoidosis,MTH,Disease or Syndrome
+2285,C0036202,Sarcoidosis,RCD,Disease or Syndrome
+2286,C0036202,Sarcoidosis,SNM,Disease or Syndrome
+2287,C0036202,SARCOIDOSIS,CCPSS,Disease or Syndrome
+2288,C0036202,SARCOIDOSIS,COSTAR,Disease or Syndrome
+2289,C0036202,SARCOIDOSIS,CST,Disease or Syndrome
+2290,C0036202,SARCOIDOSIS,DXP,Disease or Syndrome
+2291,C0036202,SARCOIDOSIS,WHO,Disease or Syndrome
+2292,C0036202,sarcoidosis,BI,Disease or Syndrome
+2293,C0036202,sarcoidosis,CSP,Disease or Syndrome
+2294,C0036202,sarcoidosis,MEDCIN,Disease or Syndrome
+2295,C0036202,Sarcoidosis,ICD10CM,Disease or Syndrome
+2296,C0036202,sarcoidosis,ICD10CM,Disease or Syndrome
+2297,C0036202,sarcoidosis,CHV,Disease or Syndrome
+2298,C0036202,Sarcoidosis,MEDLINEPLUS,Disease or Syndrome
+2299,C0036202,Sarcoidosis,LCH_NW,Disease or Syndrome
+2300,C2697310,SARCOIDOSIS,OMIM,Finding
+2301,C0036202,Sarcoidosis,MDR,Disease or Syndrome
+2302,C0036202,Sarcoidosis,LNC,Disease or Syndrome
+2304,C0036202,Sarcoidosis,SNOMEDCT_US,Disease or Syndrome
+2305,C0036202,Sarcoidosis,OMIM,Disease or Syndrome
+2306,C0036202,Sarcoidosis,ORPHANET,Disease or Syndrome
+2307,C0036202,sarcoidosis,ICPC2ICD10ENG,Disease or Syndrome
+2308,C0036202,Sarcoidosis,NCI,Disease or Syndrome
+2309,C0036202,Sarcoidosis,ICD9CM,Disease or Syndrome
+2310,C0036202,sarcoidosis,ICPC2P,Disease or Syndrome
+2311,C0015350,ICM,FMA,Tissue
+2312,C0015350,icm,CHV,Tissue
+2313,C0015350,ICM,UWDA,Tissue
+2314,C1550746,ICM,HL7V3.0,Temporal Concept
+2315,C0026847,SMA,MEDLINEPLUS,Disease or Syndrome
+2317,C4284041,SMA,NCI,Gene or Genome
+2318,C1420257,SMA,HGNC,Gene or Genome
+2319,C4724039,SMA,NCI,Language
+2320,C4024957,SMA,ORPHANET,Disease or Syndrome
+2321,C1700794,Sma,NCI,"Amino Acid, Peptide, or Protein"
+2322,C1700794,Sma,NCI,Immunologic Factor
+2323,C0162309,ALD,CSP,Disease or Syndrome
+2324,C0162309,ALD,SNMI,Disease or Syndrome
+2325,C0162309,ALD,OMIM,Disease or Syndrome
+2326,C0162309,ald,CHV,Disease or Syndrome
+2327,C4552861,ALD,NCI,Gene or Genome
+2328,C1412084,ALD,HGNC,Gene or Genome
+2329,C0162309,ALD,ORPHANET,Disease or Syndrome
+2330,C3697776,Proliferative verrucous leukoplakia,SNOMEDCT_US,Neoplastic Process
+2331,C3697776,Proliferative Verrucous Leukoplakia,NCI,Neoplastic Process
+2332,C0149925,small cell lung cancer (SCLC),CHV,Neoplastic Process
+2333,C0035222,Acute respiratory distress syndrome,MDR,Disease or Syndrome
+2334,C0035222,Acute Respiratory Distress Syndrome,NCI,Disease or Syndrome
+2335,C0035222,Acute respiratory distress syndrome,ICD10CM,Disease or Syndrome
+2336,C0035222,Acute Respiratory Distress Syndrome,MEDLINEPLUS,Disease or Syndrome
+2337,C0035222,Acute respiratory distress syndrome,SNOMEDCT_VET,Disease or Syndrome
+2339,C0035222,Acute respiratory distress syndrome,SNOMEDCT_US,Disease or Syndrome
+2340,C2887484,Acute respiratory distress syndrome,OMIM,Disease or Syndrome
+2341,C2887484,acute respiratory distress syndrome,MEDCIN,Disease or Syndrome
+2342,C2887484,Acute respiratory distress syndrome,LNC,Disease or Syndrome
+2343,C2887484,Acute Respiratory Distress Syndrome,MSH,Disease or Syndrome
+2344,C2887484,Acute respiratory distress syndrome,HPO,Disease or Syndrome
+2345,C0029453,Osteopenia,ICPC2P,Disease or Syndrome
+2346,C0029453,Osteopenia,MDR,Disease or Syndrome
+2347,C0029453,Osteopenia,RCD,Disease or Syndrome
+2348,C0029453,Osteopenia,SNM,Disease or Syndrome
+2349,C0029453,Osteopenia,SNMI,Disease or Syndrome
+2350,C0029453,OSTEOPENIA,CCPSS,Disease or Syndrome
+2351,C0029453,OSTEOPENIA,DXP,Disease or Syndrome
+2352,C0029453,osteopenia,AOD,Disease or Syndrome
+2353,C0029453,osteopenia,CSP,Disease or Syndrome
+2354,C0029453,Osteopenia,NCI,Disease or Syndrome
+2355,C0029453,Osteopenia,OMIM,Disease or Syndrome
+2356,C0029453,osteopenia,MEDCIN,Disease or Syndrome
+2357,C0029453,osteopenia,CHV,Disease or Syndrome
+2358,C0029453,Osteopenia,MEDLINEPLUS,Disease or Syndrome
+2359,C0029453,Osteopenia,LCH_NW,Disease or Syndrome
+2360,C0029453,Osteopenia,HPO,Disease or Syndrome
+2362,C0029453,Osteopenia,MTH,Disease or Syndrome
+2363,C0029453,Osteopenia,SNOMEDCT_US,Disease or Syndrome
+2365,C0029453,Osteopenia,MSH,Disease or Syndrome
+2366,C0029453,osteopenia,ICPC2P,Disease or Syndrome
+2367,C1706462,Reference,NCI,Conceptual Entity
+2368,C3244318,Reference,HL7V3.0,Idea or Concept
+2369,C1514811,reference,HL7V3.0,Intellectual Product
+2371,C4266518,Reference,LNC,Intellectual Product
+2372,C1514811,Reference,NCI,Intellectual Product
+2373,C1561577,Reference,HL7V3.0,Intellectual Product
+2374,C0011615,ATOPIC DERMATITIS,COSTAR,Disease or Syndrome
+2375,C0011615,Atopic Dermatitis,MSH,Disease or Syndrome
+2376,C0011615,Atopic dermatitis,ICD10,Disease or Syndrome
+2377,C0011615,Atopic dermatitis,ICD10AM,Disease or Syndrome
+2378,C0011615,Atopic dermatitis,LCH,Disease or Syndrome
+2379,C0011615,Atopic dermatitis,RCD,Disease or Syndrome
+2380,C0011615,atopic dermatitis,AOD,Disease or Syndrome
+2381,C0011615,atopic dermatitis,CSP,Disease or Syndrome
+2382,C0011615,Atopic dermatitis,OMIM,Disease or Syndrome
+2383,C0011615,Atopic dermatitis,ICD10CM,Disease or Syndrome
+2384,C0011615,atopic dermatitis,CHV,Disease or Syndrome
+2385,C0011615,Atopic Dermatitis,MEDLINEPLUS,Disease or Syndrome
+2386,C0011615,Atopic dermatitis,LCH_NW,Disease or Syndrome
+2387,C0013595,Atopic Dermatitis,NCI,Disease or Syndrome
+2388,C0011615,Atopic dermatitis,HPO,Disease or Syndrome
+2389,C0011615,Atopic dermatitis,MDR,Disease or Syndrome
+2390,C0011615,Atopic dermatitis,SNOMEDCT_US,Disease or Syndrome
+2391,C0011615,Atopic dermatitis,MTHICD9,Disease or Syndrome
+2392,C0011615,atopic dermatitis,ICPC2P,Disease or Syndrome
+2393,C0020179,Huntington's disease,CSP,Disease or Syndrome
+2394,C0020179,Huntington's disease,ICD10,Disease or Syndrome
+2395,C0020179,Huntington's disease,ICD10AM,Disease or Syndrome
+2396,C0020179,Huntington's disease,RCD,Disease or Syndrome
+2397,C0020179,Huntington's Disease,NCI,Disease or Syndrome
+2398,C0020179,Huntington's disease,ICD10CM,Disease or Syndrome
+2399,C0020179,Huntington's disease,MDR,Disease or Syndrome
+2400,C0020179,huntington's disease,CHV,Disease or Syndrome
+2401,C0020179,Huntington's Disease,MEDLINEPLUS,Disease or Syndrome
+2403,C0020179,Huntington's Disease,MSH,Disease or Syndrome
+2404,C0020179,Huntington's disease,LNC,Disease or Syndrome
+2405,C0020179,Huntington's disease,SNOMEDCT_US,Disease or Syndrome
+2406,C5446371,Diseased,NCI,Qualitative Concept
+2407,C5777043,COVID-19 negative,LNC,Laboratory or Test Result
+2408,C0006142,breast cancer,AOD,Neoplastic Process
+2409,C0006142,breast cancer,BI,Neoplastic Process
+2410,C0006142,Breast cancer,RCD,Neoplastic Process
+2411,C0006142,Breast cancer,OMIM,Neoplastic Process
+2412,C0006142,BREAST CANCER,OMIM,Neoplastic Process
+2413,C0006142,breast cancer,MEDCIN,Neoplastic Process
+2415,C0006142,BREAST CANCER,CCPSS,Neoplastic Process
+2416,C0006142,breast cancer,CHV,Neoplastic Process
+2417,C0678222,breast cancer,CHV,Neoplastic Process
+2418,C0006142,Breast Cancer,MEDLINEPLUS,Neoplastic Process
+2419,C0006142,Breast cancer,LNC,Neoplastic Process
+2420,C0678222,Breast cancer,HPO,Neoplastic Process
+2421,C0006142,Breast cancer,MDR,Neoplastic Process
+2423,C0006142,Breast cancer,SNOMEDCT_US,Neoplastic Process
+2424,C0006142,breast cancer,PDQ,Neoplastic Process
+2425,C0006142,breast cancer,CSP,Neoplastic Process
+2426,C0678222,Breast Cancer,NCI,Neoplastic Process
+2427,C0006142,Breast Cancer,MSH,Neoplastic Process
+2428,C0023267,Fibroid Tumor,MTH,Neoplastic Process
+2429,C0023267,fibroid tumor,CHV,Neoplastic Process
+2430,C0023267,Fibroid Tumor,MSH,Neoplastic Process
+2431,C0010674,CF,SNMI,Disease or Syndrome
+2432,C0010674,CF,OMIM,Disease or Syndrome
+2433,C0010674,CF,CHV,Disease or Syndrome
+2434,C0010674,CF,MEDLINEPLUS,Disease or Syndrome
+2435,C3811819,CF,NCI,Gene or Genome
+2436,C1413776,CF,OMIM,Gene or Genome
+2437,C1413365,CF,HGNC,Gene or Genome
+2438,C0010674,CF,ORPHANET,Disease or Syndrome
+2439,C0055160,CF,PDQ,Therapeutic or Preventive Procedure
+2440,C0280055,CF,PDQ,Therapeutic or Preventive Procedure
+2441,C0043207,Wolfram Syndrome,MSH,Disease or Syndrome
+2442,C0043207,Wolfram syndrome,CSP,Disease or Syndrome
+2444,C0043207,Wolfram syndrome,JABL,Disease or Syndrome
+2445,C0043207,Wolfram syndrome,RCD,Disease or Syndrome
+2446,C0043207,Wolfram Syndrome,MTH,Disease or Syndrome
+2447,C0043207,wolfram syndrome,CHV,Disease or Syndrome
+2448,C0043207,Wolfram syndrome,MDR,Disease or Syndrome
+2450,C0043207,Wolfram syndrome,ORPHANET,Disease or Syndrome
+2451,C0043207,Wolfram syndrome,SNOMEDCT_US,Disease or Syndrome
+2452,C0043207,Wolfram Syndrome,NCI,Disease or Syndrome
+2457,C1260899,Diamond-Blackfan anemia,RCDAE,Disease or Syndrome
+2458,C1260899,Diamond-Blackfan anemia,SNMI,Disease or Syndrome
+2459,C1260899,Diamond-Blackfan anemia,MEDCIN,Disease or Syndrome
+2460,C1260899,Diamond-Blackfan Anemia,NCI,Disease or Syndrome
+2461,C1260899,diamond-blackfan anemia,CHV,Disease or Syndrome
+2462,C1335641,Diamond-Blackfan anemia,HGNC,Gene or Genome
+2463,C1260899,Diamond-Blackfan anemia,MDR,Disease or Syndrome
+2464,C1260899,Diamond-Blackfan Anemia,MSH,Disease or Syndrome
+2465,C0265265,Diamond-Blackfan anemia,ORPHANET,Disease or Syndrome
+2466,C1260899,Diamond-Blackfan anemia,PDQ,Disease or Syndrome
+2467,C0018799,Heart disease,RCD,Disease or Syndrome
+2468,C0018799,Heart disease,SNM,Disease or Syndrome
+2469,C0018799,Heart Disease,MSH,Disease or Syndrome
+2470,C0018799,heart disease,AOD,Disease or Syndrome
+2471,C0018799,heart disease,MEDCIN,Disease or Syndrome
+2472,C0018799,HEART DISEASE,CCPSS,Disease or Syndrome
+2473,C0018799,heart disease,CHV,Disease or Syndrome
+2474,C0018799,Heart Disease,LNC,Disease or Syndrome
+2475,C0018799,Heart disease,SNOMEDCT_US,Disease or Syndrome
+2476,C0018799,Heart Disease,NCI,Disease or Syndrome
+2477,C0018799,heart disease,ICPC2P,Disease or Syndrome
+2478,C0279626,ESCC,ORPHANET,Neoplastic Process
+2479,C1828079,Parkinson's disease dementia,MEDLINEPLUS,Mental or Behavioral Dysfunction
+2480,C1705783,CT,NCI,Gene or Genome
+2481,C1367551,CT,OMIM,Gene or Genome
+2482,C0040405,CT,CCPSS,Diagnostic Procedure
+2483,C0040405,CT,LNC,Diagnostic Procedure
+2484,C1418396,CT,HGNC,Gene or Genome
+2485,C3540513,CT,NCI,Gene or Genome
+2486,C3813556,CT,NCI,"Amino Acid, Peptide, or Protein"
+2487,C0009778,CT,LNC,Geographic Area
+2489,C5203074,Ct,NCI,Quantitative Concept
+2490,C5832444,Nondiabetic,LNC,Finding
+2491,C0011900,Diagnosis,LCH,Diagnostic Procedure
+2492,C0011900,Diagnosis,MSH,Diagnostic Procedure
+2493,C0011900,Diagnosis,MTH,Diagnostic Procedure
+2494,C0011900,diagnosis,AOD,Diagnostic Procedure
+2495,C0011900,diagnosis,CSP,Diagnostic Procedure
+2496,C0011900,DIAGNOSIS,MCM,Diagnostic Procedure
+2497,C0011900,Diagnosis,SNOMEDCT_US,Diagnostic Procedure
+2498,C0945731,Diagnosis,LNC,Clinical Attribute
+2499,C0011900,Diagnosis,LNC,Diagnostic Procedure
+2500,C0011900,diagnosis,CHV,Diagnostic Procedure
+2502,C0011900,Diagnosis,HL7V3.0,Diagnostic Procedure
+2504,C0011900,Diagnosis,LCH_NW,Diagnostic Procedure
+2506,C1704338,diagnosis,MSH,Functional Concept
+2507,C0011900,Diagnosis,PSY,Diagnostic Procedure
+2508,C0011900,Diagnosis,NCI,Diagnostic Procedure
+2509,C1546899,Diagnosis,HL7V2.5,Classification
+2510,C0031099,Periodontitis,COSTAR,Disease or Syndrome
+2511,C0031099,Periodontitis,LCH,Disease or Syndrome
+2512,C0031099,Periodontitis,MDR,Disease or Syndrome
+2513,C0031099,Periodontitis,MSH,Disease or Syndrome
+2514,C0031099,Periodontitis,RCD,Disease or Syndrome
+2515,C0031099,Periodontitis,SNM,Disease or Syndrome
+2516,C0031099,PERIODONTITIS,CCPSS,Disease or Syndrome
+2517,C0031099,PERIODONTITIS,CST,Disease or Syndrome
+2518,C0031099,PERIODONTITIS,WHO,Disease or Syndrome
+2519,C0031099,periodontitis,AOD,Disease or Syndrome
+2520,C0031099,periodontitis,CSP,Disease or Syndrome
+2521,C0031099,Periodontitis,OMIM,Disease or Syndrome
+2522,C0031099,periodontitis,MEDCIN,Disease or Syndrome
+2523,C0031099,Periodontitis,MTH,Disease or Syndrome
+2524,C0031099,periodontitis,CHV,Disease or Syndrome
+2526,C0031099,Periodontitis,LCH_NW,Disease or Syndrome
+2527,C0031099,Periodontitis,HPO,Disease or Syndrome
+2529,C0031099,Periodontitis,SNOMEDCT_US,Disease or Syndrome
+2530,C0031099,periodontitis,ICPC2ICD10ENG,Disease or Syndrome
+2531,C0031099,Periodontitis,NCI,Disease or Syndrome
+2532,C0010674,Cystic Fibrosis,COSTAR,Disease or Syndrome
+2533,C0010674,Cystic Fibrosis,MSH,Disease or Syndrome
+2534,C0010674,Cystic Fibrosis,MTH,Disease or Syndrome
+2535,C0010674,CYSTIC FIBROSIS,CCPSS,Disease or Syndrome
+2536,C0010674,CYSTIC FIBROSIS,DXP,Disease or Syndrome
+2538,C0010674,Cystic fibrosis,CCS,Disease or Syndrome
+2540,C0010674,Cystic fibrosis,ICD10,Disease or Syndrome
+2541,C0010674,Cystic fibrosis,ICD10AM,Disease or Syndrome
+2542,C0010674,Cystic fibrosis,ICPC2P,Disease or Syndrome
+2543,C0010674,Cystic fibrosis,LCH,Disease or Syndrome
+2544,C0010674,Cystic fibrosis,RCD,Disease or Syndrome
+2545,C0010674,Cystic fibrosis,SNMI,Disease or Syndrome
+2546,C0010674,cystic fibrosis,AOD,Disease or Syndrome
+2547,C0010674,cystic fibrosis,CSP,Disease or Syndrome
+2548,C0010674,CYSTIC FIBROSIS,OMIM,Disease or Syndrome
+2549,C0010674,cystic fibrosis,MEDCIN,Disease or Syndrome
+2550,C0010674,Cystic fibrosis,ICD10CM,Disease or Syndrome
+2551,C0010674,Cystic fibrosis,LNC,Disease or Syndrome
+2552,C0010674,cystic fibrosis,CHV,Disease or Syndrome
+2553,C0010674,Cystic Fibrosis,MEDLINEPLUS,Disease or Syndrome
+2555,C0010674,Cystic fibrosis,LCH_NW,Disease or Syndrome
+2557,C0010674,Cystic fibrosis,MDR,Disease or Syndrome
+2560,C0010674,Cystic fibrosis,SNOMEDCT_US,Disease or Syndrome
+2561,C0010674,Cystic fibrosis,CCSR_ICD10CM,Disease or Syndrome
+2563,C0010674,Cystic fibrosis,ORPHANET,Disease or Syndrome
+2564,C0010674,Cystic Fibrosis,PSY,Disease or Syndrome
+2565,C0010674,Cystic Fibrosis,NCI,Disease or Syndrome
+2566,C0010674,Cystic fibrosis,ICD9CM,Disease or Syndrome
+2567,C0010674,cystic fibrosis,ICPC2P,Disease or Syndrome
+2568,C1825268,HCC,HGNC,Gene or Genome
+2569,C3539633,HCC,NCI,Professional or Occupational Group
+2570,C2239176,HCC,OMIM,Neoplastic Process
+2571,C2239176,HCC,ORPHANET,Neoplastic Process
+2572,C0280604,HCC,PDQ,Therapeutic or Preventive Procedure
+2573,C0006826,Cancer,ICPC2P,Neoplastic Process
+2574,C0006826,Cancer,LCH,Neoplastic Process
+2575,C0998265,Cancer,NCBI,Eukaryote
+2576,C0006826,Cancer,RCD,Neoplastic Process
+2577,C0006826,Cancer,SNM,Neoplastic Process
+2578,C0006826,Cancer,SNMI,Neoplastic Process
+2579,C0006826,CANCER,CCPSS,Neoplastic Process
+2580,C0006826,CANCER,CST,Neoplastic Process
+2581,C0006826,CANCER,DXP,Neoplastic Process
+2582,C0006826,cancer,AOD,Neoplastic Process
+2583,C0006826,Cancer,LNC,Neoplastic Process
+2586,C0006826,cancer,CHV,Neoplastic Process
+2587,C0006826,Cancer,MEDLINEPLUS,Neoplastic Process
+2588,C2707253,Cancer,LNC,Clinical Attribute
+2590,C0006826,Cancer,LCH_NW,Neoplastic Process
+2592,C0006826,Cancer,HPO,Neoplastic Process
+2593,C0006826,Cancer,MDR,Neoplastic Process
+2594,C0006826,Cancer,NANDA-I,Neoplastic Process
+2596,C0006826,cancer,MEDCIN,Neoplastic Process
+2597,C0006826,Cancer,SNOMEDCT_US,Neoplastic Process
+2598,C0006826,Cancer,PDQ,Neoplastic Process
+2599,C0006826,Cancer,OMIM,Neoplastic Process
+2604,C0006826,cancer,CSP,Neoplastic Process
+2605,C0006826,Cancer,NCI,Neoplastic Process
+2606,C0006826,Cancer,MSH,Neoplastic Process
+2607,C1547140,Cancer,HL7V2.5,Biomedical Occupation or Discipline
+2608,C0006826,cancer,ICPC2P,Neoplastic Process
+2609,C4087124,IgG4-RD,MSH,Disease or Syndrome
+2610,C1300072,tumor stage,CHV,Clinical Attribute
+2611,C1300072,Tumor stage,SNOMEDCT_US,Clinical Attribute
+2612,C1300072,Tumor Stage,NCI,Clinical Attribute
+2613,C1300072,Tumor stage,MTH,Clinical Attribute
+2615,C0023449,ALL,CSP,Neoplastic Process
+2616,C0023449,ALL,DXP,Neoplastic Process
+2617,C0444868,All,MTH,Quantitative Concept
+2618,C0444868,All,RCD,Quantitative Concept
+2619,C0444868,All,SNMI,Quantitative Concept
+2620,C1704799,ALL,NCI,Gene or Genome
+2621,C0444868,All,NCI,Quantitative Concept
+2622,C1961102,ALL,OMIM,Neoplastic Process
+2623,C0444868,all,CHV,Quantitative Concept
+2624,C0444868,all,HL7V3.0,Quantitative Concept
+2625,C0812385,ALL,HGNC,Gene or Genome
+2626,C0023449,ALL,MEDLINEPLUS,Neoplastic Process
+2628,C3539085,All,SNOMEDCT_US,Idea or Concept
+2629,C0444868,All,LNC,Quantitative Concept
+2630,C0444868,All,HPO,Quantitative Concept
+2631,C1961102,ALL,ORPHANET,Neoplastic Process
+2632,C0023449,ALL,PDQ,Neoplastic Process
+2633,C0105421,ALL,NCI,"Amino Acid, Peptide, or Protein"
+2634,C0105421,ALL,NCI,Enzyme
+2635,C1552816,all,HL7V3.0,Intellectual Product
+2636,C1552837,all,HL7V3.0,Idea or Concept
+2637,C0010346,Crohn's,CHV,Disease or Syndrome
+2638,C0010346,Crohn's,MDR,Disease or Syndrome
+2639,C4721672,NC,NCI,"Amino Acid, Peptide, or Protein"
+2640,C4721672,NC,NCI,Biologically Active Substance
+2641,C0028407,NC,LNC,Geographic Area
+2642,C0265987,NC,OMIM,Neoplastic Process
+2643,C0009324,uc,BI,Disease or Syndrome
+2644,C5552707,UC,NCI,Geographic Area
+2645,C0341332,Indeterminate colitis,RCD,Disease or Syndrome
+2646,C0341332,Indeterminate colitis,ICD10CM,Disease or Syndrome
+2647,C0341332,Indeterminate colitis,SNOMEDCT_US,Disease or Syndrome
+2648,C0341332,indeterminate colitis,MEDCIN,Disease or Syndrome
+2649,C0154830,proliferative diabetic retinopathy (PDR),CHV,Disease or Syndrome
+2650,C0154830,Proliferative diabetic retinopathy,RCD,Disease or Syndrome
+2651,C0154830,Proliferative diabetic retinopathy,SNMI,Disease or Syndrome
+2652,C0154830,Proliferative diabetic retinopathy,MTH,Disease or Syndrome
+2653,C0154830,proliferative diabetic retinopathy,BI,Disease or Syndrome
+2654,C0154830,Proliferative Diabetic Retinopathy,NCI,Disease or Syndrome
+2655,C0154830,proliferative diabetic retinopathy,MEDCIN,Disease or Syndrome
+2656,C0154830,Proliferative diabetic retinopathy,MDR,Disease or Syndrome
+2657,C0154830,Proliferative diabetic retinopathy,SNOMEDCT_US,Disease or Syndrome
+2658,C0154830,Proliferative diabetic retinopathy,ICD9CM,Disease or Syndrome
+2659,C0026470,monoclonal gammopathy of undetermined significance,MEDCIN,Neoplastic Process
+2660,C0026470,Monoclonal Gammopathy of Undetermined Significance,MSH,Neoplastic Process
+2661,C0026470,Monoclonal Gammopathy of Undetermined Significance,MTH,Neoplastic Process
+2662,C0026470,Monoclonal gammopathy of undetermined significance,SNOMEDCT_US,Neoplastic Process
+2663,C0026470,monoclonal gammopathy of undetermined significance,PDQ,Neoplastic Process
+2664,C0026470,Monoclonal Gammopathy of Undetermined Significance,NCI,Neoplastic Process
+2666,C0220633,Uveal melanoma,MSH,Neoplastic Process
+2667,C0220633,uveal melanoma,CHV,Neoplastic Process
+2668,C0220633,Uveal melanoma,OMIM,Neoplastic Process
+2669,C0220633,Uveal melanoma,SNOMEDCT_VET,Neoplastic Process
+2670,C0220633,Uveal melanoma,MDR,Neoplastic Process
+2672,C0220633,Uveal melanoma,HPO,Neoplastic Process
+2673,C0220633,Uveal melanoma,ORPHANET,Neoplastic Process
+2674,C0220633,Uveal melanoma,MTH,Neoplastic Process
+2675,C0220633,uveal melanoma,PDQ,Neoplastic Process
+2676,C0220633,Uveal Melanoma,NCI,Neoplastic Process
+2677,C0263353,Prurigo Nodularis,COSTAR,Disease or Syndrome
+2678,C0263353,Prurigo nodularis,ICD10,Disease or Syndrome
+2679,C0263353,Prurigo nodularis,ICD10AM,Disease or Syndrome
+2680,C0263353,Prurigo nodularis,RCD,Disease or Syndrome
+2681,C0263353,Prurigo nodularis,SNM,Disease or Syndrome
+2682,C0263353,Prurigo nodularis,SNMI,Disease or Syndrome
+2683,C0263353,prurigo nodularis,MEDCIN,Disease or Syndrome
+2684,C0263353,PRURIGO NODULARIS,CCPSS,Disease or Syndrome
+2685,C0263353,Prurigo nodularis,ICD10CM,Disease or Syndrome
+2686,C0263353,prurigo nodularis,CHV,Disease or Syndrome
+2687,C0263353,Prurigo nodularis,MDR,Disease or Syndrome
+2688,C0263353,Prurigo nodularis,SNOMEDCT_US,Disease or Syndrome
+2689,C0263353,Prurigo nodularis,MTH,Disease or Syndrome
+2690,C0263353,Prurigo nodularis,MTHICD9,Disease or Syndrome
+2691,C0338451,FTD,OMIM,Disease or Syndrome
+2692,C0338451,FTD,ORPHANET,Disease or Syndrome
+2695,C1865926,ICCA,OMIM,Disease or Syndrome
+2696,C1826724,ICCA,HGNC,Gene or Genome
+2697,C4721893,NHD,OMIM,Disease or Syndrome
+2698,C0432214,NHD,OMIM,Disease or Syndrome
+2699,C1857316,NHD,ORPHANET,Disease or Syndrome
+2700,C0205183,Benign,RCD,Qualitative Concept
+2701,C0205183,Benign,SNMI,Qualitative Concept
+2702,C0205183,BENIGN,CCPSS,Qualitative Concept
+2703,C0205183,benign,CHV,Qualitative Concept
+2704,C0205183,Benign,LNC,Qualitative Concept
+2705,C0205183,Benign,SNOMEDCT_US,Qualitative Concept
+2706,C0205183,Benign,MTH,Qualitative Concept
+2707,C0205183,Benign,NCI,Qualitative Concept
+2708,C4023106,Obstructive azoospermia,HPO,Disease or Syndrome
+2709,C4023106,Obstructive azoospermia,OMIM,Disease or Syndrome
+2710,C0003509,Aortitis,LCH,Disease or Syndrome
+2711,C0003509,Aortitis,MSH,Disease or Syndrome
+2712,C0003509,Aortitis,RCD,Disease or Syndrome
+2713,C0003509,Aortitis,SNM,Disease or Syndrome
+2714,C0003509,Aortitis,OMIM,Disease or Syndrome
+2715,C0003509,aortitis,MEDCIN,Disease or Syndrome
+2716,C0003509,aortitis,CHV,Disease or Syndrome
+2717,C0003509,Aortitis,NCI,Disease or Syndrome
+2718,C0003509,Aortitis,LCH_NW,Disease or Syndrome
+2719,C0003509,Aortitis,MDR,Disease or Syndrome
+2721,C0003509,Aortitis,SNOMEDCT_US,Disease or Syndrome
+2722,C0003509,aortitis,ICPC2ICD10ENG,Disease or Syndrome
+2740,C0021390,IBD,AOD,Disease or Syndrome
+2741,C0021390,IBD,CCPSS,Disease or Syndrome
+2742,C0021390,IBD,CSP,Disease or Syndrome
+2743,C0021390,IBD,DXP,Disease or Syndrome
+2744,C0022104,IBD,CHV,Disease or Syndrome
+2745,C0021390,IBD,MDR,Disease or Syndrome
+2746,C5780974,IBD,NCI,Gene or Genome
+2747,C0267171,Idiopathic gastroparesis,MDR,Disease or Syndrome
+2748,C0267171,Idiopathic gastroparesis,ORPHANET,Disease or Syndrome
+2749,C0267171,Idiopathic gastroparesis,SNOMEDCT_US,Disease or Syndrome
+2750,C0026691,Kawasaki Disease,AIR,Disease or Syndrome
+2751,C0026691,KAWASAKI DISEASE,CCPSS,Disease or Syndrome
+2752,C0026691,KAWASAKI DISEASE,DXP,Disease or Syndrome
+2753,C0026691,Kawasaki disease,AIR,Disease or Syndrome
+2754,C0026691,Kawasaki disease,RCD,Disease or Syndrome
+2755,C0026691,Kawasaki disease,MEDCIN,Disease or Syndrome
+2756,C0026691,KAWASAKI DISEASE,OMIM,Disease or Syndrome
+2757,C0026691,kawasaki disease,CHV,Disease or Syndrome
+2758,C0026691,Kawasaki Disease,MEDLINEPLUS,Disease or Syndrome
+2759,C0026691,Kawasaki Disease,MSH,Disease or Syndrome
+2760,C0026691,Kawasaki disease,SNOMEDCT_US,Disease or Syndrome
+2761,C0026691,Kawasaki disease,ORPHANET,Disease or Syndrome
+2762,C0026691,Kawasaki Disease,NCI,Disease or Syndrome
+2763,C0026691,Kawasaki disease,CSP,Disease or Syndrome
+2764,C0026691,Kawasaki disease,MTHICD9,Disease or Syndrome
+2765,C0026691,Kawasaki disease,ICPC2P,Disease or Syndrome
+2766,C3844738,NR,NCI,Finding
+2767,C1705928,MCR,NCI,Gene or Genome
+2768,C1417835,MCR,OMIM,Gene or Genome
+2769,C4049612,mCR,NCI,Finding
+2770,C3254418,MCR,NCI,"Amino Acid, Peptide, or Protein"
+2771,C3254418,MCR,NCI,Receptor
+2772,C3272447,CR,NCI,Gene or Genome
+2773,C1420667,CR,HGNC,Gene or Genome
+2774,C1824670,CR,HGNC,Gene or Genome
+2775,C0201975,Cr,NCI,Laboratory Procedure
+2776,C3539604,CR,NCI,Gene or Genome
+2777,C3711669,CR,NCI,"Amino Acid, Peptide, or Protein"
+2778,C3711669,CR,NCI,Biologically Active Substance
+2779,C4084730,CR,NCI,Gene or Genome
+2780,C4553336,CR,NCI,Finding
+2781,C4553337,CR,NCI,Intellectual Product
+2782,C4724068,CR,NCI,Gene or Genome
+2783,C5203024,CR,NCI,Finding
+2784,C5203035,CR,NCI,Finding
+2785,C5203023,CR,NCI,Finding
+2786,C5203022,CR,NCI,Finding
+2787,C5575821,CR,NCI,Classification
+2788,C1422578,CR,HGNC,Gene or Genome
+2789,C0439113,M,RCD,Intellectual Product
+2790,C1706457,m,SNOMEDCT_US,Intellectual Product
+2791,C0475209,m,RCD,Quantitative Concept
+2792,C0221134,M,LNC,"Amino Acid, Peptide, or Protein"
+2793,C0221134,M,LNC,Immunologic Factor
+2794,C0475209,m,CHV,Quantitative Concept
+2795,C0025646,M,DRUGBANK,"Amino Acid, Peptide, or Protein"
+2796,C0025646,M,DRUGBANK,Pharmacologic Substance
+2797,C0025646,M,DRUGBANK,Biologically Active Substance
+2798,C0439113,M,SNOMEDCT_US,Intellectual Product
+2799,C0475209,m,SNOMEDCT_US,Quantitative Concept
+2802,C0086582,M,LNC,Organism Attribute
+2803,C0227102,M,HL7V3.0,"Body Part, Organ, or Organ Component"
+2804,C0439119,T,RCD,Intellectual Product
+2805,C0439143,t,RCD,Intellectual Product
+2806,C1420562,T,OMIM,Gene or Genome
+2807,C1420562,T,NCI,Gene or Genome
+2808,C2827459,T,NCI,Gene or Genome
+2809,C1420562,T,HGNC,Gene or Genome
+2810,C0439119,T,SNOMEDCT_US,Intellectual Product
+2811,C0439143,t,SNOMEDCT_US,Intellectual Product
+2812,C1552647,T,HL7V3.0,Quantitative Concept
+2813,C0227099,T,HL7V3.0,"Body Part, Organ, or Organ Component"
+2814,C0439225,ns,RCD,Quantitative Concept
+2815,C1539588,NS,OMIM,Gene or Genome
+2816,C0439225,ns,CHV,Quantitative Concept
+2817,C1423506,NS,HGNC,Gene or Genome
+2818,C1539588,NS,HGNC,Gene or Genome
+2819,C5574950,NS,OMIM,Disease or Syndrome
+2820,C1705982,NS,NCI,Gene or Genome
+2821,C1112705,NS,NCI,Disease or Syndrome
+2822,C0439225,ns,SNOMEDCT_US,Quantitative Concept
+2823,C5575296,NS,NCI,Gene or Genome
+2824,C5574950,NS,ORPHANET,Disease or Syndrome
+2825,C5780781,NS,NCI,Gene or Genome
+2826,C1552157,Ns,HL7V3.0,"Body Part, Organ, or Organ Component"
+2827,C0011849,dm,BI,Disease or Syndrome
+2828,C0439199,dm,RCD,Quantitative Concept
+2829,C3250443,DM,OMIM,Disease or Syndrome
+2830,C0011849,DM,MEDCIN,Disease or Syndrome
+2831,C0011849,DM,MEDLINEPLUS,Disease or Syndrome
+2832,C0011816,DM,DRUGBANK,Organic Chemical
+2833,C0011816,DM,DRUGBANK,Pharmacologic Substance
+2834,C1414085,DM,HGNC,Gene or Genome
+2835,C0439199,dm,SNOMEDCT_US,Quantitative Concept
+2836,C0011777,DM,PDQ,Organic Chemical
+2837,C0011777,DM,PDQ,Pharmacologic Substance
+2838,C0475210,cm,RCD,Quantitative Concept
+2839,C0475210,cm,CHV,Quantitative Concept
+2840,C2952139,CM,FMA,Body Location or Region
+2841,C2698559,CM,HL7V3.0,Daily or Recreational Activity
+2842,C1136033,CM,PDQ,Neoplastic Process
+2843,C0475210,cm,SNOMEDCT_US,Quantitative Concept
+2844,C1412842,BT,HGNC,Gene or Genome
+2845,C5442831,BT,DRUGBANK,"Amino Acid, Peptide, or Protein"
+2846,C5442831,BT,DRUGBANK,Pharmacologic Substance
+2847,C5442831,BT,DRUGBANK,Immunologic Factor
+2848,C5780764,BT,NCI,Gene or Genome
+2849,C4308231,BT,NCI,"Amino Acid, Peptide, or Protein"
+2850,C4308231,BT,NCI,Biologically Active Substance
+2851,C0279417,BT,PDQ,Therapeutic or Preventive Procedure
+2852,C0017921,AMD,OMIM,Disease or Syndrome
+2853,C0242383,AMD,MEDLINEPLUS,Disease or Syndrome
+2855,C3539530,AMD,NCI,Gene or Genome
+2856,C1412379,AMD,OMIM,Gene or Genome
+2857,C0025741,AMD,DRUGBANK,"Amino Acid, Peptide, or Protein"
+2858,C0025741,AMD,DRUGBANK,Pharmacologic Substance
+2859,C1412381,AMD,HGNC,Gene or Genome
+2860,C0036341,Schizophrenia,ICD10,Mental or Behavioral Dysfunction
+2861,C0036341,Schizophrenia,ICD10AM,Mental or Behavioral Dysfunction
+2862,C0036341,Schizophrenia,ICPC2P,Mental or Behavioral Dysfunction
+2863,C0036341,Schizophrenia,LCH,Mental or Behavioral Dysfunction
+2864,C0036341,Schizophrenia,MSH,Mental or Behavioral Dysfunction
+2865,C0036341,Schizophrenia,RCD,Mental or Behavioral Dysfunction
+2866,C0036341,Schizophrenia,SNM,Mental or Behavioral Dysfunction
+2867,C0036341,SCHIZOPHRENIA,CCPSS,Mental or Behavioral Dysfunction
+2868,C0036341,SCHIZOPHRENIA,COSTAR,Mental or Behavioral Dysfunction
+2869,C0036341,SCHIZOPHRENIA,CST,Mental or Behavioral Dysfunction
+2870,C0036341,SCHIZOPHRENIA,DXP,Mental or Behavioral Dysfunction
+2871,C0036341,SCHIZOPHRENIA,QMR,Mental or Behavioral Dysfunction
+2872,C0036341,schizophrenia,AOD,Mental or Behavioral Dysfunction
+2873,C0036341,schizophrenia,BI,Mental or Behavioral Dysfunction
+2874,C0036341,schizophrenia,CSP,Mental or Behavioral Dysfunction
+2875,C0036341,SCHIZOPHRENIA,OMIM,Mental or Behavioral Dysfunction
+2876,C0036341,Schizophrenia,OMIM,Mental or Behavioral Dysfunction
+2877,C0036341,Schizophrenia,MTH,Mental or Behavioral Dysfunction
+2878,C0036341,schizophrenia,MEDCIN,Mental or Behavioral Dysfunction
+2879,C0036341,Schizophrenia,ICD10CM,Mental or Behavioral Dysfunction
+2880,C0036341,Schizophrenia,LNC,Mental or Behavioral Dysfunction
+2881,C0036341,schizophrenia,CHV,Mental or Behavioral Dysfunction
+2882,C0036341,Schizophrenia,MEDLINEPLUS,Mental or Behavioral Dysfunction
+2884,C0036341,Schizophrenia,LCH_NW,Mental or Behavioral Dysfunction
+2885,C0036341,Schizophrenia,HPO,Mental or Behavioral Dysfunction
+2886,C0036341,Schizophrenia,MDR,Mental or Behavioral Dysfunction
+2887,C0036341,Schizophrenia,DSM-5,Mental or Behavioral Dysfunction
+2891,C0036341,Schizophrenia,SNOMEDCT_US,Mental or Behavioral Dysfunction
+2893,C0036341,Schizophrenia,ICPC2EENG,Mental or Behavioral Dysfunction
+2894,C0036341,schizophrenia,ICPC2ICD10ENG,Mental or Behavioral Dysfunction
+2895,C0036341,Schizophrenia,PSY,Mental or Behavioral Dysfunction
+2896,C0036341,Schizophrenia,NCI,Mental or Behavioral Dysfunction
+2897,C0036341,schizophrenia,ICPC2P,Mental or Behavioral Dysfunction
+2898,C0025500,Mesothelioma,ICD10,Neoplastic Process
+2899,C0025500,Mesothelioma,ICD10AM,Neoplastic Process
+2900,C0025500,Mesothelioma,ICPC2P,Neoplastic Process
+2901,C0025500,Mesothelioma,LCH,Neoplastic Process
+2902,C0025500,Mesothelioma,MDR,Neoplastic Process
+2903,C0025500,Mesothelioma,MSH,Neoplastic Process
+2904,C0025500,Mesothelioma,RCD,Neoplastic Process
+2905,C0025500,Mesothelioma,SNM,Neoplastic Process
+2906,C0025500,MESOTHELIOMA,CCPSS,Neoplastic Process
+2907,C0025500,MESOTHELIOMA,DXP,Neoplastic Process
+2908,C0025500,mesothelioma,AOD,Neoplastic Process
+2909,C0025500,mesothelioma,CSP,Neoplastic Process
+2910,C0025500,Mesothelioma,ICD10CM,Neoplastic Process
+2911,C0025500,mesothelioma,CHV,Neoplastic Process
+2912,C0025500,Mesothelioma,MEDLINEPLUS,Neoplastic Process
+2913,C0025500,Mesothelioma,SNOMEDCT_VET,Neoplastic Process
+2914,C0345967,Mesothelioma,SNOMEDCT_VET,Neoplastic Process
+2915,C0345967,mesothelioma,MEDCIN,Neoplastic Process
+2916,C0025500,Mesothelioma,LCH_NW,Neoplastic Process
+2918,C0025500,Mesothelioma,OMIM,Neoplastic Process
+2919,C0025500,Mesothelioma,CCSR_ICD10CM,Neoplastic Process
+2920,C3714739,Mesothelioma,NCI,Neoplastic Process
+2921,C0025500,Mesothelioma,PDQ,Neoplastic Process
+2922,C0025500,Mesothelioma,MTH,Neoplastic Process
+2923,C0025500,mesothelioma,ICPC2ICD10ENG,Neoplastic Process
+2924,C0025500,mesothelioma,ICPC2P,Neoplastic Process
+2925,C0345967,Malignant Mesotheliomas,MSH,Neoplastic Process
+2926,C0022660,Acute Kidney Injury,NCI,Disease or Syndrome
+2927,C2609414,Acute kidney injury,MTH,Injury or Poisoning
+2928,C2609414,Acute Kidney Injury,MSH,Injury or Poisoning
+2929,C2609414,Acute kidney injury,MDR,Injury or Poisoning
+2930,C2609414,Acute kidney injury,HPO,Injury or Poisoning
+2932,C2609414,Acute kidney injury,LNC,Injury or Poisoning
+2933,C0022660,Acute kidney injury,SNOMEDCT_VET,Disease or Syndrome
+2934,C2609414,Acute kidney injury,MEDCIN,Injury or Poisoning
+2935,C0022660,Acute kidney injury,SNOMEDCT_US,Disease or Syndrome
+2936,C1319315,colorectal adenocarcinoma,CHV,Neoplastic Process
+2937,C1319315,Colorectal adenocarcinoma,MDR,Neoplastic Process
+2939,C1319315,Colorectal adenocarcinoma,OMIM,Neoplastic Process
+2940,C1319315,Colorectal Adenocarcinoma,NCI,Neoplastic Process
+2941,C0026948,Mycosis Fungoides,MSH,Neoplastic Process
+2942,C0026948,Mycosis Fungoides,MTH,Neoplastic Process
+2943,C0026948,Mycosis Fungoides,SNM,Neoplastic Process
+2944,C0026948,MYCOSIS FUNGOIDES,CCPSS,Neoplastic Process
+2945,C0026948,MYCOSIS FUNGOIDES,COSTAR,Neoplastic Process
+2946,C0026948,MYCOSIS FUNGOIDES,DXP,Neoplastic Process
+2947,C0026948,MYCOSIS FUNGOIDES,WHO,Neoplastic Process
+2948,C0026948,Mycosis fungoides,ICD10,Neoplastic Process
+2949,C0026948,Mycosis fungoides,ICD10AM,Neoplastic Process
+2951,C0026948,Mycosis fungoides,LCH,Neoplastic Process
+2952,C0026948,Mycosis fungoides,RCD,Neoplastic Process
+2953,C0026948,Mycosis fungoides,RCDSY,Neoplastic Process
+2954,C0026948,Mycosis fungoides,SNM,Neoplastic Process
+2955,C0026948,Mycosis fungoides,SNMI,Neoplastic Process
+2956,C0026948,MYCOSIS FUNGOIDES,OMIM,Neoplastic Process
+2957,C0026948,Mycosis fungoides,SNOMEDCT_US,Neoplastic Process
+2958,C0026948,mycosis fungoides,MEDCIN,Neoplastic Process
+2959,C0026948,Mycosis fungoides,ICD10CM,Neoplastic Process
+2960,C0026948,mycosis fungoides,CHV,Neoplastic Process
+2961,C0026948,Mycosis fungoides,LCH_NW,Neoplastic Process
+2963,C0026948,Mycosis fungoides,MDR,Neoplastic Process
+2964,C0026948,mycosis fungoides,PDQ,Neoplastic Process
+2965,C0026948,Mycosis fungoides,ICPC2ICD10ENG,Neoplastic Process
+2966,C0026948,Mycosis Fungoides,NCI,Neoplastic Process
+2967,C0026948,Mycosis fungoides,ICD9CM,Neoplastic Process
+2968,C0036920,Sezary Syndrome,COSTAR,Neoplastic Process
+2969,C0036920,Sezary Syndrome,MSH,Neoplastic Process
+2970,C0036920,Sezary Syndrome,MTH,Neoplastic Process
+2971,C0036920,SEZARY SYNDROME,DXP,Neoplastic Process
+2972,C0036920,Sezary syndrome,CSP,Neoplastic Process
+2973,C0036920,Sezary syndrome,MEDCIN,Neoplastic Process
+2974,C0036920,sezary syndrome,CHV,Neoplastic Process
+2975,C0036920,Sézary Syndrome,NCI,Neoplastic Process
+2976,C0036920,Sezary syndrome,MDR,Neoplastic Process
+2977,C0036920,Sézary syndrome,ORPHANET,Neoplastic Process
+2978,C0036920,Sezary syndrome,PDQ,Neoplastic Process
+2979,C0036920,Sezary Syndrome,NCI,Neoplastic Process
+2980,C0036920,Sezary syndrome,SNOMEDCT_US,Neoplastic Process
+2982,C0750952,Biliary Tract Cancer,MTH,Neoplastic Process
+2983,C0750952,biliary tract cancer,CHV,Neoplastic Process
+2984,C0750952,biliary tract cancer,PDQ,Neoplastic Process
+2985,C0750952,Biliary Tract Cancer,MSH,Neoplastic Process
+2986,C0750952,biliary tract cancer,CSP,Neoplastic Process
+2987,C0006706,Calcium Oxalate,MSH,Organic Chemical
+2988,C0006706,Calcium oxalate,LCH,Organic Chemical
+2989,C0006706,Calcium oxalate,RCD,Organic Chemical
+2990,C0006706,Calcium oxalate,SNMI,Organic Chemical
+2991,C0006706,Calcium oxalate,LNC,Organic Chemical
+2992,C0006706,calcium oxalate,CHV,Organic Chemical
+2994,C0006706,Calcium oxalate,LCH_NW,Organic Chemical
+2995,C0006706,Calcium Oxalate,CPM,Organic Chemical
+2996,C0006706,Calcium oxalate,SNOMEDCT_US,Organic Chemical
+2997,C0006706,calcium oxalate,MTH,Organic Chemical
+2998,C0006706,calcium oxalate,RXNORM,Organic Chemical
+3000,C0079141,CD,AOD,Manufactured Object
+3001,C0332140,CD,SNMI,Finding
+3002,C0018553,CD,OMIM,Neoplastic Process
+3003,C0700300,cd,RCD,Quantitative Concept
+3004,C2348923,CD,NCI,Gene or Genome
+3005,C2698415,CD,NCI,Gene or Genome
+3006,C0079141,CD,CHV,Manufactured Object
+3007,C4552032,CD,HL7V3.0,Temporal Concept
+3008,C1705969,CD,NCI,Gene or Genome
+3009,C1332802,CD,HGNC,Gene or Genome
+3010,C1826449,CD,HGNC,Gene or Genome
+3011,C0034283,CD,DRUGBANK,Organic Chemical
+3012,C0034283,CD,DRUGBANK,Pharmacologic Substance
+3013,C0332140,CD,SNOMEDCT_US,Finding
+3014,C0700300,cd,SNOMEDCT_US,Quantitative Concept
+3015,C0056447,CD,PDQ,Therapeutic or Preventive Procedure
+3016,C0206062,ILD,CSP,Disease or Syndrome
+3017,C0206062,ILD,ORPHANET,Disease or Syndrome
+3018,C0940500,normal colon,CHV,Finding
+3019,C0940500,Normal colon,MTHMST,Finding
+3020,C0264005,EOSINOPHILIC FASCIITIS,QMR,Disease or Syndrome
+3021,C0264005,Eosinophilic fasciitis,MDR,Disease or Syndrome
+3022,C0264005,Eosinophilic fasciitis,RCD,Disease or Syndrome
+3023,C0264005,Eosinophilic fasciitis,SNMI,Disease or Syndrome
+3024,C0264005,EOSINOPHILIC FASCIITIS,OMIM,Disease or Syndrome
+3025,C0264005,eosinophilic fasciitis,MEDCIN,Disease or Syndrome
+3026,C0264005,eosinophilic fasciitis,CHV,Disease or Syndrome
+3027,C0264005,Eosinophilic Fasciitis,MSH,Disease or Syndrome
+3028,C0264005,Eosinophilic Fasciitis,NCI,Disease or Syndrome
+3029,C0264005,Eosinophilic fasciitis,HPO,Disease or Syndrome
+3031,C0264005,Eosinophilic Fasciitis,MTH,Disease or Syndrome
+3032,C0264005,Eosinophilic fasciitis,SNOMEDCT_US,Disease or Syndrome
+3033,C0264005,Eosinophilic fasciitis,ORPHANET,Disease or Syndrome
+3034,C0264005,Eosinophilic fasciitis,MTHICD9,Disease or Syndrome
+3035,C1705574,HS,NCI,Gene or Genome
+3036,C2674218,HS,OMIM,Disease or Syndrome
+3037,C1367673,HS,HGNC,Gene or Genome
+3038,C1997362,HS,ORPHANET,Disease or Syndrome
+3039,C1275563,HS,HL7V3.0,Temporal Concept
+3040,C1552153,Hs,HL7V3.0,"Body Part, Organ, or Organ Component"
+3041,C1292776,Secondary acute myeloid leukemia,ORPHANET,Neoplastic Process
+3042,C0280449,Secondary Acute Myeloid Leukemia,MTH,Neoplastic Process
+3043,C0280449,secondary acute myeloid leukemia,PDQ,Neoplastic Process
+3044,C0280449,Secondary Acute Myeloid Leukemia,NCI,Neoplastic Process
+3057,C2363774,Neutrophilic asthma,MDR,Disease or Syndrome
+3058,C2698684,MDS,NCI,Gene or Genome
+3059,C1879299,MDS,LNC,Intellectual Product
+3060,C3463824,MDS,OMIM,Neoplastic Process
+3061,C3463824,MDS,MEDLINEPLUS,Neoplastic Process
+3063,C3539662,MDS,NCI,Gene or Genome
+3064,C3273937,MDS,NCI,Gene or Genome
+3065,C0265219,MDS,OMIM,Disease or Syndrome
+3066,C0265219,MDS,MDR,Disease or Syndrome
+3067,C3273357,MDS,NCI,Gene or Genome
+3068,C3463824,MDS,PDQ,Neoplastic Process
+3069,C1418245,MDS,HGNC,Gene or Genome
+3089,C0023646,Lichen Planus,MSH,Disease or Syndrome
+3090,C0023646,LICHEN PLANUS,CCPSS,Disease or Syndrome
+3091,C0023646,LICHEN PLANUS,COSTAR,Disease or Syndrome
+3092,C0023646,LICHEN PLANUS,DXP,Disease or Syndrome
+3094,C0023646,LICHEN PLANUS,WHO,Disease or Syndrome
+3095,C0023646,Lichen planus,ICD10,Disease or Syndrome
+3096,C0023646,Lichen planus,ICD10AM,Disease or Syndrome
+3097,C0023646,Lichen planus,ICPC2P,Disease or Syndrome
+3098,C0023646,Lichen planus,LCH,Disease or Syndrome
+3099,C0023646,Lichen planus,MDR,Disease or Syndrome
+3100,C0023646,Lichen planus,RCD,Disease or Syndrome
+3101,C0023646,Lichen planus,SNM,Disease or Syndrome
+3102,C0023646,Lichen planus,SNMI,Disease or Syndrome
+3103,C0023646,lichen planus,AOD,Disease or Syndrome
+3104,C0023646,lichen planus,CSP,Disease or Syndrome
+3105,C0023646,Lichen Planus,MTH,Disease or Syndrome
+3106,C0023646,lichen planus,MEDCIN,Disease or Syndrome
+3107,C0023646,Lichen planus,ICD10CM,Disease or Syndrome
+3108,C0023646,lichen planus,CHV,Disease or Syndrome
+3109,C0023646,Lichen planus,LCH_NW,Disease or Syndrome
+3111,C0023646,Lichen planus,SNOMEDCT_US,Disease or Syndrome
+3112,C0023646,Lichen Planus,NCI,Disease or Syndrome
+3113,C0023646,Lichen planus,ICD9CM,Disease or Syndrome
+3114,C0023646,lichen planus,ICPC2P,Disease or Syndrome
+3123,C0027831,Neurofibromatosis 1,MSH,Neoplastic Process
+3124,C0027831,Neurofibromatosis 1,MTH,Neoplastic Process
+3125,C0027831,Neurofibromatosis 1,NCI,Neoplastic Process
+3126,C0027831,neurofibromatosis 1,CHV,Neoplastic Process
+3127,C0027831,Neurofibromatosis 1,SNOMEDCT_US,Neoplastic Process
+3128,C1705629,RCC,NCI,Gene or Genome
+3129,C0007134,RCC,CSP,Neoplastic Process
+3130,C0279702,RCC,OMIM,Neoplastic Process
+3131,C0007134,rcc,CHV,Neoplastic Process
+3132,C0007134,RCC,PDQ,Neoplastic Process
+3133,C1366475,RCC,HGNC,Gene or Genome
+3134,C0007134,RCC,ORPHANET,Neoplastic Process
+3135,C0250029,RCC,NCI,"Amino Acid, Peptide, or Protein"
+3136,C0250029,RCC,NCI,Biologically Active Substance
+3159,C1832078,LGG,PDQ,Pharmacologic Substance
+3160,C0721277,LGG,MMSL,Organic Chemical
+3161,C0721277,LGG,MMSL,Pharmacologic Substance
+3162,C0272167,Reticular dysgenesis,RCD,Disease or Syndrome
+3163,C0272167,Reticular dysgenesis,SNMI,Disease or Syndrome
+3164,C0272167,reticular dysgenesis,CSP,Disease or Syndrome
+3165,C0272167,RETICULAR DYSGENESIS,OMIM,Disease or Syndrome
+3166,C0272167,Reticular dysgenesis,MSH,Disease or Syndrome
+3167,C0272167,reticular dysgenesis,MEDCIN,Disease or Syndrome
+3169,C0272167,Reticular dysgenesis,SNOMEDCT_US,Disease or Syndrome
+3170,C0272167,Reticular dysgenesis,ORPHANET,Disease or Syndrome
+3171,C0272167,Reticular Dysgenesis,NCI,Disease or Syndrome
+3173,C0003486,Aortic Aneurysm,MSH,Disease or Syndrome
+3174,C0003486,Aortic Aneurysm,MTH,Disease or Syndrome
+3175,C0003486,AORTIC ANEURYSM,COSTAR,Disease or Syndrome
+3176,C0003486,Aortic aneurysm,MDR,Disease or Syndrome
+3177,C0003486,Aortic aneurysm,RCD,Disease or Syndrome
+3178,C0003486,aortic aneurysm,MEDCIN,Disease or Syndrome
+3179,C0003486,aortic aneurysm,CHV,Disease or Syndrome
+3180,C0003486,Aortic aneurysm,OMIM,Disease or Syndrome
+3181,C0003486,Aortic Aneurysm,MEDLINEPLUS,Disease or Syndrome
+3182,C0003486,Aortic aneurysm,HPO,Disease or Syndrome
+3184,C0003486,Aortic aneurysm,SNOMEDCT_US,Disease or Syndrome
+3185,C0003486,Aortic Aneurysm,NCI,Disease or Syndrome
+3186,C0003486,aortic aneurysm,CSP,Disease or Syndrome
+3187,C0340629,Aortic Aneurysm,MTHICD9,Disease or Syndrome
+3188,C0003486,aortic aneurysm,ICPC2P,Disease or Syndrome
+3189,C0032981,Third Trimester,MSH,Temporal Concept
+3190,C0032981,third trimester,AOD,Temporal Concept
+3191,C0032981,third trimester,MEDCIN,Temporal Concept
+3192,C0032981,Third trimester,RCD,Temporal Concept
+3193,C0032981,third trimester,CHV,Temporal Concept
+3194,C0032981,Third Trimester,NCI,Temporal Concept
+3195,C0032981,Third trimester,SNOMEDCT_US,Temporal Concept
+3196,C0079744,DLBCL,ORPHANET,Neoplastic Process
+3197,C0276353,influenza B,MEDCIN,Disease or Syndrome
+3198,C4522216,Influenza B,LNC,Laboratory or Test Result
+3199,C0276353,influenza B,ICD10CM,Disease or Syndrome
+3236,C4083212,Androgenetic alopecia,RCD,Disease or Syndrome
+3237,C0162311,Androgenetic Alopecia,MTH,Disease or Syndrome
+3238,C0162311,Androgenetic alopecia,MDR,Disease or Syndrome
+3239,C4083212,androgenetic alopecia,CHV,Disease or Syndrome
+3240,C0162311,ANDROGENETIC ALOPECIA,OMIM,Disease or Syndrome
+3242,C0162311,Androgenetic Alopecia,MSH,Disease or Syndrome
+3243,C4083212,Androgenetic alopecia,SNOMEDCT_US,Disease or Syndrome
+3244,C0019196,HCV,CST,Disease or Syndrome
+3245,C0220847,HCV,CHV,Virus
+3246,C0019196,HCV,MEDLINEPLUS,Disease or Syndrome
+3247,C0220847,HCV,CSP,Virus
+3284,C0017168,Gastroesophageal reflux disease,MTH,Disease or Syndrome
+3285,C0017168,Gastroesophageal reflux disease,SNMI,Disease or Syndrome
+3286,C0017168,Gastroesophageal reflux disease,SNOMEDCT_US,Disease or Syndrome
+3287,C0017168,Gastroesophageal reflux disease,OMIM,Disease or Syndrome
+3288,C0017168,GASTROESOPHAGEAL REFLUX DISEASE,CCPSS,Disease or Syndrome
+3289,C0017168,gastroesophageal reflux disease,CHV,Disease or Syndrome
+3290,C0017168,Gastroesophageal reflux disease,MEDLINEPLUS,Disease or Syndrome
+3291,C0017168,GASTROESOPHAGEAL REFLUX DISEASE,OMIM,Disease or Syndrome
+3292,C0017168,Gastroesophageal reflux disease,HPO,Disease or Syndrome
+3293,C0017168,Gastroesophageal reflux disease,MDR,Disease or Syndrome
+3294,C0017168,Gastroesophageal reflux disease,NANDA-I,Disease or Syndrome
+3295,C0017168,Gastroesophageal Reflux Disease,MSH,Disease or Syndrome
+3296,C0017168,gastroesophageal reflux disease,PDQ,Disease or Syndrome
+3297,C0017168,Gastroesophageal Reflux Disease,NCI,Disease or Syndrome
+3298,C0341106,Eosinophilic esophagitis,RCDAE,Disease or Syndrome
+3299,C0341106,Eosinophilic esophagitis,MTH,Disease or Syndrome
+3300,C0341106,eosinophilic esophagitis,MEDCIN,Disease or Syndrome
+3301,C0341106,Eosinophilic esophagitis,ICD9CM,Disease or Syndrome
+3302,C0341106,Eosinophilic esophagitis,ICD10CM,Disease or Syndrome
+3303,C0341106,Eosinophilic Esophagitis,MSH,Disease or Syndrome
+3304,C0341106,eosinophilic esophagitis,CHV,Disease or Syndrome
+3305,C0341106,Eosinophilic esophagitis,MDR,Disease or Syndrome
+3306,C0341106,Eosinophilic esophagitis,OMIM,Disease or Syndrome
+3308,C0341106,Eosinophilic Esophagitis,MEDLINEPLUS,Disease or Syndrome
+3309,C0341106,Eosinophilic esophagitis,SNOMEDCT_US,Disease or Syndrome
+3310,C4703646,Eosinophilic esophagitis,HPO,Finding
+3311,C0341106,Eosinophilic Esophagitis,NCI,Disease or Syndrome
+3320,C1140680,ovarian cancer,CSP,Neoplastic Process
+3321,C1140680,OVARIAN CANCER,CCPSS,Neoplastic Process
+3322,C1140680,OVARIAN CANCER,CST,Neoplastic Process
+3323,C1140680,ovarian cancer,MEDCIN,Neoplastic Process
+3325,C1140680,OVARIAN CANCER,OMIM,Neoplastic Process
+3326,C1140680,Ovarian cancer,OMIM,Neoplastic Process
+3327,C1140680,ovarian cancer,CHV,Neoplastic Process
+3329,C1140680,Ovarian Cancer,MEDLINEPLUS,Neoplastic Process
+3330,C1140680,Ovarian cancer,LNC,Neoplastic Process
+3331,C1140680,Ovarian cancer,SNOMEDCT_US,Neoplastic Process
+3332,C1140680,Ovarian cancer,MDR,Neoplastic Process
+3333,C1140680,Ovarian Cancer,MSH,Neoplastic Process
+3335,C1140680,Ovarian cancer,HPO,Neoplastic Process
+3336,C0919267,ovarian cancer,PDQ,Neoplastic Process
+3337,C1140680,Ovarian cancer,ORPHANET,Neoplastic Process
+3338,C1140680,Ovarian Cancer,NCI,Neoplastic Process
+3339,C0027794,Neural Tube Defects,MSH,Congenital Abnormality
+3340,C0027794,Neural Tube Defects,MTH,Congenital Abnormality
+3341,C0027794,neural tube defects,CHV,Congenital Abnormality
+3342,C0027794,Neural Tube Defects,MEDLINEPLUS,Congenital Abnormality
+3343,C0027794,Neural tube defects,OMIM,Congenital Abnormality
+3344,C0027794,Neural tube defects,NANDA-I,Congenital Abnormality
+3345,C0280321,Hypopharyngeal Squamous Cell Carcinoma,MSH,Neoplastic Process
+3346,C0280321,hypopharyngeal squamous cell carcinoma,PDQ,Neoplastic Process
+3347,C0280321,Hypopharyngeal Squamous Cell Carcinoma,NCI,Neoplastic Process
+3348,C0027651,Tumour,RCD,Neoplastic Process
+3349,C0027651,tumour,CHV,Neoplastic Process
+3350,C0027651,Tumour,HPO,Neoplastic Process
+3351,C0027651,Tumour,SNOMEDCT_US,Neoplastic Process
+3352,C0027651,Tumour,MDR,Neoplastic Process
+3353,C0162836,Hidradenitis Suppurativa,COSTAR,Disease or Syndrome
+3354,C0162836,Hidradenitis Suppurativa,MSH,Disease or Syndrome
+3355,C0162836,Hidradenitis suppurativa,ICD10,Disease or Syndrome
+3356,C0162836,Hidradenitis suppurativa,ICD10AM,Disease or Syndrome
+3357,C0162836,Hidradenitis suppurativa,RCD,Disease or Syndrome
+3358,C0162836,Hidradenitis suppurativa,SNM,Disease or Syndrome
+3359,C0162836,Hidradenitis suppurativa,SNMI,Disease or Syndrome
+3360,C0162836,hidradenitis suppurativa,MEDCIN,Disease or Syndrome
+3361,C0162836,Hidradenitis Suppurativa,MTH,Disease or Syndrome
+3362,C0162836,HIDRADENITIS SUPPURATIVA,CCPSS,Disease or Syndrome
+3363,C0162836,Hidradenitis suppurativa,ICD10CM,Disease or Syndrome
+3364,C0162836,hidradenitis suppurativa,CHV,Disease or Syndrome
+3365,C0162836,Hidradenitis Suppurativa,MEDLINEPLUS,Disease or Syndrome
+3366,C0162836,Hidradenitis suppurativa,MDR,Disease or Syndrome
+3367,C0162836,Hidradenitis suppurativa,HPO,Disease or Syndrome
+3368,C0162836,Hidradenitis Suppurativa,NCI,Disease or Syndrome
+3369,C0162836,Hidradenitis suppurativa,OMIM,Disease or Syndrome
+3370,C0162836,Hidradenitis suppurativa,SNOMEDCT_US,Disease or Syndrome
+3371,C0162836,Hidradenitis suppurativa,MTHICD9,Disease or Syndrome
+3372,C2348459,EGC,DRUGBANK,Organic Chemical
+3373,C1623258,ECG,AOD,Diagnostic Procedure
+3374,C1623258,ECG,CSP,Diagnostic Procedure
+3375,C1623258,ECG,RCD,Diagnostic Procedure
+3376,C0013798,ECG,MEDCIN,Diagnostic Procedure
+3377,C0013798,ECG,CHV,Diagnostic Procedure
+3378,C0013798,ECG,LNC,Diagnostic Procedure
+3380,C1623258,ECG,MDR,Diagnostic Procedure
+3381,C1623258,ECG,MSH,Diagnostic Procedure
+3383,C1858723,PN,OMIM,Disease or Syndrome
+3384,C1547383,Pn,LNC,Intellectual Product
+3385,C0206417,pn,CHV,Body System
+3386,C1424662,PN,HGNC,Gene or Genome
+3387,C0219433,PN,NCI,"Amino Acid, Peptide, or Protein"
+3388,C0219433,PN,NCI,Biologically Active Substance
+3389,C3541307,PN,NCI,Gene or Genome
+3390,C1424662,PN,OMIM,Gene or Genome
+3391,C4049640,PN,NCI,Intellectual Product
+3392,C4049767,PN,LNC,Finding
+3393,C5443975,PN,NCI,Gene or Genome
+3394,C0751674,LAM,CSP,Neoplastic Process
+3395,C0065041,LAM,MSH,Organic Chemical
+3396,C0065041,LAM,MSH,Biologically Active Substance
+3397,C1706236,LAM,NCI,Gene or Genome
+3398,C0751674,LAM,PDQ,Neoplastic Process
+3399,C0751674,LAM,OMIM,Neoplastic Process
+3400,C1710331,LAM,NCI,Gene or Genome
+3401,C0694894,LAM,HGNC,Gene or Genome
+3402,C0694895,LAM,HGNC,Gene or Genome
+3403,C0209738,LAM,PDQ,"Nucleic Acid, Nucleoside, or Nucleotide"
+3404,C0209738,LAM,PDQ,Pharmacologic Substance
+3405,C4724444,LAM,NCI,Language
+3406,C0751674,LAM,ORPHANET,Neoplastic Process
+3407,C0017661,IGAN,OMIM,Disease or Syndrome
+3421,C0024141,Systemic Lupus Erythematosus,AIR,Disease or Syndrome
+3422,C0024141,SYSTEMIC LUPUS ERYTHEMATOSUS,COSTAR,Disease or Syndrome
+3423,C0024141,SYSTEMIC LUPUS ERYTHEMATOSUS,DXP,Disease or Syndrome
+3424,C0024141,Systemic lupus erythematosus,AIR,Disease or Syndrome
+3425,C0024141,Systemic lupus erythematosus,ICD10,Disease or Syndrome
+3426,C0024141,Systemic lupus erythematosus,ICD10AM,Disease or Syndrome
+3427,C0024141,Systemic lupus erythematosus,MDR,Disease or Syndrome
+3428,C0024141,Systemic lupus erythematosus,RCD,Disease or Syndrome
+3429,C0024141,Systemic lupus erythematosus,SNMI,Disease or Syndrome
+3430,C0024141,systemic lupus erythematosus,AOD,Disease or Syndrome
+3431,C0024141,systemic lupus erythematosus,BI,Disease or Syndrome
+3432,C0024141,systemic lupus erythematosus,CSP,Disease or Syndrome
+3433,C0024141,Systemic lupus erythematosus,OMIM,Disease or Syndrome
+3434,C0024141,SYSTEMIC LUPUS ERYTHEMATOSUS,OMIM,Disease or Syndrome
+3435,C0024141,systemic lupus erythematosus,MEDCIN,Disease or Syndrome
+3436,C0024141,systemic lupus erythematosus,CHV,Disease or Syndrome
+3437,C0024141,Systemic lupus erythematosus,MEDLINEPLUS,Disease or Syndrome
+3438,C0024141,Systemic Lupus Erythematosus,MEDLINEPLUS,Disease or Syndrome
+3439,C0024141,Systemic lupus erythematosus,LCH_NW,Disease or Syndrome
+3440,C0024141,Systemic lupus erythematosus,HPO,Disease or Syndrome
+3442,C0024141,Systemic Lupus Erythematosus,MSH,Disease or Syndrome
+3443,C0024141,Systemic lupus erythematosus,SNOMEDCT_US,Disease or Syndrome
+3444,C0024141,systemic lupus erythematosus,PDQ,Disease or Syndrome
+3445,C0024141,Systemic lupus erythematosus,ORPHANET,Disease or Syndrome
+3446,C0024141,Systemic Lupus Erythematosus,NCI,Disease or Syndrome
+3447,C0024141,Systemic lupus erythematosus,ICD9CM,Disease or Syndrome
+3448,C0024141,Systemic Lupus Erythematosus,ICPC2P,Disease or Syndrome
+3450,C4721579,metastatic colorectal cancer,CHV,Neoplastic Process
+3451,C4721579,Metastatic colorectal cancer,MDR,Neoplastic Process
+3452,C3539878,Triple negative breast cancer,MDR,Neoplastic Process
+3454,C3539878,Triple Negative Breast Cancer,MSH,Neoplastic Process
+3455,C5575969,ABMR,NCI,Diagnostic Procedure
+3457,C0001430,Adenoma,LCH,Neoplastic Process
+3458,C0001430,Adenoma,MSH,Neoplastic Process
+3459,C0001430,Adenoma,RCD,Neoplastic Process
+3460,C0001430,Adenoma,SNM,Neoplastic Process
+3461,C0001430,ADENOMA,COSTAR,Neoplastic Process
+3462,C0001430,ADENOMA,CST,Neoplastic Process
+3463,C0001430,adenoma,AOD,Neoplastic Process
+3464,C0001430,adenoma,CSP,Neoplastic Process
+3465,C0001430,Adenoma,MTH,Neoplastic Process
+3466,C0001430,adenoma,CHV,Neoplastic Process
+3467,C0001430,Adenoma,MEDLINEPLUS,Neoplastic Process
+3468,C0001430,Adenoma,LCH_NW,Neoplastic Process
+3469,C0001430,Adenoma,MDR,Neoplastic Process
+3470,C0001430,Adenoma,SNOMEDCT_US,Neoplastic Process
+3472,C0001430,Adenoma,NCI,Neoplastic Process
+3473,C0205082,Severe,RCD,Finding
+3474,C0205082,Severe,SNMI,Finding
+3475,C0205082,Severe,NCI,Finding
+3476,C0205082,SEVERE,CCPSS,Finding
+3477,C0205082,severe,CHV,Finding
+3478,C0205082,Severe,LNC,Finding
+3479,C0205082,Severe,HPO,Finding
+3481,C0205082,Severe,SNOMEDCT_US,Finding
+3482,C5203119,Severe,NCI,Finding
+3483,C1547231,Severe,HL7V2.5,Intellectual Product
+3484,C1547227,Severe,HL7V2.5,Intellectual Product
+3485,C1561581,Severe,HL7V2.5,Finding
+3486,C2945599,Mild,RCD,Qualitative Concept
+3487,C2945599,Mild,SNMI,Qualitative Concept
+3488,C2945599,Mild,NCI,Qualitative Concept
+3489,C2945599,MILD,CCPSS,Qualitative Concept
+3490,C2945599,mild,CHV,Qualitative Concept
+3491,C2945599,Mild,LNC,Qualitative Concept
+3492,C2945599,Mild,HPO,Qualitative Concept
+3494,C2945599,Mild,SNOMEDCT_US,Qualitative Concept
+3495,C1547225,Mild,HL7V2.5,Intellectual Product
+3496,C1563320,Mild,HL7V2.5,Qualitative Concept
+3497,C1538440,HF,OMIM,Gene or Genome
+3498,C3273279,HF,NCI,Gene or Genome
+3499,C1313497,HF,NCI,"Amino Acid, Peptide, or Protein"
+3500,C1313497,HF,NCI,Enzyme
+3501,C1538440,HF,HGNC,Gene or Genome
+3502,C0020305,HF,ORPHANET,Disease or Syndrome
+3503,C0002395,Alzheimers Disease,QMR,Disease or Syndrome
+3504,C0002395,alzheimers disease,CHV,Disease or Syndrome
+3505,C0002395,Alzheimers Disease,PSY,Disease or Syndrome
+3506,C0002395,Alzheimers disease,ICPC2P,Disease or Syndrome
+3507,C0010054,ATHEROSCLEROTIC HEART DISEASE,DXP,Disease or Syndrome
+3508,C0010054,Atherosclerotic heart disease,ICD10,Disease or Syndrome
+3509,C0010054,Atherosclerotic heart disease,ICD10AM,Disease or Syndrome
+3510,C0010054,Atherosclerotic heart disease,RCD,Disease or Syndrome
+3511,C0010054,Atherosclerotic heart disease,SNMI,Disease or Syndrome
+3512,C0010054,atherosclerotic heart disease,CHV,Disease or Syndrome
+3513,C0010054,Atherosclerotic heart disease,MTHICD9,Disease or Syndrome
+3514,C0010054,atherosclerotic heart disease,ICPC2P,Disease or Syndrome
+3515,C0152101,Hypoplastic left heart syndrome,ICD10,Disease or Syndrome
+3516,C0152101,Hypoplastic left heart syndrome,ICD10AM,Disease or Syndrome
+3517,C0152101,Hypoplastic left heart syndrome,MDR,Disease or Syndrome
+3518,C0152101,Hypoplastic left heart syndrome,RCD,Disease or Syndrome
+3519,C0152101,Hypoplastic left heart syndrome,SNM,Disease or Syndrome
+3520,C0152101,Hypoplastic left heart syndrome,SNMI,Disease or Syndrome
+3521,C0152101,Hypoplastic Left Heart Syndrome,MSH,Disease or Syndrome
+3522,C0152101,Hypoplastic left heart syndrome,OMIM,Disease or Syndrome
+3523,C0152101,hypoplastic left heart syndrome,MEDCIN,Disease or Syndrome
+3524,C0152101,HYPOPLASTIC LEFT HEART SYNDROME,CCPSS,Disease or Syndrome
+3525,C0152101,Hypoplastic left heart syndrome,ICD10CM,Disease or Syndrome
+3526,C0152101,hypoplastic left heart syndrome,CHV,Disease or Syndrome
+3527,C0152101,Hypoplastic Left Heart Syndrome,NCI,Disease or Syndrome
+3528,C0152101,Hypoplastic Left Heart Syndrome,MTH,Disease or Syndrome
+3530,C0152101,Hypoplastic left heart syndrome,SNOMEDCT_US,Disease or Syndrome
+3531,C0152101,Hypoplastic left heart syndrome,ORPHANET,Disease or Syndrome
+3532,C0152101,Hypoplastic left heart syndrome,ICD9CM,Disease or Syndrome

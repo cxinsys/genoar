@@ -1,0 +1,102 @@
+# Example config for the SRR pipeline. Copy it, edit the paths and core
+# counts, and mount it at /work/config.yaml: pipeline_next/run_docker_pipeline.sh
+# reads every key below.
+
+input_dir: /work/data/sra          # where SRR*.sra files are
+output_dir: /work/results          # results root (future steps)
+ref_path: /ref                     # reference for step 8; must match the mount/bind target (host ref dir -> /ref)
+
+# Resource settings (aligned with original SLURM pipeline)
+cores: 16                          # fastq-dump cores (step 2)
+gzip_threads: 2                    # pigz multi-threading (step 3)
+cellranger_threads: 16             # CellRanger --localcores (step 8)
+cellranger_mem: 100                # CellRanger --localmem in GB (step 8)
+cellranger_bin: /opt/cellranger/cellranger  # must match the mount/bind target (host cellranger dir -> /opt/cellranger)
+                                   # Mount the whole installation ROOT, not its bin/:
+                                   # Cell Ranger reads .env.json, external/, lib/ and mro/
+                                   # beside the launcher. Where the launcher lives inside
+                                   # that tree differs by release (7.x uses bin/), and the
+                                   # launcher is found either way once the root is mounted.
+                                   # What is NOT worked out for you is the mount itself: on
+                                   # the HPC path, remote_cellranger is bound verbatim, so
+                                   # pointing it at a bin/ still fails at startup.
+
+# What this pipeline was developed and validated against. Both of these change
+# the numbers, so a run on anything else is a different measurement, not just a
+# different setup:
+#
+#   * Cell Ranger's arguments move between major releases — 8.0 added
+#     --create-bam, which 7.x rejects outright. The pipeline reads the
+#     installed version and adapts, so 7.x and 8.x both run. A version it
+#     cannot read at all stops the run instead: both guesses fail only after
+#     the allocation has been spent.
+#   * The transcriptome reference carries the gene annotation. 2020-A and
+#     2024-A report different gene counts for the same reads.
+#
+# Step 0 compares what is installed against these and says so when they differ,
+# and records what it found beside the run. Reuse of an earlier run's output is
+# refused when that record disagrees: same input, different Cell Ranger or
+# reference, is a different measurement.
+# Source: DOCKER_USAGE_GUIDE.md, which installs cellranger-8.0.1 and
+# refdata-gex-GRCh38-2024-A. Leave either empty to accept anything silently.
+cellranger_version: "8.0.1"
+reference_version: "refdata-gex-GRCh38-2024-A"
+
+download: false                    # reserved for future SRA download feature
+log_dir: /work/logs
+
+# Not implemented. Kept here because configs in the field carry them, and a key
+# that is silently ignored is worse than one that says so:
+#
+#   success_dir        steps 5-9 use <output_dir>/success
+#   retry_move_dir     step 9 uses <output_dir>/retry_failed
+#   keep_intermediate  step 3 calls pigz/gzip without -k, so the uncompressed
+#                      FASTQ is always replaced
+
+
+# --- When Cell Ranger's output is not a result ---
+# Every way of being complete and wrong still produces a BAM: reads given as
+# the wrong mates, a reference for the wrong species, an input that arrived
+# truncated. Cell Ranger's own metrics_summary.csv says so, and these are the
+# floors below which this pipeline reports the sample as `suspect` rather than
+# complete.
+#
+# Set far below anything a real experiment reaches — the point is not to judge
+# the science, it is to notice that there isn't any. Set any of them to 0 to
+# switch that check off — the digit, not `off`, `no` or `false`, which YAML
+# reads as booleans. All three are recorded as numbers beside the run, so a
+# value that is not one stops the run at load time rather than disabling every
+# check at once.
+min_cells: 100                 # Estimated Number of Cells
+min_valid_barcodes: 0.10       # Valid Barcodes
+min_transcriptome: 0.05        # Reads Mapped Confidently to Transcriptome
+
+# --- Which Stage 3 runs ---
+# Run the maintained/current tree by default. The earlier tree remains frozen
+# as a comparison instrument: set this to true only when reproducing the
+# cluster-validated baseline with the same input in a separate results tree.
+# Older `pipeline_mode: verified|corrected` and `safe_mode: true|false`
+# configurations are still understood.
+legacy_pipeline: false
+
+# --- What a completed sample leaves behind ---
+# A run that cannot delete anything can only process as many samples as the
+# filesystem holds at once, which on a shared facility is far fewer than a
+# corpus. Rotation is what makes a long run possible.
+#
+#   all       nothing is released. The default: a site opts into rotation, and
+#             is never opted in for it.
+#   analysis  the BAM and its index go. Everything a second pass over the
+#             counts could want stays. The BAM is by far the largest output and
+#             the one thing reproducible from the input.
+#   summary   only the filtered matrix and the two summaries stay.
+#
+# Applied after the verifier has decided, and only to samples it credited as
+# completed. Each receipt records what was removed and by whom before the
+# removal happens, so a released sample still verifies as analysed rather than
+# as output that went missing.
+retain: all
+
+# Whether a sample's input goes when its output is verified. Frees the largest
+# thing on the disk, and means a re-run has to fetch the input again.
+release_input: false

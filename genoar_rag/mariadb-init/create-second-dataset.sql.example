@@ -1,0 +1,31 @@
+-- One schema per secondary dataset. Copy to a *.sql file in this directory
+-- (only *.sql files run; this .example is ignored) and rename the schema to
+-- the dataset's DATASET_<NAME>_DB_NAME.
+--
+-- The MariaDB image runs this directory only when its data volume is first
+-- created. On a deployment that already has one, run the statements by hand.
+-- The root password already lives inside the container's environment, so
+-- nothing needs exporting on the host (-T because stdin is a file, not a
+-- terminal):
+--
+--     docker compose exec -T mariadb sh -c \
+--         'exec mariadb -uroot -p"$MARIADB_ROOT_PASSWORD"' \
+--         < mariadb-init/<your-file>.sql
+--
+-- Then load the dataset's data into the new schema (once per dataset). The
+-- backend account below can only read, so the migration runs as root:
+--
+--     python backend/scripts/migrate_sqlite_to_mysql.py \
+--         --sqlite <that dataset's .db file> --db genoar_atlas \
+--         --host 127.0.0.1 --user root --password <root password> --drop
+
+CREATE DATABASE IF NOT EXISTS genoar_atlas
+    CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- The account the backend connects with — the deployment's DB_USER, `genoar`
+-- unless .env says otherwise; a deployment that changed DB_USER renames the
+-- account below to match, not just the schema. It reads every dataset with
+-- the same account, and it only reads: writing stays with root, so a
+-- compromised or misconfigured service cannot alter a corpus.
+GRANT SELECT ON genoar_atlas.* TO 'genoar'@'%';
+FLUSH PRIVILEGES;

@@ -1,0 +1,87 @@
+# Citation metadata for GENOAR (Citation File Format 1.2.0).
+# GitHub reads this file to offer "Cite this repository".
+#
+# Still to fill in, in this order:
+#   - `version` and `date-released`: at the first tagged release.
+#   - `doi`: the Zenodo DOI of that release (the journal requires one).
+#   - `preferred-citation`: swap `status: submitted` for the volume, pages and
+#     DOI when the article is published.
+cff-version: 1.2.0
+message: >-
+  If you use GENOAR, please cite the article under preferred-citation.
+  To cite a specific version of the software, use the release DOI.
+type: software
+title: "GENOAR: Global Engine for Navigating the Omnicell space via Agent-based Research"
+abstract: >-
+  An engine for building single-cell transcriptomic atlases that both AI
+  agents and human researchers can use: it collects and standardises GEO
+  metadata with an AI nomenclaturist, processes the raw reads in parallel,
+  and serves the result through an AI librarian.
+repository-code: "https://github.com/cxinsys/genoar"
+url: "https://genoar.ai"
+license: MIT
+keywords:
+  - single-cell transcriptomics
+  - artificial intelligence
+  - agentic AI
+  - parallel computing
+authors:
+  - family-names: Paik
+    given-names: Hyojung
+    affiliation: "Korea Institute of Science and Technology Information (KISTI); Korea National University of Science and Technology (UST)"
+    email: hyojungpaik@kisti.re.kr
+  - family-names: Ko
+    given-names: Tae Lyun
+    affiliation: "Korea Institute of Science and Technology Information (KISTI); Korea National University of Science and Technology (UST)"
+  - family-names: Kim
+    given-names: Dogyun
+    affiliation: "Chung-Ang University"
+  - family-names: Shin
+    given-names: Dongmin
+    affiliation: "Chung-Ang University"
+  - family-names: Sirota
+    given-names: Marina
+    affiliation: "University of California, San Francisco"
+  - family-names: Oskotsky
+    given-names: Boris
+    affiliation: "University of California, San Francisco"
+  - family-names: Oskotsky
+    given-names: Tomiko
+    affiliation: "University of California, San Francisco"
+  - family-names: Lee
+    given-names: Taeyoung
+    affiliation: "Korea Institute of Science and Technology Information (KISTI); Korea University College of Medicine"
+  - family-names: Lee
+    given-names: Hyeonjae
+    affiliation: "Korea Institute of Science and Technology Information (KISTI); Korea National University of Science and Technology (UST)"
+  - family-names: Lee
+    given-names: Daewon
+    affiliation: "Chung-Ang University"
+    email: dwlee@cau.ac.kr
+preferred-citation:
+  type: article
+  title: "GENOAR: Global Engine for Navigating the Omnicell space via Agent-based Research"
+  journal: "Nucleic Acids Research"
+  status: submitted
+  year: 2026
+  authors:
+    - family-names: Paik
+      given-names: Hyojung
+    - family-names: Ko
+      given-names: Tae Lyun
+    - family-names: Kim
+      given-names: Dogyun
+    - family-names: Shin
+      given-names: Dongmin
+    - family-names: Sirota
+      given-names: Marina
+    - family-names: Oskotsky
+      given-names: Boris
+    - family-names: Oskotsky
+      given-names: Tomiko
+    - family-names: Lee
+      given-names: Taeyoung
+    - family-names: Lee
+      given-names: Hyeonjae
+    - family-names: Lee
+      given-names: Daewon

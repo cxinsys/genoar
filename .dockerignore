@@ -1,0 +1,71 @@
+# Large data directories
+sample_sra/
+ref/
+cellranger/
+results/
+logs/
+10x_test_data/
+test_full_pipeline/
+results_backup_*/
+
+# User-managed Cell Ranger install location (large binary; read-only input, not needed in image)
+srr_pipeline_package/tools/
+
+# Test and temporary output
+test_*/
+backup_*/
+
+# Git and IDE
+.git/
+.gitignore
+.claude/
+
+# Docker files (not needed inside context for most builds)
+docker-compose.yml
+
+# Node/package manager. The ** matters: a bare "node_modules/" only matches at
+# the context root, so nested copies were being sent regardless.
+**/node_modules/
+**/.next/
+package-lock.json
+package.json
+
+# Large output directories
+crawl_output/
+first_pass_output/
+workflow_output/
+sample_crawl_output/
+
+# Browser cache
+.chrome/
+
+# Logs
+*.log
+
+# Python cache
+**/__pycache__/
+**/.venv/
+*.pyc
+**/*.egg-info/
+**/.pytest_cache/
+
+# RAG web service. The public pipeline image does not execute or distribute the
+# web application, so neither its source nor its local model/database artifacts
+# belong in the root Docker build context.
+#
+# This does not affect running the RAG service. Its Compose file builds from
+# genoar_rag/backend and genoar_rag/frontend as their own build contexts, and
+# Docker reads the .dockerignore at the context root -- this file never applies
+# to those builds.
+genoar_rag/
+
+# Internal handoff material is deliberately not part of the public pipeline.
+# It can contain multi-gigabyte pilot inputs/images, result archives and
+# operational notes. Docker does not read .gitignore, so the boundary the
+# repository draws for Git has to be drawn here independently.
+docs/internal/
+
+# Working notes and drafts, kept on disk but outside the published tree.
+# They quote hosts, data paths and people, and `COPY . /app/` would otherwise
+# bake them into the image.
+wiki/

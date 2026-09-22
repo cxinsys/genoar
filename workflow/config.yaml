@@ -1,0 +1,210 @@
+# GENOAR pipeline configuration
+#
+# The root Snakefile reads `directories` and `crawling.{pages,workers,headless}`.
+# Keys marked `[not read]` below are declared here and wired to nothing: editing
+# one changes no behaviour. They are kept so the intended surface stays visible,
+# and each names where the value actually lives today.
+
+# ===========================
+# Pipeline basics
+# ===========================
+pipeline:
+  name: "GENOAR Pipeline"
+  version: "2.0"
+  mode: "complete"  # complete | crawl | analyze | test
+
+# ===========================
+# Directories
+# ===========================
+directories:
+  # Crawling
+  crawl_output: "crawl_output"
+  crawl_meta: "crawl_output/META"
+  crawl_smtx: "crawl_output/SMTX"
+  crawl_srr: "crawl_output/SRR"
+  
+  # Analysis
+  umls_data: "all_query_results"
+  first_pass_output: "first_pass_output"
+  workflow_output: "workflow_output"
+  
+  # Logs
+  logs: "logs"
+  workflow_logs: "logs/workflow"
+
+# ===========================
+# Crawling
+# ===========================
+crawling:
+  # Basic parameters
+  pages: 100                        # overridden by $PAGES when it is set
+  workers: 1                        # overridden by $WORKERS when it is set;
+                                    # one worker matches the Makefile default
+  headless: true                    # run the browser headless
+  
+  # Search query
+  # [not read] The crawler takes --search-url, or GENOAR_GEO_SEARCH_URL.
+  search_query: '"Homo sapiens"[porgn] AND ("gse"[Filter] AND "Expression profiling by high throughput sequencing"[Filter])'
+  
+  # Single-cell keywords
+  single_cell_keywords:
+    - "chromium"
+    - "10x"
+    - "cell ranger"
+    - "single-cell rna"
+    - ".h5"
+    - "barcodes.tsv.gz"
+    - "features.tsv.gz"
+    - "matrix.mtx.gz"
+  
+  # Timeouts (seconds)
+  timeouts:
+    page_load: 30
+    element_wait: 10
+    download: 60
+    
+  # Retries
+  retries:
+    max_attempts: 3
+    delay_seconds: 5
+
+# ===========================
+# Analysis
+# ===========================
+analysis:
+  # Filters
+  organism_filter: "Homo sapiens"
+  # [not read] genoar_analysis/core/config.py holds the default; the Stage 2
+  # entry point takes --library-source.
+  library_source_filter: "TRANSCRIPTOMIC"
+  
+  # UMLS matching
+  umls_matching:
+    case_sensitive: false
+    # [not read] The orders that run are per-field and hardcoded in
+    # genoar_analysis/io/umls_readers.py; there MSH precedes NCI for cell_type
+    # and tissue, so this list is not merely inert, it is the reverse.
+    sab_priority: ["NCI", "MSH", "SNOMEDCT_US", "FMA"]
+    min_match_rate: 0.05  # accept a field only above a 5% match rate
+  
+  # Fields to analyse
+  fields:
+    - "cell_type"
+    - "tissue"
+    - "disease_state_modified"
+  
+  # Quality control
+  quality_control:
+    min_samples_per_field: 10
+    max_na_ratio: 0.8  # drop a field once more than 80% of its values are NA
+
+# ===========================
+# Performance
+# ===========================
+performance:
+  # Resource limits
+  max_memory_gb: 8
+  max_cores: 4
+  
+  # Snakemake
+  snakemake_cores: 4
+  
+  # Docker resources
+  docker:
+    cpu_limit: "4"
+    memory_limit: "8G"
+    cpu_reserve: "2"
+    memory_reserve: "4G"
+
+# ===========================
+# Logging
+# ===========================
+logging:
+  level: INFO  # DEBUG | INFO | WARNING | ERROR
+  verbose: true
+  
+  # Log files
+  files:
+    crawler: "logs/crawler.log"
+    analysis: "logs/analysis.log"
+    workflow: "logs/workflow.log"
+  
+  # Log rotation
+  rotation:
+    max_size_mb: 100
+    backup_count: 5
+
+# ===========================
+# Container settings
+# ===========================
+container:
+  # Selenium
+  selenium:
+    headless: true
+    display: ":99"
+    
+  # Chrome options
+  chrome_options:
+    - "--no-sandbox"
+    - "--disable-dev-shm-usage"
+    - "--disable-gpu"
+    - "--disable-extensions"
+    - "--disable-blink-features=AutomationControlled"
+    - "--window-size=1920,1080"
+  
+  # Environment variables
+  environment:
+    PYTHONPATH: "/app"
+    PYTHONUNBUFFERED: "1"
+
+# ===========================
+# Workflow options
+# ===========================
+workflow:
+  # Checkpointing
+  checkpoint_enabled: true
+  resume_on_failure: true
+  
+  # Execution flags
+  dry_run: false
+  generate_dag: false
+  
+  # Timeout (minutes)
+  timeout_minutes: 120
+  
+  # Parallelism
+  parallel:
+    enabled: true
+    max_jobs: 4
+
+# ===========================
+# Output
+# ===========================
+output:
+  # File format
+  format: "csv"  # csv | tsv | parquet
+  
+  # Compression
+  compression: false  # true | false | gzip
+  
+  # What to include
+  include_raw_data: false
+  include_statistics: true
+  
+  # Output file names
+  filename_patterns:
+    cell_type: "HS_cell_type_1st_pass_meta_table"
+    tissue: "HS_tissue_1st_pass_meta_table"
+    disease: "HS_disease_1st_pass_meta_table"
+
+# ===========================
+# Testing
+# ===========================
+testing:
+  # Test-mode parameters
+  test_pages: 10
+  test_workers: 2
+  
+  # Test data
+  use_mock_data: false
+  mock_data_dir: "test_data"

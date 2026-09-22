@@ -1,0 +1,25 @@
+# A deployment serving a second dataset. Copy to docker-compose.override.yml
+# and compose will merge it on top of docker-compose.yml without being told to.
+#
+#     cp docker-compose.override.datasets.example docker-compose.override.yml
+#
+# (The similarly named docker-compose.override.yml.example is for local
+# development — it also switches the frontend to its dev build, which a
+# deployment does not want.)
+#
+# This file only mounts the dataset's files. The settings that point at these
+# container paths go in datasets.env, the dataset list and DASHBOARD_DATASET
+# in .env, and a MariaDB deployment prepares the schema via mariadb-init/ —
+# each explained where it lives. A secondary dataset with a missing or broken
+# file refuses to start rather than serving the primary's data, so a mount
+# forgotten here is an error message, not a wrong page.
+services:
+  backend:
+    volumes:
+      # The dataset's own SQLite file (sqlite backend, or MariaDB fallback).
+      - /srv/genoar/atlas.db:/data/genoar/atlas.db:ro
+      # Its FAISS index + run mapping per species it serves semantically,
+      # with the index's .meta.json sidecar so the build model is verified.
+      - /srv/genoar/atlas_human.bin:/data/genoar/atlas_human.bin:ro
+      - /srv/genoar/atlas_human.bin.meta.json:/data/genoar/atlas_human.bin.meta.json:ro
+      - /srv/genoar/atlas_human.json:/data/genoar/atlas_human.json:ro

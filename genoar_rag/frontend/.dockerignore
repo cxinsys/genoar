@@ -1,0 +1,20 @@
+# The image installs its own dependencies and does its own build. Copying the
+# host's in would take four hundred megabytes of somebody else's platform
+# binaries, and a .next from a machine that is not this one is worse than
+# useless — the build would start from a cache it has no business trusting.
+node_modules
+.next
+
+# Nothing here is served or built from.
+.git
+.gitignore
+Dockerfile
+.dockerignore
+coverage
+*.log
+
+# Finder's bookkeeping. One under public/ would be shipped and then served —
+# or rather answered with a 500, which is what a scanner sees on a path it
+# always tries.
+.DS_Store
+**/.DS_Store

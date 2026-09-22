@@ -1,0 +1,154 @@
+# The one file. Copy to hpc_config.yaml and fill it in.
+#
+# Everything a site decides lives here. The pipeline config that runs inside
+# the container is GENERATED from this file by prepare_hpc_handoff.py — there
+# is never a second file to keep in step, and editing the generated one has no
+# effect on the next bundle. plan_batches.py reads this same file.
+#
+#   srr_pipeline_package/hpc/SITE_SETUP.md — what each value is, where to find
+#   it on an unfamiliar cluster, and what goes wrong when it is wrong.
+#
+# Values are marked:
+#   [required]  the run cannot be prepared without it
+#   [handoff]   ignored when nobody is driving the cluster over SSH
+#   [optional]  has a default that works; set it to mean something else
+
+# ===========================================================================
+# 1. Getting there
+# ===========================================================================
+host: hpc.example.ac.kr          # [handoff] login/transfer node hostname
+user: myid                       # [handoff] your account on the cluster
+port: 22                         # [optional] some sites use e.g. 10000
+# ssh_key: ~/.ssh/id_rsa         # [optional] omit to use your SSH default
+transfer_tool: rsync             # [optional] rsync | scp. --only needs rsync.
+
+# ===========================================================================
+# 2. Where things are ON the cluster
+# ===========================================================================
+# Under Slurm these appear in #SBATCH lines, which the scheduler splits on
+# whitespace, so a path holding a space is refused rather than truncated.
+remote_base: /scratch/myid/genoar_stage3        # [required] workspace parent;
+                                                # each bundle uses runs/<run-id>/
+remote_sif: /scratch/myid/genoar-srr_step9.sif  # [required] image (upload once)
+remote_ref: /scratch/myid/ref                   # [required] reference dir
+remote_cellranger: /scratch/myid/cellranger     # [required] INSTALLATION ROOT,
+                                                # the directory holding .env.json,
+                                                # never its bin/
+
+# ===========================================================================
+# 3. What the scheduler will accept
+# ===========================================================================
+scheduler: slurm                 # [optional] slurm | pbspro | torque
+queue: normal                    # [required] Slurm partition, or PBS queue
+ncpus: 16                        # [required] cores per job (>= cellranger_threads)
+mem_gb: 120                      # [required] memory request (> cellranger_mem)
+# mem_mb: 120000                 # [optional] overrides mem_gb where MB was quoted
+walltime: "24:00:00"             # [required] HH:MM:SS, under the queue's limit
+module_load: singularity         # [optional] module providing Singularity
+# account: my_project            # [optional] Slurm --account
+# qos: normal                    # [optional] Slurm --qos
+# email: me@lab.ac.kr            # [optional] job notifications
+
+# ===========================================================================
+# 4. What Cell Ranger is given
+# ===========================================================================
+cellranger_threads: 16           # [required] --localcores
+cellranger_mem: 100              # [required] --localmem, in GB
+
+# ===========================================================================
+# 5. What the results are meant to be comparable with
+# ===========================================================================
+# A Cell Ranger release changes which arguments exist; a reference release
+# changes the gene counts for the same reads. Step 0 compares what is actually
+# installed against these and says so when they differ. Quote them — an
+# unquoted 9.10 is a float and comes back as 9.1. Empty accepts anything
+# without comment.
+cellranger_version: "8.0.1"      # [optional]
+reference_version: "refdata-gex-GRCh38-2024-A"   # [optional]
+
+# --- When the output is not a result ---
+# Every way of being complete and wrong still produces a BAM. Cell Ranger's own
+# summary says so, and below these floors the sample is reported `suspect`
+# rather than complete. Set far below anything a real experiment reaches; 0
+# switches one off.
+min_cells: 100                   # [optional] Estimated Number of Cells
+min_valid_barcodes: 0.10         # [optional] Valid Barcodes
+min_transcriptome: 0.05          # [optional] Reads Mapped Confidently to Transcriptome
+
+# ===========================================================================
+# 6. Which Stage 3 runs
+# ===========================================================================
+# The maintained/current tree is the default. The earlier cluster-validated
+# tree remains frozen for a separate comparison/reproduction run. Corpus
+# retention and array features exist only in the current tree, and the planner
+# refuses a legacy corpus plan rather than silently changing trees.
+# Older `pipeline_mode: verified|corrected` and `safe_mode: true|false`
+# configurations are still understood.
+legacy_pipeline: false
+
+# ===========================================================================
+# 7. What a finished sample leaves on the disk
+# ===========================================================================
+# A run that deletes nothing can only process as many samples as the
+# filesystem holds at once. Rotation is what makes a long run possible.
+#
+#   all       nothing is released. The default: rotation is opted into.
+#   analysis  the BAM and its index go; everything else stays. The BAM is by
+#             far the largest output and the one thing reproducible from input.
+#   summary   only the filtered matrix and the two summaries stay.
+#
+# Applied after the verifier, only to samples it credited as completed, and
+# recorded in each sample's receipt before anything is removed — so a released
+# sample still verifies as analysed rather than as output that went missing.
+retain: all                      # [optional] all | analysis | summary
+release_input: false             # [optional] also delete a sample's input once
+                                 # its output is verified
+
+# ===========================================================================
+# 8. Running a corpus that does not fit in one job
+# ===========================================================================
+# Read by plan_batches.py, which works out how many samples fit in one job and
+# says whether the disk or the wall clock is what stops it being more. Anything
+# it can measure it measures; anything left it asks about; with nobody to ask
+# it stops and names the key to write.
+#
+disk_gb: 2000                    # [required for planning] the CLUSTER quota
+                                 # this run may occupy, in GB. Not measured:
+                                 # the machine running the planner is not the
+                                 # cluster, and its free space is not the
+                                 # number the run has to fit inside.
+#
+# The planner simulates the whole run. Resident inputs and retained output are
+# cumulative; expanded FASTQ and the step-5 copy are per-batch. Smaller batches
+# reduce the latter two but not the former two.
+#
+minutes_per_gb:                  # [required for planning] compute minutes per
+                                 # GB of input on THIS cluster. Measure a
+                                 # representative completed run, or set an
+                                 # explicit conservative site value until one
+                                 # is available. There is no cross-site default.
+fastq_expansion: 4.0             # [optional] uncompressed FASTQ as a multiple
+                                 # of the .sra input.
+clock_margin: 0.8                # [optional] fraction of queue walltime a batch
+                                 # may consume; leaves room for slow samples.
+# residue_ratio: 0.2             # [optional] what a finished sample keeps, as a
+                                 # fraction of its input. Measured from an
+                                 # earlier run's output when one exists, and
+                                 # never below what `retain` implies.
+
+# One array task per batch list. Set by `prepare_hpc_handoff.py --batches`;
+# there is no reason to write it by hand.
+# array_count: 73                # [optional]
+
+# How many array tasks may run at once. One unless the site says otherwise:
+# the tasks share the quota the batch size was calculated against, so two at a
+# time need twice the disk the plan asked for.
+max_concurrent_jobs: 1           # [optional]
+
+# ===========================================================================
+# 9. What comes back
+# ===========================================================================
+# The default for retrieve_results.sh, overridable per run with
+# `./retrieve_results.sh --only summary`. The run records come back in every
+# mode; without outcome.json the results are numbers nobody can check.
+retrieve: all                    # [optional] all | analysis | summary
