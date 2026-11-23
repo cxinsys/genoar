@@ -55,3 +55,86 @@ class TestStatsService:
         stats1 = svc.get_dashboard_stats()
         stats2 = svc.get_dashboard_stats()
         assert stats1 is stats2
+
+
+class TestCorpusLevels:
+    """The corpus counted at each level it exists at, and the levels reconciled.
+
+    A study with runs of two species is one study and is counted under each
+    species. The fixture has two such studies (GSE003 and GSE004, each with a
+    human and a mouse run), so the species figures sum to the whole plus two,
+    and the service says so rather than leaving the reader to find a mistake.
+    """
+
+    def setup_method(self):
+        StatsService.clear_cache()
+
+    def test_species_runs_partition_the_corpus(self, db_conn):
+        stats = StatsService(db_conn).get_dashboard_stats()
+        by_species = {c.species: c for c in stats.corpus}
+        assert by_species["human"].runs == 8
+        assert by_species["mouse"].runs == 2
+        assert sum(c.runs for c in stats.corpus) == stats.total_samples
+
+    def test_shared_studies_reconcile_the_series_figures(self, db_conn):
+        stats = StatsService(db_conn).get_dashboard_stats()
+        assert stats.shared_series == 2
+        assert (
+            sum(c.series for c in stats.corpus)
+            == stats.total_series + stats.shared_series
+        )
+
+    def test_runs_without_a_gsm_are_not_samples(self, db_conn):
+        """The fixture names no GEO sample for any run, so there are none to
+        count — and not ten, which is what counting rows would say."""
+        stats = StatsService(db_conn).get_dashboard_stats()
+        assert stats.total_geo_samples == 0
+        assert all(c.geo_samples == 0 for c in stats.corpus)
+
+    def test_no_census_means_no_cell_figure(self, db_conn, monkeypatch):
+        """None, not zero: a zero is a claim about the corpus."""
+        from app.services import stats_service
+
+        monkeypatch.setattr(stats_service.settings, "cell_counts_path", "")
+        monkeypatch.setattr(stats_service.settings, "processed_results_dir", "")
+        stats = StatsService(db_conn).get_dashboard_stats()
+        assert stats.total_cells is None
+        assert all(c.cells is None for c in stats.corpus)
+
+    def test_census_is_folded_into_species_totals(self, db_conn, monkeypatch, tmp_path):
+        """A census names runs; the service sorts them by species through the
+        organism field, and a run the census does not name is simply absent."""
+        from app.services import stats_service
+
+        census = tmp_path / "cell_counts.json"
+        census.write_text('{"SRR001": 100, "SRR006": 30, "SRR008": 20}')
+        monkeypatch.setattr(stats_service.settings, "cell_counts_path", str(census))
+        stats = StatsService(db_conn).get_dashboard_stats()
+        by_species = {c.species: c for c in stats.corpus}
+        assert stats.total_cells == 150
+        assert by_species["human"].cells == 100
+        assert by_species["mouse"].cells == 50
+
+    def test_census_runs_outside_the_corpus_are_not_counted(
+        self, db_conn, monkeypatch, tmp_path
+    ):
+        """The processed directory can hold runs the database does not — on
+        the deployment, 74 mouse runs. The total is summed over the same runs
+        as the species figures, so the whole still equals its parts."""
+        from app.services import stats_service
+
+        census = tmp_path / "cell_counts.json"
+        census.write_text('{"SRR001": 100, "SRR006": 30, "SRR999999": 5000}')
+        monkeypatch.setattr(stats_service.settings, "cell_counts_path", str(census))
+        stats = StatsService(db_conn).get_dashboard_stats()
+        assert stats.total_cells == 130
+        assert sum(c.cells or 0 for c in stats.corpus) == stats.total_cells
+
+    def test_unreadable_census_is_ignored_not_fatal(self, db_conn, monkeypatch, tmp_path):
+        from app.services import stats_service
+
+        census = tmp_path / "cell_counts.json"
+        census.write_text("not json")
+        monkeypatch.setattr(stats_service.settings, "cell_counts_path", str(census))
+        stats = StatsService(db_conn).get_dashboard_stats()
+        assert stats.total_cells is None

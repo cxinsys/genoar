@@ -118,6 +118,69 @@ class SampleRepository(BaseRepository):
         """
         return self._fetchval("SELECT COUNT(DISTINCT Series) FROM sra_series")
 
+    def count_geo_samples(self) -> int:
+        """How many GEO samples the runs come from.
+
+        A GSM is a biological sample and a run is one sequencing of it, so the
+        corpus has fewer samples than runs — 4,540 against 7,275 — and a reader
+        who meets only the run count takes it for the sample count. Fifteen
+        runs carry no GSM at all and are not counted here; they are still runs.
+        """
+        return self._fetchval(
+            "SELECT COUNT(DISTINCT Sample_Name) FROM sra_core"
+            " WHERE Sample_Name LIKE 'GSM%'"
+        )
+
+    def corpus_by_organism(self, organism: str) -> dict:
+        """One species' share of the corpus at each level: studies, samples, runs.
+
+        Studies are read through `sra_series`, like `count_series`, so a study
+        reached only through a shared run is counted. A study with runs of both
+        species is counted once for each, which is why the species figures sum
+        to more than the whole — see `count_series_shared`.
+        """
+        return self._fetchone(
+            "SELECT"
+            "  (SELECT COUNT(DISTINCT s.Series) FROM sra_series s"
+            "    JOIN sra_extended e ON e.Run = s.Run"
+            "    WHERE e.field_name = 'Organism' AND e.field_value = ?) AS series,"
+            "  (SELECT COUNT(DISTINCT c.Sample_Name) FROM sra_core c"
+            "    JOIN sra_extended e ON e.Run = c.Run"
+            "    WHERE e.field_name = 'Organism' AND e.field_value = ?"
+            "      AND c.Sample_Name LIKE 'GSM%') AS geo_samples,"
+            "  (SELECT COUNT(*) FROM sra_extended e"
+            "    WHERE e.field_name = 'Organism' AND e.field_value = ?) AS runs",
+            [organism, organism, organism],
+        ) or {"series": 0, "geo_samples": 0, "runs": 0}
+
+    def count_series_shared(self, organisms: list[str]) -> int:
+        """Studies with runs of more than one of these species.
+
+        Twelve of the 929 studies have both a human and a mouse arm. Counted
+        under each species they come to 941, the figure a per-species table
+        reports; the whole is 929. Saying so is what reconciles the two.
+        """
+        if len(organisms) < 2:
+            return 0
+        placeholders = ", ".join("?" for _ in organisms)
+        return self._fetchval(
+            "SELECT COUNT(*) FROM ("
+            "  SELECT s.Series FROM sra_series s"
+            "  JOIN sra_extended e ON e.Run = s.Run"
+            f"  WHERE e.field_name = 'Organism' AND e.field_value IN ({placeholders})"
+            "  GROUP BY s.Series HAVING COUNT(DISTINCT e.field_value) > 1)",
+            organisms,
+        )
+
+    def organism_of_runs(self) -> dict[str, str]:
+        """Every run's organism, for folding per-run figures into species totals."""
+        return {
+            row["Run"]: row["field_value"]
+            for row in self._fetchall(
+                "SELECT Run, field_value FROM sra_extended WHERE field_name = 'Organism'"
+            )
+        }
+
     def platform_distribution(self) -> list[dict]:
         return self._fetchall(
             "SELECT Platform as label, COUNT(*) as count FROM sra_core "

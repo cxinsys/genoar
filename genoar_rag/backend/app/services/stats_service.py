@@ -1,7 +1,10 @@
 """Dashboard statistics service with caching."""
 
+import json
+import logging
 import sqlite3
 import time
+from pathlib import Path
 
 from app.config import settings
 from app.models.stats import (
@@ -9,7 +12,10 @@ from app.models.stats import (
     DashboardStats,
     DistributionItem,
     SpeciesCompleteness,
+    SpeciesCorpus,
 )
+
+logger = logging.getLogger(__name__)
 from app.repositories.extended_repository import ExtendedRepository
 from app.repositories.sample_repository import SampleRepository
 
@@ -43,6 +49,67 @@ def _to_distribution(rows: list[dict], total: int) -> list[DistributionItem]:
         )
         for r in rows
     ]
+
+
+def _census_path() -> Path | None:
+    if settings.cell_counts_path:
+        return Path(settings.cell_counts_path)
+    if settings.processed_results_dir:
+        return Path(settings.processed_results_dir) / "cell_counts.json"
+    return None
+
+
+def _load_census() -> dict[str, int] | None:
+    """The cell census, or None where there is none to read.
+
+    None and not {} on purpose: an empty dict would sum to a cell count of
+    zero and the dashboard would print it, which is a claim about the corpus.
+    No census is the absence of a figure, and is shown as one.
+    """
+    path = _census_path()
+    if path is None or not path.is_file():
+        return None
+    try:
+        raw = json.loads(path.read_text())
+        return {str(run): int(n) for run, n in raw.items()}
+    except (OSError, ValueError, AttributeError) as exc:
+        logger.warning("Cell census at %s unreadable, ignoring: %s", path, exc)
+        return None
+
+
+def _corpus(repo: SampleRepository) -> tuple[list[SpeciesCorpus], int | None]:
+    """Each species' studies, samples, runs and cells, and the cells in all.
+
+    The census is taken over the processed directory, which may hold more
+    runs than the database does — on the deployment it holds 74 mouse runs
+    the curated corpus does not. Those are not in the corpus and are not
+    counted: the total is the sum over the database's runs, the same runs
+    the species figures are summed over, so the whole and its parts agree.
+    """
+    census = _load_census()
+    organism_of = repo.organism_of_runs() if census else {}
+    if census:
+        census = {run: n for run, n in census.items() if run in organism_of}
+    out = []
+    for species, organism in COMPLETENESS_SPECIES:
+        level = repo.corpus_by_organism(organism)
+        cells = (
+            sum(n for run, n in census.items() if organism_of.get(run) == organism)
+            if census
+            else None
+        )
+        out.append(
+            SpeciesCorpus(
+                species=species,
+                organism=organism,
+                series=level["series"],
+                geo_samples=level["geo_samples"],
+                runs=level["runs"],
+                cells=cells,
+            )
+        )
+    total_cells = sum(census.values()) if census else None
+    return out, total_cells
 
 
 def _completeness(repo: SampleRepository) -> list[SpeciesCompleteness]:
@@ -96,6 +163,7 @@ class StatsService:
 
         total = sample_repo.count_all()
         total_series = sample_repo.count_series()
+        corpus, total_cells = _corpus(sample_repo)
 
         organism_rows = ext_repo.get_distinct_values("Organism", limit=20)
         assay_rows = ext_repo.get_distinct_values("Assay Type", limit=20)
@@ -105,6 +173,12 @@ class StatsService:
         result = DashboardStats(
             total_samples=total,
             total_series=total_series,
+            total_geo_samples=sample_repo.count_geo_samples(),
+            total_cells=total_cells,
+            shared_series=sample_repo.count_series_shared(
+                [organism for _, organism in COMPLETENESS_SPECIES]
+            ),
+            corpus=corpus,
             organism_distribution=_to_distribution(organism_rows, total),
             assay_distribution=_to_distribution(assay_rows, total),
             platform_distribution=_to_distribution(platform_rows, total),

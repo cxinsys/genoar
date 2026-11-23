@@ -119,4 +119,7 @@ def health():
         "datasets": registry.names,
         "semantic_search": enabled,
         "semantic_species": vs.available_species() if enabled else [],
+        # The exact encoder behind each species, so that what the AI Librarian
+        # ranks with can be named and checked rather than described.
+        "embedding_models": vs.model_names() if enabled else {},
     }

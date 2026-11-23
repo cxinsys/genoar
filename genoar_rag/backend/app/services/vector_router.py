@@ -83,6 +83,14 @@ class VectorRouter:
     def available_species(self) -> list[str]:
         return sorted(self._backends)
 
+    def model_names(self) -> dict[str, str]:
+        """Which model embeds each live species, by its published identifier.
+
+        For the health endpoint and the API page: a reader checking a result
+        against the paper needs the exact model, not "a biomedical encoder".
+        """
+        return {species: backend.model_name for species, backend in sorted(self._backends.items())}
+
     def run_ids_by_species(self) -> dict[str, list[str]]:
         """Every run each live backend's index describes, for corpus checks."""
         return {

@@ -182,6 +182,15 @@ class Settings(BaseSettings):
     # pattern serves nothing rather than something it should not.
     processed_results_layouts: str = ""
 
+    # A census of the processed matrices: {run_id: cells}, as written by
+    # scripts/count_cells.py. Read for the dashboard's cell totals and for
+    # nothing else — a run absent from it is still served, it just goes
+    # uncounted. Empty means <processed_results_dir>/cell_counts.json, which
+    # is where the script's output is kept beside the matrices it describes;
+    # a deployment with no census, or none there, shows no cell figure rather
+    # than a zero.
+    cell_counts_path: str = ""
+
     # Offer only Cell Ranger output that carries a provenance receipt.
     #
     # Stage 3 writes a receipt (.genoar_cellranger.json) beside each sample's

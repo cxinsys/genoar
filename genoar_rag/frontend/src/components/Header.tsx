@@ -16,11 +16,18 @@ import {
 } from "@/components/HeaderSea";
 import { DEFAULT_EXAMPLE_QUERY } from "@/lib/examples";
 
-type ActivePage = "dashboard" | "search";
+type ActivePage = "dashboard" | "search" | "guide";
 
-const NAV_ITEMS: { label: string; href: string; page: ActivePage }[] = [
+const NAV_ITEMS: {
+  label: string;
+  href: string;
+  page: ActivePage;
+  /** Other paths that are this item's page — the API is a tab of the guide. */
+  also?: string[];
+}[] = [
   { label: "Dashboard", href: "/", page: "dashboard" },
   { label: "Search", href: "/search", page: "search" },
+  { label: "Support", href: "/guide", page: "guide", also: ["/api-docs"] },
 ];
 
 /** Where each letter of the wordmark sits, measured from the left edge of the
@@ -92,9 +99,15 @@ function wordmarkEdge(edge: number, letters: number): string {
  */
 export default function Header() {
   const [searchValue, setSearchValue] = useState("");
+  // Whether a phone is being shown the settings. Kept here and not in the
+  // controls because opening them is also what hides the wordmark: below md the
+  // row cannot hold both, and the four settings take the room the word leaves.
+  const [settingsOpen, setSettingsOpen] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
-  const activePage = NAV_ITEMS.find((item) => item.href === pathname)?.page;
+  const activePage = NAV_ITEMS.find(
+    (item) => item.href === pathname || item.also?.includes(pathname),
+  )?.page;
 
   function handleSearch(e: React.FormEvent) {
     e.preventDefault();
@@ -140,7 +153,9 @@ export default function Header() {
       <HeaderStars />
       <HeaderSea layer="behind" />
       <div className="relative max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 gap-6">
+        {/* Half the gap on a phone, where the row is counted to the pixel: the
+            boat, four links and the four settings have to fit 360px. */}
+        <div className="flex items-center justify-between h-16 gap-6 max-md:gap-3">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 flex-shrink-0">
             {/* Sized from the number the drawing's waterline was fitted to
@@ -161,7 +176,9 @@ export default function Header() {
                 the word moving in the sea and the word moving near it. */}
             <span
               aria-label="GENOAR"
-              className="text-[26px] font-extrabold text-brand dark:text-white leading-none translate-y-[3px]"
+              className={`text-[26px] font-extrabold text-brand dark:text-white leading-none translate-y-[3px] ${
+                settingsOpen ? "max-md:hidden" : ""
+              }`}
             >
               {"GENOAR".split("").map((letter, i, all) => (
                 <span
@@ -248,7 +265,10 @@ export default function Header() {
             })}
           </nav>
 
-          <HeaderControls />
+          <HeaderControls
+            settingsOpen={settingsOpen}
+            onToggleSettings={() => setSettingsOpen((open) => !open)}
+          />
         </div>
       </div>
       <HeaderSea layer="front" />

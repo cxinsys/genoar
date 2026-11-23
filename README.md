@@ -920,11 +920,11 @@ genoar/
 
 ## Citation
 
-GENOAR is described in an article under review at *Nucleic Acids Research*:
+GENOAR is described in an article currently under review:
 
-> Paik H, Ko TL, Kim D, Shin D, Sirota M, Oskotsky B, Oskotsky T, Lee T, Lee H, Lee D. GENOAR: Global Engine for Navigating the Omnicell space via Agent-based Research. *Nucleic Acids Research*, submitted (2026).
+> Paik H, Ko TL, Kim D, Shin D, Sirota M, Oskotsky B, Oskotsky T, Lee T, Lee H, Lee D. GENOAR: Global Engine for Navigating the Omnicell space via Agent-based Research. Submitted (2026).
 
-[`CITATION.cff`](CITATION.cff) carries the same in machine-readable form; GitHub's "Cite this repository" reads it. Software releases are tagged on GitHub (current: v1.0.0). A Zenodo DOI for a release is planned and will be added here and to the file.
+[`CITATION.cff`](CITATION.cff) carries the same in machine-readable form; GitHub's "Cite this repository" reads it. Software releases are tagged on GitHub (current: v1.1.0). A Zenodo DOI for a release is planned and will be added here and to the file.
 
 ---
 

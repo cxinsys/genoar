@@ -443,13 +443,26 @@ function SearchPageContent() {
         </div>
       )}
       <div className="flex items-center justify-between pb-2">
-        <h2 className="type-eyebrow">
-          {!results
-            ? "Results"
-            : activeMode === "sql"
-              ? `Results (${results.total.toLocaleString()})`
-              : `Top ${results.total.toLocaleString()} Results`}
-        </h2>
+        <div>
+          <h2 className="type-eyebrow">
+            {!results
+              ? "Results"
+              : activeMode === "sql"
+                ? `Results (${results.total.toLocaleString()})`
+                : `Top ${results.total.toLocaleString()} Results`}
+          </h2>
+          {/* What the list is, said once above it. A semantic search always
+              returns its top-k, so a short list is never "no results" — it is
+              the closest the corpus has, and the score on each card is how
+              close. Saying so here is what keeps a low-scoring list from
+              reading as a confident answer. */}
+          {results && activeMode !== "sql" && (
+            <p className="text-xs text-ink-faint mt-0.5">
+              Ranked by similarity of curated metadata to the query. A low
+              score means no close match, not a weak one.
+            </p>
+          )}
+        </div>
         <div className="flex items-center gap-2">
           <span className="text-sm text-ink-soft">Sort by:</span>
           <select

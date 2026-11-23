@@ -647,6 +647,32 @@
   scrollbar-gutter: stable;
 }
 
+/* The guide header's tab for the page you are on (GuideHeader). The cards'
+ * colour at its tip, running down into the page's own colour, which is what
+ * lets its foot open into the page beneath it.
+ *
+ * Laid from the border box and not repeated. The tab's bottom border is
+ * transparent so that nothing closes it, and a background left to the default
+ * starts inside the border and tiles: the gradient's top showed through that
+ * transparent border as a pale line along the foot, the one edge that was
+ * meant to be open.
+ *
+ * On a dark page the brand is a light colour, mixed in here rather than the
+ * cards' colour, and is left as it was. */
+.guide-bookmark {
+  background-image: linear-gradient(to bottom, var(--color-surface), var(--color-canvas));
+  background-origin: border-box;
+  background-repeat: no-repeat;
+}
+[data-theme="dark"] .guide-bookmark {
+  background-image: linear-gradient(
+    to bottom,
+    color-mix(in oklab, var(--color-brand) 24%, var(--color-canvas)),
+    color-mix(in oklab, var(--color-brand) 8%, var(--color-canvas)) 55%,
+    var(--color-canvas)
+  );
+}
+
 /* Room for a card's shadow inside a scroll container.
  *
  * A scroll container clips on both axes however only one of them was asked to

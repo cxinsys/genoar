@@ -131,9 +131,28 @@ export interface SpeciesCompleteness {
   tiers: CompletenessTier[];
 }
 
+/** One species' share of the corpus at each of the levels it exists at. A
+ *  study, a GEO sample, a run and a cell are four different things with four
+ *  different counts, and the dashboard names which is which. */
+export interface SpeciesCorpus {
+  species: string;
+  organism: string;
+  series: number;
+  geo_samples: number;
+  runs: number;
+  /** null where the deployment has no cell census to count from. */
+  cells: number | null;
+}
+
 export interface DashboardStats {
+  /** The run count, under the name it has always had. */
   total_samples: number;
   total_series: number;
+  total_geo_samples: number;
+  total_cells: number | null;
+  /** Studies with runs of more than one species, counted once under each. */
+  shared_series: number;
+  corpus: SpeciesCorpus[];
   organism_distribution: DistributionItem[];
   assay_distribution: DistributionItem[];
   platform_distribution: DistributionItem[];
@@ -163,6 +182,8 @@ export interface HealthResponse {
   /** Species with a loaded vector index, e.g. ["human", "mouse"]. A species whose
    *  index is missing is absent here, so semantic search should not be offered for it. */
   semantic_species: string[];
+  /** The encoder behind each live species, by its published identifier. */
+  embedding_models: Record<string, string>;
 }
 
 /** One way to obtain a sample's data. `available` is false when GENOAR knows the

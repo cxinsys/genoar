@@ -31,6 +31,9 @@ export default function Footer() {
               </span>
             </span>
           ))}
+          <Link href="/guide" className="hover:text-brand transition-colors">
+            Analysis Code Support
+          </Link>
           <Link href="/api-docs" className="hover:text-brand transition-colors">
             API Documentation
           </Link>

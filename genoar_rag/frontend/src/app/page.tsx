@@ -299,7 +299,10 @@ function DashboardContent() {
                       <span className="font-semibold text-ink">
                         {results?.total.toLocaleString() ?? "..."}
                       </span>{" "}
-                      samples matching criteria
+                      {/* Runs, not samples: each card below is one sequencing
+                          run, and a GEO sample can have several. The cards
+                          under the charts say how the two counts relate. */}
+                      runs matching criteria
                     </p>
                     <DatasetNote
                       dataset={DASHBOARD_DATASET}
@@ -437,6 +440,36 @@ function DashboardContent() {
           {/* Charts, below the explorer. Within the main column so they do not
               push the filter sidebar down. */}
           <DashboardOverview onTissueSelect={handleTissueSelect} />
+
+          {/* A pointer to the guide and its API tab, under the charts and
+              before the contacts.
+              One flat row rather than a panel: it says where to read, and the
+              reading is on the other page. */}
+          <section className="px-6 pb-6">
+            <div className="bg-surface rounded-card border border-edge shadow-card px-5 py-4 flex flex-col sm:flex-row sm:items-center gap-4">
+              <div className="flex items-center gap-3 flex-1 min-w-0">
+                <div className="w-9 h-9 shrink-0 rounded-lg inline-flex items-center justify-center leading-none bg-accent/12 text-accent">
+                  <span className="material-symbols-outlined">menu_book</span>
+                </div>
+                <p className="text-sm text-ink-body">
+                  For guidance on using GENOAR data, refer to Analysis Code Support.
+                  For programmatic access, see the API reference.
+                </p>
+              </div>
+              <Link
+                href="/guide"
+                className="shrink-0 self-start sm:self-auto inline-flex items-center gap-2 h-10 px-4 rounded-lg border border-edge-firm bg-surface text-ink-body text-sm font-bold hover:bg-raised transition-colors shadow-control"
+              >
+                Analysis Code Support &amp; API
+                <span
+                  className="material-symbols-outlined"
+                  style={{ fontSize: "18px" }}
+                >
+                  arrow_forward
+                </span>
+              </Link>
+            </div>
+          </section>
 
           {/* Who to reach about GENOAR — the last thing in the column. */}
           <ContactFooter />

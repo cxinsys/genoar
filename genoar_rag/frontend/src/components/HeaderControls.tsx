@@ -43,7 +43,14 @@ function brightnessLabel(theme: Theme, resolved: "light" | "dark"): string {
  * icon; the page's own colours are already right by then, set by the script in
  * the document head before anything was painted.
  */
-export default function HeaderControls() {
+export default function HeaderControls({
+  settingsOpen,
+  onToggleSettings,
+}: {
+  /** Whether the settings are showing on a phone. From md up they always are. */
+  settingsOpen: boolean;
+  onToggleSettings: () => void;
+}) {
   const prefs = useSyncExternalStore(
     subscribePreferences,
     getPreferences,
@@ -72,7 +79,9 @@ export default function HeaderControls() {
     // the right, changing how the site looks. The rule is what says they are
     // different kinds of thing, so it belongs between them rather than in front
     // of both.
-    <div className="flex items-center gap-1 shrink-0">
+    // No gap on a phone: with the settings open the row is nine buttons wide,
+    // and the 4px between each is what decides whether it fits 360px.
+    <div className="flex items-center gap-1 max-md:gap-0 shrink-0">
       {/* The way to the search page, when there is no search bar.
 
           Below md the header drops both the field and the nav links, which left
@@ -81,18 +90,30 @@ export default function HeaderControls() {
           rather than as a stray button — and it goes away again as soon as the
           real field is back.
 
-          The margin is carried by whichever of these two is last rather than by
-          the group after them, so that it leaves when they do: at a width with
-          neither, there is nothing on this side of the rule and nothing should
-          be holding room beside it. With the flex gap it comes to the same 12px
-          the group keeps on its own side. */}
+          The margin before the rule is carried by whichever of these is last
+          at the width in question, rather than by the group after them, so that
+          it leaves when they do: at a width with none of them there is nothing
+          on this side of the rule and nothing should be holding room beside
+          it. */}
       <Link
         href="/search"
         aria-label="Search"
         title="Search"
-        className={`${BUTTON} md:hidden ${panel.available > 0 ? "" : "mr-2"}`}
+        className={`${BUTTON} md:hidden`}
       >
         <span className={ICON}>search</span>
+      </Link>
+
+      {/* The guide, for the same reason: the nav link to it goes with the
+          others below md, and the dashboard's pointer to it is at the foot of a
+          long page. */}
+      <Link
+        href="/guide"
+        aria-label="Analysis Code Support"
+        title="Analysis Code Support"
+        className={`${BUTTON} md:hidden`}
+      >
+        <span className={ICON}>menu_book</span>
       </Link>
 
       {/* The page's side column, when the window is too narrow to show it beside
@@ -104,7 +125,10 @@ export default function HeaderControls() {
 
           One button rather than two. It is the same panel either way, and a
           close control that lives somewhere other than the thing that opened it
-          is a second place to have to look. */}
+          is a second place to have to look.
+
+          From md up only. Below it the menu button next to this does the job,
+          and opens the panel along with the settings. */}
       {panel.available > 0 && (
         <button
           type="button"
@@ -112,13 +136,46 @@ export default function HeaderControls() {
           aria-expanded={panel.open}
           aria-label={panel.open ? "Close the panel" : "Open the panel"}
           title={panel.open ? "Close" : "Filters and tools"}
-          className={`${BUTTON} mr-2`}
+          className={`${BUTTON} max-md:hidden mr-2`}
         >
           <span className={ICON}>{panel.open ? "close" : "menu"}</span>
         </button>
       )}
 
-      <div className="flex items-center gap-1 pl-3 border-l border-edge">
+      {/* A phone's one menu. The row cannot hold the four settings beside the
+          links and the wordmark, so they are shown on request and the wordmark
+          makes way while they are (see Header) — and where the page has a side
+          panel, the same press opens it below. One button for both, because on
+          a phone they are the same request: show me the rest. Last before the
+          rule below md, so it carries the margin — while there is a rule. */}
+      <button
+        type="button"
+        onClick={() => {
+          const opening = !settingsOpen;
+          onToggleSettings();
+          // Brought into line rather than toggled blind: the panel can be
+          // closed from inside itself, and the next press should not open it
+          // while closing the settings.
+          if (panel.available > 0 && panel.open !== opening) toggleSidePanel();
+        }}
+        aria-expanded={settingsOpen}
+        aria-controls="header-settings"
+        aria-label={settingsOpen ? "Close the menu" : "Open the menu"}
+        title={settingsOpen ? "Close" : "Menu"}
+        className={`${BUTTON} md:hidden ${settingsOpen ? "mr-1" : ""}`}
+      >
+        <span className={ICON}>{settingsOpen ? "close" : "menu"}</span>
+      </button>
+
+      {/* starting: is where the group enters from when it is shown on a phone,
+          a few pixels to the right and transparent, so it slides in rather than
+          appearing. From md up it is always shown and never enters. */}
+      <div
+        id="header-settings"
+        className={`flex items-center gap-1 pl-3 border-l border-edge max-md:gap-0 max-md:pl-1 transition-[opacity,translate] duration-200 starting:opacity-0 starting:translate-x-2 ${
+          settingsOpen ? "" : "max-md:hidden"
+        }`}
+      >
         {/* Download sits with the settings, not with the nav links, because it
             is a thing to do rather than a place to go — a tab beside Dashboard
             and Search read as a third page. Suspended because it reads the URL's

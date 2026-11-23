@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import GuideHeader from "@/components/GuideHeader";
+import SemanticModels from "@/components/SemanticModels";
 
 export const metadata: Metadata = {
   title: "GENOAR - API",
@@ -215,21 +217,7 @@ export default function ApiDocsPage() {
             <span className="text-brand font-semibold">API</span>
           </nav>
 
-          {/* The sample page's hero: the name, its standing, and what it is. */}
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-8 pb-8 border-b border-edge">
-            <div className="flex flex-col gap-2">
-              <div className="flex items-center gap-3 flex-wrap">
-                <h1 className="type-figure text-3xl">API</h1>
-                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-accent/12 text-accent border border-accent/25">
-                  No key required
-                </span>
-              </div>
-              <p className="text-sm text-ink-soft max-w-2xl">
-                The website uses these endpoints. They are open to anyone and need
-                no account or key. All paths are relative to this host.
-              </p>
-            </div>
-          </div>
+          <GuideHeader active="api" />
 
           <div className="flex flex-col gap-6 mb-12">
             <SectionHead
@@ -325,6 +313,39 @@ export default function ApiDocsPage() {
                 Every record includes its accessions, which can be used to cite
                 the studies the samples came from.
               </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-6 mb-16">
+            <SectionHead
+              icon="psychology"
+              title="How the AI Librarian ranks"
+              blurb="What a semantic search does, and what it does not."
+            />
+            <div className={`${CARD_STILL} p-6 flex flex-col gap-4`}>
+              <p className="text-sm text-ink-body leading-relaxed">
+                A query in <span className="font-mono text-xs">semantic</span>{" "}
+                mode is embedded with the model for the species being searched
+                and ranked against the embeddings of every sample&apos;s curated
+                metadata by cosine similarity. The{" "}
+                <code className={CODE}>similarity_score</code> on each result is
+                that number. Nothing is generated: the service returns ranked
+                records, not an explanation, so a score says how close a
+                sample&apos;s metadata is to the query and no more.
+              </p>
+              <p className="text-sm text-ink-body leading-relaxed">
+                The same filters are available in{" "}
+                <span className="font-mono text-xs">sql</span> mode, which
+                matches the curated fields exactly and carries no score. Running
+                a query both ways is the simplest comparison between keyword
+                and semantic retrieval on this corpus.
+              </p>
+              <div>
+                <p className="text-xs font-semibold text-ink-soft mb-2">
+                  Embedding models on this deployment
+                </p>
+                <SemanticModels />
+              </div>
             </div>
           </div>
         </main>

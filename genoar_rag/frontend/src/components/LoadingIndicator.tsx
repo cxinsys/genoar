@@ -27,10 +27,13 @@ import {
 
 /** How long the app has to stay busy before the indicator is worth showing.
  *
- * A cached answer comes back inside this, and the reader is better served by
- * nothing happening than by something appearing and leaving before they can work
- * out what it was. */
-const APPEAR_AFTER = 300;
+ * Two seconds: long enough that it only comes up for a wait the reader has
+ * already noticed. On a fast connection almost every request is back well
+ * inside that, and the reader is better served by nothing happening than by
+ * the character popping up and ducking away again; at 300 ms it did exactly
+ * that on every ordinary search. On a slow connection the wait runs past two
+ * seconds and the character still comes up, which is when it is welcome. */
+const APPEAR_AFTER = 2000;
 
 /** And how long it stays once it has appeared, however quickly the rest
  *  finishes. Something that arrives and goes in fifty milliseconds is read as a

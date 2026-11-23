@@ -12,9 +12,8 @@ the maintainers will close these release gates:
   The NLM acknowledgement and notice are in the READMEs and the dashboard
   footer.
 - [x] Citation metadata: `CITATION.cff` and the README Citation section carry
-  the author list and title of the article under review at Nucleic Acids
-  Research (manuscript NAR-03601-2026). Still to add: the article DOI once
-  published.
+  the author list and title of the article, which is under review. Still to
+  add: the journal and article DOI once published.
 - [ ] Tag a release and deposit it on Zenodo (deferred by the corresponding
   authors, 2026-09-22). The journal's data policy asks for software in a
   repository that assigns a permanent DOI, with the DOI in the article's

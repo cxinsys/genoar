@@ -86,6 +86,32 @@ const ICON_TILE =
 const ALERT =
   "rounded-card border border-red-500/25 bg-red-500/10 text-red-700 dark:text-red-300";
 
+/** Where the nomenclaturist filed a disease label, as "parent › child".
+ *
+ * The two levels sit in the extended metadata under the names the curation
+ * CSV gave them. Only levels that add something are shown: a label filed
+ * under itself says nothing, and the first level is usually the category
+ * the "Filed under" link beside it already names, so that is left out too.
+ * Empty string when there is nothing to say, so the caller can test it
+ * like a flag. */
+function diseaseHierarchy(sample: SampleDetail): string {
+  const ext = (name: string) =>
+    sample.extended_fields.find((f) => f.field_name === name)?.field_value ??
+    null;
+  const said = new Set(
+    [sample.disease, sample.disease_category]
+      .filter((v): v is string => Boolean(v))
+      .map((v) => v.toLowerCase()),
+  );
+  const levels = [
+    ext("disease (UMLS) - 1st level"),
+    ext("disease (UMLS) - 2nd level"),
+  ]
+    .filter((v): v is string => Boolean(v) && !said.has(v!.toLowerCase()))
+    .map(displayLabel);
+  return Array.from(new Set(levels)).join(" › ");
+}
+
 function val(v: string | null | undefined): string {
   // Empty as well as absent. `displayLabel` answers "" for a missing value,
   // and `??` alone would let that through as a blank row where the dash
@@ -425,7 +451,34 @@ function InfoCards({
                   {displayLabel(sample.disease)}
                 </span>
               ) : (
-                <span className="text-sm text-ink">--</span>
+                /* Said in words rather than as dashes. Three quarters of the
+                   corpus has no disease label, and "--" read as a field that
+                   failed to load. What is known is only that the curated
+                   metadata carries none; whether the submitter recorded
+                   nothing or a label went unmapped is not kept, so this does
+                   not claim either. */
+                <span className="text-sm text-ink-soft">
+                  No disease annotation
+                </span>
+              )}
+              {/* How the label was arrived at, for the reader who needs to
+                  know what to trust. Two tiers exist in the data: a label
+                  with a UMLS concept behind it (827 runs), and a resolved
+                  label that has none — "Control Groups" and the like (959).
+                  The nomenclaturist's hierarchy, where it was recorded, says
+                  what the label is a kind of. */}
+              {sample.disease && (
+                <span className="text-xs text-ink-faint mt-1">
+                  {sample.cui_dis
+                    ? `UMLS concept${
+                        sample.str_dis &&
+                        sample.str_dis.toLowerCase() !==
+                          sample.disease.toLowerCase()
+                          ? `: ${displayLabel(sample.str_dis)}`
+                          : ""
+                      }`
+                    : "Resolved label; no UMLS concept assigned"}
+                </span>
               )}
               {/* The name the disease filter knows this sample by, shown when
                   it is not the words above. They differ for 455 of the 584
@@ -445,6 +498,16 @@ function InfoCards({
                     </span>
                   </Link>
                 )}
+              {/* After the category, because it is the finer level: filed
+                  under a category, classified within it. */}
+              {sample.disease && diseaseHierarchy(sample) && (
+                <span className="text-xs text-ink-faint mt-0.5">
+                  Classified under{" "}
+                  <span className="text-ink-soft">
+                    {diseaseHierarchy(sample)}
+                  </span>
+                </span>
+              )}
               {sample.cui_dis && (
                 <span className="text-xs text-ink-faint mt-0.5 font-mono">
                   CUI: {sample.cui_dis}

@@ -14,6 +14,10 @@ This directory holds scripts that fell out of use when the pipeline was consolid
 - **Replaced by**: `workflow/run.sh`, which is the image's `ENTRYPOINT` and the Compose `command`
 - **Why**: it duplicated the workflow script; a single entry point is easier to keep correct
 
+## Merging lane-split runs
+
+Users merge the lane-split SRRs of one GEO sample with `genoar_merge_library_groups.py`, which the web service offers on its Analysis Code Support page (`genoar_rag/frontend/public/downloads/`).
+
 ## How to run the pipeline now
 
 ```bash

@@ -17,3 +17,7 @@ Dockerfile  text eol=lf
 *.bin  binary
 *.db   binary
 *.pdf  binary
+
+# Development-only files; `git archive` leaves them out of the public snapshot.
+scripts/genoar_assign_library_groups.py export-ignore
+scripts/INTERNAL.md export-ignore

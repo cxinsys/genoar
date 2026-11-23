@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef, useState, type RefObject } from "react";
-import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 import { searchParamsToFilters } from "@/hooks/useSearch";
 import { useAnchoredPanel } from "@/hooks/useAnchoredPanel";
@@ -115,9 +114,6 @@ function DownloadMenu({ open, anchor, fullUrl, context, onClose }: Props) {
         <h2 id="download-menu-title" className="text-base font-semibold text-ink">
           Download
         </h2>
-        <p className="mt-1 text-sm text-ink-soft">
-          Download the metadata, or use the API.
-        </p>
 
         <ul className="mt-4 space-y-2">
           <li>
@@ -192,22 +188,6 @@ function DownloadMenu({ open, anchor, fullUrl, context, onClose }: Props) {
                 </span>
               </div>
             )}
-          </li>
-
-          <li>
-            <Link href="/api-docs" onClick={onClose} className={ROW}>
-              <span className="material-symbols-outlined shrink-0 text-[20px] leading-none text-brand mt-0.5">
-                code
-              </span>
-              <span className="min-w-0">
-                <span className="block text-sm font-medium text-ink">
-                  API documentation
-                </span>
-                <span className="block text-xs text-ink-soft mt-0.5">
-                  Documentation for the endpoints this website uses.
-                </span>
-              </span>
-            </Link>
           </li>
         </ul>
       </div>

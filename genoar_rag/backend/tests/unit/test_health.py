@@ -59,6 +59,7 @@ class TestHealth:
         assert payload["status"] == "ok"
         assert payload["semantic_search"] is False
         assert payload["semantic_species"] == []
+        assert payload["embedding_models"] == {}
 
     def test_lists_every_loaded_species(self, tmp_path):
         router = VectorRouter(
@@ -75,6 +76,9 @@ class TestHealth:
             payload = health()
             assert payload["semantic_search"] is True
             assert payload["semantic_species"] == ["human", "mouse"]
+            # Named by the identifier the index was built with, so a reader
+            # can check a result against the paper's exact model.
+            assert payload["embedding_models"] == {"human": "sapbert", "mouse": "minilm"}
         finally:
             _install(None)
 
@@ -95,5 +99,6 @@ class TestHealth:
             payload = health()
             assert payload["semantic_search"] is True
             assert payload["semantic_species"] == ["human"]
+            assert payload["embedding_models"] == {"human": "sapbert"}
         finally:
             _install(None)

@@ -3,7 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 import { useStats } from "@/hooks/useStats";
 import { useFilters } from "@/hooks/useFilters";
-import type { FilterCategory, SpeciesCompleteness } from "@/types/api";
+import type {
+  FilterCategory,
+  SpeciesCompleteness,
+  SpeciesCorpus,
+} from "@/types/api";
 import { DASHBOARD_DATASET } from "@/lib/datasets";
 
 function formatCount(n: number): string {
@@ -353,6 +357,22 @@ export default function DashboardOverview({
   const tissueValues = categoryOf("tissue")?.values ?? [];
   const diseaseValues = categoryOf("disease")?.values ?? [];
 
+  // The species split under a KPI figure: "4,421 human · 2,854 mouse", with
+  // an optional tail for the one card that needs a third term. Written once
+  // because four cards say it the same way, and nothing where the stats have
+  // not arrived, so a card does not show a line of dashes under its own.
+  const speciesLine = (
+    pick: (c: SpeciesCorpus) => number,
+    opts: { tail?: string } = {},
+  ): string | undefined => {
+    if (!stats || stats.corpus.length === 0) return undefined;
+    const parts = stats.corpus.map(
+      (c) => `${pick(c).toLocaleString()} ${c.species}`,
+    );
+    if (opts.tail) parts.push(opts.tail);
+    return parts.join(" · ");
+  };
+
   return (
     // px-6 is the padding the explorer above uses, so the cards line up with it
     // down the column. No top padding: the explorer's own bottom margin is the
@@ -370,50 +390,60 @@ export default function DashboardOverview({
           </div>
         ) : (
           <>
-            {/* KPI cards */}
+            {/* KPI cards: the corpus at each of the four levels it exists at.
+
+                A study, a GEO sample, a run and a cell are four different
+                things, and the corpus has a different number of each — 929
+                studies, 4,540 samples, 7,275 runs. What stood here before was
+                "Total Samples 7,275", which is the run count under the
+                sample's name, and a reader took it for the sample count. So
+                the cards read left to right from the coarsest unit to the
+                finest, each named for what it counts, and each carries the
+                species split underneath so the whole and its parts are on the
+                same card rather than on four.
+
+                The series card also says how many studies are counted under
+                both species: 385 human and 556 mouse come to 941, and the
+                whole is 929, and without the twelve the two figures look like
+                a mistake. */}
             <div className="grid grid-cols-2 xl:grid-cols-4 gap-4 mb-4">
-              {/* No second line: it repeated the series count, which is the
-                    card immediately beside it. */}
-              {/* One row of four, or two rows of two, and the reading order is
-                  not the same in both.
-
-                  In one row it is the whole and then its parts: samples, the
-                  two species that make them up, then series. Broken into two
-                  rows that would put a species beside series, pairing figures
-                  that have nothing to do with each other. So the columns become
-                  the grouping instead — totals down the left, species down the
-                  right — and the DOM is written in that order with the wide
-                  layout restoring the other by hand.
-
-                  None carries a second line: four cards of the same shape are
-                  read as four of a kind, which is what they are. */}
               <KpiCard
-                label="Total Samples"
-                value={stats ? stats.total_samples.toLocaleString() : "--"}
-                className="xl:order-1"
-              />
-              <KpiCard
-                label="Homo sapiens Samples"
-                value={
-                  humanCompleteness
-                    ? humanCompleteness.total.toLocaleString()
-                    : "--"
-                }
-                className="xl:order-2"
-              />
-              <KpiCard
-                label="Total Series"
+                label="Studies"
                 value={stats ? stats.total_series.toLocaleString() : "--"}
-                className="xl:order-4"
+                sub={speciesLine((c) => c.series, {
+                  tail:
+                    stats && stats.shared_series > 0
+                      ? `${stats.shared_series} in both`
+                      : undefined,
+                })}
               />
               <KpiCard
-                label="Mus musculus Samples"
+                label="GEO Samples"
+                value={stats ? stats.total_geo_samples.toLocaleString() : "--"}
+                sub={speciesLine((c) => c.geo_samples)}
+              />
+              <KpiCard
+                label="Runs"
+                value={stats ? stats.total_samples.toLocaleString() : "--"}
+                sub={speciesLine((c) => c.runs)}
+              />
+              {/* Cells come from a census of the processed matrices, which a
+                  deployment may not have taken; then the card says so rather
+                  than showing a zero. */}
+              <KpiCard
+                label="Cells"
                 value={
-                  mouseCompleteness
-                    ? mouseCompleteness.total.toLocaleString()
+                  stats?.total_cells != null
+                    ? stats.total_cells.toLocaleString()
                     : "--"
                 }
-                className="xl:order-3"
+                sub={
+                  stats?.total_cells != null
+                    ? speciesLine((c) => c.cells ?? 0)
+                    : stats
+                      ? "No cell census on this deployment"
+                      : undefined
+                }
               />
             </div>
 

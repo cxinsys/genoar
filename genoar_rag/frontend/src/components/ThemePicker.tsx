@@ -85,9 +85,6 @@ export default function ThemePicker({ open, current, anchor, onClose }: Props) {
         >
           Theme
         </h2>
-        <p className="mt-1 text-sm text-ink-soft">
-          Which colours the site is made of.
-        </p>
 
         <ul className="mt-4 space-y-2">
           {PALETTES.map((palette) => {
